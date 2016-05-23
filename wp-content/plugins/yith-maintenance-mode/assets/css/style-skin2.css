@@ -1,0 +1,162 @@
+/**
+ * The style of the maintenance mode page - Skin2
+ */
+
+div.container {
+    width: 570px;
+    margin: 60px auto 0;
+
+}
+
+.logo {
+    display: block;
+    padding-left: 30px;
+    text-decoration: none;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.logo img{border: 0;}
+
+.logo .tagline {
+    text-decoration: none;
+    margin-top: 19px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 18px;
+}
+
+p, li {
+    margin-bottom: 18px;
+    line-height: 1.51em;
+}
+
+.yit-box {
+    clear: both;
+    margin-right: -1px;
+    margin-bottom: 9px;
+    text-align: left;
+    padding: 0;
+    border-collapse: separate;
+    background-color: rgba(44,44,44,0.7);
+    position: relative;
+    display: block;
+}
+
+.yit-box h3{line-height: 19px; background-color: rgba(136,136,136,0.2); font-style: normal; text-align: center; padding: 31px 40px; margin: 0;}
+.yit-box p{padding: 10px 40px; line-height: 21px; }
+
+
+
+/* newsletter form */
+form.newsletter, form.newsletter fieldset {
+    border: 0;
+    padding: 0;
+    margin-left: 20px;
+    margin-right: 20px;
+    position: relative;
+}
+
+form.newsletter{padding-bottom: 40px;}
+
+form.newsletter input.text-field {
+    background: #f2f2f2;
+    color: #656565;
+    width: 100%;
+    margin: 0;
+    padding: 13px 190px 16px 22px;
+    border: 1px solid #b4b4b4;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: #bbb9b9;
+    line-height: 21px;
+}
+
+form.newsletter input::-webkit-input-placeholder {color: #656565;} /* Webkit browsers */
+form.newsletter input:-moz-input-placeholder {color: #656565;} /* Firefox 4 */
+
+form.newsletter input.text-field:focus{background: #f2f2f2; outline: none;}
+
+form.newsletter input.submit-field {
+    border: 0;
+    border-left: 0;
+    padding: 0 26px;
+    height: 100%;
+    margin: 0;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.14);
+    line-height: 21px;
+    cursor: pointer;
+}
+
+
+form.newsletter .submit {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+}
+
+
+
+.socials {
+    text-align: center;
+}
+
+.socials a {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-position: top center;
+    background-repeat: no-repeat;
+    margin: 0 6px 0;
+    word-space: nowrap;
+    text-indent: 100%;
+    overflow: hidden;
+}
+
+.socials a:hover {
+    background-position: bottom center;
+}
+
+.socials a.facebook  { background:transparent url('../images/skin2/socials/social-sprite.png')   7px  2px no-repeat;  }
+.socials a.twitter   { background:transparent url('../images/skin2/socials/social-sprite.png') -25px  3px no-repeat;  }
+.socials a.gplus     { background:transparent url('../images/skin2/socials/social-sprite.png') -58px  2px no-repeat;  }
+.socials a.youtube   { background:transparent url('../images/skin2/socials/social-sprite.png') -84px  3px no-repeat;  }
+.socials a.rss       { background:transparent url('../images/skin2/socials/social-sprite.png') -115px 3px  no-repeat;  }
+.socials a.flickr    { background:transparent url('../images/skin2/socials/social-sprite.png') -149px 1px  no-repeat;  }
+.socials a.vimeo     { background:transparent url('../images/skin2/socials/social-sprite.png') -184px 3px  no-repeat;  }
+.socials a.tumblr    { background:transparent url('../images/skin2/socials/social-sprite.png') -215px 3px  no-repeat;  }
+.socials a.dribble   { background:transparent url('../images/skin2/socials/social-sprite.png') -243px 3px  no-repeat;  }
+.socials a.linkedin  { background:transparent url('../images/skin2/socials/social-sprite.png') -304px 3px  no-repeat;  }
+.socials a.skype     { background:transparent url('../images/skin2/socials/social-sprite.png') -273px 4px  no-repeat;  }
+.socials a.pinterest { background:transparent url('../images/skin2/socials/social-sprite.png') -394px 4px  no-repeat;  }
+.socials a.instagram { background:transparent url('../images/skin2/socials/social-sprite.png') -330px 4px  no-repeat;  }
+.socials a.behance   { background:transparent url('../images/skin2/socials/social-sprite.png') -363px 4px  no-repeat;  }
+.socials a.email     { background:transparent url('../images/skin2/socials/social-sprite.png') -420px 4px  no-repeat;  }
+
+.socials a.facebook:hover  { background:#333333 url('../images/skin2/socials/social-sprite.png')   7px  2px no-repeat;  }
+.socials a.twitter:hover   { background:#333333 url('../images/skin2/socials/social-sprite.png') -25px  3px no-repeat;  }
+.socials a.gplus:hover     { background:#333333 url('../images/skin2/socials/social-sprite.png') -58px  2px no-repeat;  }
+.socials a.youtube:hover   { background:#333333 url('../images/skin2/socials/social-sprite.png') -84px  3px no-repeat;  }
+.socials a.rss:hover       { background:#333333 url('../images/skin2/socials/social-sprite.png') -115px 3px  no-repeat;  }
+.socials a.flickr:hover    { background:#333333 url('../images/skin2/socials/social-sprite.png') -149px 1px  no-repeat;  }
+.socials a.vimeo:hover     { background:#333333 url('../images/skin2/socials/social-sprite.png') -184px 3px  no-repeat;  }
+.socials a.tumblr:hover    { background:#333333 url('../images/skin2/socials/social-sprite.png') -215px 3px  no-repeat;  }
+.socials a.dribble:hover   { background:#333333 url('../images/skin2/socials/social-sprite.png') -243px 3px  no-repeat;  }
+.socials a.linkedin:hover  { background:#333333 url('../images/skin2/socials/social-sprite.png') -304px 3px  no-repeat;  }
+.socials a.skype:hover     { background:#333333 url('../images/skin2/socials/social-sprite.png') -273px 4px  no-repeat;  }
+.socials a.pinterest:hover { background:#333333 url('../images/skin2/socials/social-sprite.png') -394px 4px  no-repeat;  }
+.socials a.instagram:hover { background:#333333 url('../images/skin2/socials/social-sprite.png') -330px 4px  no-repeat;  }
+.socials a.behance:hover   { background:#333333 url('../images/skin2/socials/social-sprite.png') -363px 4px  no-repeat;  }
+.socials a.email:hover     { background:#333333 url('../images/skin2/socials/social-sprite.png') -420px 4px  no-repeat;  }
+
+@media (max-width: 767px) {
+
+    div.container{width: auto; padding-left: 15px; padding-right: 15px;}
+    .yit-box h3{line-height: 25px;}
+    .socials a{margin: 0 3px 0; padding-bottom: 5px;}
+    .logo img{max-width: 100%;}
+    form.newsletter, form.newsletter fieldset{margin-left: 5px; margin-right: 5px;}
+    form.newsletter input.submit-field{padding: 0 10px;}
+    form.newsletter input.text-field {padding: 13px 136px 16px 22px;}
+}

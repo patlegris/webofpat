@@ -1,0 +1,1776 @@
+# Copyright (C) 2012 Wordpress Portfolio Plugin
+# This file is distributed under the same license as the Wordpress Portfolio Plugin package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Wordpress Portfolio Plugin\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/wp-portfolio\n"
+"POT-Creation-Date: 2014-06-02 15:49-0000\n"
+"PO-Revision-Date: 2014-06-02 15:49-0000\n"
+"Last-Translator: Dan Harrison <dan.harrison@wpdoctors.co.uk>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.5\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-KeywordsList: _e;__;_x;_n\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: lib/admin_only.inc.php:17
+msgid "WP Portfolio - Documentation"
+msgstr ""
+
+#: lib/admin_only.inc.php:19
+msgid ""
+"All the information you need to run the plugin is available on this page."
+msgstr ""
+
+#: lib/admin_only.inc.php:21
+msgid "Problems and Support"
+msgstr ""
+
+#: lib/admin_only.inc.php:22
+#, php-format
+msgid ""
+"Please check the <a href=\"%s\">Frequently Asked Questions</a> page if you "
+"have any issues."
+msgstr ""
+
+#: lib/admin_only.inc.php:23
+#, php-format
+msgid ""
+" As a last resort, please raise a problem in the <a href=\"%s\">WP Portfolio "
+"Support Forum on Wordpress.org</a>, and I'll respond to the ticket as soon "
+"as possible. Please be aware, this might be a couple of days."
+msgstr ""
+
+#: lib/admin_only.inc.php:25
+msgid "Comments and Feedback"
+msgstr ""
+
+#: lib/admin_only.inc.php:26
+#, php-format
+msgid ""
+"If you have any comments, ideas or any other feedback on this plugin, please "
+"leave comments on the <a href=\"%s\">WP Portfolio Support Forum on Wordpress."
+"org</a>."
+msgstr ""
+
+#: lib/admin_only.inc.php:28
+msgid "Requesting Features"
+msgstr ""
+
+#: lib/admin_only.inc.php:29
+#, php-format
+msgid ""
+"My schedule is extremely busy, and so I have little time to add new features "
+"to this plugin. If you are keen for a feature to be implemented, I can add "
+"new features in return for a small fee which helps cover my time. Due to "
+"running an agency, so my clients are my first priority. By paying a small "
+"fee, you effectively become a client, and therefore I can implement desired "
+"features more quickly. Please contact me via the <a href=\"%s\">WP Doctors "
+"Contact Page</a> if you would like to pay to have a new feature implemented."
+msgstr ""
+
+#: lib/admin_only.inc.php:31
+#, php-format
+msgid ""
+"You can see the list of requested features on the <a href=\"%s\">WP "
+"Portfolio page</a> on the <a href=\"%s\">WP Doctors</a> website. If you are "
+"prepared to wait, I do welcome feature ideas, which can be left on the <a "
+"href=\"%s\">WP Portfolio Support Forum on Wordpress.org</a>."
+msgstr ""
+
+#: lib/admin_only.inc.php:34
+msgid "ShrinkTheWeb - Thumbnail Service"
+msgstr ""
+
+#: lib/admin_only.inc.php:35
+#, php-format
+msgid ""
+"The plugin requires you to have a free (or paid) account with <a href=\"%s\" "
+"target=\"_blank\">ShrinkTheWeb (STW)</a> if you wish to generate the "
+"thumbnails <b>dynamically</b>. Please read <a href=\"%s\" target=\"_blank"
+"\">the first FAQ about account types</a> to learn more. If you have a paid "
+"account with STW, this plugin will automatically handle the caching of "
+"thumbnails to give your website fast loading times."
+msgstr ""
+
+#: lib/admin_only.inc.php:37
+msgid ""
+"However, you do not need an account with ShrinkTheWeb to use this plugin if "
+"you capture screenshots of your websites yourself. Just can capture your own "
+"screenshots as images, upload those images to your website, and then link to "
+"them in the Custom Thumbnail URL wp-portfolio</b> field."
+msgstr ""
+
+#: lib/admin_only.inc.php:39
+msgid "Portfolio Syntax"
+msgstr ""
+
+#: lib/admin_only.inc.php:40
+msgid ""
+"You can use the following syntax for wp-portfolio within any post or page."
+msgstr ""
+
+#: lib/admin_only.inc.php:42
+msgid "Individual websites"
+msgstr ""
+
+#: lib/admin_only.inc.php:44
+#, php-format
+msgid ""
+"To show just one website thumbnail, use %s. The number is the ID of the "
+"website, which can be found on the WP Portfolio summary page."
+msgstr ""
+
+#: lib/admin_only.inc.php:45
+#, php-format
+msgid "To show a specific selection of thumbnails, use their IDs like so: %s"
+msgstr ""
+
+#: lib/admin_only.inc.php:48 lib/admin_only.inc.php:1120
+msgid "Website Groups"
+msgstr ""
+
+#: lib/admin_only.inc.php:50
+#, php-format
+msgid "To show all groups, use %s"
+msgstr ""
+
+#: lib/admin_only.inc.php:51
+#, php-format
+msgid "To show just the group with an ID of 1, use %s"
+msgstr ""
+
+#: lib/admin_only.inc.php:52
+#, php-format
+msgid "To show groups with IDs of 1, 2 and 4, use %s"
+msgstr ""
+
+#: lib/admin_only.inc.php:55
+msgid "Paging (Showing a portfolio on several pages)"
+msgstr ""
+
+#: lib/admin_only.inc.php:57
+#, php-format
+msgid "To show all websites without any paging, just use %s as normal"
+msgstr ""
+
+#: lib/admin_only.inc.php:58
+#, php-format
+msgid "To show 3 websites per page, use %s"
+msgstr ""
+
+#: lib/admin_only.inc.php:59
+#, php-format
+msgid "To show 5 websites per page, use %s"
+msgstr ""
+
+#: lib/admin_only.inc.php:62
+msgid "Ordering By Date"
+msgstr ""
+
+#: lib/admin_only.inc.php:64
+#, php-format
+msgid ""
+"To order websites by the date they were added, showing newest first (so "
+"descending order) use %s. Group names are automatically hidden when ordering "
+"by date."
+msgstr ""
+
+#: lib/admin_only.inc.php:65
+#, php-format
+msgid ""
+"To order websites by the date they were added, showing oldest first (so "
+"ascending order) use %s. Group names are automatically hidden when ordering "
+"by date."
+msgstr ""
+
+#: lib/admin_only.inc.php:68
+msgid "Miscellaneous Options"
+msgstr ""
+
+#: lib/admin_only.inc.php:70
+#, php-format
+msgid ""
+"To hide the title/description of all groups shown in a portfolio for just a "
+"single post/page without affecting other posts/pages, just use %s"
+msgstr ""
+
+#: lib/admin_only.inc.php:71
+#, php-format
+msgid ""
+"To show the portfolio in reverse order, just use %s (The <code>desc=</code> "
+"is short for descending order)"
+msgstr ""
+
+#: lib/admin_only.inc.php:75 lib/admin_only.inc.php:742
+msgid "Uninstalling WP Portfolio"
+msgstr ""
+
+#: lib/admin_only.inc.php:76
+#, php-format
+msgid ""
+"If you're going to permanently uninstall WP Portfolio, you can also <a href="
+"\"%s\">remove all settings and data</a>."
+msgstr ""
+
+#: lib/admin_only.inc.php:79
+msgid "Portfolio Layout Templates"
+msgstr ""
+
+#: lib/admin_only.inc.php:81
+msgid "The default templates for the groups and websites below as a reference."
+msgstr ""
+
+#: lib/admin_only.inc.php:83
+msgid "Replace with the group name."
+msgstr ""
+
+#: lib/admin_only.inc.php:84
+msgid "Replace with the group description."
+msgstr ""
+
+#: lib/admin_only.inc.php:85
+msgid "Replace with the website name."
+msgstr ""
+
+#: lib/admin_only.inc.php:86
+msgid "Replace with the website url."
+msgstr ""
+
+#: lib/admin_only.inc.php:87
+msgid "Replace with the website description."
+msgstr ""
+
+#: lib/admin_only.inc.php:88
+msgid "Replace with the website thumbnail including the &lt;img&gt; tag."
+msgstr ""
+
+#: lib/admin_only.inc.php:89
+msgid "Replace with the website thumbnail URL (no HTML)."
+msgstr ""
+
+#: lib/admin_only.inc.php:90
+msgid "Replace with the custom field data."
+msgstr ""
+
+#: lib/admin_only.inc.php:97
+msgid "Group Template"
+msgstr ""
+
+#: lib/admin_only.inc.php:103
+msgid "Website Template"
+msgstr ""
+
+#: lib/admin_only.inc.php:109 lib/admin_only.inc.php:847
+msgid "Template CSS"
+msgstr ""
+
+#: lib/admin_only.inc.php:115 lib/admin_only.inc.php:859
+msgid "Widget CSS"
+msgstr ""
+
+#: lib/admin_only.inc.php:126
+msgid "Portfolio Paging Templates"
+msgstr ""
+
+#: lib/admin_only.inc.php:129
+msgid ""
+"The default templates specifically for the paging of websites (when there "
+"are more websites that you want to fit on a single page)."
+msgstr ""
+
+#: lib/admin_only.inc.php:131
+msgid "Replace with the current page number."
+msgstr ""
+
+#: lib/admin_only.inc.php:132
+msgid "Replace with the total number of pages."
+msgstr ""
+
+#: lib/admin_only.inc.php:133
+msgid ""
+"Replace with the start of the range of websites/thumbnails being shown on a "
+"particular page."
+msgstr ""
+
+#: lib/admin_only.inc.php:134
+msgid ""
+"Replace with the end of the range of websites/thumbnails being shown on a "
+"particular page."
+msgstr ""
+
+#: lib/admin_only.inc.php:135
+msgid "Replace with the total number of websites/thumbnails in the portfolio."
+msgstr ""
+
+#: lib/admin_only.inc.php:136
+msgid "Replace with the link to the previous page."
+msgstr ""
+
+#: lib/admin_only.inc.php:137
+msgid "Replace with the link to the next page."
+msgstr ""
+
+#: lib/admin_only.inc.php:138
+msgid "Replace with the list of pages, with each number being a link."
+msgstr ""
+
+#: lib/admin_only.inc.php:145
+msgid "Paging Template"
+msgstr ""
+
+#: lib/admin_only.inc.php:151 lib/admin_only.inc.php:853
+msgid "Paging CSS"
+msgstr ""
+
+#: lib/admin_only.inc.php:160
+msgid "Showing the Portfolio from PHP"
+msgstr ""
+
+#: lib/admin_only.inc.php:164 lib/admin_only.inc.php:238
+msgid "Parameters"
+msgstr ""
+
+#: lib/admin_only.inc.php:167
+#, php-format
+msgid ""
+"The comma separated list of groups to include. To show all groups, specify "
+"%1$s for %2$s. (<b>default</b> is %1$s)"
+msgstr ""
+
+#: lib/admin_only.inc.php:168 lib/admin_only.inc.php:242
+#, php-format
+msgid ""
+"The HTML template to use for rendering a single website (using the <a href="
+"\"%1$s#doc-layout\">template tags above</a>). Specify %2$s to use the "
+"website template stored in the settings. (<b>default</b> is %2$s, i.e. use "
+"template stored in settings.)"
+msgstr ""
+
+#: lib/admin_only.inc.php:169
+#, php-format
+msgid ""
+"The HTML template to use for rendering a group description (using the <a "
+"href=\"%1$s#doc-layout\">template tags above</a>). Specify %2$s to use the "
+"group template stored in the settings. To hide the group description, "
+"specify a single space character for %3$s. (<b>default</b> is %2$s, i.e. use "
+"template stored in settings.)"
+msgstr ""
+
+#: lib/admin_only.inc.php:170
+#, php-format
+msgid ""
+"The number of websites to show per page, set to %1$s or %2$s if you don't "
+"want to use paging.  (<b>default</b> is %1$s, i.e. don't do any paging.)"
+msgstr ""
+
+#: lib/admin_only.inc.php:171
+#, php-format
+msgid ""
+"If %1$s, show the websites in ascending order. If %2$s, show the websites in "
+"reverse order. (<b>default</b> is %1$s, i.e. ascending ordering.)"
+msgstr ""
+
+#: lib/admin_only.inc.php:172
+#, php-format
+msgid ""
+"Determine how to order the websites. (<b>default</b> is %s, i.e. normal "
+"ordering.)"
+msgstr ""
+
+#: lib/admin_only.inc.php:174
+#, php-format
+msgid "If %s, show the websites in normal group order."
+msgstr ""
+
+#: lib/admin_only.inc.php:175
+#, php-format
+msgid ""
+"If %s, show the websites ordered by date. If this mode is chosen, group "
+"names are automatically hidden."
+msgstr ""
+
+#: lib/admin_only.inc.php:183 lib/admin_only.inc.php:247
+msgid "Example 1 (using website template stored in settings)"
+msgstr ""
+
+#: lib/admin_only.inc.php:192 lib/admin_only.inc.php:256
+msgid "Example 2 (with custom templates)"
+msgstr ""
+
+#: lib/admin_only.inc.php:214
+msgid "Example 3 (using stored templates, but showing 3 websites per page)"
+msgstr ""
+
+#: lib/admin_only.inc.php:223
+msgid ""
+"Example 4 (using stored templates, but showing 4 websites per page, ordering "
+"by date, with the newest website first)"
+msgstr ""
+
+#: lib/admin_only.inc.php:236
+#, php-format
+msgid ""
+"You can show a random selection of your portfolio from within code by using "
+"the %s function. Please note that there is no group information shown when "
+"this function is used."
+msgstr ""
+
+#: lib/admin_only.inc.php:240
+#, php-format
+msgid ""
+"The comma separated list of groups to make a random selection from. To "
+"choose from all groups, specify %1$s for %2$s (<b>default</b> is %1$s)."
+msgstr ""
+
+#: lib/admin_only.inc.php:241
+#, php-format
+msgid ""
+"The number of websites to show in the random selection. (<b>default</b> is "
+"%s)"
+msgstr ""
+
+#: lib/admin_only.inc.php:289
+msgid "Settings saved."
+msgstr ""
+
+#: lib/admin_only.inc.php:315
+#, php-format
+msgid ""
+"Redirecting in %1$s seconds. Please click <a href=\"%2$s\">here</a> if you "
+"do not wish to wait."
+msgstr ""
+
+#: lib/admin_only.inc.php:345 wp-portfolio.php:261
+msgid "General Settings"
+msgstr ""
+
+#: lib/admin_only.inc.php:358
+#, php-format
+msgid ""
+"No %s settings were found, so it appears that the plugin has been "
+"uninstalled. Please <b>deactivate</b> and then <b>activate</b> the %s plugin "
+"again to fix this."
+msgstr ""
+
+#: lib/admin_only.inc.php:369
+#, php-format
+msgid ""
+"Are you sure you want to delete all %s settings and data? This action cannot "
+"be undone!"
+msgstr ""
+
+#: lib/admin_only.inc.php:369
+msgid "Yes, delete."
+msgstr ""
+
+#: lib/admin_only.inc.php:369
+msgid "NO!"
+msgstr ""
+
+#: lib/admin_only.inc.php:400
+msgid ""
+"The keys must only contain letters and numbers. Please check that they are "
+"correct."
+msgstr ""
+
+#: lib/admin_only.inc.php:407
+msgid "Upgrading WP Portfolio Tables..."
+msgstr ""
+
+#: lib/admin_only.inc.php:410
+#, php-format
+msgid "%s tables have successfully been upgraded."
+msgstr ""
+
+#: lib/admin_only.inc.php:445
+#, php-format
+msgid "%s tables have successfully been upgraded to UTF-8."
+msgstr ""
+
+#: lib/admin_only.inc.php:478
+#, php-format
+msgid ""
+"The cache location has successfully been changed. The new cache location is "
+"now:<br/><br/><code>%s</code>"
+msgstr ""
+
+#: lib/admin_only.inc.php:483
+msgid "The cache location has not changed, therefore there is nothing to do."
+msgstr ""
+
+#: lib/admin_only.inc.php:490
+msgid "STW Access Key ID"
+msgstr ""
+
+#: lib/admin_only.inc.php:492
+#, php-format
+msgid ""
+"The <a href=\"%s#doc-stw\">Shrink The Web</a> Access Key ID is around 15 "
+"characters."
+msgstr ""
+
+#: lib/admin_only.inc.php:495
+msgid "STW Secret Key"
+msgstr ""
+
+#: lib/admin_only.inc.php:497
+#, php-format
+msgid ""
+"The <a href=\"%s#doc-stw\">Shrink The Web</a> Secret Key is around 5-10 "
+"characters. This key is never shared, it is only stored in your settings and "
+"used to generate thumbnails for this website."
+msgstr ""
+
+#: lib/admin_only.inc.php:513
+msgid "Thumbnail Settings"
+msgstr ""
+
+#: lib/admin_only.inc.php:515
+msgid "STW Rendering Type"
+msgstr ""
+
+#: lib/admin_only.inc.php:518
+msgid "-- Select a rendering type --"
+msgstr ""
+
+#: lib/admin_only.inc.php:518
+msgid "Embedded"
+msgstr ""
+
+#: lib/admin_only.inc.php:518
+msgid "Cache Locally on your server"
+msgstr ""
+
+#: lib/admin_only.inc.php:519
+msgid ""
+"Small note: Caching is not supported for free accounts using a shared IP "
+"address (<a href=\"#\" target=\"_blank\">more details here</a>)."
+msgstr ""
+
+#: lib/admin_only.inc.php:526
+msgid "What thumbnail sizes do you want to use?"
+msgstr ""
+
+#: lib/admin_only.inc.php:528
+msgid "Standard STW Sizes"
+msgstr ""
+
+#: lib/admin_only.inc.php:528
+msgid "My own custom sizes"
+msgstr ""
+
+#: lib/admin_only.inc.php:532
+msgid "Custom Thumbnail Size (Width)"
+msgstr ""
+
+#: lib/admin_only.inc.php:535
+msgid ""
+"Specify your desired width for the custom thumbnail. STW will resize the "
+"thumbnail to be in a 4:3 ratio."
+msgstr ""
+
+#: lib/admin_only.inc.php:536
+msgid ""
+"This feature requires a STW Paid (Basic or Plus) account with custom "
+"thumbnail support."
+msgstr ""
+
+#: lib/admin_only.inc.php:542
+msgid "Micro (75 x 56)"
+msgstr ""
+
+#: lib/admin_only.inc.php:543
+msgid "Tiny (90 x 68)"
+msgstr ""
+
+#: lib/admin_only.inc.php:544
+msgid "Very Small (100 x 75)"
+msgstr ""
+
+#: lib/admin_only.inc.php:545
+msgid "Small (120 x 90)"
+msgstr ""
+
+#: lib/admin_only.inc.php:546
+msgid "Large (200 x 150)"
+msgstr ""
+
+#: lib/admin_only.inc.php:547
+msgid "Extra Large (320 x 240)"
+msgstr ""
+
+#: lib/admin_only.inc.php:549
+msgid "Thumbnail Size"
+msgstr ""
+
+#: lib/admin_only.inc.php:557 lib/admin_only.inc.php:558
+#: lib/admin_only.inc.php:559 lib/admin_only.inc.php:560
+#: lib/admin_only.inc.php:561 lib/admin_only.inc.php:562
+#: lib/admin_only.inc.php:563
+msgid "days"
+msgstr ""
+
+#: lib/admin_only.inc.php:564
+msgid "Never Expire Thumbnails"
+msgstr ""
+
+#: lib/admin_only.inc.php:567
+msgid "Number of Days to Cache Thumbnail"
+msgstr ""
+
+#: lib/admin_only.inc.php:571
+msgid ""
+"The number of days to hold thumbnails in the cache. Set to a longer time "
+"period if website homepages don't change very often"
+msgstr ""
+
+#: lib/admin_only.inc.php:575
+msgid "cURL (recommended)"
+msgstr ""
+
+#: lib/admin_only.inc.php:576
+msgid "fopen"
+msgstr ""
+
+#: lib/admin_only.inc.php:578
+msgid "Thumbnail Fetch Method"
+msgstr ""
+
+#: lib/admin_only.inc.php:582
+msgid ""
+"The type of HTTP call used to fetch thumbnails. fopen is usually less secure "
+"and disabled by most web hosts, hence why cURL is recommended."
+msgstr ""
+
+#: lib/admin_only.inc.php:586
+msgid "Match height of website thumbnails"
+msgstr ""
+
+#: lib/admin_only.inc.php:587
+msgid "Match width of website thumbnails"
+msgstr ""
+
+#: lib/admin_only.inc.php:588
+msgid ""
+"Ensure thumbnail is same size or smaller than website thumbnails (default)"
+msgstr ""
+
+#: lib/admin_only.inc.php:590
+msgid "Custom Thumbnail Scale Method"
+msgstr ""
+
+#: lib/admin_only.inc.php:595
+msgid ""
+"How custom thumbnails are scaled to match the size of other website "
+"thumbnails. This is mostly a matter of style. The thumbnails can match "
+"either:"
+msgstr ""
+
+#: lib/admin_only.inc.php:596
+msgid ""
+"a) <strong>the height</strong> of the website thumbnails (with the width "
+"resized to keep the scale of the original image)"
+msgstr ""
+
+#: lib/admin_only.inc.php:597
+msgid ""
+"b) <strong>the width</strong> of the website thumbnails  (with the height "
+"resized to keep the scale of the original image)"
+msgstr ""
+
+#: lib/admin_only.inc.php:598
+msgid ""
+"c) <strong>the width and the height</strong> of the website thumbnails, "
+"where the custom thumbnail is never larger than a website thumbnail, but "
+"still scaled correctly."
+msgstr ""
+
+#: lib/admin_only.inc.php:599
+msgid ""
+"After changing this option, it's recommended to clear the cache so that all "
+"custom thumbnails are sized correctly."
+msgstr ""
+
+#: lib/admin_only.inc.php:603
+msgid "Miscellaneous Settings"
+msgstr ""
+
+#: lib/admin_only.inc.php:606
+msgid "Enable Debug Mode"
+msgstr ""
+
+#: lib/admin_only.inc.php:609
+msgid ""
+"Enables logging of successful thumbnail requests too (all errors are logged "
+"regardless)."
+msgstr ""
+
+#: lib/admin_only.inc.php:613
+msgid "Show Credit Link"
+msgstr ""
+
+#: lib/admin_only.inc.php:615
+msgid "Creates a link back to WP Portfolio and to WPDoctors.co.uk"
+msgstr ""
+
+#: lib/admin_only.inc.php:616
+msgid ""
+"<strong>We've worked hard on this plugin, please consider keeping the link "
+"back to our website.</strong> It's the link back to my site that keeps this "
+"plugin free!"
+msgstr ""
+
+#: lib/admin_only.inc.php:623
+msgid "Server Compatibility Checker"
+msgstr ""
+
+#: lib/admin_only.inc.php:627
+msgid "PHP Version"
+msgstr ""
+
+#: lib/admin_only.inc.php:635
+msgid "WP Portfolio requires PHP 5 or above."
+msgstr ""
+
+#: lib/admin_only.inc.php:646
+msgid "Writeable Cache Folder"
+msgstr ""
+
+#: lib/admin_only.inc.php:648 lib/admin_only.inc.php:1984
+#: lib/admin_only.inc.php:1985
+msgid "Yes"
+msgstr ""
+
+#: lib/admin_only.inc.php:653 lib/admin_only.inc.php:1984
+#: lib/admin_only.inc.php:1985
+msgid "No"
+msgstr ""
+
+#: lib/admin_only.inc.php:656
+msgid "WP Portfolio requires a directory for the cache that's writeable."
+msgstr ""
+
+#: lib/admin_only.inc.php:666
+msgid "open_basedir Restriction"
+msgstr ""
+
+#: lib/admin_only.inc.php:668
+msgid "Not Set"
+msgstr ""
+
+#: lib/admin_only.inc.php:673
+msgid "Set"
+msgstr ""
+
+#: lib/admin_only.inc.php:676
+msgid ""
+"The PHP ini open_basedir setting can cause problems with fetching thumbnails."
+msgstr ""
+
+#: lib/admin_only.inc.php:687 lib/admin_only.inc.php:712
+msgid "Change Cache Location"
+msgstr ""
+
+#: lib/admin_only.inc.php:688
+msgid ""
+"You can either have the thumbnail cache stored in the <b>plugin directory</"
+"b> (which gets deleted when you upgrade the plugin), or you can have the "
+"thumbnail cache stored in the <b>wp-content directory</b> (which doesn't get "
+"deleted when you upgrade wp-portfolio). This is only useful if your "
+"thumbnails are set to never be updated and you don't want to lose the cached "
+"thumbnails."
+msgstr ""
+
+#: lib/admin_only.inc.php:690
+msgid "Plugin Location"
+msgstr ""
+
+#: lib/admin_only.inc.php:690 lib/admin_only.inc.php:693
+msgid "Currently Selected"
+msgstr ""
+
+#: lib/admin_only.inc.php:693
+msgid " Location"
+msgstr ""
+
+#: lib/admin_only.inc.php:701
+msgid "Plugin Directory (Recommended)"
+msgstr ""
+
+#: lib/admin_only.inc.php:702
+msgid "wp-content Directory"
+msgstr ""
+
+#: lib/admin_only.inc.php:705
+msgid "New Cache Location"
+msgstr ""
+
+#: lib/admin_only.inc.php:720
+msgid "Upgrade Tables"
+msgstr ""
+
+#: lib/admin_only.inc.php:721
+msgid ""
+"<p>If you're getting any errors relating to tables, you can force an upgrade "
+"of the database tables relating to WP Portfolio."
+msgstr ""
+
+#: lib/admin_only.inc.php:724
+msgid "Force Table Upgrade"
+msgstr ""
+
+#: lib/admin_only.inc.php:730
+msgid "Upgrade Tables to UTF-8 Codepage (Advanced)"
+msgstr ""
+
+#: lib/admin_only.inc.php:731
+msgid ""
+"As of V1.18, WP Portfolio uses UTF-8 as the default codepage for all text "
+"fields. Previously, for non Latin-based languages, the lack of UTF-8 support "
+"caused rendering issues with characters (such as using question marks and "
+"blocks for certain characters)."
+msgstr ""
+
+#: lib/admin_only.inc.php:732
+msgid ""
+"To upgrade to the new UTF-8 support, just click the button below. If you're "
+"<b>not experiencing problems</b> with website names and descriptions, then "
+"there's no need to click this button.</p>"
+msgstr ""
+
+#: lib/admin_only.inc.php:735
+msgid "Upgrade Codepage to UTF-8"
+msgstr ""
+
+#: lib/admin_only.inc.php:743
+#, php-format
+msgid ""
+"If you're going to permanently uninstall WP Portfolio, you can also <a href="
+"\"%s\">remove all settings and data</a>.</p>"
+msgstr ""
+
+#: lib/admin_only.inc.php:776
+msgid ""
+"No WP Portfolio settings were found, so it appears that the plugin has been "
+"uninstalled. Please <b>deactivate</b> and then <b>activate</b> the WP "
+"Portfolio plugin again to fix this."
+msgstr ""
+
+#: lib/admin_only.inc.php:802
+msgid "Website HTML Template"
+msgstr ""
+
+#: lib/admin_only.inc.php:804
+msgid "This is the template used to render each of the websites."
+msgstr ""
+
+#: lib/admin_only.inc.php:805 lib/admin_only.inc.php:812
+#, php-format
+msgid ""
+"A complete list of tags is available in the <a href=\"%s#doc-layout"
+"\">Portfolio Layout Templates</a> section in the documentation."
+msgstr ""
+
+#: lib/admin_only.inc.php:809
+msgid "Group HTML Template"
+msgstr ""
+
+#: lib/admin_only.inc.php:811
+msgid ""
+"This is the template used to render each of the groups that the websites "
+"belong to."
+msgstr ""
+
+#: lib/admin_only.inc.php:817
+msgid "Portfolio Paging Settings"
+msgstr ""
+
+#: lib/admin_only.inc.php:818
+msgid "Paging HTML Template"
+msgstr ""
+
+#: lib/admin_only.inc.php:820
+msgid "This is the template used to render the paging for the thumbnails."
+msgstr ""
+
+#: lib/admin_only.inc.php:821
+#, php-format
+msgid ""
+"A complete list of tags is available in the <a href=\"%s#doc-paging"
+"\">Portfolio Paging Templates</a> section in the documentation."
+msgstr ""
+
+#: lib/admin_only.inc.php:825
+msgid "Text for 'Previous' link"
+msgstr ""
+
+#: lib/admin_only.inc.php:827
+msgid ""
+"The text to use for the 'Previous' page link used in the thumbnail paging."
+msgstr ""
+
+#: lib/admin_only.inc.php:830
+msgid "Text for 'Next' link"
+msgstr ""
+
+#: lib/admin_only.inc.php:832
+msgid "The text to use for the 'Next' page link used in the thumbnail paging."
+msgstr ""
+
+#: lib/admin_only.inc.php:836
+msgid "Portfolio Stylesheet (CSS) Settings"
+msgstr ""
+
+#: lib/admin_only.inc.php:839
+msgid "Disable Plugin CSS"
+msgstr ""
+
+#: lib/admin_only.inc.php:841
+msgid "If ticked, don't use the WP Portfolio CSS below."
+msgstr ""
+
+#: lib/admin_only.inc.php:842
+msgid ""
+"Allows you to switch off the default CSS so that you can use CSS in your "
+"template CSS file."
+msgstr ""
+
+#: lib/admin_only.inc.php:843
+#, php-format
+msgid ""
+"<strong>Advanced Tip:</strong> Once you're happy with the styles, you should "
+"really move all the CSS below into your template %s. This is so that visitor "
+"browsers can cache the stylesheet and reduce loading times. Any CSS placed "
+"here will be injected into the template &lt;head&gt; tag, which is not the "
+"most efficient method of delivering CSS."
+msgstr ""
+
+#: lib/admin_only.inc.php:849
+msgid "This is the CSS code used to style the portfolio."
+msgstr ""
+
+#: lib/admin_only.inc.php:855
+msgid ""
+"This is the CSS code used to style the paging area if you are showing your "
+"portfolio on several pages."
+msgstr ""
+
+#: lib/admin_only.inc.php:861
+msgid "This is the CSS code used to style the websites in the widget area."
+msgstr ""
+
+#: lib/admin_only.inc.php:881 wp-portfolio.php:267
+msgid "Refresh Thumbnails"
+msgstr ""
+
+#: lib/admin_only.inc.php:898
+msgid "Thumbnail cache has now been emptied."
+msgstr ""
+
+#: lib/admin_only.inc.php:907
+msgid "Refresh schedule updated."
+msgstr ""
+
+#: lib/admin_only.inc.php:917
+msgid "The automatic refresh of thumbnails has been disabled."
+msgstr ""
+
+#: lib/admin_only.inc.php:931
+msgid "Request a Thumbnail Recapture from STW"
+msgstr ""
+
+#: lib/admin_only.inc.php:932
+msgid ""
+"For all of your <b>website thumbnails generated by STW</b>, this button will "
+"ask STW to <b>update the thumbnail of the webpage</b>. STW will attempt to "
+"refresh their thumbnails as quickly as possible, but this does not happen "
+"instantly."
+msgstr ""
+
+#: lib/admin_only.inc.php:933
+msgid ""
+"You may find that the thumbnails are <b>re-cached on your website before "
+"they've been regenerated</b> by STW. Therefore you can just click on the "
+"<b>'Clear Thumbnail Cache'</b> button below to trigger the plugin to fetch "
+"the latest thumbnail versions from STW."
+msgstr ""
+
+#: lib/admin_only.inc.php:936
+msgid "Refresh All Website Thumbnails"
+msgstr ""
+
+#: lib/admin_only.inc.php:946
+msgid "Request Thumbnail Recaptures from STW Automatically"
+msgstr ""
+
+#: lib/admin_only.inc.php:948
+msgid ""
+"Use this option to automatically schedule updates to happen automatically. "
+"Checks are made every day for thumbnails <b>older than the setting below</"
+"b>. So if you select <b>weekly</b> as how often thumbnails will be checked, "
+"then when the checker executes, <b>any thumbnail older than 1 week</b> will "
+"be refreshed. Any thumbnails that were refreshed less than a week ago will "
+"be ignored until they are a week old."
+msgstr ""
+
+#: lib/admin_only.inc.php:953
+#, php-format
+msgid "The next check for thumbnails needing an update is in about <b>%s </b>."
+msgstr ""
+
+#: lib/admin_only.inc.php:956
+msgid "Automated checks are currently <b>disabled</b>."
+msgstr ""
+
+#: lib/admin_only.inc.php:962
+msgid "Set Refresh Schedule"
+msgstr ""
+
+#: lib/admin_only.inc.php:964
+msgid "How often should thumbnails be refreshed?"
+msgstr ""
+
+#: lib/admin_only.inc.php:966
+msgid "Never"
+msgstr ""
+
+#: lib/admin_only.inc.php:967
+msgid "Daily"
+msgstr ""
+
+#: lib/admin_only.inc.php:968
+msgid "Weekly"
+msgstr ""
+
+#: lib/admin_only.inc.php:969
+msgid "Monthly"
+msgstr ""
+
+#: lib/admin_only.inc.php:970
+msgid "Quarterly"
+msgstr ""
+
+#: lib/admin_only.inc.php:984 lib/admin_only.inc.php:989
+msgid "Clear Thumbnail Cache"
+msgstr ""
+
+#: lib/admin_only.inc.php:985
+msgid ""
+"Clearing the thumbnail cache will <b>remove all thumbnails</b> that have "
+"been fetched from STW or that have been created from your custom thumbnails."
+msgstr ""
+
+#: lib/admin_only.inc.php:986
+msgid ""
+"The thumbnails will be <b>recreated automatically</b> as they are displayed "
+"on your website."
+msgstr ""
+
+#: lib/admin_only.inc.php:1014
+msgid "Debug logs have successfully been emptied."
+msgstr ""
+
+#: lib/admin_only.inc.php:1026
+msgid "Refresh Logs"
+msgstr ""
+
+#: lib/admin_only.inc.php:1027
+msgid "Clear Logs"
+msgstr ""
+
+#: lib/admin_only.inc.php:1045
+#, php-format
+msgid "Showing a total of <b>%d</b> log messages.</div>"
+msgstr ""
+
+#: lib/admin_only.inc.php:1047
+msgid ""
+"All errors are <b>cached for 12 hours</b> so that your thumbnail allowance "
+"with STW does not get used up if you have persistent errors."
+msgstr ""
+
+#: lib/admin_only.inc.php:1048
+msgid ""
+"If you've <b>had errors</b>, and you've <b>now fixed them</b>, you can click "
+"on the '<b>Clear Logs</b>' button on the right to <b>flush the error cache</"
+"b> and re-attempt to fetch a thumbnail."
+msgstr ""
+
+#: lib/admin_only.inc.php:1050
+#, php-format
+msgid ""
+"To get help with errors, you can either check the plugin FAQ or check the <a "
+"href=\"%s\" target=\"_blank\">STW Knowledgebase</a>."
+msgstr ""
+
+#: lib/admin_only.inc.php:1055 lib/admin_only.inc.php:1200
+#: lib/admin_only.inc.php:1893
+msgid "ID"
+msgstr ""
+
+#: lib/admin_only.inc.php:1059
+msgid "Result"
+msgstr ""
+
+#: lib/admin_only.inc.php:1063
+msgid "Requested URL"
+msgstr ""
+
+#: lib/admin_only.inc.php:1067
+msgid "Type"
+msgstr ""
+
+#: lib/admin_only.inc.php:1071
+msgid "Request Date"
+msgstr ""
+
+#: lib/admin_only.inc.php:1075
+msgid "Detail"
+msgstr ""
+
+#: lib/admin_only.inc.php:1086
+msgid "Success"
+msgstr ""
+
+#: lib/admin_only.inc.php:1086
+msgid "Error"
+msgstr ""
+
+#: lib/admin_only.inc.php:1099
+msgid "There are currently no debug logs to show."
+msgstr ""
+
+#: lib/admin_only.inc.php:1142 lib/admin_only.inc.php:1597
+#, php-format
+msgid ""
+"Sorry, but no group with that ID could be found. Please click <a href=\"%s"
+"\">here</a> to return to the list of groups."
+msgstr ""
+
+#: lib/admin_only.inc.php:1160
+#, php-format
+msgid ""
+"Sorry, but there needs to be at least 1 group in the portfolio. Please add a "
+"new group before deleting %s"
+msgstr ""
+
+#: lib/admin_only.inc.php:1169
+msgid "Group was successfully deleted."
+msgstr ""
+
+#: lib/admin_only.inc.php:1172
+msgid ""
+"Sorry, but an unknown error occured whist trying to delete the selected "
+"group from the portfolio."
+msgstr ""
+
+#: lib/admin_only.inc.php:1177
+#, php-format
+msgid ""
+"Are you sure you want to delete the group '%1$s' from your portfolio?<br/"
+"><br/> <a href=\"%2$s\">Yes, delete.</a> &nbsp; <a href=\"%3$s\">NO!</a>"
+msgstr ""
+
+#: lib/admin_only.inc.php:1204
+msgid "Name"
+msgstr ""
+
+#: lib/admin_only.inc.php:1208
+msgid "Description"
+msgstr ""
+
+#: lib/admin_only.inc.php:1211
+msgid "# Websites"
+msgstr ""
+
+#: lib/admin_only.inc.php:1215 lib/admin_only.inc.php:1925
+msgid "Ordering"
+msgstr ""
+
+#: lib/admin_only.inc.php:1219 lib/admin_only.inc.php:1933
+msgid "Action"
+msgstr ""
+
+#: lib/admin_only.inc.php:1224
+msgid ""
+"The websites will be rendered in groups in the order shown in the table."
+msgstr ""
+
+#: lib/admin_only.inc.php:1228
+#, php-format
+msgid "Show websites only in the '%s' group\">"
+msgstr ""
+
+#: lib/admin_only.inc.php:1240 lib/admin_only.inc.php:1996
+msgid "Delete"
+msgstr ""
+
+#: lib/admin_only.inc.php:1241 lib/admin_only.inc.php:1809
+#: lib/admin_only.inc.php:1810 lib/admin_only.inc.php:1942
+#: lib/admin_only.inc.php:1994
+msgid "Edit"
+msgstr ""
+
+#: lib/admin_only.inc.php:1255
+msgid "There are currently no groups in the portfolio."
+msgstr ""
+
+#: lib/admin_only.inc.php:1286 lib/admin_only.inc.php:1581
+msgid "Add New"
+msgstr ""
+
+#: lib/admin_only.inc.php:1288 lib/admin_only.inc.php:1583
+msgid "Modify"
+msgstr ""
+
+#: lib/admin_only.inc.php:1296 lib/admin_only.inc.php:1550
+msgid "Website Details"
+msgstr ""
+
+#: lib/admin_only.inc.php:1302
+#, php-format
+msgid ""
+"Sorry, but no website with that ID could be found. Please click <a href=\"%s"
+"\">here</a> to return to the list of websites."
+msgstr ""
+
+#: lib/admin_only.inc.php:1349
+msgid ""
+"Please check that you have completed the site name, url and description "
+"fields."
+msgstr ""
+
+#: lib/admin_only.inc.php:1354
+msgid "Sorry, but the custom field is limited to a maximum of 255 characters."
+msgstr ""
+
+#: lib/admin_only.inc.php:1367
+msgid ""
+"Sorry, but the 'Date Added' date format was not recognised. Please enter a "
+"date in the format <em>'yyyy-mm-dd hh:mm:ss'</em>."
+msgstr ""
+
+#: lib/admin_only.inc.php:1407
+msgid "Website details successfully updated."
+msgstr ""
+
+#: lib/admin_only.inc.php:1415
+msgid "Website details successfully added."
+msgstr ""
+
+#: lib/admin_only.inc.php:1435 lib/admin_only.inc.php:1676
+msgid ""
+"Sorry, but unfortunately there were some errors. Please fix the errors and "
+"try again."
+msgstr ""
+
+#: lib/admin_only.inc.php:1451
+msgid "Website Name"
+msgstr ""
+
+#: lib/admin_only.inc.php:1453
+msgid "The proper name of the website."
+msgstr ""
+
+#: lib/admin_only.inc.php:1453 lib/admin_only.inc.php:1458
+#: lib/admin_only.inc.php:1463
+msgid "(Required)"
+msgstr ""
+
+#: lib/admin_only.inc.php:1456
+msgid "Website URL"
+msgstr ""
+
+#: lib/admin_only.inc.php:1458
+msgid "The URL for the website, including the leading"
+msgstr ""
+
+#: lib/admin_only.inc.php:1461
+msgid "Website Description"
+msgstr ""
+
+#: lib/admin_only.inc.php:1463
+msgid "The description of your website. HTML is permitted."
+msgstr ""
+
+#: lib/admin_only.inc.php:1480
+msgid "The group you want to assign this website to."
+msgstr ""
+
+#: lib/admin_only.inc.php:1483
+msgid "Show Advanced Settings"
+msgstr ""
+
+#: lib/admin_only.inc.php:1485
+msgid "Show Website?"
+msgstr ""
+
+#: lib/admin_only.inc.php:1486
+msgid "Show Website"
+msgstr ""
+
+#: lib/admin_only.inc.php:1486
+msgid "Hide Website"
+msgstr ""
+
+#: lib/admin_only.inc.php:1488
+msgid ""
+"By changing this option, you can show or hide a website from the portfolio."
+msgstr ""
+
+#: lib/admin_only.inc.php:1491
+msgid "Show Link?"
+msgstr ""
+
+#: lib/admin_only.inc.php:1492
+msgid "Show Link"
+msgstr ""
+
+#: lib/admin_only.inc.php:1492
+msgid "Hide Link"
+msgstr ""
+
+#: lib/admin_only.inc.php:1494
+msgid ""
+"With this option, you can choose whether or not to display the URL to the "
+"website."
+msgstr ""
+
+#: lib/admin_only.inc.php:1497
+msgid "Date Website Added"
+msgstr ""
+
+#: lib/admin_only.inc.php:1499
+msgid ""
+"Here you can adjust the date in which the website was added to the "
+"portfolio. This is useful if you're adding items retrospectively. (valid "
+"format is yyyy-mm-dd hh:mm:ss)"
+msgstr ""
+
+#: lib/admin_only.inc.php:1502
+msgid "Website Ordering"
+msgstr ""
+
+#: lib/admin_only.inc.php:1504
+msgid ""
+"The number to use for ordering the websites. Websites are rendered in "
+"ascending order, first by this order value (lowest value first), then by "
+"website name."
+msgstr ""
+
+#: lib/admin_only.inc.php:1505
+msgid ""
+"e.g. Websites (A, B, C, D) with ordering (50, 100, 0, 50) will be rendered "
+"as (C, A, D, B)."
+msgstr ""
+
+#: lib/admin_only.inc.php:1506
+msgid ""
+"If all websites have 0 for ordering, then the websites are rendered in "
+"alphabetical order by name."
+msgstr ""
+
+#: lib/admin_only.inc.php:1510
+msgid "Custom Thumbnail URL"
+msgstr ""
+
+#: lib/admin_only.inc.php:1513
+msgid ""
+"If specified, the URL of a custom thumbnail to use <em>instead</em> of the "
+"screenshot of the URL above."
+msgstr ""
+
+#: lib/admin_only.inc.php:1514
+msgid "The image URL must include the leading <em>http://</em>, e.g."
+msgstr ""
+
+#: lib/admin_only.inc.php:1515
+msgid ""
+"Leave this field blank to use an automatically generated screenshot of the "
+"website specified above."
+msgstr ""
+
+#: lib/admin_only.inc.php:1516
+msgid ""
+"Custom thumbnails are automatically resized to match the size of the other "
+"thumbnails."
+msgstr ""
+
+#: lib/admin_only.inc.php:1519 lib/admin_only.inc.php:1974
+msgid "Custom Field"
+msgstr ""
+
+#: lib/admin_only.inc.php:1519 lib/admin_only.inc.php:1530
+msgid "Advanced Feature"
+msgstr ""
+
+#: lib/admin_only.inc.php:1522
+#, php-format
+msgid ""
+"Allows you to specify a value that is substituted into the <code><b>%s</b></"
+"code> field. This can be any value. Examples of what you could use the "
+"custom field for include:"
+msgstr ""
+
+#: lib/admin_only.inc.php:1523
+msgid "Affiliate URLs for the actual URL that visitors click on."
+msgstr ""
+
+#: lib/admin_only.inc.php:1524
+msgid ""
+"Information as to the type of work a website relates to (e.g. design work, "
+"SEO, web development)."
+msgstr ""
+
+#: lib/admin_only.inc.php:1529
+msgid "Use Specific Page Capture"
+msgstr ""
+
+#: lib/admin_only.inc.php:1531
+msgid "STW Paid Account Only"
+msgstr ""
+
+#: lib/admin_only.inc.php:1532
+msgid "No - Homepage Only"
+msgstr ""
+
+#: lib/admin_only.inc.php:1532
+msgid "Yes - Show Specific Page"
+msgstr ""
+
+#: lib/admin_only.inc.php:1534
+msgid ""
+"Requires Shrink The Web 'Specific Page Capture' Paid (Basic or Plus) feature."
+msgstr ""
+
+#: lib/admin_only.inc.php:1535
+msgid ""
+"If enabled show internal web page rather than website's homepage. If in "
+"doubt, select <b>'No - Homepage Only'</b>."
+msgstr ""
+
+#: lib/admin_only.inc.php:1550 lib/admin_only.inc.php:1722
+msgid "Update"
+msgstr ""
+
+#: lib/admin_only.inc.php:1550 lib/admin_only.inc.php:1722
+msgid "Add"
+msgstr ""
+
+#: lib/admin_only.inc.php:1592
+msgid " Group Details"
+msgstr ""
+
+#: lib/admin_only.inc.php:1630
+msgid ""
+"Please check that you have completed the group name and description fields."
+msgstr ""
+
+#: lib/admin_only.inc.php:1656
+msgid "Group details successfully updated."
+msgstr ""
+
+#: lib/admin_only.inc.php:1663
+msgid "Group details successfully added."
+msgstr ""
+
+#: lib/admin_only.inc.php:1692
+msgid "Group Name"
+msgstr ""
+
+#: lib/admin_only.inc.php:1694
+msgid "The name for this group of websites."
+msgstr ""
+
+#: lib/admin_only.inc.php:1697
+msgid "Group Description"
+msgstr ""
+
+#: lib/admin_only.inc.php:1699
+msgid "The description of your group. HTML is permitted."
+msgstr ""
+
+#: lib/admin_only.inc.php:1703
+msgid "Group Order"
+msgstr ""
+
+#: lib/admin_only.inc.php:1705
+msgid ""
+"The number to use for ordering the groups. Groups are rendered in ascending "
+"order, first by this order value (lowest value first), then by group name."
+msgstr ""
+
+#: lib/admin_only.inc.php:1706
+msgid ""
+"e.g. Groups (A, B, C, D) with ordering (50, 100, 0, 50) will be rendered as "
+"(C, A, D, B)."
+msgstr ""
+
+#: lib/admin_only.inc.php:1707
+msgid ""
+"If all groups have 0 for ordering, then the groups are rendered in "
+"alphabetical order."
+msgstr ""
+
+#: lib/admin_only.inc.php:1722
+msgid "Group Details"
+msgstr ""
+
+#: lib/admin_only.inc.php:1743
+msgid "Summary of Websites in your Portfolio"
+msgstr ""
+
+#: lib/admin_only.inc.php:1773
+msgid "Website was successfully deleted."
+msgstr ""
+
+#: lib/admin_only.inc.php:1776
+msgid ""
+"Sorry, but an unknown error occured whist trying to delete the selected "
+"website from the portfolio."
+msgstr ""
+
+#: lib/admin_only.inc.php:1781
+#, php-format
+msgid ""
+"Are you sure you want to delete \"%1$s\" from your portfolio?<br/><br/> <a "
+"href=\"%2$s\">Yes, delete.</a> &nbsp; <a href=\"%3$s\">NO!</a>"
+msgstr ""
+
+#: lib/admin_only.inc.php:1812
+#, php-format
+msgid "The website '%s' was successfully copied to '%s'"
+msgstr ""
+
+#: lib/admin_only.inc.php:1868
+#, php-format
+msgid ""
+"Showing <strong>%s</strong> websites in the '%s' group (<a href=\"%s\" class="
+"\"showall\">or Show All</a>). To only show the websites in this group, use %s"
+msgstr ""
+
+#: lib/admin_only.inc.php:1870
+#, php-format
+msgid "Showing <strong>%s</strong> websites in the portfolio."
+msgstr ""
+
+#: lib/admin_only.inc.php:1878
+msgid "Sort by:"
+msgstr ""
+
+#: lib/admin_only.inc.php:1879
+#, php-format
+msgid ""
+"<a href=\"%s\" title=\"Sort websites in the order you'll see them within "
+"your portfolio.\">Normal Ordering</a>"
+msgstr ""
+
+#: lib/admin_only.inc.php:1881
+#, php-format
+msgid "<a href=\"%s\" title=\"Sort the websites by name.\">Name</a>"
+msgstr ""
+
+#: lib/admin_only.inc.php:1883
+#, php-format
+msgid "<a href=\"%s\" title=\"Sort the websites by URL.\">URL</a>"
+msgstr ""
+
+#: lib/admin_only.inc.php:1885
+#, php-format
+msgid ""
+"<a href=\"%s\" title=\"Sort the websites by the date that the websites were "
+"added.\">Date Added</a>"
+msgstr ""
+
+#: lib/admin_only.inc.php:1897
+msgid "Thumbnail"
+msgstr ""
+
+#: lib/admin_only.inc.php:1901
+msgid "Site Name"
+msgstr ""
+
+#: lib/admin_only.inc.php:1905
+msgid "URL"
+msgstr ""
+
+#: lib/admin_only.inc.php:1909
+msgid "Date Added"
+msgstr ""
+
+#: lib/admin_only.inc.php:1913
+msgid "Custom Info"
+msgstr ""
+
+#: lib/admin_only.inc.php:1917
+msgid "Visible?"
+msgstr ""
+
+#: lib/admin_only.inc.php:1921
+msgid "Link Displayed?"
+msgstr ""
+
+#: lib/admin_only.inc.php:1929
+msgid "Group"
+msgstr ""
+
+#: lib/admin_only.inc.php:1941
+msgid "Visit the website"
+msgstr ""
+
+#: lib/admin_only.inc.php:1957
+msgid "Open custom thumbnail in a new window"
+msgstr ""
+
+#: lib/admin_only.inc.php:1957
+msgid "View Image"
+msgstr ""
+
+#: lib/admin_only.inc.php:1970
+msgid "Custom Thumb"
+msgstr ""
+
+#: lib/admin_only.inc.php:1986
+#, php-format
+msgid "Show websites only in the '%s' group"
+msgstr ""
+
+#: lib/admin_only.inc.php:1990
+msgid "Force a refresh of the thumbnail"
+msgstr ""
+
+#: lib/admin_only.inc.php:1990
+msgid "Refresh"
+msgstr ""
+
+#: lib/admin_only.inc.php:1995
+msgid "Duplicate this website"
+msgstr ""
+
+#: lib/admin_only.inc.php:1995
+msgid "Duplicate"
+msgstr ""
+
+#: lib/admin_only.inc.php:1996
+msgid "Delete this website..."
+msgstr ""
+
+#: lib/admin_only.inc.php:2013
+msgid "There are currently no websites in the portfolio."
+msgstr ""
+
+#: lib/utils.inc.php:243
+msgid "Starting thumbnail refresh..."
+msgstr ""
+
+#: lib/utils.inc.php:244
+#, php-format
+msgid ""
+"You have <b>%d items in your portfolio</b>, of which <b>%d are websites that "
+"use STW</b> for thumbnails."
+msgstr ""
+
+#: lib/utils.inc.php:294
+msgid "No websites need updating currently."
+msgstr ""
+
+#: lib/utils.inc.php:304
+#, php-format
+msgid "Refreshing <b>%s</b>..."
+msgstr ""
+
+#: lib/utils.inc.php:316
+#, php-format
+msgid "Refreshed. (%.1f%% complete)"
+msgstr ""
+
+#: lib/utils.inc.php:322
+msgid "Refresh all done."
+msgstr ""
+
+#: lib/widget.inc.php:115
+msgid "Title:"
+msgstr ""
+
+#: lib/widget.inc.php:122
+msgid "Description:"
+msgstr ""
+
+#: lib/widget.inc.php:129
+msgid "List of Groups to include:"
+msgstr ""
+
+#: lib/widget.inc.php:137
+msgid "Number of Websites to show:"
+msgstr ""
+
+#: lib/widget.inc.php:143
+msgid "Ordering Method:"
+msgstr ""
+
+#: lib/widget.inc.php:158
+msgid "Layout HTML:"
+msgstr ""
+
+#: lib/widget.inc.php:158
+msgid "Required"
+msgstr ""
+
+#: lib/widget.inc.php:160
+msgid "Template Documentation"
+msgstr ""
+
+#: lib/widget.inc.php:165
+msgid "Custom CSS ID:"
+msgstr ""
+
+#: wp-portfolio.php:106
+msgid "Previous"
+msgstr ""
+
+#: wp-portfolio.php:107
+msgid "Next"
+msgstr ""
+
+#: wp-portfolio.php:254
+msgid "Modify Website"
+msgstr ""
+
+#: wp-portfolio.php:255
+msgid "Modify Group"
+msgstr ""
+
+#: wp-portfolio.php:256
+msgid "Groups"
+msgstr ""
+
+#: wp-portfolio.php:262
+msgid "Layout Settings"
+msgstr ""
+
+#: wp-portfolio.php:272
+msgid "Documentation"
+msgstr ""
+
+#: wp-portfolio.php:280
+msgid "Error Logs"
+msgstr ""
+
+#: wp-portfolio.php:654
+msgid "Deleted WP Portfolio database entries."
+msgstr ""
+
+#: wp-portfolio.php:714
+#, php-format
+msgid "Portfolio item <b>ID %d</b> does not exist."
+msgstr ""
+
+#: wp-portfolio.php:1143
+#, php-format
+msgid "Created using %s by the %s</div>"
+msgstr ""

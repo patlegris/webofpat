@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/wp-content/plugins/updraftplus/vendor/psr/log" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/wp-content/plugins/updraftplus/vendor/eher/oauth/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/wp-content/plugins/updraftplus/vendor/rackspace/php-opencloud/lib" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/wp-content/themes/Avada/includes/recaptcha/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/wp-content/plugins/updraftplus/vendor/guzzle/guzzle/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/wp-content/plugins/updraftplus/vendor/aws/aws-sdk-php/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/wp-content/plugins/wordpress-seo/vendor/xrstf/composer-php52/lib" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

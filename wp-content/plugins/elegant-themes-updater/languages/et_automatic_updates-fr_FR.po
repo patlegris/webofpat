@@ -1,0 +1,134 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Elegant Themes Updater\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-09-22 08:44+0100\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Arnaud Jaegers <arnaud.jaegers@infomaniak.ch>\n"
+"Language-Team: ElegantThemes\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: _x;_e;__;esc_html__;esc_html_e;esc_attr__;esc_attr_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Generator: Poedit 1.6.9\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: ..\n"
+
+#: ../elegant-themes-updater.php:46
+#, php-format
+msgid "%s is a singleton class and you cannot create a second instance."
+msgstr "%s is a singleton class and you cannot create a second instance."
+
+#: ../elegant-themes-updater.php:112
+#, php-format
+msgid ""
+"<div class=\"error\"><p><strong>Your Elegant Themes Account Has Expired!</"
+"strong> You must renew your account to retain access to important theme "
+"updates. To ensure security and compatibility, it is important to always "
+"keep your themes up-to-date.</p><p><a href=\"https://www.elegantthemes.com/"
+"cgi-bin/members/manage.cgi\" class=\"button\" target=\"_blank\">Renew</"
+"a>&nbsp;&nbsp;<a href=\"%1$s\" class=\"button\">Re-Validate</a></p></div>"
+msgstr ""
+"<div class=\"error\"><p><strong>Votre compte Elegant Themes a expiré!</"
+"strong> Vous devez renouveler votre compte pour conserver l'accès aux mises "
+"à jour importantes de thème. Pour assurer la sécurité et la compatibilité, "
+"il est important de toujours garder vos thèmes mis à jour.</p><p><a href="
+"\"https://www.elegantthemes.com/cgi-bin/members/manage.cgi\" class=\"button"
+"\" target=\"_blank\">Renouveler</a>&nbsp;&nbsp;<a href=\"%1$s\" class="
+"\"button\">Valider à nouveau</a></p></div>"
+
+#: ../elegant-themes-updater.php:244
+#, php-format
+msgid ""
+"There is a new version of %1$s available. <a href=\"%2$s\" class=\"thickbox"
+"\" title=\"%1$s\">View version %3$s details</a>."
+msgstr ""
+"Il s'agit d'une nouvelle version de %1$s disponible. <a href=\"%2$s\"  class="
+"\"thickbox\" title=\"%1$s\">Voir les détails de la version %3$s</a>."
+
+#: ../elegant-themes-updater.php:249
+#, php-format
+msgid ""
+"Your Elegant Themes username or <a href=\"https://www.elegantthemes.com/"
+"members-area/api-key.php\" target=\"_blank\">API Key</a> is incorrect. "
+"Please update your details in the <a href=\"%1$s\" target=\"_blank"
+"\">Settings > General</a> tab. Valid credentials are required to update your "
+"theme."
+msgstr ""
+"Votre nom d'utilisateur Elegant Themes ou <a href=\"https://www."
+"elegantthemes.com/members-area/api-key.php\" target=\"_blank\"> clé API</a> "
+"est incorrect. Veuillez mettre à jour vos coordonnées dans la page <a href="
+"\"%1$s\" target=\"_blank\">Paramètres > Général</a>. Les informations "
+"d'identification doivent être valides pour garder à jour vos thèmes."
+
+#: ../elegant-themes-updater.php:254
+msgid ""
+"Your Elegant Themes account has expired! You must <a href=\"https://www."
+"elegantthemes.com/cgi-bin/members/manage.cgi\" target=\"_blank\">renew your "
+"account</a> before updating your theme. To ensure compatibility and "
+"security, it is extremely important to keep your themes up-to-date."
+msgstr ""
+"Le compte Elegant Themes a expiré! Vous devez <a href=\"https://www."
+"elegantthemes.com/cgi-bin/members/manage.cgi\" target=\"_blank\">renouveler "
+"votre compte</a> avant la mise à jour de votre thème. Pour assurer la "
+"compatibilité et la sécurité, il est extrêmement important de garder vos "
+"thèmes à jour."
+
+#: ../elegant-themes-updater.php:270
+msgid "Settings"
+msgstr "Réglages"
+
+#: ../elegant-themes-updater.php:306
+msgid "Elegant Themes Automatic Update Settings"
+msgstr "Paramètres de mise à jour automatique Elegant Themes"
+
+#: ../elegant-themes-updater.php:313
+msgid "Credentials"
+msgstr "Authentification"
+
+#: ../elegant-themes-updater.php:322
+msgid "Username"
+msgstr "Identifiant"
+
+#: ../elegant-themes-updater.php:331
+msgid "Personal API Key"
+msgstr "Clé API personnelle"
+
+#: ../elegant-themes-updater.php:349
+msgid ""
+"Elegant Themes allows you to <a target=\"_blank\" href=\"https://www."
+"elegantthemes.com/members-area/documentation.html#update\">update your "
+"themes</a> via your WordPress Dashboard instead of having to manually "
+"download and upload the theme files. Before automatic updates can be "
+"enabled, you must first authenticate your Elegant Themes account below."
+msgstr ""
+"Elegant Themes Updater vous permet de <a target=\"_blank\" href=\"https://"
+"www.elegantthemes.com/members-area/documentation.html#update\"> mettre à "
+"jour vos thèmes</a> via votre tableau de bord WordPress au lieu d'avoir à "
+"télécharger et envoyer des fichiers de thème manuellement. Pour que les "
+"mises à jours automatiques soient activées, vous devez d'abord vous "
+"authentifier ci-dessous via un compte Elegant Themes."
+
+#: ../elegant-themes-updater.php:436
+msgid "Use Mon Site Facile credentials"
+msgstr "Utiliser l'authentification de Mon Site Facile"
+
+#: ../elegant-themes-updater.php:437
+msgid "Use Personal credentials"
+msgstr "Utiliser une authentification personnelle"
+
+#: ../elegant-themes-updater.php:452
+msgid "Please enter your ElegantThemes.com username."
+msgstr "Veuillez entrer votre nom d'utilisateur ElegantThemes.com."
+
+#: ../elegant-themes-updater.php:466
+msgid ""
+"Enter your <a href=\"https://www.elegantthemes.com/members-area/api-key.php"
+"\" target=\"_blank\">Elegant Themes API Key</a> here."
+msgstr ""
+"Entrez votre <a href=\"https://www.elegantthemes.com/members-area/api-key.php"
+"\" target=\"_blank\">Clé API Elegant Themes</a> ici."

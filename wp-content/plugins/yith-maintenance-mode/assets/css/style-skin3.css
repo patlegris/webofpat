@@ -1,0 +1,190 @@
+/**
+ * The style of the maintenance mode page - Skin3
+ */
+
+div.container {
+    width: 1070px;
+    margin: 60px auto 0;
+
+}
+
+.logo {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    width: 270px;
+    background: rgba(215,215,215,0.4);
+    padding-top: 106px;
+    padding-bottom: 82px;
+    float: left;
+}
+
+.logo img{border: 0;}
+
+.logo .tagline {
+    text-decoration: none;
+    margin-top: 9px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 18px;
+}
+
+p, li {
+    margin-bottom: 18px;
+    line-height: 21px;
+}
+
+.yit-box {
+    clear: both;
+    margin-right: -1px;
+    margin-bottom: 130px;
+    text-align: left;
+    /*padding: 24px 40px;*/
+    border-collapse: separate;
+    position: relative;
+    display: block;
+    width: 572px;
+    display: inline-block;
+    padding-left: 229px;
+}
+
+.yit-box .message{
+    display: inline-block;
+    background: transparent;
+    padding-top: 150px;
+}
+
+.yit-box h3 {
+    text-align: center;
+    padding: 31px 0px;
+    margin: 0;
+    letter-spacing: -1px;
+    background-color: transparent;
+    line-height: 29px;
+}
+
+.yit-box .message p{margin-bottom: 30px;}
+
+/* newsletter form */
+form.newsletter, form.newsletter fieldset {
+    border: 0;
+    padding: 0;
+    position: relative;
+}
+
+form.newsletter{padding-bottom: 40px;}
+
+form.newsletter input.text-field {
+    background: #ffffff;
+    color: #656565;
+    width: 100%;
+    line-height: 21px;
+    margin: 0;
+    padding: 17px 190px 20px 22px;
+    border: 1px solid #b4b4b4;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    opacity: 0.6;
+}
+
+form.newsletter input::-webkit-input-placeholder {color: #656565;} /* Webkit browsers */
+form.newsletter input:-moz-input-placeholder {color: #656565;} /* Firefox 4 */
+
+form.newsletter input.text-field:focus{outline: none;}
+
+form.newsletter input.submit-field {
+    border: 0;
+    border-left: 0;
+    padding: 0 11px;
+    height: 100%;
+    margin: 0;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.14);
+    cursor: pointer;
+    line-height: 21px;
+}
+
+form.newsletter .submit {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    padding: 10px;
+}
+
+
+
+.socials {
+    text-align: center;
+    padding-top: 89px;
+}
+
+.socials a {
+    display: inline-block;
+    width: 25px;
+    height: 24px;
+    background-position: top center;
+    background-repeat: no-repeat;
+    margin: 0 6px 0;
+    word-space: nowrap;
+    text-indent: 100%;
+    overflow: hidden;
+}
+
+
+.socials a.facebook  { background:transparent url('../images/skin3/socials/social-sprite.png')   0px  bottom no-repeat;  }
+.socials a.twitter   { background:transparent url('../images/skin3/socials/social-sprite.png') -35px  bottom no-repeat;  }
+.socials a.gplus     { background:transparent url('../images/skin3/socials/social-sprite.png') -75px  bottom no-repeat;  }
+.socials a.youtube   { background:transparent url('../images/skin3/socials/social-sprite.png') -115px bottom no-repeat;  }
+.socials a.rss       { background:transparent url('../images/skin3/socials/social-sprite.png') -160px bottom  no-repeat;  }
+.socials a.dribble   { background:transparent url('../images/skin3/socials/social-sprite.png') -205px bottom  no-repeat;  }
+.socials a.instagram { background:transparent url('../images/skin3/socials/social-sprite.png') -245px bottom  no-repeat;  }
+.socials a.behance   { background:transparent url('../images/skin3/socials/social-sprite.png') -290px bottom  no-repeat;  }
+.socials a.pinterest { background:transparent url('../images/skin3/socials/social-sprite.png') -330px bottom  no-repeat;  }
+.socials a.tumblr    { background:transparent url('../images/skin3/socials/social-sprite.png') -364px bottom  no-repeat;  }
+.socials a.flickr    { background:transparent url('../images/skin3/socials/social-sprite.png') -400px bottom  no-repeat;  }
+.socials a.linkedin  { background:transparent url('../images/skin3/socials/social-sprite.png') -440px bottom  no-repeat;  }
+.socials a.skype     { background:transparent url('../images/skin3/socials/social-sprite.png') -477px bottom  no-repeat;  }
+.socials a.email     { background:transparent url('../images/skin3/socials/social-sprite.png') -516px bottom  no-repeat;  }
+
+
+.socials a.facebook:hover  { background:transparent url('../images/skin3/socials/social-sprite.png')   0px  top no-repeat;  }
+.socials a.twitter:hover   { background:transparent url('../images/skin3/socials/social-sprite.png') -35px  top no-repeat;  }
+.socials a.gplus:hover     { background:transparent url('../images/skin3/socials/social-sprite.png') -75px  top no-repeat;  }
+.socials a.youtube:hover   { background:transparent url('../images/skin3/socials/social-sprite.png') -115px top no-repeat;  }
+.socials a.rss:hover       { background:transparent url('../images/skin3/socials/social-sprite.png') -160px top  no-repeat;  }
+.socials a.dribble:hover   { background:transparent url('../images/skin3/socials/social-sprite.png') -205px top  no-repeat;  }
+.socials a.instagram:hover { background:transparent url('../images/skin3/socials/social-sprite.png') -245px top  no-repeat;  }
+.socials a.behance:hover   { background:transparent url('../images/skin3/socials/social-sprite.png') -290px top  no-repeat;  }
+.socials a.pinterest:hover { background:transparent url('../images/skin3/socials/social-sprite.png') -330px top  no-repeat;  }
+.socials a.tumblr:hover    { background:transparent url('../images/skin3/socials/social-sprite.png') -364px top  no-repeat;  }
+.socials a.flickr:hover    { background:transparent url('../images/skin3/socials/social-sprite.png') -400px top  no-repeat;  }
+.socials a.linkedin:hover  { background:transparent url('../images/skin3/socials/social-sprite.png') -440px top  no-repeat;  }
+.socials a.skype:hover     { background:transparent url('../images/skin3/socials/social-sprite.png') -477px top  no-repeat;  }
+.socials a.email:hover     { background:transparent url('../images/skin3/socials/social-sprite.png') -516px top  no-repeat;  }
+
+@media(max-width:1200px){
+    .yit-box{padding-left: 80px;}
+    .yit-box h3{letter-spacing: -2px;}
+    .logo{margin-left: 15px;}
+}
+
+@media (min-width: 768px) and (max-width: 979px){
+    div.container{width: auto;}
+    .yit-box{display: block; margin: 0 auto; float: none; padding-left: 0px;}
+    .yit-box .message{padding-top: 0;}
+    .logo{margin: 0 auto; float:none;}
+}
+
+@media (max-width: 767px) {
+    div.container{width: auto;}
+    .yit-box{display: block; margin: 0 auto; float: none; padding-left: 0px; padding-left: 10px; padding-right: 10px; width: auto;}
+    .yit-box h3{margin-top: 0;}
+    .yit-box .message{padding-top: 0;}
+    .yit-box form.newsletter{padding-bottom: 0;}
+    .logo{margin: 0 auto; float:none;}
+    .socials{padding-top: 145px;}
+    .socials a{margin: 6px 6px 0;}
+}
+
+@media (max-width: 480px) {.socials{padding-top: 100px;}}

@@ -1,0 +1,29 @@
+<wpml-config>
+  <admin-texts>
+    <key name="yith_maintenance_message"/>
+    <key name="yith_maintenance_masotte"/>
+    <key name="yith_maintenance_background_image"/>
+    <key name="yith_maintenance_logo_image"/>
+    <key name="yith_maintenance_logo_tagline"/>
+    <key name="yith_maintenance_newsletter_title"/>
+    <key name="yith_maintenance_newsletter_action"/>
+    <key name="yith_maintenance_newsletter_email_label"/>
+    <key name="yith_maintenance_newsletter_email_name"/>
+    <key name="yith_maintenance_newsletter_submit_label"/>
+    <key name="yith_maintenance_newsletter_hidden_fields"/>
+    <key name="yith_maintenance_socials_facebook"/>
+    <key name="yith_maintenance_socials_twitter"/>
+    <key name="yith_maintenance_socials_gplus"/>
+    <key name="yith_maintenance_socials_youtube"/>
+    <key name="yith_maintenance_socials_rss"/>
+    <key name="yith_maintenance_socials_skype"/>
+    <key name="yith_maintenance_socials_email"/>
+    <key name="yith_maintenance_socials_behance"/>
+    <key name="yith_maintenance_socials_dribble"/>
+    <key name="yith_maintenance_socials_flickr"/>
+    <key name="yith_maintenance_socials_instagram"/>
+    <key name="yith_maintenance_socials_pinterest"/>
+    <key name="yith_maintenance_socials_tumblr"/>
+    <key name="yith_maintenance_socials_linkedin"/>
+  </admin-texts>
+</wpml-config>
