@@ -59,7 +59,7 @@ if (!class_exists('UpdraftPlus_Remote_Communications')):
 class UpdraftPlus_Remote_Communications {
 
 	// Version numbers relate to versions of this PHP library only (i.e. it's not a protocol support number, and version numbers of other compatible libraries (e.g. JavaScript) are not comparable)
-	public $version = '1.4.3';
+	public $version = '1.4.5';
 
 	private $key_name_indicator;
 
@@ -619,17 +619,29 @@ class UpdraftPlus_Remote_Communications {
 		
 		if (is_wp_error($post)) return $post;
 
-		if (empty($post['response']) || empty($post['response']['code'])) return new WP_Error('empty_http_code', 'Unexpected HTTP response code');
+		$response_code = wp_remote_retrieve_response_code($post);
+		
+		if (empty($response_code)) return new WP_Error('empty_http_code', 'Unexpected HTTP response code');
 
-		if ($post['response']['code'] < 200 || $post['response']['code'] >= 300) return new WP_Error('unexpected_http_code', 'Unexpected HTTP response code ('.$post['response']['code'].')', $post);
+		if ($response_code < 200 || $response_code >= 300) return new WP_Error('unexpected_http_code', 'Unexpected HTTP response code ('.$response_code.')', $post);
+		
+		$response_body = wp_remote_retrieve_body($post);
 
-		if (empty($post['body'])) return new WP_Error('empty_response', 'Empty response from remote site');
+		if (empty($response_body)) return new WP_Error('empty_response', 'Empty response from remote site');
 
-		$decoded = json_decode((string)$post['body'], true);
+		$decoded = json_decode($response_body, true);
 
 		if (empty($decoded)) {
-			$this->log("response from remote site could not be understood: ".substr($post['body'], 0, 100).' ... ');
-			return new WP_Error('response_not_understood', 'Response from remote site could not be understood', $post['body']);
+		
+			if (false != ($found_at = strpos($response_body, '{"format":'))) {
+				$new_body = substr($response_body, $found_at);
+				$decoded = json_decode($new_body, true);
+			}
+			
+			if (empty($decoded)) {
+				$this->log("response from remote site could not be understood: ".substr($response_body, 0, 100).' ... ');
+				return new WP_Error('response_not_understood', 'Response from remote site could not be understood', $response_body);
+			}
 		}
 
 		if (!is_array($decoded) || empty($decoded['udrpc_message'])) return new WP_Error('response_not_understood', 'Response from remote site was not in the expected format ('.$post['body'].')', $decoded);

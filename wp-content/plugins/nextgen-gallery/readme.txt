@@ -2,8 +2,8 @@
 Contributors: photocrati, imagely
 Tags: nextgen, nextgen gallery, gallery, galleries, image, images, image gallery, photo, photos, photo gallery, picture, pictures, picture gallery, album, albums, photo albums, image album, media, media gallery, thumbnails, thumbnail gallery, thumbnail galleries, slideshow, slideshows, slideshow gallery, slideshow galleries, fancybox, lightbox, responsive, responsive gallery, responsive galleries, wordpress responsive gallery, nextcellent, wordpress gallery plugin, wordpress photo gallery plugin, wp gallery, wp gallery plugins, best gallery plugin, free photo gallery, singlepic, image captions imagebrowser, watermarks, watermarking, photography, photographer
 Requires at least: 4.0.0
-Stable tag: 2.1.31
-Tested up to: 4.4.2
+Stable tag: 2.1.43
+Tested up to: 4.5.2
 License: GPLv2
 
 The most popular WordPress gallery plugin and one of the most popular plugins of all time with over 14 million downloads.
@@ -59,6 +59,7 @@ Learn more or connect with us:<br>
 == Credits ==
 
 Copyright:<br>
+Imagely 2016
 Photocrati Media 2012-2016<br>
 Alex Rabe 2007-2011
 
@@ -185,6 +186,25 @@ For more information, feel free to visit the official website for the NextGEN Ga
 
 
 == Changelog ==
+
+= V2.1.43 - 05.25.2016 =
+* NEW:     Added Freemius integration
+* NEW:     Added actions actions ngg_updated_image_meta, ngg_recovered_image, ngg_generated_image, ngg_moved_images, and ngg_copied_images
+* NEW:     Added patch from WPML copyping ATP galleries to new language pages when duplicating a page to a new language
+* Changed: Moved 'ngg_delete_picture' action to before the image has been removed
+* Changed: Now prevent maximum_entity_count from being set to 0 or lower in Other Options
+* Changed: Updated "Roots" relative url support to re-branded "Soil" relative url
+* Changed: Updated branding so all publicly visible instances of "Photocrati" are now "Imagely"
+* Changed: Upgraded FontAwesome to 4.6.1
+* Fixed:   Album breadcrumbs when used with legacy templates
+* Fixed:   Compatibility with added WP role objects without a remove_cap() method
+* Fixed:   Default watermark setting causing images to be watermarked by text even though "image" is shown chosen on "Other Options"
+* Fixed:   Navigating to albums with UTF8 characters in their name
+* Fixed:   Replaced use of get_currentuserinfo() with wp_get_current_user()
+
+= V2.1.33 - 04.25.2016 =
+* Fixed:   Compatibility with themes and plugins which enqueue underscore.js in the head of the document
+* Fixed:   Ensure that shutter reloaded can find it's image assets
 
 = V2.1.31 - 04.05.2016 =
 * NEW:     Added constant NGG_SCRIPT_VERSION that is either the plugin version or rand() should SCRIPT_DEBUG be on

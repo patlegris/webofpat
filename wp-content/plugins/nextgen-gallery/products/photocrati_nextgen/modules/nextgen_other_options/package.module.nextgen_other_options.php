@@ -306,6 +306,10 @@ Choose [Cancel] to Stop, [OK] to proceed.', 'nggallery'), 'slug_field' => $this-
             if ($settings['router_param_slug'] != $this->object->get_model()->router_param_slug) {
                 C_Photocrati_Transient_Manager::flush('displayed_gallery_rendering');
             }
+            // Do not allow this field to ever be unset
+            if (empty($settings['maximum_entity_count']) || (int) $settings['maximum_entity_count'] <= 0) {
+                $settings['maximum_entity_count'] = 500;
+            }
             // Save both setting groups
             $this->object->get_model()->set($settings)->save();
             $local_settings->save();
@@ -369,7 +373,9 @@ Choose [Cancel] to Stop, [OK] to proceed.', 'nggallery')), TRUE);
         foreach ($roles as $role) {
             $role = get_role($role);
             foreach ($capabilities as $capability) {
-                $role->remove_cap($capability);
+                if (!is_null($role)) {
+                    $role->remove_cap($capability);
+                }
             }
         }
         // Some installations of NextGen that upgraded from 1.9x to 2.0x have duplicates installed,

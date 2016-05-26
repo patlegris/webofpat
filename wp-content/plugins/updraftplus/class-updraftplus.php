@@ -549,7 +549,7 @@ class UpdraftPlus {
 		@set_time_limit(UPDRAFTPLUS_SET_TIME_LIMIT);
 		$max_execution_time = (int)@ini_get("max_execution_time");
 
-		$logline = "UpdraftPlus WordPress backup plugin (https://updraftplus.com): ".$this->version." WP: ".$wp_version." PHP: ".phpversion()." (".@php_uname().") MySQL: $mysql_version WPLANG: ".$this->get_wplang()." Server: ".$_SERVER["SERVER_SOFTWARE"]." safe_mode: $safe_mode max_execution_time: $max_execution_time memory_limit: $memory_limit (used: ${memory_usage}M | ${memory_usage2}M) multisite: ".(is_multisite() ? 'Y' : 'N')." openssl: ".(defined('OPENSSL_VERSION_TEXT') ? OPENSSL_VERSION_TEXT : 'N')." mcrypt: ".(function_exists('mcrypt_encrypt') ? 'Y' : 'N')." LANG: ".getenv('LANG')." ZipArchive::addFile: ";
+		$logline = "UpdraftPlus WordPress backup plugin (https://updraftplus.com): ".$this->version." WP: ".$wp_version." PHP: ".phpversion()." (".@php_uname().") MySQL: $mysql_version WPLANG: ".get_locale()." Server: ".$_SERVER["SERVER_SOFTWARE"]." safe_mode: $safe_mode max_execution_time: $max_execution_time memory_limit: $memory_limit (used: ${memory_usage}M | ${memory_usage2}M) multisite: ".(is_multisite() ? 'Y' : 'N')." openssl: ".(defined('OPENSSL_VERSION_TEXT') ? OPENSSL_VERSION_TEXT : 'N')." mcrypt: ".(function_exists('mcrypt_encrypt') ? 'Y' : 'N')." LANG: ".getenv('LANG')." ZipArchive::addFile: ";
 
 		// method_exists causes some faulty PHP installations to segfault, leading to support requests
 		if (version_compare(phpversion(), '5.2.0', '>=') && extension_loaded('zip')) {
@@ -1025,7 +1025,7 @@ class UpdraftPlus {
 			# Test it, see if it is compatible with Info-ZIP
 			# If you have another kind of zip, then feel free to tell me about it
 			@mkdir($updraft_dir.'/binziptest/subdir1/subdir2', 0777, true);
-			file_put_contents($updraft_dir.'/binziptest/subdir1/subdir2/test.html', '<html></body><a href="https://updraftplus.com">UpdraftPlus is a great backup and restoration plugin for WordPress.</body></html>');
+			file_put_contents($updraft_dir.'/binziptest/subdir1/subdir2/test.html', '<html><body><a href="https://updraftplus.com">UpdraftPlus is a great backup and restoration plugin for WordPress.</a></body></html>');
 			@unlink($updraft_dir.'/binziptest/test.zip');
 			if (is_file($updraft_dir.'/binziptest/subdir1/subdir2/test.html')) {
 
@@ -1052,7 +1052,7 @@ class UpdraftPlus {
 
 				# Now test -@
 				if (true == $all_ok) {
-					file_put_contents($updraft_dir.'/binziptest/subdir1/subdir2/test2.html', '<html></body><a href="https://updraftplus.com">UpdraftPlus is a really great backup and restoration plugin for WordPress.</body></html>');
+					file_put_contents($updraft_dir.'/binziptest/subdir1/subdir2/test2.html', '<html><body><a href="https://updraftplus.com">UpdraftPlus is a really great backup and restoration plugin for WordPress.</a></body></html>');
 					
 					$exec = $potzip;
 					if (defined('UPDRAFTPLUS_BINZIP_OPTS') && UPDRAFTPLUS_BINZIP_OPTS) $exec .= ' '.UPDRAFTPLUS_BINZIP_OPTS;
@@ -1112,8 +1112,8 @@ class UpdraftPlus {
 						$foundit = 0;
 						if (($list = $zip->listContent()) != 0) {
 							foreach ($list as $obj) {
-								if ($obj['filename'] && !empty($obj['stored_filename']) && 'binziptest/subdir1/subdir2/test.html' == $obj['stored_filename'] && $obj['size']==128) $found_first=true;
-								if ($obj['filename'] && !empty($obj['stored_filename']) && 'binziptest/subdir1/subdir2/test2.html' == $obj['stored_filename'] && $obj['size']==135) $found_second=true;
+								if ($obj['filename'] && !empty($obj['stored_filename']) && 'binziptest/subdir1/subdir2/test.html' == $obj['stored_filename'] && $obj['size']==131) $found_first=true;
+								if ($obj['filename'] && !empty($obj['stored_filename']) && 'binziptest/subdir1/subdir2/test2.html' == $obj['stored_filename'] && $obj['size']==138) $found_second=true;
 							}
 						}
 					} else {
@@ -2510,6 +2510,7 @@ class UpdraftPlus {
 		}
 
 		global $updraftplus_backup;
+
 		if ($force_abort) $jobdata_as_was['aborted'] = true;
 		if ($send_an_email) $updraftplus_backup->send_results_email($final_message, $jobdata_as_was);
 
@@ -3456,16 +3457,6 @@ class UpdraftPlus {
 		return fetch_feed('http://feeds.feedburner.com/updraftplus/');
 	}
 
-	public function get_wplang() {
-		# See: https://core.trac.wordpress.org/changeset/29630
-		global $wp_current_db_version; 
-		if ( $wp_current_db_version < 29630 ) { 
-			return (defined('WPLANG')) ? WPLANG : '';
-		} else {
-			return get_option('WPLANG', '');
-		}
-	}
-
 	public function wordshell_random_advert($urls) {
 		if (defined('UPDRAFTPLUS_NOADS_B')) return "";
 		$rad = rand(0, 8);
@@ -3474,7 +3465,7 @@ class UpdraftPlus {
 			return $this->url_start($urls,'updraftplus.com').__("Want more features or paid, guaranteed support? Check out UpdraftPlus.Com", 'updraftplus').$this->url_end($urls,'updraftplus.com');
 			break;
 		case 1:
-			$wplang = $this->get_wplang();
+			$wplang = get_locale();
 			if (strlen($wplang)>0 && !is_file(UPDRAFTPLUS_DIR.'/languages/updraftplus-'.$wplang.
 '.mo')) return __('Can you translate? Want to improve UpdraftPlus for speakers of your language?','updraftplus').' '.$this->url_start($urls,'updraftplus.com/translate/')."Please go here for instructions - it is easy.".$this->url_end($urls,'updraftplus.com/translate/');
 

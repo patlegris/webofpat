@@ -5,7 +5,7 @@ Tags: registration, user profile, user registration, custom field registration, 
 
 Requires at least: 3.1
 Tested up to: 4.5.2
-Stable tag: 2.3.6
+Stable tag: 2.3.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -147,6 +147,10 @@ This plugin adds/removes user fields in the front-end. Both default and extra pr
 10. Profile Builder Login Widget
 
 == Changelog ==
+= 2.3.7 =
+* Changed the wppb_curpageurl function to fix the missing www problem from links
+* Added a new filter wppb_send_to_admin_email to Email Confirmation
+
 = 2.3.6 =
 * Fixed a security issue regarding shortcodes
 * Fixed a deprecated function warning in the hidden input field

@@ -462,6 +462,8 @@ class Mixin_CustomPost_DataMapper_Driver extends Mixin
         if ($query->get('datamapper')) {
             $query->query_vars = $this->object->_query_args;
         }
+        $filter = isset($query->query_vars['suppress_filters']) ? $query->query_vars['suppress_filters'] : FALSE;
+        $query->query_vars['suppress_filters'] = apply_filters('wpml_suppress_filters', $filter);
     }
     /**
      * Fetches the last row

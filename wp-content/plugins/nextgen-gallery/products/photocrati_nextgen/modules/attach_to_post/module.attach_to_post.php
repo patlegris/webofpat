@@ -25,9 +25,9 @@ class M_Attach_To_Post extends C_Base_Module
 			'Attach To Post',
 			'Provides the "Attach to Post" interface for displaying galleries and albums',
 			'0.11',
-			'http://www.nextgen-gallery.com',
+			'https://www.imagely.com/wordpress-gallery-plugin/nextgen-gallery/',
 			'Photocrati Media',
-			'http://www.photocrati.com',
+			'https://www.imagely.com',
 		    $context
 		);
 

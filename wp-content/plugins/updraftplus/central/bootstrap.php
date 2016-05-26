@@ -317,12 +317,12 @@ class UpdraftPlus_UpdraftCentral_Main {
 					);
 				}
 				
-				$response = json_decode($sent_key['body'], true);
+				$response = json_decode(wp_remote_retrieve_body($sent_key), true);
 
 				if (!is_array($response) || !isset($response['key_id']) || !isset($response['key_public'])) {
 					return array(
 						'r' => sprintf(__('A key was created, but the attempt to register it with %s was unsuccessful - please try again later.', 'updraftplus'), (string)$post_it_description),
-						'raw' => $sent_key['body']
+						'raw' => wp_remote_retrieve_body($sent_key)
 					);
 				}
 				

@@ -7,7 +7,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: GlotPress/0.1\n"
+"X-Generator: GlotPress/2.0.1\n"
 "Project-Id-Version: UpdraftPlus\n"
 
 #: admin.php:2162
@@ -1953,7 +1953,7 @@ msgstr "mã API bí mật"
 
 #: addons/copycom.php:550
 msgid "(case-sensitive)"
-msgstr "(phân biệt dạng chữ)\n"
+msgstr "(phân biệt dạng chữ)"
 
 #: addons/copycom.php:551
 msgid "N.B. Copy is case-sensitive."

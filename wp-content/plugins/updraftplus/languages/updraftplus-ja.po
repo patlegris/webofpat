@@ -7,7 +7,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: GlotPress/0.1\n"
+"X-Generator: GlotPress/2.0.1\n"
 "Project-Id-Version: UpdraftPlus\n"
 
 #: admin.php:2162
@@ -826,9 +826,7 @@ msgstr "バックアップを %d 個 削除しました"
 
 #: admin.php:2869
 msgid "Press here to look inside your remote storage methods for any existing backup sets (from any site, if they are stored in the same folder)."
-msgstr ""
-"\n"
-"ここを押して、既存のバックアップセットのためのあなたのリモートストレージ内検索します。（これらは同じフォルダに格納されている場合、任意のサイトから）"
+msgstr "ここを押して、既存のバックアップセットのためのあなたのリモートストレージ内検索します。（これらは同じフォルダに格納されている場合、任意のサイトから）"
 
 #: admin.php:2920
 msgid "Actions upon selected backups"
@@ -1074,7 +1072,7 @@ msgstr "許可しない場合、UpdraftPlus はバックアップを削除する
 
 #: backup.php:2884
 msgid "The zip engine returned the message: %s."
-msgstr "圧縮の際に以下のエラーが発生しました：%s 。\n"
+msgstr "圧縮の際に以下のエラーが発生しました：%s 。"
 
 #: addons/azure.php:364 addons/googlecloud.php:693 methods/s3.php:904
 msgid "Delete failed:"
@@ -4408,7 +4406,7 @@ msgstr "サイトの移行"
 
 #: addons/migrator.php:170
 msgid "<a href=\"%s\">Read this article to see step-by-step how it's done.</a>"
-msgstr "<a href=\"%s\">ステップバイステップどのように行うのかこの記事を読んで</a>\n"
+msgstr "<a href=\"%s\">ステップバイステップどのように行うのかこの記事を読んで</a>"
 
 #: admin.php:2476
 msgid "Do you want to migrate or clone/duplicate a site?"
@@ -4683,7 +4681,7 @@ msgstr "あなたが入力した内容に注意してください - あなたが
 
 #: addons/morefiles.php:442
 msgid "No backup of %s directories: there was nothing found to back up"
-msgstr "%sのディレクトリのバックアップなし：何もありませんでしたが、バックアップするものが見つけられません。\n"
+msgstr "%sのディレクトリのバックアップなし：何もありませんでしたが、バックアップするものが見つけられません。"
 
 #: addons/sftp.php:38
 msgid "Encrypted FTP is available, and will be automatically tried first (before falling back to non-encrypted if it is not successful), unless you disable it using the expert options. The 'Test FTP Login' button will tell you what type of connection is in use."

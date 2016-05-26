@@ -17,6 +17,8 @@ class UpdraftPlus_UpdraftCentral_Listener {
 	public function __construct($keys = array(), $command_classes = array()) {
 		global $updraftplus;
 		$this->ud = $updraftplus;
+		// It seems impossible for this condition to result in a return; but it seems Plesk can do something odd within the control panel that causes a problem - see HS#6276
+		if (!is_a($this->ud, 'UpdraftPlus')) return;
 
 		foreach ($command_classes as $class_prefix => $command_class) {
 			if (class_exists($command_class)) $this->commands[$class_prefix] = new $command_class($this);

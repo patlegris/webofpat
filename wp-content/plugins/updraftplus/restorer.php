@@ -72,8 +72,8 @@ class Updraft_Restorer extends WP_Upgrader {
 		$this->ud_multisite_selective_restore = (is_array($restore_options) && !empty($restore_options['updraft_restore_ms_whichsites']) && $restore_options['updraft_restore_ms_whichsites'] > 0) ? $restore_options['updraft_restore_ms_whichsites'] : false;
 		$this->ud_restore_options = $restore_options;
 		
-		$this->ud_foreign = (empty($info['meta_foreign'])) ? false : $info['meta_foreign'];
-		if (isset($info['multisite'])) $this->ud_backup_is_multisite = $info['multisite'];
+		$this->ud_foreign = empty($info['meta_foreign']) ? false : $info['meta_foreign'];
+		if (isset($info['is_multisite'])) $this->ud_backup_is_multisite = $info['is_multisite'];
 		if (isset($info['created_by_version'])) $this->created_by_version = $info['created_by_version'];
 
 		parent::__construct($skin);
@@ -722,7 +722,7 @@ class Updraft_Restorer extends WP_Upgrader {
 
 		$now_done = apply_filters('updraftplus_pre_restore_move_in', false, $type, $working_dir, $info, $this->ud_backup_info, $this, $wp_filesystem_dir);
 		if (is_wp_error($now_done)) return $now_done;
-		
+
 		// A slightly ugly way of getting a particular result back
 		if (is_string($now_done)) {
 			$wp_filesystem_dir = $now_done;
@@ -810,7 +810,7 @@ class Updraft_Restorer extends WP_Upgrader {
 							return new WP_Error('new_move_failed', $this->strings['new_move_failed']);
 						}
 					}
-				
+
 					// On the first time, create the -old directory in updraft_dir
 					// (Old style was: On the first time, move the existing data to -old)
 					if (!isset($this->been_restored[$type]) && empty($do_not_move_old)) {

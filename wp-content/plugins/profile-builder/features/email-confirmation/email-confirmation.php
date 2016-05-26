@@ -556,8 +556,10 @@ function wppb_notify_user_registration_email( $bloginfo, $user_name, $email, $se
 		$message_content = apply_filters( 'wppb_register_admin_email_message_without_admin_approval', $message_content, $email, $password, $message_from, 'wppb_admin_emailc_default_registration_email_content' );
 	}
 
-	if ( trim( $message_content ) != '' )
-		wppb_mail( get_option('admin_email'), $message_subject, $message_content, $message_from, $message_context );
+	if ( trim( $message_content ) != '' ){
+		$admin_email = apply_filters('wppb_send_to_admin_email', get_option('admin_email'), get_user_by( 'email', $email ), $message_context);
+		wppb_mail( $admin_email, $message_subject, $message_content, $message_from, $message_context );
+	}
 
 		
 	

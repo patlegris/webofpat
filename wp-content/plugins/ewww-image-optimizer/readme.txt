@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: image, attachment, optimize, optimization, lossless, lossy, photo, picture, seo, compression, gmagick, jpegtran, gifsicle, optipng, pngout, pngquant, jpegmini, tinyjpg, tinypng, webp, wp-cli 
 Requires at least: 4.4
 Tested up to: 4.5.2
-Stable tag: 2.8.2
+Stable tag: 2.8.3
 License: GPLv3
 
 Reduce image sizes in WordPress including NextGEN, GRAND FlAGallery, FooGallery and more using lossless/lossy methods and image format conversion.
@@ -186,6 +186,8 @@ Webhosts where the plugin will only work in cloud mode or only some tools are in
 * Hostwinds
 * ipage (JPG only)
 * ipower
+* Cloudways
+* Flywheel
 * WP Engine - use EWWW Image Optimizer Cloud fork: https://wordpress.org/plugins/ewww-image-optimizer-cloud/
 
 == Frequently Asked Questions ==
@@ -249,6 +251,12 @@ Pngout, TinyJPG/TinyPNG, JPEGmini, and Pngquant were recommended by EWWW IO user
 
 * feature requests are sticky at the top of the support forums, vote for the ones you like: https://wordpress.org/support/plugin/ewww-image-optimizer
 * If you would like to help translate this plugin in your language, get started here: https://translate.wordpress.org/projects/wp-plugins/ewww-image-optimizer/
+
+= 2.8.3 =
+* fixed: tool status not shown when tool could not be found, prevents pngout installation
+* fixed: notice when checking nonce lifetime during scheduled optimization
+* fixed: multi-site not saving cloud optimization levels
+* fixed: settings page requiring a refresh to display properly after inserting/removing an API key
 
 = 2.8.2 =
 * added: ability to use ImageMagick's 'convert' tool to convert images on Windows

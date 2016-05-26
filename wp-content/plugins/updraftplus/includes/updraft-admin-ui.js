@@ -2232,8 +2232,8 @@ jQuery(document).ready(function($){
 		e.preventDefault();
 		$.blockUI({ message: '<div style="margin: 8px; font-size:150%;"><img src="'+updraftlion.ud_url+'/images/udlogo-rotating.gif" height="80" width="80" style="padding-bottom:10px;"><br>'+updraftlion.saving+'</div>'});
 		
-		//Gather data
-		var form_data = $("#updraft-navtab-settings-content form input, #updraft-navtab-settings-content form textarea, #updraft-navtab-settings-content form select").serialize();
+		// Gather data. Excluding the unnecessary 'action' input avoids triggering a very mis-conceived mod_security rule seen on one user's site
+		var form_data = $("#updraft-navtab-settings-content form input[name!='action'], #updraft-navtab-settings-content form textarea, #updraft-navtab-settings-content form select").serialize();
 		
 		//include unchecked checkboxes. user filter to only include unchecked boxes.
 		$.each($('#updraft-navtab-settings-content form input[type=checkbox]')

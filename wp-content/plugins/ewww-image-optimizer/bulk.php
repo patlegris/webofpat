@@ -383,7 +383,7 @@ function ewww_image_optimizer_bulk_script( $hook ) {
 function ewww_image_optimizer_aux_images_table_count() {
 	global $wpdb;
 	$count = $wpdb->get_var( "SELECT COUNT(*) FROM $wpdb->ewwwio_images" );
-	if (!empty($_REQUEST['ewww_inline'])) {
+	if ( ! empty( $_REQUEST['ewww_inline'] ) ) {
 		echo $count;
 		ewwwio_memory( __FUNCTION__ );
 		die();

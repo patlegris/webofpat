@@ -2,37 +2,37 @@
 # This file is distributed under the same license as the UpdraftPlus package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2016-02-24 18:48:36+0000\n"
+"PO-Revision-Date: 2016-05-16 21:47:05+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: GlotPress/0.1\n"
+"X-Generator: GlotPress/2.0.1\n"
 "Project-Id-Version: UpdraftPlus\n"
 
 #: admin.php:2162
 msgid "FAQs"
-msgstr ""
+msgstr "FAQ"
 
 #: udaddons/plugin-updates/github-checker.php:120
 msgid "There is no changelog available."
-msgstr ""
+msgstr "Es ist keine Änderungsaufzeichnung verfügbar."
 
 #: udaddons/plugin-updates/plugin-update-checker.php:648
 msgid "Check for updates"
-msgstr ""
+msgstr "Auf Aktualisierungen prüfen"
 
 #: udaddons/plugin-updates/plugin-update-checker.php:692
 msgid "This plugin is up to date."
-msgstr ""
+msgstr "Das Plugin ist auf letztem Stand."
 
 #: udaddons/plugin-updates/plugin-update-checker.php:694
 msgid "A new version of this plugin is available."
-msgstr ""
+msgstr "Es ist eine neue Version von diesem Plugin verfügbar."
 
 #: udaddons/plugin-updates/plugin-update-checker.php:696
 msgid "Unknown update checker status \"%s\""
-msgstr ""
+msgstr "Unbekannter Status \"%S\" bei Updateprüfung."
 
 #: backup.php:1973
 msgid "%s: unreadable file - could not be backed up (check the file permissions and ownership)"
@@ -60,7 +60,7 @@ msgstr ""
 
 #: central/bootstrap.php:439
 msgid "More information..."
-msgstr ""
+msgstr "Mehr Informationen..."
 
 #: central/bootstrap.php:439
 msgid "This is useful if the dashboard webserver cannot be contacted with incoming traffic by this website (for example, this is the case if this website is hosted on the public Internet, but the UpdraftCentral dashboard is on localhost, or on an Intranet, or if this website has an outgoing firewall), or if the dashboard website does not have a SSL certificate."
@@ -72,7 +72,7 @@ msgstr ""
 
 #: addons/migrator.php:2159
 msgid "Enter your chosen name"
-msgstr ""
+msgstr "Gib einen Namen deiner Wahl ein"
 
 #: addons/migrator.php:2161 central/bootstrap.php:441
 msgid "Encryption key size:"
@@ -82,31 +82,31 @@ msgstr ""
 #: central/bootstrap.php:442 central/bootstrap.php:443
 #: central/bootstrap.php:445
 msgid "%s bits"
-msgstr ""
+msgstr "%s Bit"
 
 #: addons/migrator.php:2163 central/bootstrap.php:442
 msgid "easy to break, fastest"
-msgstr ""
+msgstr "leicht zu knacken, am schnellsten"
 
 #: addons/migrator.php:2164 central/bootstrap.php:443
 msgid "faster (possibility for slow PHP installs)"
-msgstr ""
+msgstr "schneller (Option für langsame PHP-Installationen)"
 
 #: addons/migrator.php:2165 central/bootstrap.php:444
 msgid "%s bytes"
-msgstr ""
+msgstr "%s Byte"
 
 #: addons/migrator.php:2165 central/bootstrap.php:444
 msgid "recommended"
-msgstr ""
+msgstr "empfohlen"
 
 #: addons/migrator.php:2166 central/bootstrap.php:445
 msgid "slower, strongest"
-msgstr ""
+msgstr "langsamer, am stärksten"
 
 #: addons/migrator.php:2169
 msgid "Create key"
-msgstr ""
+msgstr "Erzeuge einen Schlüssel / Passwort"
 
 #: central/bootstrap.php:439
 msgid "i.e. you have an account there"
@@ -118,7 +118,7 @@ msgstr ""
 
 #: class-updraftplus.php:1240
 msgid "Size: %s MB"
-msgstr ""
+msgstr "Größe: %s MB"
 
 #: methods/email.php:28
 msgid "This backup archive is %s MB in size - the attempt to send this via email is likely to fail (few email servers allow attachments of this size). If so, you should switch to using a different remote storage method."
@@ -130,7 +130,7 @@ msgstr ""
 
 #: methods/ftp.php:355
 msgid "login"
-msgstr ""
+msgstr "Anmeldung"
 
 #: methods/ftp.php:383
 msgid "This is sometimes caused by a firewall - try turning off SSL in the expert settings, and testing again."
@@ -142,7 +142,7 @@ msgstr ""
 
 #: admin.php:2453
 msgid "Now"
-msgstr ""
+msgstr "Jetzt"
 
 #: admin.php:2604
 msgid "Free 1GB for UpdraftPlus Vault"
@@ -162,7 +162,7 @@ msgstr ""
 
 #: backup.php:833 class-updraftplus.php:2411
 msgid "The backup was aborted by the user"
-msgstr ""
+msgstr "Die Sicherung wurde durch den Benutzer abgebrochen"
 
 #: central/bootstrap.php:50
 msgid "UpdraftCentral Connection"
@@ -198,11 +198,11 @@ msgstr ""
 
 #: central/bootstrap.php:83
 msgid "Close..."
-msgstr ""
+msgstr "Schließen..."
 
 #: central/bootstrap.php:196
 msgid "An invalid URL was entered"
-msgstr ""
+msgstr "Eine ungültige URL wurde eingegeben"
 
 #: central/bootstrap.php:313 central/bootstrap.php:324
 msgid "A key was created, but the attempt to register it with %s was unsuccessful - please try again later."
@@ -210,39 +210,39 @@ msgstr ""
 
 #: central/bootstrap.php:381
 msgid "Key description"
-msgstr ""
+msgstr "Schlüssel-Beschreibung"
 
 #: central/bootstrap.php:381
 msgid "Details"
-msgstr ""
+msgstr "Details"
 
 #: central/bootstrap.php:387
 msgid "No keys have yet been created."
-msgstr ""
+msgstr "Es wurden noch keine Schlüssel erstellt."
 
 #: central/bootstrap.php:419
 msgid "Access this site as user:"
-msgstr ""
+msgstr "Auf diese Seite zugreifen als Benutzer:"
 
 #: central/bootstrap.php:422
 msgid "Created:"
-msgstr ""
+msgstr "Erzeugt:"
 
 #: central/bootstrap.php:429
 msgid "Delete..."
-msgstr ""
+msgstr "Löschen..."
 
 #: central/bootstrap.php:435
 msgid "Create new key"
-msgstr ""
+msgstr "Neuen Schlüssel erzeugen"
 
 #: central/bootstrap.php:437
 msgid "Description"
-msgstr ""
+msgstr "Beschreibung"
 
 #: central/bootstrap.php:437
 msgid "Enter any description"
-msgstr ""
+msgstr "Gib irgendeine Beschreibung ein"
 
 #: central/bootstrap.php:439
 msgid "URL of mothership"
@@ -254,7 +254,7 @@ msgstr ""
 
 #: central/bootstrap.php:452
 msgid "fetch..."
-msgstr ""
+msgstr "Holen ..."
 
 #: central/bootstrap.php:463
 msgid "UpdraftCentral (Remote Control)"
@@ -276,7 +276,7 @@ msgstr ""
 #: methods/updraftvault.php:270 methods/updraftvault.php:276
 #: methods/updraftvault.php:282
 msgid "%s per year"
-msgstr ""
+msgstr "%s pro Jahr"
 
 #: addons/copycom.php:60 addons/copycom.php:526
 msgid "Barracuda are closing down Copy.Com on May 1st, 2016. See:"
@@ -288,67 +288,67 @@ msgstr ""
 
 #: admin.php:477
 msgid "Fetching..."
-msgstr ""
+msgstr "Hole ..."
 
 #: admin.php:485
 msgid "Error: the server sent us a response which we did not understand."
-msgstr ""
+msgstr "Fehler: Der Server hat uns eine Anwort geschickt, die wir nicht verstehen."
 
 #: admin.php:521
 msgid "Saving..."
-msgstr ""
+msgstr "Speichern..."
 
 #: admin.php:538
 msgid "Please enter a valid URL"
-msgstr ""
+msgstr "Bitte geben Sie eine gültige URL ein"
 
 #: admin.php:539
 msgid "We requested to delete the file, but could not understand the server's response"
-msgstr ""
+msgstr "Wir haben die Löschung der ausgewählten Datei angefragt, aber können die Antwort des Servers nicht verstehen."
 
 #: admin.php:545
 msgid "You should save your changes to ensure that they are used for making your backup."
-msgstr ""
+msgstr "Sie sollten Ihre Änderungen speichern um sicher zu gehen, dass sie für ihre Sicherung genutzt werden."
 
 #: admin.php:2599
 msgid "Microsoft OneDrive, Microsoft Azure, Google Cloud Storage"
-msgstr ""
+msgstr "Microsoft OneDrive, Microsoft Azure, Google Cloud Storage"
 
 #: admin.php:2863
 msgid "calculate"
-msgstr ""
+msgstr "Berechne"
 
 #: admin.php:2934
 msgid "this backup set"
-msgstr ""
+msgstr "Dieser Sicherungs-Satz"
 
 #: admin.php:2937
 msgid "these backup sets"
-msgstr ""
+msgstr "Diese Sicherungs-Sätze"
 
 #: admin.php:3103
 msgid "reset"
-msgstr ""
+msgstr "Zurücksetzen"
 
 #: admin.php:3149 admin.php:3153
 msgid "Wipe settings"
-msgstr ""
+msgstr "Setze Einstellungen zurück"
 
 #: admin.php:3220
 msgid "The backup has finished running"
-msgstr ""
+msgstr "Die Sicherung wurde abgeschlossen"
 
 #: admin.php:3382
 msgid "stop"
-msgstr ""
+msgstr "Stop"
 
 #: admin.php:4294
 msgid "Total backup size:"
-msgstr ""
+msgstr "Gesamtgröße der Sicherung:"
 
 #: admin.php:5212
 msgid "Your settings have been saved."
-msgstr ""
+msgstr "Ihre Einstellungen wurden gespeichert."
 
 #: addons/onedrive.php:50
 msgid "The required %s PHP module is not installed - ask your web hosting company to enable it."
@@ -4614,7 +4614,7 @@ msgstr "Alle Verweise zur Seite in der Datenbank wird mit der aktuellen URL (%s)
 
 #: addons/migrator.php:528
 msgid "Search and replace site location in the database (migrate)"
-msgstr "Suche und Ersetze Seitenort in der Datenbank (Migrierung)"
+msgstr "Suche und Ersetze Seiten-URL in der Datenbank (Migration)"
 
 #: addons/migrator.php:528
 msgid "(learn more)"

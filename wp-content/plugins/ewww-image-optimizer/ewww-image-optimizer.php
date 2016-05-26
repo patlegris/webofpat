@@ -1,7 +1,7 @@
 <?php
 /**
  * Integrate image optimizers into WordPress.
- * @version 2.8.2
+ * @version 2.8.3
  * @package EWWW_Image_Optimizer
  */
 /*
@@ -10,7 +10,7 @@ Plugin URI: https://wordpress.org/extend/plugins/ewww-image-optimizer/
 Description: Reduce file sizes for images within WordPress including NextGEN Gallery and GRAND FlAGallery. Uses jpegtran, optipng/pngout, and gifsicle.
 Author: Shane Bishop
 Text Domain: ewww-image-optimizer
-Version: 2.8.2
+Version: 2.8.3
 Author URI: https://ewww.io/
 License: GPLv3
 */
@@ -34,6 +34,7 @@ require_once( EWWW_IMAGE_OPTIMIZER_PLUGIN_PATH . 'common.php' );
 
 // Hooks
 add_action( 'admin_action_ewww_image_optimizer_install_pngout', 'ewww_image_optimizer_install_pngout' );
+register_deactivation_hook( EWWW_IMAGE_OPTIMIZER_PLUGIN_FILE, 'ewww_image_optimizer_remove_binaries' );
 
 // check to see if the cloud constant is defined (which would mean we've already run init) and then set it properly if not
 function ewww_image_optimizer_cloud_init() {
@@ -2256,4 +2257,31 @@ function ewww_image_optimizer_install_pngout() {
 	wp_redirect( esc_url_raw( $sendback) );
 	ewwwio_memory( __FUNCTION__ );
 	exit( 0 );
+}
+
+// removes any binaries that have been installed in wp-content/ewww/
+function ewww_image_optimizer_remove_binaries() {
+	if ( ! class_exists( 'RecursiveIteratorIterator' ) ) {
+		return;
+	}
+	if ( ! is_dir( EWWW_IMAGE_OPTIMIZER_TOOL_PATH ) ) {
+		return;
+	}
+	$iterator = new RecursiveIteratorIterator( new RecursiveDirectoryIterator( EWWW_IMAGE_OPTIMIZER_TOOL_PATH ), RecursiveIteratorIterator::CHILD_FIRST, RecursiveIteratorIterator::CATCH_GET_CHILD );
+	foreach ( $iterator as $file ) {
+		if ( $file->isFile() ) {
+			$path = $file->getPathname();
+			if ( is_writable( $path ) ) {
+				unlink( $path );
+			}
+		}
+	}
+	if ( ! class_exists( 'FilesystemIterator' ) ) {
+		return;
+	}
+	clearstatcache();
+	$iterator = new FilesystemIterator( EWWW_IMAGE_OPTIMIZER_TOOL_PATH );
+	if ( ! $iterator->valid() ) {
+		rmdir( EWWW_IMAGE_OPTIMIZER_TOOL_PATH );
+	}
 }

@@ -28,7 +28,7 @@ class nggAdmin{
         $storage  = C_Gallery_Storage::get_instance();
 
         // get the current user ID
-        get_currentuserinfo();
+        wp_get_current_user();
 
         //cleanup pathname
         $name = sanitize_file_name( sanitize_title($title)  );
@@ -581,7 +581,7 @@ class nggAdmin{
         global $wpdb, $user_ID;
 
         // get the current user ID
-        get_currentuserinfo();
+        wp_get_current_user();
 
         $created_msg = '';
 
@@ -690,7 +690,7 @@ class nggAdmin{
 
         if ( !current_user_can('NextGEN Manage others gallery') ) {
             // get the current user ID
-            get_currentuserinfo();
+            wp_get_current_user();
 
             if ( $user_ID != $check_ID)
                 return false;
