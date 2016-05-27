@@ -247,6 +247,19 @@ final class ITSEC_Modules {
 
 		if ( ! is_array( $self->_active_modules ) ) {
 			$self->_active_modules = array();
+		} else if ( isset( $self->_active_modules[0] ) ) {
+			// Found data from an old format.
+			foreach ( $self->_active_modules as $key => $value ) {
+				if ( ! is_bool( $value ) ) {
+					unset( $self->_active_modules[$key] );
+
+					if ( ! isset( $self->_active_modules[$value] ) ) {
+						$self->_active_modules[$value] = true;
+					}
+				}
+			}
+
+			update_site_option( 'itsec_active_modules', $self->_active_modules );
 		}
 
 		$default_active_modules = apply_filters( 'itsec-default-active-modules', array_keys( $self->_default_active_modules ) );

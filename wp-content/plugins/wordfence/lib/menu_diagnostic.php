@@ -407,9 +407,22 @@ $w = new wfConfig();
 			</button>
 <!--			<em id="waf-rules-last-updated"></em>-->
 		</p>
+		<p><em id="waf-rules-next-update"></em></p>
 		<?php
 		try {
 			$lastUpdated = wfWAF::getInstance()->getStorageEngine()->getConfig('rulesLastUpdated');
+
+			$nextUpdate = PHP_INT_MAX;
+			$cron = wfWAF::getInstance()->getStorageEngine()->getConfig('cron');
+			if (is_array($cron)) {
+				/** @var wfWAFCronEvent $event */
+				foreach ($cron as $index => $event) {
+					$event->setWaf(wfWAF::getInstance());
+					if (!$event->isInPast()) {
+						$nextUpdate = min($nextUpdate, $event->getFireTime());
+					}
+				}
+			}
 		} catch (wfWAFStorageFileException $e) {
 			error_log($e->getMessage());
 		}
@@ -418,6 +431,13 @@ $w = new wfConfig();
 				var lastUpdated = <?php echo (int) $lastUpdated ?>;
 				WFAD.renderWAFRulesLastUpdated(new Date(lastUpdated * 1000));
 			</script>
+		<?php endif ?>
+
+		<?php if ($nextUpdate < PHP_INT_MAX): ?>
+		<script>
+			var nextUpdate = <?php echo (int) $nextUpdate ?>;
+			WFAD.renderWAFRulesNextUpdate(new Date(nextUpdate * 1000));
+		</script>
 		<?php endif ?>
 
 	</div>

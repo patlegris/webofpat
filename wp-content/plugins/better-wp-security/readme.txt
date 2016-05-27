@@ -3,7 +3,7 @@ Contributors: ithemes, chrisjean, aaroncampbell, gerroald, mattdanner
 Tags: security, security plugin, malware, hack, secure, block, SSL, admin, htaccess, lockdown, login, protect, protection, anti virus, attack, injection, login security, maintenance, permissions, prevention, authentication, administration, password, brute force, ban, permissions, bots, user agents, xml rpc, security log
 Requires at least: 4.1
 Tested up to: 4.5.2
-Stable tag: 5.4.2
+Stable tag: 5.4.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -187,6 +187,12 @@ Free support may be available with the help of the community in the <a href="htt
 5. Free malware scan powered by Sucuri SiteCheck.
 
 == Changelog ==
+
+= 5.4.4 =
+ * Bug Fix: Fixed bug that could cause some sites to lose settings when upgrading.
+
+= 5.4.3 =
+ * Bug Fix: Don't rely on externally loaded MailChimp JavaScript.
 
 = 5.4.2 =
  * Bug Fix: Fixed links to Settings, Logs, and creating a backup on Multisite.
@@ -1537,8 +1543,15 @@ This release is a complete rewrite from the ground up. Special thanks to Cory Mi
 
 == Upgrade Notice ==
 
+= 5.4.4 =
+Version 5.4.4 contains a bug fix that addresses problems some users had when upgrading.
+
+= 5.4.3 =
+Version 5.4.3 contains a bug fix that can prevent script issues in some browsers.
+
 = 5.4.2 =
 Version 5.4.2 contains import bug fixes for Multisite.
+
 = 5.4.1 =
 Version 5.4.1 contains import bug fixes for sites on nginx servers and brings back display of 404 errors in the logs.
 

@@ -881,7 +881,7 @@ HTML
 							'k'      => $this->getStorageEngine()->getConfig('apiKey'),
 							's'      => $this->getStorageEngine()->getConfig('siteURL') ? $this->getStorageEngine()->getConfig('siteURL') :
 								sprintf('%s://%s/', $this->getRequest()->getProtocol(), rawurlencode($this->getRequest()->getHost())),
-						)), $this->getStorageEngine()->getAttackData(), $request);
+						), null, '&'), $this->getStorageEngine()->getAttackData(), $request);
 
 					if ($response instanceof wfWAFHTTPResponse && $response->getBody()) {
 						$jsonData = wfWAFUtils::json_decode($response->getBody(), true);
@@ -1260,7 +1260,7 @@ class wfWAFCronFetchRulesEvent extends wfWAFCronEvent {
 					'h'        => $waf->getStorageEngine()->getConfig('homeURL') ? $waf->getStorageEngine()->getConfig('homeURL') : $guessSiteURL,
 					'openssl'  => $waf->hasOpenSSL() ? 1 : 0,
 					'betaFeed' => (int) $waf->getStorageEngine()->getConfig('betaThreatDefenseFeed'),
-				)));
+				), null, '&'));
 			if ($this->response) {
 				$jsonData = wfWAFUtils::json_decode($this->response->getBody(), true);
 				if (is_array($jsonData)) {

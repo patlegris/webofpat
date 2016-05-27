@@ -588,6 +588,8 @@ SQL
 		add_action('init', 'wordfence::initAction');
 		add_action('template_redirect', 'wordfence::templateRedir', 1001);
 		add_action('shutdown', 'wordfence::shutdownAction');
+		add_action('wp_enqueue_scripts', 'wordfence::enqueueAJAXWatcher');
+		add_action('admin_enqueue_scripts', 'wordfence::enqueueAJAXWatcher');
 
 		if(version_compare(PHP_VERSION, '5.4.0') >= 0){
 			add_action('wp_authenticate','wordfence::authActionNew', 1, 2);
@@ -712,6 +714,13 @@ SQL
 	public static function wpRedirectFilter($URL, $status){
 		return $URL;
 	}
+	public static function enqueueAJAXWatcher() {
+		if (wfUtils::isAdmin()) {
+			wp_enqueue_style('wordfence-colorbox-style', wfUtils::getBaseURL() . 'css/colorbox.css', '', WORDFENCE_VERSION);
+			wp_enqueue_script('jquery.wfcolorbox', wfUtils::getBaseURL() . 'js/jquery.colorbox-min.js', array('jquery'), WORDFENCE_VERSION);
+			wp_enqueue_script('wordfenceAJAXjs', wfUtils::getBaseURL() . 'js/admin.ajaxWatcher.js', array('jquery'), WORDFENCE_VERSION);
+		}
+	}
 	public static function ajax_testAjax_callback(){
 		die("WFSCANTESTOK");
 	}
@@ -740,12 +749,10 @@ SQL
 	}
 	public static function ajax_logHuman_callback(){
 		self::getLog()->canLogHit = false;
-		$browscap = new wfBrowscap();
 		$UA = isset($_SERVER['HTTP_USER_AGENT']) ? $_SERVER['HTTP_USER_AGENT'] : '';
 		$isCrawler = false;
-		if($UA){
-			$b = $browscap->getBrowser($UA);
-			if(!empty($b['Crawler']) || wfCrawl::isGoogleCrawler()){
+		if ($UA) {
+			if (wfCrawl::isCrawler($UA) || wfCrawl::isGoogleCrawler()) {
 				$isCrawler = true;
 			}
 		}
@@ -1267,6 +1274,7 @@ SQL
 				if(wfConfig::get('loginSec_lockInvalidUsers')){
 					if(strlen($username) > 0 && preg_match('/[^\r\s\n\t]+/', $username)){
 						self::lockOutIP($IP, "Used an invalid username '" . $username . "' to try to sign in.");
+						self::getLog()->logLogin('loginFailInvalidUsername', true, $username);
 					}
 					require('wfLockedOut.php');
 				}
@@ -1727,6 +1735,7 @@ SQL
 				wfConfig::set('isPaid', 0);
 				//When downgrading we must disable all two factor authentication because it can lock an admin out if we don't.
 				wfConfig::set_ser('twoFactorUsers', array());
+				self::licenseStatusChanged();
 			} else {
 				throw new Exception("Could not understand the response we received from the Wordfence servers when applying for a free API key.");
 			}
@@ -2220,6 +2229,7 @@ SQL
 					wfConfig::set('apiKey', $keyData['apiKey']);
 					wfConfig::set('isPaid', 0);
 					$reload = 'reload';
+					self::licenseStatusChanged();
 				} else {
 					throw new Exception("We could not understand the Wordfence server's response because it did not contain an 'ok' and 'apiKey' element.");
 				}
@@ -2237,6 +2247,7 @@ SQL
 					if($res['isPaid']){
 						$paidKeyMsg = true;
 					}
+					self::licenseStatusChanged();
 				} else {
 					throw new Exception("We could not understand the Wordfence API server reply when updating your API key.");
 				}
@@ -4958,7 +4969,7 @@ LIMIT %d", $lastSendTime, $limit));
 							'k'      => $waf->getStorageEngine()->getConfig('apiKey'),
 							's'      => $waf->getStorageEngine()->getConfig('siteURL') ? $waf->getStorageEngine()->getConfig('siteURL') :
 								sprintf('%s://%s/', $waf->getRequest()->getProtocol(), rawurlencode($waf->getRequest()->getHost())),
-						)),
+						), null, '&'),
 						array(
 							'body'    => json_encode($dataToSend),
 							'headers' => array(
@@ -5194,6 +5205,26 @@ if (file_exists(%1$s)) {
 			}
 		}
 		return false;
+	}
+
+	public static function licenseStatusChanged() {
+		//Update the WAF cron
+		$cron = wfWAF::getInstance()->getStorageEngine()->getConfig('cron');
+		if (is_array($cron)) {
+			/** @var wfWAFCronEvent $event */
+			foreach ($cron as $index => $event) {
+				$event->setWaf(wfWAF::getInstance());
+				if (!$event->isInPast()) {
+					$newEvent = $event->reschedule();
+					if ($newEvent instanceof wfWAFCronEvent && $newEvent !== $event) {
+						$cron[$index] = $newEvent;
+					} else {
+						unset($cron[$index]);
+					}
+				}
+			}
+		}
+		wfWAF::getInstance()->getStorageEngine()->setConfig('cron', $cron);
 	}
 }
 

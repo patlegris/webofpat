@@ -1288,7 +1288,7 @@
 				});
 			},
 			emailActivityLog: function() {
-				this.colorbox('400px', 'Email Wordfence Activity Log', "Enter the email address you would like to send the Wordfence activity log to. Note that the activity log may contain thousands of lines of data. This log is usually only sent to a member of the Wordfence support team. It also contains your PHP configuration from the phpinfo() function for diagnostic data.<br /><br /><input type='text' value='support@wordfence.com' size='20' id='wfALogRecip' /><input type='button' value='Send' onclick=\"WFAD.completeEmailActivityLog();\" /><input type='button' value='Cancel' onclick='jQuery.colorbox.close();' /><br /><br />");
+				this.colorbox('400px', 'Email Wordfence Activity Log', "Enter the email address you would like to send the Wordfence activity log to. Note that the activity log may contain thousands of lines of data. This log is usually only sent to a member of the Wordfence support team. It also contains your PHP configuration from the phpinfo() function for diagnostic data.<br /><br /><input type='text' value='wftest@wordfence.com' size='20' id='wfALogRecip' /><input type='button' value='Send' onclick=\"WFAD.completeEmailActivityLog();\" /><input type='button' value='Cancel' onclick='jQuery.colorbox.close();' /><br /><br />");
 			},
 			completeEmailActivityLog: function() {
 				jQuery.colorbox.close();
@@ -2483,6 +2483,20 @@
 					dateString = date.toLocaleString();
 				}
 				$('#waf-rules-last-updated').text('Last Updated: ' + dateString)
+					.css({
+						'opacity': 0
+					})
+					.animate({
+						'opacity': 1
+					}, 500);
+			},
+
+			renderWAFRulesNextUpdate: function(date) {
+				var dateString = date.toString();
+				if (date.toLocaleString) {
+					dateString = date.toLocaleString();
+				}
+				$('#waf-rules-next-update').text('Next Update Check: ' + dateString)
 					.css({
 						'opacity': 0
 					})

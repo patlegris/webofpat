@@ -221,13 +221,20 @@ img.kgvid_ios_novideo {
     font-family: sans-serif !important;
     font-size: 10pt !important;
     line-height: 1.2 !important;
-    color: white !important;
-    width: 50% !important;
-    background: #ABACA8 !important;
+    color: #999 !important;
+    background: #EEE !important;
     padding: 4px !important;
     border-radius: 6px !important;
     border: none !important;
     display: inline-block !important;
+}
+
+input[type="text"].kgvid_embedcode {
+    width: 30% !important;
+}
+
+input[type="text"].kgvid_start_at {
+    width: 8%; !important;
 }
 
 .kgvid_share_icons .kgvid_social_icons {
@@ -341,8 +348,18 @@ span.kgvid_facebook_icon_holder {
 /* SimpleModal styles */
 #kgvid-simplemodal-overlay {background-color:#000;}
 
-#kgvid-simplemodal-container { color:black; background-color:#000; height:auto; }
-#kgvid-simplemodal-container .simplemodal-data {margin-top:-1em; padding:5px;}
+#kgvid-simplemodal-container {
+	color:black;
+	background-color:#000;
+	height:auto;
+	transform: translateY(10px);
+}
+
+#kgvid-simplemodal-container .simplemodal-data {
+	margin-top:-1em;
+	padding:5px;
+}
+
 #kgvid-simplemodal-container a.modalCloseImg {
     display: inline;
     box-sizing: border-box;

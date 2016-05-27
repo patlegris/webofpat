@@ -462,7 +462,7 @@ class wfWAFStorageFile implements wfWAFStorageInterface {
 		$this->data = @unserialize($serializedData);
 
 		if ($this->data === false) {
-			throw new wfWAFStorageFileConfigException('Error reading config data, configuration file could be corrupted.');
+			throw new wfWAFStorageFileConfigException('Error reading Wordfence Firewall config data, configuration file could be corrupted or inaccessible. Path: ' . $this->getConfigFile());
 		}
 
 		self::lock($this->configFileHandle, LOCK_UN);
@@ -1010,11 +1010,18 @@ class wfWAFAttackDataStorageFileEngine {
 		$this->seek(wfWAFUtils::strlen(wfWAFStorageFile::LOG_FILE_HEADER) + wfWAFUtils::strlen(self::FILE_SIGNATURE) + 8 + 8);
 		$this->lockRead();
 		list(, $rowCount) = unpack('V', $this->read(4));
+		$this->unlock();
 		if ($rowCount >= self::MAX_ROWS) {
-			$this->unlock();
 			return false;
 		}
+		
+		$this->lockWrite();
+		
+		//Re-read the row count in case it changed between releasing the shared lock and getting the exclusive
+		$this->seek(wfWAFUtils::strlen(wfWAFStorageFile::LOG_FILE_HEADER) + wfWAFUtils::strlen(self::FILE_SIGNATURE) + 8 + 8);
+		list(, $rowCount) = unpack('V', $this->read(4));
 
+		//Start the write
 		$this->header = array();
 		$this->offsetTable = array();
 
@@ -1022,8 +1029,6 @@ class wfWAFAttackDataStorageFileEngine {
 		list(, $nextRowOffset) = unpack('V', $this->read(4));
 
 		$rowString = $row->pack();
-
-		$this->lockWrite();
 
 		// Update offset table
 		$this->seek(wfWAFUtils::strlen(wfWAFStorageFile::LOG_FILE_HEADER) + wfWAFUtils::strlen(self::FILE_SIGNATURE) + 8 + 8 + 4 + (($rowCount + 1) * 4));

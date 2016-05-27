@@ -3,7 +3,7 @@ Contributors: mmaunder
 Tags: wordpress, security, web application firewall, waf, performance, speed, caching, cache, caching plugin, wordpress cache, wordpress caching, wordpress security, security plugin, secure, anti-virus, malware, firewall, antivirus, virus, google safe browsing, phishing, scrapers, hacking, wordfence, securty, secrity, secure, two factor, cellphone sign-in, cellphone signin, cellphone, twofactor, security, secure, htaccess, login, log, users, login alerts, lock, chmod, maintenance, plugin, private, privacy, protection, permissions, 503, base64, injection, code, encode, script, attack, hack, hackers, block, blocked, prevent, prevention, RFI, XSS, CRLF, CSRF, SQL Injection, vulnerability, website security, WordPress security, security log, logging, HTTP log, error log, login security, personal security, infrastructure security, firewall security, front-end security, web server security, proxy security, reverse proxy security, secure website, secure login, two factor security, two factor authentication, maximum login security, heartbleed, heart bleed, heartbleed vulnerability, openssl vulnerability, nginx, litespeed, php5-fpm, woocommerce support, woocommerce caching, IPv6, IP version 6
 Requires at least: 3.9
 Tested up to: 4.5.2
-Stable tag: 6.1.7
+Stable tag: 6.1.8
 
 The Wordfence WordPress security plugin provides free enterprise-class WordPress security, protecting your website from hacks and malware.
 == Description ==
@@ -194,6 +194,24 @@ Designed for every skill level, [The WordPress Security Learning Center](https:/
 5. If you're technically minded, this is the under-the-hood view of Wordfence Security options where you can fine-tune your security settings.
 
 == Changelog ==
+
+= 6.1.8 =
+* Fix: Change wfConfig::set_ser to split large objects into multiple queries.
+* Fix: Fixed bug in multisite with "You do not have sufficient permissions to access this page" error after logging in.
+* Improvement: Update Geo IP database.
+* Fix: Fixed deadlock when NFS is used for WAF file storage, in wfWAFAttackDataStorageFileEngine::addRow().
+* Fix: Added third param to http_build_query for hosts with arg_separator.output set.
+* Improvement: Show admin notice if WAF blocks an admin (mainly needed for ajax requests).
+* Improvement: Clarify error message "Error reading config data, configuration file could be corrupted."
+* Improvement: Added better crawler detection.
+* Improvement: Add currentUserIsNot('administrator') to any generic firewall rules that are not XSS based.
+* Improvement: Update URLs in Wordfence for documentation about LiteSpeed and lockouts.
+* Improvement: Show message on scan results when a result is caused by enabling "Scan images and binary files as if they were executable" or...
+* Fix: Suppressed warning: dns_get_record(): DNS Query failed.
+* Fix: Suppressed warning gzinflate() error in scan logs.
+* Fix: On WAF roadblock page: Warning: urlencode() expects parameter 1 to be string, array given ...
+* Fix: Scheduled update for WAF rules doesn't decrease from 7 days, to 12 hours, when upgrading to a premium account.
+* Improvement: Better message for dashboard widget when no failed logins.
 
 = 6.1.7 =
 * Security Fix: Fixed reflected XSS vulnerability: CVSS 6.1 (Medium). Thanks Kacper Szurek.

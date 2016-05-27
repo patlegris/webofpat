@@ -82,10 +82,13 @@ if ( ! class_exists( 'ITSEC_Backup_Setup' ) ) {
 						ITSEC_Modules::deactivate( 'backup' );
 					}
 
-					$defaults = ITSEC_Modules::get_defaults( 'backup' );
-					$options = $defaults;
+					if ( isset( $current_options['location'] ) && ! is_dir( $current_options['location'] ) ) {
+						unset( $current_options['location'] );
+					}
 
-					foreach ( $defaults as $name => $value ) {
+					$options = ITSEC_Modules::get_defaults( 'backup' );
+
+					foreach ( $options as $name => $value ) {
 						if ( isset( $current_options[$name] ) ) {
 							$options[$name] = $current_options[$name];
 						}

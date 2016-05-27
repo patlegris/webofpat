@@ -883,9 +883,9 @@ class wfScanEngine {
 		if(preg_match('/https?:\/\/([^\/]+)/i', $home, $matches)){
 			$host = strtolower($matches[1]);
 			$this->status(2, 'info', "Starting DNS scan for $host");
-
+			
 			$cnameArrRec = @dns_get_record($host, DNS_CNAME);
-			$cnameArr = array(); 
+			$cnameArr = array();
 			$cnamesWeMustTrack = array();
 			if ($cnameArrRec) {
 				foreach($cnameArrRec as $elem){
@@ -896,7 +896,7 @@ class wfScanEngine {
 					}
 				}
 			}
-
+			
 			function wfAnonFunc1($a){ return $a['host'] . ' points to ' . $a['target']; }
 			$cnameArr = array_map('wfAnonFunc1', $cnameArr);
 			sort($cnameArr, SORT_STRING);
@@ -905,24 +905,26 @@ class wfScanEngine {
 			$dnsLogged = wfConfig::get('wf_dnsLogged', false);
 			$msg = "A change in your DNS records may indicate that a hacker has hacked into your DNS administration system and has pointed your email or website to their own server for malicious purposes. It could also indicate that your domain has expired. If you made this change yourself you can mark it 'resolved' and safely ignore it.";
 			if($dnsLogged && $loggedCNAME != $currentCNAME){
-				if($this->addIssue('dnsChange', 2, 'dnsChanges', 'dnsChanges', "Your DNS records have changed", "We have detected a change in the CNAME records of your DNS configuration for the domain $host. A CNAME record is an alias that is used to point a domain name to another domain name. For example foo.example.com can point to bar.example.com which then points to an IP address of 10.1.1.1. $msg", array( 
+				if($this->addIssue('dnsChange', 2, 'dnsChanges', 'dnsChanges', "Your DNS records have changed", "We have detected a change in the CNAME records of your DNS configuration for the domain $host. A CNAME record is an alias that is used to point a domain name to another domain name. For example foo.example.com can point to bar.example.com which then points to an IP address of 10.1.1.1. $msg", array(
 					'type' => 'CNAME',
 					'host' => $host,
 					'oldDNS' => $loggedCNAME,
 					'newDNS' => $currentCNAME
-					))){
+				))){
 					$haveIssues = true;
 				}
 			}
 			wfConfig::set('wf_dnsCNAME', $currentCNAME);
-
-			$aArrRec = dns_get_record($host, DNS_A); 
+			
+			$aArrRec = @dns_get_record($host, DNS_A);
 			$aArr = array();
-			foreach($aArrRec as $elem){ 
-				$this->status(2, 'info', "Scanning DNS A record for " . $elem['host']);
-				if($elem['host'] == $host || in_array($elem['host'], $cnamesWeMustTrack) ){ 
-					$aArr[] = $elem; 
-				} 
+			if ($aArrRec) {
+				foreach($aArrRec as $elem){
+					$this->status(2, 'info', "Scanning DNS A record for " . $elem['host']);
+					if($elem['host'] == $host || in_array($elem['host'], $cnamesWeMustTrack) ){
+						$aArr[] = $elem;
+					}
+				}
 			}
 			function wfAnonFunc2($a){ return $a['host'] . ' points to ' . $a['ip']; }
 			$aArr = array_map('wfAnonFunc2', $aArr);
@@ -931,26 +933,30 @@ class wfScanEngine {
 			$loggedA = wfConfig::get('wf_dnsA');
 			$dnsLogged = wfConfig::get('wf_dnsLogged', false);
 			if($dnsLogged && $loggedA != $currentA){
-				if($this->addIssue('dnsChange', 2, 'dnsChanges', 'dnsChanges', "Your DNS records have changed", "We have detected a change in the A records of your DNS configuration that may affect the domain $host. An A record is a record in DNS that points a domain name to an IP address. $msg", array( 
+				if($this->addIssue('dnsChange', 2, 'dnsChanges', 'dnsChanges', "Your DNS records have changed", "We have detected a change in the A records of your DNS configuration that may affect the domain $host. An A record is a record in DNS that points a domain name to an IP address. $msg", array(
 					'type' => 'A',
 					'host' => $host,
 					'oldDNS' => $loggedA,
 					'newDNS' => $currentA
-					))){
+				))){
 					$haveIssues = true;
 				}
 			}
 			wfConfig::set('wf_dnsA', $currentA);
-
-
-
-			$mxArrRec = dns_get_record($host, DNS_MX); 
+			
+			
+			
+			$mxArrRec = @dns_get_record($host, DNS_MX);
 			$mxArr = array();
-			foreach($mxArrRec as $elem){
-				$this->status(2, 'info', "Scanning DNS MX record for " . $elem['host']); 
-				if($elem['host'] == $host){ 
-					$mxArr[] = $elem; 
-				} 
+			if ($mxArrRec) {
+				foreach ($mxArrRec as $elem)
+				{
+					$this->status(2, 'info', "Scanning DNS MX record for " . $elem['host']);
+					if ($elem['host'] == $host)
+					{
+						$mxArr[] = $elem;
+					}
+				}
 			}
 			function wfAnonFunc3($a){ return $a['target']; }
 			$mxArr = array_map('wfAnonFunc3', $mxArr);

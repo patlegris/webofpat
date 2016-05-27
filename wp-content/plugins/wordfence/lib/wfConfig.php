@@ -568,9 +568,9 @@ class wfConfig {
 			return;
 		}
 
-		if ($key == 'apiKey' && wfWAF::getInstance() && !WFWAF_SUBDIRECTORY_INSTALL) {
+		if (($key == 'apiKey' || $key == 'isPaid') && wfWAF::getInstance() && !WFWAF_SUBDIRECTORY_INSTALL) {
 			try {
-				wfWAF::getInstance()->getStorageEngine()->setConfig('apiKey', $val);
+				wfWAF::getInstance()->getStorageEngine()->setConfig($key, $val);
 			} catch (wfWAFStorageFileException $e) {
 				error_log($e->getMessage());
 			}
@@ -651,90 +651,202 @@ class wfConfig {
 		}
 		return $val;
 	}
-	public static function get_ser($key, $default, $canUseDisk = false){ //When using disk, reading a value deletes it.
-		//If we can use disk, check if there are any values stored on disk first and read them instead of the DB if there are values
-		if($canUseDisk){
-			$filename = 'wordfence_tmpfile_' . $key . '.php';
-			$dir = self::getTempDir();
-			if($dir){
-				$obj = false;
-				$fullFile = $dir . $filename;
-				if(file_exists($fullFile)){
-					wordfence::status(4, 'info', "Loading serialized data from file $fullFile");
-					$obj = unserialize(substr(file_get_contents($fullFile), strlen(self::$tmpFileHeader))); //Strip off security header and unserialize
-					if(! $obj){
-						wordfence::status(2, 'error', "Could not unserialize file $fullFile");
-					}
-					self::deleteOldTempFile($fullFile);
+	
+	private static function canCompressValue() {
+		if (!function_exists('gzencode') || !function_exists('gzdecode')) {
+			return false;
+		}
+		$disabled = explode(',', ini_get('disable_functions'));
+		if (in_array('gzencode', $disabled) || in_array('gzdecode', $disabled)) {
+			return false;
+		}
+		return true;
+	}
+	
+	private static function isCompressedValue($data) {
+		//Based on http://www.ietf.org/rfc/rfc1952.txt
+		if (strlen($data) < 2) {
+			return false;
+		}
+		
+		$magicBytes = substr($data, 0, 2);
+		if ($magicBytes !== (chr(0x1f) . chr(0x8b))) {
+			return false;
+		}
+		
+		//Small chance of false positives here -- can check the header CRC if it turns out it's needed
+		return true;
+	}
+	
+	private static function ser_chunked_key($key) {
+		return 'wordfence_chunked_' . $key . '_';
+	}
+	
+	public static function get_ser($key, $default) {
+		//Check for a chunked value first
+		$chunkedValueKey = self::ser_chunked_key($key);
+		$header = self::getDB()->querySingle("select val from " . self::table() . " where name=%s", $chunkedValueKey . 'header');
+		if ($header) {
+			$header = unserialize($header);
+			$count = $header['count'];
+			$path = tempnam(sys_get_temp_dir(), $key); //Writing to a file like this saves some of PHP's in-memory copying when just appending each chunk to a string
+			$fh = fopen($path, 'r+');
+			$length = 0;
+			for ($i = 0; $i < $count; $i++) {
+				$chunk = self::getDB()->querySingle("select val from " . self::table() . " where name=%s", $chunkedValueKey . $i);
+				self::getDB()->flush(); //clear cache
+				if (!$chunk) {
+					wordfence::status(2, 'error', "Error reassembling value for {$key}");
+					return $default;
 				}
-				if($obj){ //If we managed to deserialize something, clean ALL tmp dirs of this file and return obj
-					return $obj;
+				fwrite($fh, $chunk);
+				$length += strlen($chunk);
+				unset($chunk);
+			}
+			
+			fseek($fh, 0);
+			$serialized = fread($fh, $length);
+			fclose($fh);
+			unlink($path);
+			
+			if (self::canCompressValue() && self::isCompressedValue($serialized)) {
+				$inflated = @gzdecode($serialized);
+				if ($inflated !== false) {
+					unset($serialized);
+					return unserialize($inflated);
 				}
 			}
+			return unserialize($serialized);
 		}
-
-		$res = self::getDB()->querySingle("select val from " . self::table() . " where name=%s", $key);
-		self::getDB()->flush(); //clear cache
-		if($res){
-			return unserialize($res);
+		else {
+			$serialized = self::getDB()->querySingle("select val from " . self::table() . " where name=%s", $key);
+			self::getDB()->flush(); //clear cache
+			if ($serialized) {
+				if (self::canCompressValue() && self::isCompressedValue($serialized)) {
+					$inflated = @gzdecode($serialized);
+					if ($inflated !== false) {
+						unset($serialized);
+						return unserialize($inflated);
+					}
+				}
+				return unserialize($serialized);
+			}
 		}
+		
 		return $default;
 	}
-	public static function set_ser($key, $val, $canUseDisk = false){
-		//We serialize some very big values so this is memory efficient. We don't make any copies of $val and don't use ON DUPLICATE KEY UPDATE
-		// because we would have to concatenate $val twice into the query which could also exceed max packet for the mysql server
-		$serialized = serialize($val);
-		$tempFilename = 'wordfence_tmpfile_' . $key . '.php';
-		if((strlen($serialized) * 2) + 50 > self::getDB()->getMaxAllowedPacketBytes()){ //If it's greater than max_allowed_packet + 20% for escaping and SQL
-			if($canUseDisk){
-				$dir = self::getTempDir();
-				$potentialDirs = self::getPotentialTempDirs();
-				if($dir){
-					$fullFile = $dir . $tempFilename;
-					self::deleteOldTempFile($fullFile);
-					$fh = fopen($fullFile, 'w');
-					if($fh){ 
-						wordfence::status(4, 'info', "Serialized data for $key is " . strlen($serialized) . " bytes and is greater than max_allowed packet so writing it to disk file: " . $fullFile);
-					} else {
-						wordfence::status(1, 'error', "Your database doesn't allow big packets so we have to use files to store temporary data and Wordfence can't find a place to write them. Either ask your admin to increase max_allowed_packet on your MySQL database, or make one of the following directories writable by your web server: " . implode(', ', $potentialDirs));
+	
+	public static function set_ser($key, $val, $allowCompression = false) {
+		/*
+		 * Because of the small default value for `max_allowed_packet` and `max_long_data_size`, we're stuck splitting
+		 * large values into multiple chunks. To minimize memory use, the MySQLi driver is used directly when possible.
+		 */
+		
+		global $wpdb;
+		$dbh = $wpdb->dbh;
+		
+		self::delete_ser_chunked($key); //Ensure any old values for a chunked value are deleted first
+		
+		if (self::canCompressValue() && $allowCompression) {
+			$data = gzencode(serialize($val));
+		}
+		else {
+			$data = serialize($val);
+		}
+		
+		if (!$wpdb->use_mysqli) {
+			$data = bin2hex($data);
+		}
+		
+		$dataLength = strlen($data);
+		$chunkSize = intval((self::getDB()->getMaxAllowedPacketBytes() - 50) / 1.2); //Based on max_allowed_packet + 20% for escaping and SQL
+		$chunkSize = $chunkSize - ($chunkSize % 2); //Ensure it's even
+		$chunkedValueKey = self::ser_chunked_key($key);
+		if ($dataLength > $chunkSize) {
+			$chunks = 0;
+			while (($chunks * $chunkSize) < $dataLength) {
+				$dataChunk = substr($data, $chunks * $chunkSize, $chunkSize);
+				if ($wpdb->use_mysqli) {
+					$chunkKey = $chunkedValueKey . $chunks;
+					$stmt = $dbh->prepare("INSERT IGNORE INTO " . self::table() . " (name, val) VALUES (?, ?)");
+					$null = NULL;
+					$stmt->bind_param("sb", $chunkKey, $null);
+					
+					if (!$stmt->send_long_data(1, $dataChunk)) {
+						wordfence::status(2, 'error', "Error writing value chunk for {$key} (error: {$dbh->error})");
 						return false;
 					}
-					fwrite($fh, self::$tmpFileHeader);
-					fwrite($fh, $serialized);
-					fclose($fh);
-					return true;
-				} else {
-					wordfence::status(1, 'error', "Your database doesn't allow big packets so we have to use files to store temporary data and Wordfence can't find a place to write them. Either ask your admin to increase max_allowed_packet on your MySQL database, or make one of the following directories writable by your web server: " . implode(', ', $potentialDirs));
-					return false;
-				}
 					
-			} else {
-				wordfence::status(1, 'error', "Wordfence tried to save a variable with name '$key' and your database max_allowed_packet is set to be too small. This particular variable can't be saved to disk. Please ask your administrator to increase max_allowed_packet. Thanks.");
+					if (!$stmt->execute()) {
+						wordfence::status(2, 'error', "Error finishing writing value for {$key} (error: {$dbh->error})");
+						return false;
+					}
+				}
+				else {
+					if (!self::getDB()->queryWrite(sprintf("insert ignore into " . self::table() . " (name, val) values (%%s, X'%s')", $dataChunk), $chunkedValueKey . $chunks)) {
+						wordfence::status(2, 'error', "Error writing value chunk for {$key} (error: {$wpdb->last_error})");
+						return false;
+					}
+				}
+				$chunks++;
+			}
+			
+			if (!self::getDB()->queryWrite(sprintf("insert ignore into " . self::table() . " (name, val) values (%%s, X'%s')", bin2hex(serialize(array('count' => $chunks)))), $chunkedValueKey . 'header')) {
+				wordfence::status(2, 'error', "Error writing value header for {$key}");
 				return false;
 			}
-		} else {
-			//Delete temp files on disk or else the DB will be written to but get_ser will see files on disk and read them instead
-			$tempDir = self::getTempDir();
-			if($tempDir){
-				self::deleteOldTempFile($tempDir . $tempFilename);
-			}
+		}
+		else {
 			$exists = self::getDB()->querySingle("select name from " . self::table() . " where name='%s'", $key);
-			$serializedHex = bin2hex($serialized);
-
-			if($exists){
-				self::getDB()->queryWrite(sprintf("update " . self::table() . " set val=X'%s' where name=%%s", $serializedHex), $key);
-			} else {
-				self::getDB()->queryWrite(sprintf("insert ignore into " . self::table() . " (name, val) values (%%s, X'%s')", $serializedHex), $key);
+			
+			if ($wpdb->use_mysqli) {
+				if ($exists) {
+					$stmt = $dbh->prepare("UPDATE " . self::table() . " SET val=? WHERE name=?");
+				}
+				else {
+					$stmt = $dbh->prepare("INSERT IGNORE INTO " . self::table() . " (val, name) VALUES (?, ?)");
+				}
+				
+				$null = NULL;
+				$stmt->bind_param("bs", $null, $key);
+				if (!$stmt->send_long_data(0, $data)) {
+					wordfence::status(2, 'error', "Error writing value chunk for {$key} (error: {$dbh->error})");
+					return false;
+				}
+				
+				if (!$stmt->execute()) {
+					wordfence::status(2, 'error', "Error finishing writing value for {$key} (error: {$dbh->error})");
+					return false;
+				}
+			}
+			else {
+				if ($exists) {
+					self::getDB()->queryWrite(sprintf("update " . self::table() . " set val=X'%s' where name=%%s", $data), $key);
+				}
+				else {
+					self::getDB()->queryWrite(sprintf("insert ignore into " . self::table() . " (name, val) values (%%s, X'%s')", $data), $key);
+				}
 			}
 		}
 		self::getDB()->flush();
 		return true;
 	}
-	private static function deleteOldTempFile($filename){
-		if(file_exists($filename)){
-			@unlink($filename);
+	
+	private static function delete_ser_chunked($key) {
+		$chunkedValueKey = self::ser_chunked_key($key);
+		$header = self::getDB()->querySingle("select val from " . self::table() . " where name=%s", $chunkedValueKey . 'header');
+		if (!$header) {
+			return;
 		}
+		
+		$header = unserialize($header);
+		$count = $header['count'];
+		for ($i = 0; $i < $count; $i++) {
+			self::getDB()->queryWrite("delete from " . self::table() . " where name='%s'", $chunkedValueKey . $i);
+		}
+		self::getDB()->queryWrite("delete from " . self::table() . " where name='%s'", $chunkedValueKey . 'header');
 	}
+	
 	public static function getTempDir(){
 		if(! self::$tmpDirCache){
 			$dirs = self::getPotentialTempDirs();
@@ -848,7 +960,7 @@ class wfConfig {
 						"You are running the LiteSpeed web server which has been known to cause a problem with Wordfence auto-update.\n" .
 						"Please go to your website now and make a minor change to your .htaccess to fix this.\n" .
 						"You can find out how to make this change at:\n" .
-						"https://support.wordfence.com/solution/articles/1000129050-running-wordfence-under-litespeed-web-server-and-preventing-process-killing-or\n" .
+						"https://docs.wordfence.com/en/LiteSpeed_aborts_Wordfence_scans_and_updates._How_do_I_prevent_that%3F\n" .
 						"\nAlternatively you can disable auto-update on your website to stop receiving this message and upgrade Wordfence manually.\n",
 						'127.0.0.1'
 						);

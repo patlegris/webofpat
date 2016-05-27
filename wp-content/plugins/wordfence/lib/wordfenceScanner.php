@@ -200,11 +200,24 @@ class wordfenceScanner {
 				if( (! wfConfig::get('scansEnabled_highSense')) && preg_match('/^(?:\.htaccess|wp\-config\.php)$/', $file)) {
 					$dontScanForURLs = true;
 				}
-				if(! $isPHP && preg_match('/^(?:jpg|jpeg|mp3|avi|m4v|gif|png|sql|tbz2?|bz2?|xz|zip|tgz|gz|tar|log|err\d+)$/', $fileExt) && (! wfConfig::get('scansEnabled_scanImages')) ){
-					continue;
+				
+				$isScanImagesFile = false;
+				if (!$isPHP && preg_match('/^(?:jpg|jpeg|mp3|avi|m4v|gif|png|sql|js|tbz2?|bz2?|xz|zip|tgz|gz|tar|log|err\d+)$/', $fileExt)) {
+					if (wfConfig::get('scansEnabled_scanImages')) {
+						$isScanImagesFile = true;
+					}
+					else {
+						continue;
+					}
 				}
-				if( (! wfConfig::get('scansEnabled_highSense')) && strtolower($fileExt) == 'sql'){ //
-					continue;
+				$isHighSensitivityFile = false;
+				if (strtolower($fileExt) == 'sql') {
+					if (wfConfig::get('scansEnabled_highSense')) {
+						$isHighSensitivityFile = true;
+					}
+					else {
+						continue;
+					}
 				}
 				if(wfUtils::fileTooBig($this->path . $file)){ //We can't use filesize on 32 bit systems for files > 2 gigs
 					//We should not need this check because files > 2 gigs are not hashed and therefore won't be received back as unknowns from the API server
@@ -241,6 +254,15 @@ class wordfenceScanner {
 					if($totalRead < 1){
 						break;
 					}
+					
+					$extraMsg = '';
+					if ($isScanImagesFile) {
+						$extraMsg = ' This file was detected because you have enabled "Scan images, binary, and other files as if they were executable", which treats non-PHP files as if they were PHP code. This option is more aggressive than the usual scans, and may cause false positives.';
+					}
+					else if ($isHighSensitivityFile) {
+						$extraMsg = ' This file was detected because you have enabled HIGH SENSITIVITY scanning. This option is more aggressive than the usual scans, and may cause false positives.';
+					}
+					
 					if($isPHP || wfConfig::get('scansEnabled_scanImages') ){
 						if(strpos($data, '$allowed'.'Sites') !== false && strpos($data, "define ('VER"."SION', '1.") !== false && strpos($data, "TimThum"."b script created by") !== false){
 							if(! $this->isSafeFile($this->path . $file)){
@@ -250,7 +272,7 @@ class wordfenceScanner {
 									'ignoreP' => $this->path . $file,
 									'ignoreC' => $fileSum,
 									'shortMsg' => "File is an old version of TimThumb which is vulnerable.",
-									'longMsg' => "This file appears to be an old version of the TimThumb script which makes your system vulnerable to attackers. Please upgrade the theme or plugin that uses this or remove it.",
+									'longMsg' => "This file appears to be an old version of the TimThumb script which makes your system vulnerable to attackers. Please upgrade the theme or plugin that uses this or remove it." . $extraMsg,
 									'data' => array_merge(array(
 										'file' => $file,
 									), $dataForFile),
@@ -268,7 +290,7 @@ class wordfenceScanner {
 											'ignoreP' => $this->path . $file,
 											'ignoreC' => $fileSum,
 											'shortMsg' => "File appears to be malicious: " . esc_html($file),
-											'longMsg' => "This file appears to be installed by a hacker to perform malicious activity. If you know about this file you can choose to ignore it to exclude it from future scans. The text we found in this file that matches a known malicious file is: <strong style=\"color: #F00;\">\"" . esc_html((strlen($matches[1]) > 200 ? substr($matches[1], 0, 200) . '...' : $matches[1])) . "\"</strong>. The infection type is: <strong>" . esc_html($rule[3]) . '</strong>',
+											'longMsg' => "This file appears to be installed by a hacker to perform malicious activity. If you know about this file you can choose to ignore it to exclude it from future scans. The text we found in this file that matches a known malicious file is: <strong style=\"color: #F00;\">\"" . esc_html((strlen($matches[1]) > 200 ? substr($matches[1], 0, 200) . '...' : $matches[1])) . "\"</strong>. The infection type is: <strong>" . esc_html($rule[3]) . '</strong>' . $extraMsg,
 											'data' => array_merge(array(
 												'file' => $file,
 											), $dataForFile),
@@ -298,7 +320,7 @@ class wordfenceScanner {
 										'ignoreP' => $this->path . $file,
 										'ignoreC' => $fileSum,
 										'shortMsg' => "This file may contain malicious executable code: " . esc_html($this->path . $file),
-										'longMsg' => "This file is a PHP executable file and contains the word 'eval' (without quotes) and the word '" . esc_html($badStringFound) . "' (without quotes). The eval() function along with an encoding function like the one mentioned are commonly used by hackers to hide their code. If you know about this file you can choose to ignore it to exclude it from future scans.",
+										'longMsg' => "This file is a PHP executable file and contains the word 'eval' (without quotes) and the word '" . esc_html($badStringFound) . "' (without quotes). The eval() function along with an encoding function like the one mentioned are commonly used by hackers to hide their code. If you know about this file you can choose to ignore it to exclude it from future scans. This file was detected because you have enabled HIGH SENSITIVITY scanning. This option is more aggressive than the usual scans, and may cause false positives.",
 										'data' => array_merge(array(
 											'file' => $file,
 										), $dataForFile),

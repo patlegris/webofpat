@@ -54,6 +54,8 @@ class wfScan {
 			if(! wfUtils::getScanLock()){
 				self::errorExit("There is already a scan running.");
 			}
+			
+			wfConfig::set('wfPeakMemory', 0);
 		}
 		self::status(4, 'info', "Requesting max memory");
 		wfUtils::requestMaxMemory();
@@ -67,7 +69,7 @@ class wfScan {
 		wfUtils::iniSet('display_errors','On');
 		self::status(4, 'info', "Setting up scanRunning and starting scan");
 		if($isFork){
-			$scan = wfConfig::get_ser('wfsd_engine', false, true);
+			$scan = wfConfig::get_ser('wfsd_engine', false);
 			if($scan){
 				self::status(4, 'info', "Got a true deserialized value back from 'wfsd_engine' with type: " . gettype($scan));
 				wfConfig::set('wfsd_engine', '', true);
@@ -109,7 +111,7 @@ class wfScan {
 		}
 	}
 	public static function error_handler($errno, $errstr, $errfile, $errline){
-		if(self::$errorHandlingOn){
+		if(self::$errorHandlingOn && error_reporting() > 0){
 			if(preg_match('/wordfence\//', $errfile)){
 				$level = 1; //It's one of our files, so level 1
 			} else {

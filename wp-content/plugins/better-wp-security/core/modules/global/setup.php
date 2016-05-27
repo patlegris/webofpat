@@ -51,17 +51,27 @@ if ( ! class_exists( 'ITSEC_Global_Setup' ) ) {
 
 				// If there are no current options, go with the new defaults by not saving anything
 				if ( is_array( $current_options ) ) {
-					$settings = ITSEC_Modules::get_settings( 'global' );
-
 					// log_type used to be 0 for database, 1 for file, 2 for both
 					switch ( $current_options['log_type'] ) {
 						case 2:
 							$current_options['log_type'] = 'both';
+							break;
 						case 1:
 							$current_options['log_type'] = 'file';
+							break;
 						default:
 							$current_options['log_type'] = 'database';
 					}
+
+					if ( isset( $current_options['log_location'] ) && ! is_dir( $current_options['log_location'] ) ) {
+						unset( $current_options['log_location'] );
+					}
+
+					if ( isset( $current_options['nginx_file'] ) && ! is_dir( dirname( $current_options['nginx_file'] ) ) ) {
+						unset( $current_options['nginx_file'] );
+					}
+
+					$settings = ITSEC_Modules::get_defaults( 'global' );
 
 					foreach ( $settings as $index => $setting ) {
 						if ( isset( $current_options[ $index ] ) ) {

@@ -48,7 +48,7 @@
 
 				<form data-bind="submit: reloadListings">
 
-					<?php if (defined('WP_DEBUG') && WP_DEBUG): ?>
+					<?php if (defined('WP_DEBUG') && WP_DEBUG && false): ?>
 						<pre data-bind="text: 'DEBUG: ' + sql(), visible: sql"></pre>
 					<?php endif ?>
 

@@ -36,7 +36,8 @@ if ( ! class_exists( 'ITSEC_Core' ) ) {
 			$request_type,
 			$wp_upload_dir,
 			$notices_loaded,
-			$doing_data_upgrade;
+			$doing_data_upgrade,
+			$storage_dir;
 
 		/**
 		 * Private constructor to make this a singleton
@@ -368,6 +369,8 @@ if ( ! class_exists( 'ITSEC_Core' ) ) {
 
 			global $itsec_globals;
 
+			$this->doing_data_upgrade = true;
+
 			//require plugin setup information
 			if ( ! class_exists( 'ITSEC_Setup' ) ) {
 				require( self::get_core_dir() . '/class-itsec-setup.php' );
@@ -679,11 +682,17 @@ if ( ! class_exists( 'ITSEC_Core' ) ) {
 		}
 
 		public static function get_storage_dir( $dir = '' ) {
+			$self = self::get_instance();
+
 			require_once( self::get_core_dir() . '/lib/class-itsec-lib-directory.php' );
 
-			$wp_upload_dir = self::get_wp_upload_dir();
+			if ( ! isset( $self->storage_dir ) ) {
+				$wp_upload_dir = self::get_wp_upload_dir();
 
-			$dir = $wp_upload_dir['basedir'] . '/ithemes-security/' . $dir;
+				$self->storage_dir = $wp_upload_dir['basedir'] . '/ithemes-security/';
+			}
+
+			$dir = $self->storage_dir . $dir;
 			$dir = rtrim( $dir, '/' );
 
 			ITSEC_Lib_Directory::create( $dir );

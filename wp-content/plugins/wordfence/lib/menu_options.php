@@ -179,7 +179,7 @@ $w = new wfConfig();
 					<?php if (getenv( 'noabort' ) != '1' && stristr( $_SERVER['SERVER_SOFTWARE'], 'litespeed' ) !== false){ ?>
 					<span style="color: #F00;">Warning: </span>You are running LiteSpeed web server and you don't have
 					the "noabort" variable set in your .htaccess.<br/>
-					<a href="https://support.wordfence.com/solution/articles/1000129050-running-wordfence-under-litespeed-web-server-and-preventing-process-killing-or"
+					<a href="https://docs.wordfence.com/en/LiteSpeed_aborts_Wordfence_scans_and_updates._How_do_I_prevent_that%3F"
 					   target="_blank">Please read this article in our FAQ to make an important change that will ensure
 						your site stability during an update.<br/>
 						<?php } ?>
@@ -574,7 +574,7 @@ $w = new wfConfig();
 					           value="1" <?php $w->cb( 'other_scanOutside' ); ?> /></td>
 				</tr>
 				<tr>
-					<th>Scan images and binary files as if they were executable<a
+					<th>Scan images, binary, and other files as if they were executable<a
 							href="http://docs.wordfence.com/en/Wordfence_options#Scan_image_files_as_if_they_were_executable"
 							target="_blank" class="wfhelp"></a></th>
 					<td><input type="checkbox" id="scansEnabled_scanImages" class="wfConfigElem"

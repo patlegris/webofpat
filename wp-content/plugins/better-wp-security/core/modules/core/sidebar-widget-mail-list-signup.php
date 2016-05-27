@@ -11,6 +11,13 @@ class ITSEC_Settings_Page_Sidebar_Widget_Mail_List_Signup extends ITSEC_Settings
 	}
 
 	public function render( $form ) {
+		wp_enqueue_script( 'itsec-mc-validate', plugins_url( '/js/mc-validate.js', __FILE__ ), array( 'jquery' ), '20160526', true );
+		$this->inline_js = "(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));";
+		if ( function_exists( 'wp_add_inline_script' ) ) {
+			wp_add_inline_script( 'itsec-mc-validate', $this->inline_js );
+		} else {
+			add_filter( 'script_loader_tag', array( $this, 'script_loader_tag' ), null, 2 );
+		}
 		?>
 
 		<div id="mc_embed_signup">
@@ -32,9 +39,19 @@ class ITSEC_Settings_Page_Sidebar_Widget_Mail_List_Signup extends ITSEC_Settings
 				<input type="submit" value="<?php _e( 'Subscribe', 'better-wp-security' ); ?>" name="subscribe" id="mc-embedded-subscribe" class="button button-secondary">
 			</form>
 		</div>
-		<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
-
 		<?php
+	}
+
+	/**
+	 * Used to replicate the functionality of wp_add_inline_script
+	 *
+	 * @todo remove when we only support WordPress 4.5+
+	 */
+	public function script_loader_tag( $tag, $handle ) {
+		if ( 'itsec-mc-validate' === $handle ) {
+			$tag .= sprintf( "<script type='text/javascript'>\n%s\n</script>\n", $this->inline_js );
+		}
+		return $tag;
 	}
 
 }

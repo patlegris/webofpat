@@ -389,3 +389,9 @@
 2.3.4 - 2016-05-25 - Chris Jean & Aaron D. Campbell
 	Bug Fix: Fixed links to Settings, Logs, and creating a backup on Multisite.
 	Enhancement: The "Write to Files" setting is now enabled by default.
+2.3.5 - 2016-05-26 - Chris Jean & Aaron D. Campbell
+	Bug Fix: Don't rely on externally loaded MailChimp JavaScript.
+2.3.6 - 2016-05-26 - Chris Jean & Aaron D. Campbell
+	Bug Fix: Fixed bug that could cause some sites to lose settings when upgrading or importing settings.
+	Bug Fix: Fixed bug that could cause Security to look at old file and directory locations after importing settings from one site to a different site.
+	Bug Fix: Removed some status messages that would display after doing an import.

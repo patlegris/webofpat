@@ -517,3 +517,7 @@
 5.4.2 - 2016-05-25 - Chris Jean & Aaron D. Campbell
 	Bug Fix: Fixed links to Settings, Logs, and creating a backup on Multisite.
 	Enhancement: The "Write to Files" setting is now enabled by default.
+5.4.3 - 2016-05-26 - Chris Jean & Aaron D. Campbell
+	Bug Fix: Don't rely on externally loaded MailChimp JavaScript.
+5.4.4 - 2016-05-26 - Chris Jean & Aaron D. Campbell
+	Bug Fix: Fixed bug that could cause some sites to lose settings when upgrading.

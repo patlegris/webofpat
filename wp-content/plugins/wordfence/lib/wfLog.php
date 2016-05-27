@@ -179,6 +179,9 @@ class wfLog {
 			);
 	}
 	private function getCurrentUserID(){
+		if (!function_exists('get_current_user_id') || !defined('AUTH_COOKIE')) { //If pluggable.php is loaded early by some other plugin on a multisite installation, it leads to an error because AUTH_COOKIE is undefined and WP doesn't check for it first
+			return 0;
+		}
 		$id = get_current_user_id();
 		return $id ? $id : 0;
 	}
@@ -570,7 +573,7 @@ class wfLog {
 			$res['browser'] = false;
 			if($res['UA']){
 				$b = $browscap->getBrowser($res['UA']);
-				if($b){
+				if ($b && $b['Parent'] != 'DefaultProperties') {
 					$res['browser'] = array(
 						'browser' => $b['Browser'],
 						'version' => $b['Version'],
@@ -578,6 +581,13 @@ class wfLog {
 						'isMobile' => $b['isMobileDevice'],
 						'isCrawler' => $b['Crawler']
 						);
+				}
+				else {
+					$log = new wfLog(wfConfig::get('apiKey'), wfUtils::getWPVersion());
+					$IP = wfUtils::getIP();
+					$res['browser'] = array(
+						'isCrawler' => !(isset($_COOKIE['wordfence_verifiedHuman']) && $log->validateVerifiedHumanCookie($_COOKIE['wordfence_verifiedHuman'], $res['UA'], $IP))
+					);
 				}
 			}
 			if($res['userID']){
@@ -728,13 +738,20 @@ class wfLog {
 			$res['browser'] = false;
 			if($res['UA']){
 				$b = $browscap->getBrowser($res['UA']);
-				if($b){
+				if($b && $b['Parent'] != 'DefaultProperties'){
 					$res['browser'] = array(
 						'browser'   => !empty($b['Browser']) ? $b['Browser'] : "",
 						'version'   => !empty($b['Version']) ? $b['Version'] : "",
 						'platform'  => !empty($b['Platform']) ? $b['Platform'] : "",
 						'isMobile'  => !empty($b['isMobileDevice']) ? $b['isMobileDevice'] : "",
 						'isCrawler' => !empty($b['Crawler']) ? $b['Crawler'] : "",
+					);
+				}
+				else {
+					$log = new wfLog(wfConfig::get('apiKey'), wfUtils::getWPVersion());
+					$IP = wfUtils::getIP();
+					$res['browser'] = array(
+						'isCrawler' => !(isset($_COOKIE['wordfence_verifiedHuman']) && $log->validateVerifiedHumanCookie($_COOKIE['wordfence_verifiedHuman'], $res['UA'], $IP)) ? 'true' : ''
 					);
 				}
 			}

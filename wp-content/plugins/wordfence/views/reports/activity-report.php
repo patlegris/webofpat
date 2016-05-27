@@ -37,7 +37,7 @@
 		<?php else: ?>
 			<tr>
 				<td colspan="3">
-					We're collecting data, please check back soon.
+					No IPs blocked yet.
 				</td>
 			</tr>
 		<?php endif ?>
@@ -80,7 +80,7 @@
 		<?php else: ?>
 			<tr>
 				<td colspan="3">
-					We're collecting data, please check back soon.
+					No requests blocked yet.
 				</td>
 			</tr>
 		<?php endif ?>
@@ -115,7 +115,7 @@
 		<?php else: ?>
 			<tr>
 				<td colspan="3">
-					We're collecting data, please check back soon.
+					No failed logins yet.
 				</td>
 			</tr>
 		<?php endif ?>
