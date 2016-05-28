@@ -2,743 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d7aea581-a7ac-450a-969a-29716d702787" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/si-captcha-for-wordpress/captcha/cache/TqW2NPHk3RE4QIxi.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/tmp/configCache.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/vendor/wordfence/wf-waf/src/baseRules.rules" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/vendor/wordfence/wf-waf/src/logs/.htaccess" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/vendor/wordfence/wf-waf/src/logs/attack-data.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/vendor/wordfence/wf-waf/src/logs/config.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/vendor/wordfence/wf-waf/src/logs/ips.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/vendor/wordfence/wf-waf/src/rules.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/video-embed-thumbnail-generator/video-js/font/VideoJS.eot" afterPath="$PROJECT_DIR$/wp-content/plugins/video-embed-thumbnail-generator/video-js/font/VideoJS.eot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/video-embed-thumbnail-generator/video-js/font/VideoJS.ttf" afterPath="$PROJECT_DIR$/wp-content/plugins/video-embed-thumbnail-generator/video-js/font/VideoJS.ttf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/video-embed-thumbnail-generator/video-js/font/VideoJS.woff" afterPath="$PROJECT_DIR$/wp-content/plugins/video-embed-thumbnail-generator/video-js/font/VideoJS.woff" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/GeoIP.dat" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/GeoIP.dat" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/html5blank" afterPath="$PROJECT_DIR$/wp-content/themes/html5blank" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/better-wp-security/better-wp-security.php" afterPath="$PROJECT_DIR$/wp-content/plugins/better-wp-security/better-wp-security.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/better-wp-security/core/class-itsec-core.php" afterPath="$PROJECT_DIR$/wp-content/plugins/better-wp-security/core/class-itsec-core.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/better-wp-security/core/class-itsec-modules.php" afterPath="$PROJECT_DIR$/wp-content/plugins/better-wp-security/core/class-itsec-modules.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/better-wp-security/core/history.txt" afterPath="$PROJECT_DIR$/wp-content/plugins/better-wp-security/core/history.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/better-wp-security/core/lib/class-itsec-lib-directory.php" afterPath="$PROJECT_DIR$/wp-content/plugins/better-wp-security/core/lib/class-itsec-lib-directory.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/better-wp-security/core/modules/backup/setup.php" afterPath="$PROJECT_DIR$/wp-content/plugins/better-wp-security/core/modules/backup/setup.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/better-wp-security/core/modules/core/sidebar-widget-mail-list-signup.php" afterPath="$PROJECT_DIR$/wp-content/plugins/better-wp-security/core/modules/core/sidebar-widget-mail-list-signup.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/better-wp-security/core/modules/global/setup.php" afterPath="$PROJECT_DIR$/wp-content/plugins/better-wp-security/core/modules/global/setup.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/better-wp-security/history.txt" afterPath="$PROJECT_DIR$/wp-content/plugins/better-wp-security/history.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/better-wp-security/readme.txt" afterPath="$PROJECT_DIR$/wp-content/plugins/better-wp-security/readme.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/.svnignore" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/.svnignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/3rd-party/3rd-party.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/3rd-party/3rd-party.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/3rd-party/bbpress.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/3rd-party/bbpress.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/3rd-party/bitly.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/3rd-party/bitly.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/3rd-party/buddypress.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/3rd-party/buddypress.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/3rd-party/woocommerce.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/3rd-party/woocommerce.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/3rd-party/wpml.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/3rd-party/wpml.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/_inc/facebook-embed.js" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/_inc/facebook-embed.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/_inc/fonts/automatticons/automatticons.svg" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/_inc/fonts/automatticons/automatticons.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/_inc/fonts/jetpack/jetpack.svg" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/_inc/fonts/jetpack/jetpack.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/_inc/footer.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/_inc/footer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/_inc/gallery-settings.js" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/_inc/gallery-settings.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/_inc/genericons.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/_inc/genericons.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/_inc/genericons/COPYING.txt" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/_inc/genericons/COPYING.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/_inc/genericons/LICENSE.txt" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/_inc/genericons/LICENSE.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/_inc/genericons/genericons.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/_inc/genericons/genericons.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/_inc/genericons/genericons/Genericons.svg" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/_inc/genericons/genericons/Genericons.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/_inc/genericons/genericons/genericons.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/_inc/genericons/genericons/genericons.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/_inc/genericons/genericons/rtl/genericons-rtl.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/_inc/genericons/genericons/rtl/genericons-rtl.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/_inc/header.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/_inc/header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/_inc/jetpack-admin.js" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/_inc/jetpack-admin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/_inc/jetpack-jitm.js" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/_inc/jetpack-jitm.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/_inc/jetpack-modules.js" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/_inc/jetpack-modules.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/_inc/jetpack-modules.models.js" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/_inc/jetpack-modules.models.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/_inc/jetpack-modules.views.js" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/_inc/jetpack-modules.views.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/_inc/jetpack.js" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/_inc/jetpack.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/_inc/jp-my-jetpack.js" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/_inc/jp-my-jetpack.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/_inc/jp.js" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/_inc/jp.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/_inc/jquery.inview.js" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/_inc/jquery.inview.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/_inc/jquery.jetpack-resize.js" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/_inc/jquery.jetpack-resize.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/_inc/jquery.jetpack-sync.js" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/_inc/jquery.jetpack-sync.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/_inc/jquery.spin.js" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/_inc/jquery.spin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/_inc/lib/admin-pages/class.jetpack-admin-page.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/_inc/lib/admin-pages/class.jetpack-admin-page.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/_inc/lib/admin-pages/class.jetpack-landing-page.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/_inc/lib/admin-pages/class.jetpack-landing-page.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/_inc/lib/admin-pages/class.jetpack-my-jetpack-page.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/_inc/lib/admin-pages/class.jetpack-my-jetpack-page.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/_inc/lib/admin-pages/class.jetpack-settings-page.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/_inc/lib/admin-pages/class.jetpack-settings-page.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/_inc/lib/class.color.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/_inc/lib/class.color.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/_inc/lib/class.media-extractor.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/_inc/lib/class.media-extractor.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/_inc/lib/class.media-summary.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/_inc/lib/class.media-summary.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/_inc/lib/markdown/0-load.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/_inc/lib/markdown/0-load.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/_inc/lib/markdown/extra.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/_inc/lib/markdown/extra.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/_inc/lib/markdown/gfm.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/_inc/lib/markdown/gfm.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/_inc/lib/tonesque.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/_inc/lib/tonesque.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/_inc/lib/tracks/class.tracks-client.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/_inc/lib/tracks/class.tracks-client.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/_inc/lib/tracks/class.tracks-event.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/_inc/lib/tracks/class.tracks-event.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/_inc/lib/tracks/client.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/_inc/lib/tracks/client.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/_inc/lib/tracks/tracks-ajax.js" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/_inc/lib/tracks/tracks-ajax.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/_inc/postmessage.js" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/_inc/postmessage.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/_inc/spin.js" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/_inc/spin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/_inc/twitter-timeline.js" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/_inc/twitter-timeline.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/changelog.txt" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/changelog.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/class.jetpack-admin.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/class.jetpack-admin.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/class.jetpack-autoupdate.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/class.jetpack-autoupdate.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/class.jetpack-bbpress-json-api-compat.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/class.jetpack-bbpress-json-api-compat.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/class.jetpack-cli.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/class.jetpack-cli.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/class.jetpack-client-server.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/class.jetpack-client-server.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/class.jetpack-client.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/class.jetpack-client.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/class.jetpack-data.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/class.jetpack-data.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/class.jetpack-debugger.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/class.jetpack-debugger.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/class.jetpack-error.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/class.jetpack-error.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/class.jetpack-heartbeat.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/class.jetpack-heartbeat.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/class.jetpack-ixr-client.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/class.jetpack-ixr-client.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/class.jetpack-jitm.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/class.jetpack-jitm.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/class.jetpack-modules-list-table.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/class.jetpack-modules-list-table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/class.jetpack-network-sites-list-table.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/class.jetpack-network-sites-list-table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/class.jetpack-network.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/class.jetpack-network.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/class.jetpack-options.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/class.jetpack-options.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/class.jetpack-post-images.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/class.jetpack-post-images.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/class.jetpack-signature.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/class.jetpack-signature.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/class.jetpack-sync.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/class.jetpack-sync.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/class.jetpack-tracks.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/class.jetpack-tracks.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/class.jetpack-twitter-cards.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/class.jetpack-twitter-cards.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/class.jetpack-user-agent.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/class.jetpack-user-agent.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/class.jetpack-xmlrpc-server.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/class.jetpack-xmlrpc-server.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/class.jetpack.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/class.jetpack.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/class.json-api-endpoints.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/class.json-api-endpoints.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/class.json-api.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/class.json-api.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/class.photon.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/class.photon.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/css/dashboard-widget-rtl.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/css/dashboard-widget-rtl.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/css/dashboard-widget-rtl.min.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/css/dashboard-widget-rtl.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/css/dashboard-widget.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/css/dashboard-widget.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/css/dashboard-widget.min.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/css/dashboard-widget.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/css/jetpack-admin-jitm-rtl.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/css/jetpack-admin-jitm-rtl.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/css/jetpack-admin-jitm-rtl.min.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/css/jetpack-admin-jitm-rtl.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/css/jetpack-admin-jitm.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/css/jetpack-admin-jitm.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/css/jetpack-admin-jitm.min.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/css/jetpack-admin-jitm.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/css/jetpack-admin-rtl.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/css/jetpack-admin-rtl.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/css/jetpack-admin-rtl.min.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/css/jetpack-admin-rtl.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/css/jetpack-admin.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/css/jetpack-admin.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/css/jetpack-admin.min.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/css/jetpack-admin.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/css/jetpack-banners-rtl.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/css/jetpack-banners-rtl.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/css/jetpack-banners-rtl.min.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/css/jetpack-banners-rtl.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/css/jetpack-banners.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/css/jetpack-banners.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/css/jetpack-banners.min.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/css/jetpack-banners.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/css/jetpack-icons.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/css/jetpack-icons.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/css/jetpack-icons.min.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/css/jetpack-icons.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/css/jetpack-rtl.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/css/jetpack-rtl.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/css/jetpack.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/css/jetpack.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/css/jp-benefits.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/css/jp-benefits.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/functions.compat.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/functions.compat.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/functions.gallery.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/functions.gallery.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/functions.opengraph.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/functions.opengraph.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/functions.photon.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/functions.photon.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/jetpack.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/jetpack.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-api-config.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-api-config.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-autosave-post-v1-1-endpoint.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-autosave-post-v1-1-endpoint.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-comment-endpoint.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-comment-endpoint.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-delete-media-endpoint.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-delete-media-endpoint.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-delete-media-v1-1-endpoint.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-delete-media-v1-1-endpoint.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-get-autosave-v1-1-endpoint.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-get-autosave-v1-1-endpoint.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-get-comment-endpoint.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-get-comment-endpoint.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-get-customcss.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-get-customcss.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-get-media-endpoint.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-get-media-endpoint.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-get-media-v1-1-endpoint.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-get-media-v1-1-endpoint.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-get-post-counts-v1-1-endpoint.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-get-post-counts-v1-1-endpoint.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-get-post-endpoint.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-get-post-endpoint.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-get-post-v1-1-endpoint.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-get-post-v1-1-endpoint.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-get-site-endpoint.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-get-site-endpoint.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-get-site-v1-2-endpoint.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-get-site-v1-2-endpoint.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-get-taxonomies-endpoint.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-get-taxonomies-endpoint.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-get-taxonomy-endpoint.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-get-taxonomy-endpoint.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-list-comments-endpoint.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-list-comments-endpoint.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-list-embeds-endpoint.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-list-embeds-endpoint.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-list-invites-endpoint.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-list-invites-endpoint.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-list-media-endpoint.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-list-media-endpoint.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-list-media-v1-1-endpoint.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-list-media-v1-1-endpoint.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-list-post-types-endpoint.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-list-post-types-endpoint.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-list-posts-endpoint.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-list-posts-endpoint.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-list-posts-v1-1-endpoint.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-list-posts-v1-1-endpoint.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-list-roles-endpoint.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-list-roles-endpoint.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-list-shortcodes-endpoint.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-list-shortcodes-endpoint.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-list-users-endpoint.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-list-users-endpoint.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-menus-v1-1-endpoint.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-menus-v1-1-endpoint.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-post-endpoint.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-post-endpoint.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-post-v1-1-endpoint.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-post-v1-1-endpoint.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-publicize-endpoint.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-publicize-endpoint.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-render-embed-endpoint.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-render-embed-endpoint.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-render-embed-reversal-endpoint.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-render-embed-reversal-endpoint.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-render-endpoint.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-render-endpoint.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-render-shortcode-endpoint.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-render-shortcode-endpoint.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-sharing-buttons-endpoint.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-sharing-buttons-endpoint.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-site-settings-endpoint.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-site-settings-endpoint.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-site-settings-v1-2-endpoint.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-site-settings-v1-2-endpoint.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-site-user-endpoint.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-site-user-endpoint.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-taxonomy-endpoint.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-taxonomy-endpoint.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-update-comment-endpoint.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-update-comment-endpoint.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-update-customcss.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-update-customcss.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-update-invites-endpoint.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-update-invites-endpoint.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-update-media-endpoint.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-update-media-endpoint.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-update-media-v1-1-endpoint.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-update-media-v1-1-endpoint.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-update-post-endpoint.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-update-post-endpoint.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-update-post-v1-1-endpoint.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-update-post-v1-1-endpoint.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-update-post-v1-2-endpoint.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-update-post-v1-2-endpoint.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-update-taxonomy-endpoint.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-update-taxonomy-endpoint.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-update-user-endpoint.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-update-user-endpoint.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-upload-media-endpoint.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-upload-media-endpoint.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-upload-media-v1-1-endpoint.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/class.wpcom-json-api-upload-media-v1-1-endpoint.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/jetpack/class.jetpack-json-api-check-capabilities-endpoint.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/jetpack/class.jetpack-json-api-check-capabilities-endpoint.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/jetpack/class.jetpack-json-api-core-endpoint.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/jetpack/class.jetpack-json-api-core-endpoint.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/jetpack/class.jetpack-json-api-core-modify-endpoint.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/jetpack/class.jetpack-json-api-core-modify-endpoint.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/jetpack/class.jetpack-json-api-endpoint.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/jetpack/class.jetpack-json-api-endpoint.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/jetpack/class.jetpack-json-api-log-endpoint.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/jetpack/class.jetpack-json-api-log-endpoint.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/jetpack/class.jetpack-json-api-maybe-auto-update-endpoint.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/jetpack/class.jetpack-json-api-maybe-auto-update-endpoint.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/jetpack/class.jetpack-json-api-modules-endpoint.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/jetpack/class.jetpack-json-api-modules-endpoint.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/jetpack/class.jetpack-json-api-modules-get-endpoint.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/jetpack/class.jetpack-json-api-modules-get-endpoint.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/jetpack/class.jetpack-json-api-modules-list-endpoint.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/jetpack/class.jetpack-json-api-modules-list-endpoint.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/jetpack/class.jetpack-json-api-modules-modify-endpoint.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/jetpack/class.jetpack-json-api-modules-modify-endpoint.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/jetpack/class.jetpack-json-api-plugins-delete-endpoint.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/jetpack/class.jetpack-json-api-plugins-delete-endpoint.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/jetpack/class.jetpack-json-api-plugins-endpoint.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/jetpack/class.jetpack-json-api-plugins-endpoint.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/jetpack/class.jetpack-json-api-plugins-get-endpoint.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/jetpack/class.jetpack-json-api-plugins-get-endpoint.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/jetpack/class.jetpack-json-api-plugins-install-endpoint.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/jetpack/class.jetpack-json-api-plugins-install-endpoint.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/jetpack/class.jetpack-json-api-plugins-list-endpoint.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/jetpack/class.jetpack-json-api-plugins-list-endpoint.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/jetpack/class.jetpack-json-api-plugins-modify-endpoint.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/jetpack/class.jetpack-json-api-plugins-modify-endpoint.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/jetpack/class.jetpack-json-api-sync-endpoint.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/jetpack/class.jetpack-json-api-sync-endpoint.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/jetpack/class.jetpack-json-api-themes-active-endpoint.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/jetpack/class.jetpack-json-api-themes-active-endpoint.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/jetpack/class.jetpack-json-api-themes-delete-endpoint.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/jetpack/class.jetpack-json-api-themes-delete-endpoint.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/jetpack/class.jetpack-json-api-themes-endpoint.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/jetpack/class.jetpack-json-api-themes-endpoint.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/jetpack/class.jetpack-json-api-themes-get-endpoint.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/jetpack/class.jetpack-json-api-themes-get-endpoint.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/jetpack/class.jetpack-json-api-themes-install-endpoint.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/jetpack/class.jetpack-json-api-themes-install-endpoint.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/jetpack/class.jetpack-json-api-themes-list-endpoint.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/jetpack/class.jetpack-json-api-themes-list-endpoint.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/jetpack/class.jetpack-json-api-themes-modify-endpoint.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/jetpack/class.jetpack-json-api-themes-modify-endpoint.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/jetpack/class.jetpack-json-api-updates-status-endpoint.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/jetpack/class.jetpack-json-api-updates-status-endpoint.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/jetpack/class.wpcom-json-api-get-option-endpoint.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/jetpack/class.wpcom-json-api-get-option-endpoint.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/jetpack/class.wpcom-json-api-update-option-endpoint.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/jetpack/class.wpcom-json-api-update-option-endpoint.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/jetpack/json-api-jetpack-endpoints.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/json-endpoints/jetpack/json-api-jetpack-endpoints.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/languages/readme.txt" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/languages/readme.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/locales.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/locales.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/after-the-deadline.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/after-the-deadline.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/after-the-deadline/atd-autoproofread.js" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/after-the-deadline/atd-autoproofread.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/after-the-deadline/atd-nonvis-editor-plugin.js" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/after-the-deadline/atd-nonvis-editor-plugin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/after-the-deadline/atd-rtl.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/after-the-deadline/atd-rtl.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/after-the-deadline/atd.core.js" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/after-the-deadline/atd.core.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/after-the-deadline/atd.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/after-the-deadline/atd.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/after-the-deadline/config-options.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/after-the-deadline/config-options.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/after-the-deadline/config-unignore.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/after-the-deadline/config-unignore.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/after-the-deadline/jquery.atd.js" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/after-the-deadline/jquery.atd.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/after-the-deadline/proxy.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/after-the-deadline/proxy.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/after-the-deadline/rtl/atd-rtl.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/after-the-deadline/rtl/atd-rtl.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/after-the-deadline/tinymce/css/content.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/after-the-deadline/tinymce/css/content.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/after-the-deadline/tinymce/editor_plugin.js" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/after-the-deadline/tinymce/editor_plugin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/after-the-deadline/tinymce/plugin.js" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/after-the-deadline/tinymce/plugin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/carousel.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/carousel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/carousel/jetpack-carousel-ie8fix.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/carousel/jetpack-carousel-ie8fix.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/carousel/jetpack-carousel.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/carousel/jetpack-carousel.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/carousel/jetpack-carousel.js" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/carousel/jetpack-carousel.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/carousel/jetpack-carousel.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/carousel/jetpack-carousel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/carousel/rtl/jetpack-carousel-rtl.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/carousel/rtl/jetpack-carousel-rtl.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/comments.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/comments.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/comments/admin.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/comments/admin.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/comments/base.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/comments/base.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/comments/comments.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/comments/comments.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/contact-form.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/contact-form.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/contact-form/admin.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/contact-form/admin.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/contact-form/css/grunion.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/contact-form/css/grunion.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/contact-form/css/menu-alter-rtl.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/contact-form/css/menu-alter-rtl.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/contact-form/css/menu-alter.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/contact-form/css/menu-alter.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/contact-form/css/rtl/grunion-rtl.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/contact-form/css/rtl/grunion-rtl.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/contact-form/css/rtl/menu-alter-rtl.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/contact-form/css/rtl/menu-alter-rtl.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/contact-form/grunion-contact-form.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/contact-form/grunion-contact-form.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/contact-form/grunion-form-view.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/contact-form/grunion-form-view.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/contact-form/grunion-omnisearch.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/contact-form/grunion-omnisearch.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/contact-form/js/grunion-admin.js" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/contact-form/js/grunion-admin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/contact-form/js/grunion-frontend.js" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/contact-form/js/grunion-frontend.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/contact-form/js/grunion.js" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/contact-form/js/grunion.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/custom-content-types.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/custom-content-types.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/custom-css.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/custom-css.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/custom-css/csstidy/class.csstidy.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/custom-css/csstidy/class.csstidy.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/custom-css/csstidy/class.csstidy_ctype.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/custom-css/csstidy/class.csstidy_ctype.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/custom-css/csstidy/class.csstidy_optimise.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/custom-css/csstidy/class.csstidy_optimise.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/custom-css/csstidy/class.csstidy_print.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/custom-css/csstidy/class.csstidy_print.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/custom-css/csstidy/cssparse-rtl.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/custom-css/csstidy/cssparse-rtl.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/custom-css/csstidy/cssparse.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/custom-css/csstidy/cssparse.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/custom-css/csstidy/cssparsed-rtl.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/custom-css/csstidy/cssparsed-rtl.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/custom-css/csstidy/cssparsed.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/custom-css/csstidy/cssparsed.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/custom-css/csstidy/data-wp.inc.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/custom-css/csstidy/data-wp.inc.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/custom-css/csstidy/data.inc.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/custom-css/csstidy/data.inc.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/custom-css/csstidy/lang.inc.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/custom-css/csstidy/lang.inc.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/custom-css/csstidy/wordpress-standard.tpl" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/custom-css/csstidy/wordpress-standard.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/custom-css/custom-css.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/custom-css/custom-css.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/custom-css/custom-css/css/codemirror-rtl.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/custom-css/custom-css/css/codemirror-rtl.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/custom-css/custom-css/css/codemirror.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/custom-css/custom-css/css/codemirror.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/custom-css/custom-css/css/css-editor.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/custom-css/custom-css/css/css-editor.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/custom-css/custom-css/css/rtl/codemirror-rtl.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/custom-css/custom-css/css/rtl/codemirror-rtl.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/custom-css/custom-css/css/use-codemirror.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/custom-css/custom-css/css/use-codemirror.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/custom-css/custom-css/js/codemirror.min.js" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/custom-css/custom-css/js/codemirror.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/custom-css/custom-css/js/css-editor.js" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/custom-css/custom-css/js/css-editor.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/custom-css/custom-css/js/use-codemirror.js" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/custom-css/custom-css/js/use-codemirror.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/custom-css/custom-css/preprocessors.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/custom-css/custom-css/preprocessors.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/custom-css/custom-css/preprocessors/lessc.inc.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/custom-css/custom-css/preprocessors/lessc.inc.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/custom-css/custom-css/preprocessors/scss.inc.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/custom-css/custom-css/preprocessors/scss.inc.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/custom-post-types/comics.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/custom-post-types/comics.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/custom-post-types/comics/admin.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/custom-post-types/comics/admin.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/custom-post-types/comics/comics.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/custom-post-types/comics/comics.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/custom-post-types/comics/comics.js" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/custom-post-types/comics/comics.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/custom-post-types/comics/rtl/comics-rtl.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/custom-post-types/comics/rtl/comics-rtl.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/custom-post-types/css/edit-items.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/custom-post-types/css/edit-items.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/custom-post-types/css/many-items.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/custom-post-types/css/many-items.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/custom-post-types/css/nova-font.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/custom-post-types/css/nova-font.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/custom-post-types/css/nova.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/custom-post-types/css/nova.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/custom-post-types/css/portfolio-shortcode.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/custom-post-types/css/portfolio-shortcode.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/custom-post-types/css/testimonial-shortcode.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/custom-post-types/css/testimonial-shortcode.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/custom-post-types/js/many-items.js" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/custom-post-types/js/many-items.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/custom-post-types/js/menu-checkboxes.js" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/custom-post-types/js/menu-checkboxes.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/custom-post-types/js/nova-drag-drop.js" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/custom-post-types/js/nova-drag-drop.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/custom-post-types/nova.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/custom-post-types/nova.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/custom-post-types/portfolios.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/custom-post-types/portfolios.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/custom-post-types/testimonial.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/custom-post-types/testimonial.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/debug.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/debug.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/enhanced-distribution.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/enhanced-distribution.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/gplus-authorship.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/gplus-authorship.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/gravatar-hovercards.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/gravatar-hovercards.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/holiday-snow.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/holiday-snow.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/holiday-snow/snowstorm.js" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/holiday-snow/snowstorm.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/infinite-scroll.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/infinite-scroll.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/infinite-scroll/infinity.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/infinite-scroll/infinity.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/infinite-scroll/infinity.js" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/infinite-scroll/infinity.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/infinite-scroll/infinity.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/infinite-scroll/infinity.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/infinite-scroll/themes/twentyeleven.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/infinite-scroll/themes/twentyeleven.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/infinite-scroll/themes/twentyeleven.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/infinite-scroll/themes/twentyeleven.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/infinite-scroll/themes/twentyfifteen-rtl.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/infinite-scroll/themes/twentyfifteen-rtl.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/infinite-scroll/themes/twentyfifteen.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/infinite-scroll/themes/twentyfifteen.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/infinite-scroll/themes/twentyfifteen.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/infinite-scroll/themes/twentyfifteen.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/infinite-scroll/themes/twentyfourteen.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/infinite-scroll/themes/twentyfourteen.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/infinite-scroll/themes/twentyfourteen.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/infinite-scroll/themes/twentyfourteen.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/infinite-scroll/themes/twentysixteen-rtl.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/infinite-scroll/themes/twentysixteen-rtl.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/infinite-scroll/themes/twentysixteen.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/infinite-scroll/themes/twentysixteen.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/infinite-scroll/themes/twentysixteen.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/infinite-scroll/themes/twentysixteen.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/infinite-scroll/themes/twentyten.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/infinite-scroll/themes/twentyten.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/infinite-scroll/themes/twentyten.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/infinite-scroll/themes/twentyten.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/infinite-scroll/themes/twentythirteen.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/infinite-scroll/themes/twentythirteen.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/infinite-scroll/themes/twentythirteen.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/infinite-scroll/themes/twentythirteen.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/infinite-scroll/themes/twentytwelve.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/infinite-scroll/themes/twentytwelve.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/infinite-scroll/themes/twentytwelve.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/infinite-scroll/themes/twentytwelve.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/json-api.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/json-api.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/latex.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/latex.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/likes.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/likes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/likes/post-count-jetpack.js" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/likes/post-count-jetpack.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/likes/post-count.js" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/likes/post-count.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/likes/queuehandler.js" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/likes/queuehandler.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/likes/style.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/likes/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/manage.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/manage.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/manage/activate-admin.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/manage/activate-admin.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/manage/confirm-admin.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/manage/confirm-admin.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/markdown.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/markdown.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/markdown/easy-markdown.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/markdown/easy-markdown.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/minileven.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/minileven.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/minileven/minileven.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/minileven/minileven.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/minileven/theme/pub/minileven/comments.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/minileven/theme/pub/minileven/comments.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/minileven/theme/pub/minileven/content-gallery.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/minileven/theme/pub/minileven/content-gallery.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/minileven/theme/pub/minileven/content.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/minileven/theme/pub/minileven/content.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/minileven/theme/pub/minileven/footer.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/minileven/theme/pub/minileven/footer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/minileven/theme/pub/minileven/functions.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/minileven/theme/pub/minileven/functions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/minileven/theme/pub/minileven/header.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/minileven/theme/pub/minileven/header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/minileven/theme/pub/minileven/image.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/minileven/theme/pub/minileven/image.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/minileven/theme/pub/minileven/inc/custom-header.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/minileven/theme/pub/minileven/inc/custom-header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/minileven/theme/pub/minileven/inc/fonts/genericons-regular-webfont.svg" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/minileven/theme/pub/minileven/inc/fonts/genericons-regular-webfont.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/minileven/theme/pub/minileven/inc/template-tags.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/minileven/theme/pub/minileven/inc/template-tags.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/minileven/theme/pub/minileven/inc/tweaks.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/minileven/theme/pub/minileven/inc/tweaks.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/minileven/theme/pub/minileven/index.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/minileven/theme/pub/minileven/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/minileven/theme/pub/minileven/js/small-menu.js" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/minileven/theme/pub/minileven/js/small-menu.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/minileven/theme/pub/minileven/page.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/minileven/theme/pub/minileven/page.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/minileven/theme/pub/minileven/rtl.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/minileven/theme/pub/minileven/rtl.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/minileven/theme/pub/minileven/searchform.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/minileven/theme/pub/minileven/searchform.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/minileven/theme/pub/minileven/sidebar.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/minileven/theme/pub/minileven/sidebar.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/minileven/theme/pub/minileven/style.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/minileven/theme/pub/minileven/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/mobile-push.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/mobile-push.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/module-extras.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/module-extras.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/module-headings.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/module-headings.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/module-info.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/module-info.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/monitor.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/monitor.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/notes.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/notes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/omnisearch.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/omnisearch.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/omnisearch/omnisearch-comments.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/omnisearch/omnisearch-comments.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/omnisearch/omnisearch-core.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/omnisearch/omnisearch-core.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/omnisearch/omnisearch-jetpack-rtl.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/omnisearch/omnisearch-jetpack-rtl.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/omnisearch/omnisearch-jetpack.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/omnisearch/omnisearch-jetpack.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/omnisearch/omnisearch-media.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/omnisearch/omnisearch-media.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/omnisearch/omnisearch-plugins.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/omnisearch/omnisearch-plugins.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/omnisearch/omnisearch-posts.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/omnisearch/omnisearch-posts.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/omnisearch/omnisearch-rtl.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/omnisearch/omnisearch-rtl.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/omnisearch/omnisearch.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/omnisearch/omnisearch.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/omnisearch/rtl/omnisearch-jetpack-rtl.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/omnisearch/rtl/omnisearch-jetpack-rtl.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/omnisearch/rtl/omnisearch-rtl.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/omnisearch/rtl/omnisearch-rtl.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/photon.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/photon.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/photon/photon.js" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/photon/photon.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/post-by-email.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/post-by-email.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/post-by-email/post-by-email.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/post-by-email/post-by-email.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/post-by-email/post-by-email.js" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/post-by-email/post-by-email.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/protect.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/protect.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/protect/config-ui.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/protect/config-ui.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/protect/math-fallback.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/protect/math-fallback.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/protect/protect-dashboard-widget-rtl.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/protect/protect-dashboard-widget-rtl.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/protect/protect-dashboard-widget.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/protect/protect-dashboard-widget.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/protect/shared-functions.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/protect/shared-functions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/protect/transient-cleanup.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/protect/transient-cleanup.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/publicize.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/publicize.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/publicize/assets/publicize-rtl.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/publicize/assets/publicize-rtl.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/publicize/assets/publicize.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/publicize/assets/publicize.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/publicize/assets/publicize.js" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/publicize/assets/publicize.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/publicize/assets/rtl/publicize-rtl.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/publicize/assets/rtl/publicize-rtl.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/publicize/enhanced-open-graph.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/publicize/enhanced-open-graph.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/publicize/publicize-jetpack.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/publicize/publicize-jetpack.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/publicize/publicize.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/publicize/publicize.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/publicize/ui.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/publicize/ui.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/random-redirect.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/random-redirect.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/related-posts.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/related-posts.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/related-posts/jetpack-related-posts.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/related-posts/jetpack-related-posts.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/related-posts/related-posts.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/related-posts/related-posts.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/related-posts/related-posts.js" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/related-posts/related-posts.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/related-posts/rtl/related-posts-rtl.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/related-posts/rtl/related-posts-rtl.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/sharedaddy.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/sharedaddy.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/sharedaddy/admin-sharing-rtl.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/sharedaddy/admin-sharing-rtl.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/sharedaddy/admin-sharing.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/sharedaddy/admin-sharing.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/sharedaddy/admin-sharing.js" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/sharedaddy/admin-sharing.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/sharedaddy/recaptcha.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/sharedaddy/recaptcha.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/sharedaddy/sharedaddy.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/sharedaddy/sharedaddy.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/sharedaddy/sharing-service.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/sharedaddy/sharing-service.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/sharedaddy/sharing-sources.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/sharedaddy/sharing-sources.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/sharedaddy/sharing.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/sharedaddy/sharing.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/sharedaddy/sharing.js" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/sharedaddy/sharing.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/sharedaddy/sharing.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/sharedaddy/sharing.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/archives.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/archives.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/audio.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/audio.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/bandcamp.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/bandcamp.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/blip.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/blip.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/cartodb.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/cartodb.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/codepen.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/codepen.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/css/recipes-print.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/css/recipes-print.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/css/recipes.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/css/recipes.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/css/rtl/recipes-rtl.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/css/rtl/recipes-rtl.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/css/rtl/slideshow-shortcode-rtl.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/css/rtl/slideshow-shortcode-rtl.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/css/slideshow-shortcode.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/css/slideshow-shortcode.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/css/style.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/dailymotion.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/dailymotion.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/diggthis.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/diggthis.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/facebook.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/facebook.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/flickr.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/flickr.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/gist.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/gist.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/googlemaps.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/googlemaps.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/googleplus.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/googleplus.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/googlevideo.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/googlevideo.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/houzz.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/houzz.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/instagram.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/instagram.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/js/audio-shortcode.js" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/js/audio-shortcode.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/js/gist.js" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/js/gist.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/js/instagram.js" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/js/instagram.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/js/jmpress.js" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/js/jmpress.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/js/jmpress.min.js" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/js/jmpress.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/js/jquery.cycle.js" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/js/jquery.cycle.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/js/main.js" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/js/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/js/recipes-printthis.js" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/js/recipes-printthis.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/js/recipes.js" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/js/recipes.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/js/slideshow-shortcode.js" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/js/slideshow-shortcode.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/medium.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/medium.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/mixcloud.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/mixcloud.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/polldaddy.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/polldaddy.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/presentations.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/presentations.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/recipe.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/recipe.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/scribd.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/scribd.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/slideshare.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/slideshare.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/slideshow.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/slideshow.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/soundcloud.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/soundcloud.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/ted.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/ted.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/twitchtv.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/twitchtv.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/twitter-timeline.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/twitter-timeline.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/videopress.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/videopress.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/vimeo.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/vimeo.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/vine.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/vine.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/wufoo.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/wufoo.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/youtube.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortcodes/youtube.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortlinks.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/shortlinks.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/site-icon.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/site-icon.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/site-icon/css/site-icon-admin.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/site-icon/css/site-icon-admin.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/site-icon/jetpack-site-icon.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/site-icon/jetpack-site-icon.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/site-icon/js/site-icon-crop.js" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/site-icon/js/site-icon-crop.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/site-icon/site-icon-functions.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/site-icon/site-icon-functions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/site-icon/upload-site-icon.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/site-icon/upload-site-icon.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/sitemaps.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/sitemaps.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/sitemaps/sitemaps.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/sitemaps/sitemaps.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/social-links.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/social-links.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/sso.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/sso.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/stats.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/stats.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/subscriptions.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/subscriptions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/subscriptions/subscriptions.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/subscriptions/subscriptions.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/theme-tools.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/theme-tools.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/theme-tools/compat/twentyfifteen-rtl.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/theme-tools/compat/twentyfifteen-rtl.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/theme-tools/compat/twentyfifteen.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/theme-tools/compat/twentyfifteen.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/theme-tools/compat/twentyfifteen.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/theme-tools/compat/twentyfifteen.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/theme-tools/compat/twentyfourteen-rtl.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/theme-tools/compat/twentyfourteen-rtl.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/theme-tools/compat/twentyfourteen.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/theme-tools/compat/twentyfourteen.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/theme-tools/compat/twentyfourteen.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/theme-tools/compat/twentyfourteen.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/theme-tools/compat/twentysixteen-rtl.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/theme-tools/compat/twentysixteen-rtl.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/theme-tools/compat/twentysixteen.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/theme-tools/compat/twentysixteen.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/theme-tools/compat/twentysixteen.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/theme-tools/compat/twentysixteen.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/theme-tools/featured-content.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/theme-tools/featured-content.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/theme-tools/infinite-scroll.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/theme-tools/infinite-scroll.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/theme-tools/js/suggest.js" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/theme-tools/js/suggest.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/theme-tools/random-redirect.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/theme-tools/random-redirect.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/theme-tools/responsive-videos.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/theme-tools/responsive-videos.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/theme-tools/responsive-videos/responsive-videos.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/theme-tools/responsive-videos/responsive-videos.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/theme-tools/responsive-videos/responsive-videos.js" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/theme-tools/responsive-videos/responsive-videos.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/theme-tools/responsive-videos/responsive-videos.min.js" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/theme-tools/responsive-videos/responsive-videos.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/theme-tools/site-breadcrumbs.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/theme-tools/site-breadcrumbs.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/theme-tools/site-logo.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/theme-tools/site-logo.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/theme-tools/site-logo/css/site-logo-control-rtl.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/theme-tools/site-logo/css/site-logo-control-rtl.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/theme-tools/site-logo/css/site-logo-control.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/theme-tools/site-logo/css/site-logo-control.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/theme-tools/site-logo/inc/class-site-logo-control.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/theme-tools/site-logo/inc/class-site-logo-control.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/theme-tools/site-logo/inc/class-site-logo.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/theme-tools/site-logo/inc/class-site-logo.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/theme-tools/site-logo/inc/compat.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/theme-tools/site-logo/inc/compat.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/theme-tools/site-logo/inc/functions.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/theme-tools/site-logo/inc/functions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/theme-tools/site-logo/js/site-logo-control.js" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/theme-tools/site-logo/js/site-logo-control.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/theme-tools/site-logo/js/site-logo-header-text.js" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/theme-tools/site-logo/js/site-logo-header-text.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/theme-tools/site-logo/js/site-logo.js" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/theme-tools/site-logo/js/site-logo.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/theme-tools/social-links.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/theme-tools/social-links.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/theme-tools/social-menu.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/theme-tools/social-menu.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/theme-tools/social-menu/social-menu.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/theme-tools/social-menu/social-menu.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/tiled-gallery.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/tiled-gallery.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/tiled-gallery/math/class-constrained-array-rounding.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/tiled-gallery/math/class-constrained-array-rounding.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/tiled-gallery/tiled-gallery.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/tiled-gallery/tiled-gallery.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/tiled-gallery/tiled-gallery/rtl/tiled-gallery-rtl.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/tiled-gallery/tiled-gallery/rtl/tiled-gallery-rtl.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/tiled-gallery/tiled-gallery/templates/carousel-container.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/tiled-gallery/tiled-gallery/templates/carousel-container.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/tiled-gallery/tiled-gallery/templates/circle-layout.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/tiled-gallery/tiled-gallery/templates/circle-layout.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/tiled-gallery/tiled-gallery/templates/partials/carousel-image-args.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/tiled-gallery/tiled-gallery/templates/partials/carousel-image-args.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/tiled-gallery/tiled-gallery/templates/partials/item.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/tiled-gallery/tiled-gallery/templates/partials/item.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/tiled-gallery/tiled-gallery/templates/rectangular-layout.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/tiled-gallery/tiled-gallery/templates/rectangular-layout.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/tiled-gallery/tiled-gallery/templates/square-layout.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/tiled-gallery/tiled-gallery/templates/square-layout.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/tiled-gallery/tiled-gallery/tiled-gallery-circle.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/tiled-gallery/tiled-gallery/tiled-gallery-circle.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/tiled-gallery/tiled-gallery/tiled-gallery-item.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/tiled-gallery/tiled-gallery/tiled-gallery-item.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/tiled-gallery/tiled-gallery/tiled-gallery-layout.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/tiled-gallery/tiled-gallery/tiled-gallery-layout.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/tiled-gallery/tiled-gallery/tiled-gallery-rectangular.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/tiled-gallery/tiled-gallery/tiled-gallery-rectangular.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/tiled-gallery/tiled-gallery/tiled-gallery-shape.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/tiled-gallery/tiled-gallery/tiled-gallery-shape.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/tiled-gallery/tiled-gallery/tiled-gallery-square.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/tiled-gallery/tiled-gallery/tiled-gallery-square.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/tiled-gallery/tiled-gallery/tiled-gallery.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/tiled-gallery/tiled-gallery/tiled-gallery.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/tiled-gallery/tiled-gallery/tiled-gallery.js" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/tiled-gallery/tiled-gallery/tiled-gallery.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/tonesque.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/tonesque.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/vaultpress.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/vaultpress.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/verification-tools.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/verification-tools.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/verification-tools/blog-verification-tools.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/verification-tools/blog-verification-tools.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/videopress.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/videopress.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/videopress/class.videopress-player.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/videopress/class.videopress-player.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/videopress/class.videopress-video.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/videopress/class.videopress-video.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/videopress/js/editor-view.js" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/videopress/js/editor-view.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/videopress/js/videopress-admin.js" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/videopress/js/videopress-admin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/videopress/shortcode.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/videopress/shortcode.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/videopress/utility-functions.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/videopress/utility-functions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/videopress/videopress-admin-rtl.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/videopress/videopress-admin-rtl.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/videopress/videopress-admin.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/videopress/videopress-admin.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/videopress/videopress-editor-style.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/videopress/videopress-editor-style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/videopress/videopress.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/videopress/videopress.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/widget-visibility.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/widget-visibility.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/widget-visibility/widget-conditions.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/widget-visibility/widget-conditions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/widget-visibility/widget-conditions/rtl/widget-conditions-rtl.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/widget-visibility/widget-conditions/rtl/widget-conditions-rtl.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/widget-visibility/widget-conditions/widget-conditions-rtl.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/widget-visibility/widget-conditions/widget-conditions-rtl.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/widget-visibility/widget-conditions/widget-conditions.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/widget-visibility/widget-conditions/widget-conditions.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/widget-visibility/widget-conditions/widget-conditions.js" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/widget-visibility/widget-conditions/widget-conditions.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/widgets.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/widgets.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/widgets/contact-info.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/widgets/contact-info.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/widgets/contact-info/contact-info-map.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/widgets/contact-info/contact-info-map.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/widgets/contact-info/contact-info-map.js" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/widgets/contact-info/contact-info-map.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/widgets/customizer-utils.js" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/widgets/customizer-utils.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/widgets/facebook-likebox.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/widgets/facebook-likebox.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/widgets/facebook-likebox/style.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/widgets/facebook-likebox/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/widgets/gallery.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/widgets/gallery.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/widgets/gallery/css/admin-rtl.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/widgets/gallery/css/admin-rtl.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/widgets/gallery/css/admin.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/widgets/gallery/css/admin.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/widgets/gallery/css/rtl/admin-rtl.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/widgets/gallery/css/rtl/admin-rtl.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/widgets/gallery/js/admin.js" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/widgets/gallery/js/admin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/widgets/gallery/js/gallery.js" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/widgets/gallery/js/gallery.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/widgets/gallery/templates/form.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/widgets/gallery/templates/form.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/widgets/goodreads.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/widgets/goodreads.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/widgets/goodreads/css/goodreads.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/widgets/goodreads/css/goodreads.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/widgets/goodreads/css/rtl/goodreads-rtl.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/widgets/goodreads/css/rtl/goodreads-rtl.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/widgets/google-plus/js/admin.js" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/widgets/google-plus/js/admin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/widgets/googleplus-badge.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/widgets/googleplus-badge.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/widgets/gravatar-profile.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/widgets/gravatar-profile.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/widgets/gravatar-profile.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/widgets/gravatar-profile.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/widgets/image-widget.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/widgets/image-widget.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/widgets/image-widget/style.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/widgets/image-widget/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/widgets/rsslinks-widget.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/widgets/rsslinks-widget.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/widgets/social-media-icons.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/widgets/social-media-icons.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/widgets/social-media-icons/style.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/widgets/social-media-icons/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/widgets/top-posts.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/widgets/top-posts.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/widgets/top-posts/style.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/widgets/top-posts/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/widgets/twitter-timeline.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/widgets/twitter-timeline.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/widgets/wordpress-post-widget.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/widgets/wordpress-post-widget.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/widgets/wordpress-post-widget/style.css" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/widgets/wordpress-post-widget/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/wpcc.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/wpcc.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/wpgroho.js" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/modules/wpgroho.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/readme.txt" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/readme.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/require-lib.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/require-lib.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/sal/class.json-api-platform-jetpack.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/sal/class.json-api-platform-jetpack.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/sal/class.json-api-platform.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/sal/class.json-api-platform.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/sal/class.json-api-site-base.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/sal/class.json-api-site-base.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/sal/class.json-api-site-jetpack-base.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/sal/class.json-api-site-jetpack-base.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/sal/class.json-api-site-jetpack.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/sal/class.json-api-site-jetpack.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/uninstall.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/uninstall.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/views/admin/admin-page.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/views/admin/admin-page.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/views/admin/landing-page-templates.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/views/admin/landing-page-templates.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/views/admin/module-modal-template.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/views/admin/module-modal-template.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/views/admin/must-connect-main-blog.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/views/admin/must-connect-main-blog.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/views/admin/my-jetpack-page.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/views/admin/my-jetpack-page.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/views/admin/network-activated-notice.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/views/admin/network-activated-notice.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/views/admin/network-admin-alert.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/views/admin/network-admin-alert.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/views/admin/network-admin-footer.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/views/admin/network-admin-footer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/views/admin/network-admin-header.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/views/admin/network-admin-header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/views/admin/network-settings.php" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/views/admin/network-settings.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/jetpack/wpml-config.xml" afterPath="$PROJECT_DIR$/wp-content/plugins/jetpack/wpml-config.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/siteorigin-panels/inc/styles.php" afterPath="$PROJECT_DIR$/wp-content/plugins/siteorigin-panels/inc/styles.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/siteorigin-panels/js/siteorigin-parallax.js" afterPath="$PROJECT_DIR$/wp-content/plugins/siteorigin-panels/js/siteorigin-parallax.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/siteorigin-panels/js/siteorigin-parallax.min.js" afterPath="$PROJECT_DIR$/wp-content/plugins/siteorigin-panels/js/siteorigin-parallax.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/siteorigin-panels/readme.txt" afterPath="$PROJECT_DIR$/wp-content/plugins/siteorigin-panels/readme.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/siteorigin-panels/siteorigin-panels.php" afterPath="$PROJECT_DIR$/wp-content/plugins/siteorigin-panels/siteorigin-panels.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/video-embed-thumbnail-generator/css/kgvid_styles.css" afterPath="$PROJECT_DIR$/wp-content/plugins/video-embed-thumbnail-generator/css/kgvid_styles.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/video-embed-thumbnail-generator/js/kgvid_video_embed.js" afterPath="$PROJECT_DIR$/wp-content/plugins/video-embed-thumbnail-generator/js/kgvid_video_embed.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/video-embed-thumbnail-generator/readme.txt" afterPath="$PROJECT_DIR$/wp-content/plugins/video-embed-thumbnail-generator/readme.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/video-embed-thumbnail-generator/video-embed-thumbnail-generator.php" afterPath="$PROJECT_DIR$/wp-content/plugins/video-embed-thumbnail-generator/video-embed-thumbnail-generator.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/video-embed-thumbnail-generator/video-js/font/VideoJS.svg" afterPath="$PROJECT_DIR$/wp-content/plugins/video-embed-thumbnail-generator/video-js/font/VideoJS.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/video-embed-thumbnail-generator/video-js/video-js.css" afterPath="$PROJECT_DIR$/wp-content/plugins/video-embed-thumbnail-generator/video-js/video-js.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/video-embed-thumbnail-generator/video-js/video-quality-selector.js" afterPath="$PROJECT_DIR$/wp-content/plugins/video-embed-thumbnail-generator/video-js/video-quality-selector.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/video-embed-thumbnail-generator/video-js/video.js" afterPath="$PROJECT_DIR$/wp-content/plugins/video-embed-thumbnail-generator/video-js/video.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/css/activity-report-widget.css" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/css/activity-report-widget.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/css/colorbox.css" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/css/colorbox.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/css/diff.css" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/css/diff.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/css/dt_table.css" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/css/dt_table.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/css/fullLog.css" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/css/fullLog.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/css/iptraf.css" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/css/iptraf.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/css/jquery-ui.min.css" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/css/jquery-ui.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/css/jquery-ui.structure.min.css" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/css/jquery-ui.structure.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/css/jquery-ui.theme.min.css" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/css/jquery-ui.theme.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/css/main.css" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/css/phpinfo.css" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/css/phpinfo.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/index.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/js/admin.js" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/js/admin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/js/admin.liveTraffic.js" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/js/admin.liveTraffic.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/js/jquery.dataTables.min.js" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/js/jquery.dataTables.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/js/jquery.tmpl.min.js" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/js/jquery.tmpl.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/js/jquery.tools.min.js" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/js/jquery.tools.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/js/knockout-3.3.0.js" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/js/knockout-3.3.0.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/js/perf.js" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/js/perf.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/js/select2.min.js" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/js/select2.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/js/tourTip.js" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/js/tourTip.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/.htaccess" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/.htaccess" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/Diff.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/Diff.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/Diff/Renderer/Abstract.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/Diff/Renderer/Abstract.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/Diff/Renderer/Html/Array.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/Diff/Renderer/Html/Array.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/Diff/Renderer/Html/SideBySide.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/Diff/Renderer/Html/SideBySide.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/Diff/SequenceMatcher.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/Diff/SequenceMatcher.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/IPTraf.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/IPTraf.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/compat.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/compat.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/conntest.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/conntest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/cronview.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/cronview.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/dashboard.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/dashboard.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/dbview.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/dbview.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/diffResult.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/diffResult.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/email_genericAlert.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/email_genericAlert.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/email_newIssues.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/email_newIssues.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/email_passwdChanged.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/email_passwdChanged.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/email_pleaseChangePasswd.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/email_pleaseChangePasswd.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/email_unlockRequest.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/email_unlockRequest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/menuHeader.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/menuHeader.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/menu_activity.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/menu_activity.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/menu_blockedIPs.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/menu_blockedIPs.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/menu_countryBlocking.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/menu_countryBlocking.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/menu_diagnostic.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/menu_diagnostic.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/menu_options.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/menu_options.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/menu_passwd.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/menu_passwd.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/menu_rangeBlocking.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/menu_rangeBlocking.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/menu_scan.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/menu_scan.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/menu_scanSchedule.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/menu_scanSchedule.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/menu_sitePerf.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/menu_sitePerf.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/menu_sitePerfStats.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/menu_sitePerfStats.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/menu_twoFactor.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/menu_twoFactor.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/menu_waf.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/menu_waf.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/menu_whois.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/menu_whois.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/pageTitle.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/pageTitle.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/schedWeekEntry.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/schedWeekEntry.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/sysinfo.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/sysinfo.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/unknownFiles.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/unknownFiles.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/viewFullActivityLog.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/viewFullActivityLog.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/wf503.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/wf503.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/wfAPI.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/wfAPI.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/wfAction.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/wfAction.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/wfActivityReport.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/wfActivityReport.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/wfArray.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/wfArray.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/wfBrowscap.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/wfBrowscap.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/wfBrowscapCache.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/wfBrowscapCache.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/wfBulkCountries.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/wfBulkCountries.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/wfCache.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/wfCache.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/wfConfig.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/wfConfig.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/wfCountryMap.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/wfCountryMap.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/wfCrawl.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/wfCrawl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/wfCrypt.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/wfCrypt.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/wfDB.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/wfDB.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/wfDiagnostic.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/wfDiagnostic.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/wfDict.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/wfDict.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/wfDirectoryIterator.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/wfDirectoryIterator.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/wfGeoIP.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/wfGeoIP.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/wfHelperBin.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/wfHelperBin.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/wfHelperString.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/wfHelperString.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/wfIPWhitelist.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/wfIPWhitelist.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/wfIssues.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/wfIssues.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/wfLockedOut.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/wfLockedOut.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/wfLog.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/wfLog.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/wfRate.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/wfRate.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/wfScan.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/wfScan.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/wfScanEngine.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/wfScanEngine.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/wfSchema.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/wfSchema.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/wfUnlockMsg.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/wfUnlockMsg.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/wfUpdateCheck.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/wfUpdateCheck.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/wfUtils.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/wfUtils.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/wfView.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/wfView.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/wfViewResult.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/wfViewResult.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/wordfenceClass.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/wordfenceClass.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/wordfenceConstants.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/wordfenceConstants.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/wordfenceHash.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/wordfenceHash.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/wordfenceScanner.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/wordfenceScanner.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/wordfenceURLHoover.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/lib/wordfenceURLHoover.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/readme.txt" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/readme.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/tmp/.htaccess" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/tmp/.htaccess" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/vendor/autoload.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/vendor/autoload.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/vendor/composer/ClassLoader.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/vendor/composer/ClassLoader.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/vendor/composer/LICENSE" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/vendor/composer/LICENSE" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/vendor/composer/autoload_classmap.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/vendor/composer/autoload_classmap.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/vendor/composer/autoload_namespaces.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/vendor/composer/autoload_namespaces.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/vendor/composer/autoload_psr4.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/vendor/composer/autoload_psr4.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/vendor/composer/autoload_real.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/vendor/composer/autoload_real.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/vendor/wordfence/wf-waf/src/bootstrap-sample.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/vendor/wordfence/wf-waf/src/bootstrap-sample.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/vendor/wordfence/wf-waf/src/init.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/vendor/wordfence/wf-waf/src/init.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/vendor/wordfence/wf-waf/src/lib/config.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/vendor/wordfence/wf-waf/src/lib/config.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/vendor/wordfence/wf-waf/src/lib/http.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/vendor/wordfence/wf-waf/src/lib/http.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/vendor/wordfence/wf-waf/src/lib/json.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/vendor/wordfence/wf-waf/src/lib/json.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/vendor/wordfence/wf-waf/src/lib/parser/lexer.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/vendor/wordfence/wf-waf/src/lib/parser/lexer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/vendor/wordfence/wf-waf/src/lib/parser/parser.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/vendor/wordfence/wf-waf/src/lib/parser/parser.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/vendor/wordfence/wf-waf/src/lib/parser/sqli.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/vendor/wordfence/wf-waf/src/lib/parser/sqli.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/vendor/wordfence/wf-waf/src/lib/request.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/vendor/wordfence/wf-waf/src/lib/request.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/vendor/wordfence/wf-waf/src/lib/rules.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/vendor/wordfence/wf-waf/src/lib/rules.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/vendor/wordfence/wf-waf/src/lib/storage.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/vendor/wordfence/wf-waf/src/lib/storage.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/vendor/wordfence/wf-waf/src/lib/storage/file.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/vendor/wordfence/wf-waf/src/lib/storage/file.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/vendor/wordfence/wf-waf/src/lib/utils.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/vendor/wordfence/wf-waf/src/lib/utils.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/vendor/wordfence/wf-waf/src/lib/view.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/vendor/wordfence/wf-waf/src/lib/view.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/vendor/wordfence/wf-waf/src/lib/waf.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/vendor/wordfence/wf-waf/src/lib/waf.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/vendor/wordfence/wf-waf/src/views/403-roadblock.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/vendor/wordfence/wf-waf/src/views/403-roadblock.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/vendor/wordfence/wf-waf/src/views/403.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/vendor/wordfence/wf-waf/src/views/403.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/views/reports/activity-report-email-inline.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/views/reports/activity-report-email-inline.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/views/reports/activity-report-email.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/views/reports/activity-report-email.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/views/reports/activity-report.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/views/reports/activity-report.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/views/waf/debug.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/views/waf/debug.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/waf/bootstrap.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/waf/bootstrap.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/waf/wfWAFUserIPRange.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/waf/wfWAFUserIPRange.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wordfence/wordfence.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wordfence/wordfence.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/html5blank/src/single.php" afterPath="$PROJECT_DIR$/wp-content/themes/html5blank/src/single.php" />
     </list>
     <ignored path="webofpat.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -770,11 +35,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sharebuttons.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="sharebuttons.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/html5blank/src/sharebuttons.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="9" column="84" selection-start-line="9" selection-start-column="84" selection-end-line="9" selection-end-column="84" />
+            <state relative-caret-position="460">
+              <caret line="23" column="81" selection-start-line="23" selection-start-column="81" selection-end-line="23" selection-end-column="81" />
+              <folding>
+                <marker date="1464426724057" expanded="true" signature="1012:1055" ph="..." />
+                <marker date="1464426724057" expanded="true" signature="1167:1281" ph="..." />
+                <marker date="1464426724057" expanded="true" signature="1325:2121" ph="..." />
+                <marker date="1464426724057" expanded="true" signature="1374:2110" ph="..." />
+                <marker date="1464426724057" expanded="true" signature="1557:2098" ph="..." />
+                <marker date="1464426724057" expanded="true" signature="1578:2083" ph="..." />
+                <marker date="1464426724057" expanded="true" signature="1619:2061" ph="..." />
+                <marker date="1464426724057" expanded="true" signature="1818:1882" ph="..." />
+                <marker date="1464426724057" expanded="true" signature="1986:2038" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="functions.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/html5blank/src/functions.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="477">
+              <caret line="316" column="16" selection-start-line="316" selection-start-column="11" selection-end-line="316" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -790,11 +75,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="single.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="single.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/html5blank/src/single.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="800">
-              <caret line="40" column="34" selection-start-line="40" selection-start-column="34" selection-end-line="40" selection-end-column="34" />
+            <state relative-caret-position="700">
+              <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="50" selection-end-column="206" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="loop.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/html5blank/src/loop.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="520">
+              <caret line="26" column="104" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="104" />
               <folding />
             </state>
           </provider>
@@ -850,14 +145,14 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/wp-content/themes/html5blank/src/loop.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/html5blank/src/Sahebuttons.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/html5blank/src/single.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/html5blank/src/functions.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/html5blank/src/sharebuttons.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/html5blank/src/header.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/html5blank/src/sidemenu.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/html5blank/src/category.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/html5blank/src/sideleft.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/html5blank/src/css/style.css" />
+        <option value="$PROJECT_DIR$/wp-content/themes/html5blank/src/functions.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/html5blank/src/sharebuttons.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/html5blank/src/single.php" />
       </list>
     </option>
   </component>
@@ -1147,12 +442,12 @@
       <workItem from="1464276354067" duration="286000" />
       <workItem from="1464277247911" duration="22000" />
       <workItem from="1464277571127" duration="2596000" />
-      <workItem from="1464319663279" duration="4292000" />
+      <workItem from="1464319663279" duration="8396000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="90135000" />
+    <option name="totallyTimeSpent" value="94239000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1034" extended-state="6" />
@@ -1369,38 +664,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/html5blank/src/functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="452">
-          <caret line="506" column="8" selection-start-line="506" selection-start-column="4" selection-end-line="506" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/html5blank/src/single.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="800">
-          <caret line="40" column="34" selection-start-line="40" selection-start-column="34" selection-end-line="40" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/html5blank/src/loop.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="580">
-          <caret line="29" column="35" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/html5blank/src/category.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/html5blank/src/header.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="723">
@@ -1428,10 +691,52 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/html5blank/src/category.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/html5blank/src/loop.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="26" column="104" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="104" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/html5blank/src/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="477">
+          <caret line="316" column="16" selection-start-line="316" selection-start-column="11" selection-end-line="316" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/html5blank/src/sharebuttons.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="9" column="84" selection-start-line="9" selection-start-column="84" selection-end-line="9" selection-end-column="84" />
+        <state relative-caret-position="460">
+          <caret line="23" column="81" selection-start-line="23" selection-start-column="81" selection-end-line="23" selection-end-column="81" />
+          <folding>
+            <marker date="1464426724057" expanded="true" signature="1012:1055" ph="..." />
+            <marker date="1464426724057" expanded="true" signature="1167:1281" ph="..." />
+            <marker date="1464426724057" expanded="true" signature="1325:2121" ph="..." />
+            <marker date="1464426724057" expanded="true" signature="1374:2110" ph="..." />
+            <marker date="1464426724057" expanded="true" signature="1557:2098" ph="..." />
+            <marker date="1464426724057" expanded="true" signature="1578:2083" ph="..." />
+            <marker date="1464426724057" expanded="true" signature="1619:2061" ph="..." />
+            <marker date="1464426724057" expanded="true" signature="1818:1882" ph="..." />
+            <marker date="1464426724057" expanded="true" signature="1986:2038" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/html5blank/src/single.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="700">
+          <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="50" selection-end-column="206" />
           <folding />
         </state>
       </provider>
