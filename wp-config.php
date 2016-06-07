@@ -33,6 +33,10 @@ define('DB_HOST', 'localhost');
 /** Jeu de caractères à utiliser par la base de données lors de la création des tables. */
 define('DB_CHARSET', 'utf8mb4');
 
+/** Mémoire allouée à l'administration. */
+define( 'WP_MEMORY_LIMIT', '128M' );
+define( 'WP_MAX_MEMORY_LIMIT', '256M' );
+
 /** Type de collation de la base de données.
   * N'y touchez que si vous savez ce que vous faites.
   */

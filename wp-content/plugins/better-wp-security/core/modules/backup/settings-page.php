@@ -175,7 +175,7 @@ final class ITSEC_Backup_Settings_Page extends ITSEC_Module_Settings_Page {
 		);
 
 		if ( $settings['all_sites'] ) {
-			$query = 'SHOW_TABLES';
+			$query = 'SHOW TABLES';
 		} else {
 			$query = $wpdb->prepare( 'SHOW TABLES LIKE %s', "{$wpdb->base_prefix}%" );
 		}

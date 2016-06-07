@@ -395,3 +395,5 @@
 	Bug Fix: Fixed bug that could cause some sites to lose settings when upgrading or importing settings.
 	Bug Fix: Fixed bug that could cause Security to look at old file and directory locations after importing settings from one site to a different site.
 	Bug Fix: Removed some status messages that would display after doing an import.
+2.3.7 - 2016-05-27 - Chris Jean & Aaron D. Campbell
+	Bug Fix: Fixed SQL query for Database Backups when "Backup Full Database" is enabled.

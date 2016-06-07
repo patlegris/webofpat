@@ -1,13 +1,13 @@
 === WP Smush - Image Optimization ===
 Plugin Name: WP Smush - Image Optimization
-Version: 2.3
+Version: 2.3.1
 Author: WPMU DEV
 Author URI: http://premium.wpmudev.org/
 Contributors: WPMUDEV, alexdunae
 Tags: image optimization, image compression, attachment,Attachments,compress,Compress Image File,Compress Image Size,Compress JPG,Compressed JPG, Compression Image,Image,Images,JPG,Optimise,Optimize,Photo,Photos,Pictures,PNG,Reduce Image Size,Smush,Smush.it,Upload,WordPress Compression,WordPress Image Tool,Yahoo, Yahoo Smush.it
 Requires at least: 3.5
 Tested up to: 4.5.2
-Stable tag: 2.3
+Stable tag: 2.3.1
 License: GPL v2 - http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
 Reduce image file sizes, improve performance and boost your SEO using the free <a href="https://premium.wpmudev.org/">WPMU DEV</a> WordPress Smush API.
@@ -16,11 +16,13 @@ Reduce image file sizes, improve performance and boost your SEO using the free <
 
 <strong>Resize and optimize all of your images</strong> with the <strong>incredibly powerful</strong> and <strong>100% free image smusher</strong>, brought to you by the superteam at WPMU DEV!
 
+<strong>Now with image resizing!</strong> Set a max width and height and large images will scale down as they are being compressed.
+
 Our servers do all the heavy lifting. Strip hidden bulky information from your images and reduce file size without losing quality.
 
 Large image files may be slowing down your site without you even knowing it. WP Smush uses WPMU DEV’s super servers to quickly smush every single one of your images and cuts all the unnecessary data without slowing down your site.
 
-[youtube https://www.youtube.com/watch?v=Bb905kWPohU&feature=youtu.be]
+[youtube https://www.youtube.com/watch?v=BLqk4KPRz28&feature=youtu.be]
 
 WP Smush meticulously scans every image you upload – or have already added to your site – cuts all the unnecessary data and scales it for you before adding it to your media library.
 
@@ -88,6 +90,12 @@ Yahoo's Smush.it API is gone forever. So WPMU DEV built our own free API that is
 
 
 == Changelog ==
+
+= 2.3.1 =
+
+* Fixed:
+    * Stats not updated on resizing images
+    * CSS conflict in Media Library
 
 = 2.3 =
 

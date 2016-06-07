@@ -2,8 +2,859 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d7aea581-a7ac-450a-969a-29716d702787" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/core/admin/fonts/builder.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/core/admin/fonts/builder.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/core/admin/fonts/builder.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/core/admin/fonts/modules.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/core/admin/fonts/modules.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/core/admin/fonts/modules.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/core/admin/images/ajax-loader.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/core/admin/images/loader.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/core/languages/ar.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/core/languages/bg_BG.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/core/languages/cs_CZ.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/core/languages/da_DK.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/core/languages/de_DE.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/core/languages/el.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/core/languages/en_US.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/core/languages/es_ES.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/core/languages/fi.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/core/languages/fr_FR.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/core/languages/he_IL.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/core/languages/hu_HU.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/core/languages/id_ID.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/core/languages/it_IT.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/core/languages/ja.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/core/languages/ko_KR.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/core/languages/ms_MY.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/core/languages/nb_NO.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/core/languages/nl_NL.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/core/languages/pl_PL.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/core/languages/pt_BR.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/core/languages/ro_RO.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/core/languages/ru_RU.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/core/languages/sk_SK.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/core/languages/sr_RS.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/core/languages/sv_SE.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/core/languages/th.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/core/languages/tl.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/core/languages/tr_TR.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/core/languages/uk.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/core/languages/vi.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/core/languages/zh_CN.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/epanel/google-fonts/images/all-fonts.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/epanel/images/active-mainlink-bg.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/epanel/images/ad-icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/epanel/images/ajax-loader.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/epanel/images/blank.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/epanel/images/box-title-mark.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/epanel/images/checkbox-2.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/epanel/images/checkbox.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/epanel/images/colorization-icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/epanel/images/colorpicker_overlay.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/epanel/images/colorpicker_select.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/epanel/images/custom_background.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/epanel/images/custom_hex.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/epanel/images/custom_hsb_b.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/epanel/images/custom_hsb_h.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/epanel/images/custom_hsb_s.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/epanel/images/custom_indic.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/epanel/images/custom_rgb_b.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/epanel/images/custom_rgb_g.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/epanel/images/custom_rgb_r.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/epanel/images/custom_submit.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/epanel/images/defaults-hover.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/epanel/images/defaults.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/epanel/images/description-bottom.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/epanel/images/description-close.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/epanel/images/description-main.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/epanel/images/description-top.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/epanel/images/empty.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/epanel/images/epanel-bg.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/epanel/images/epanel-bottom-bg.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/epanel/images/epanel-content-bg.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/epanel/images/epanel-content-bottombg.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/epanel/images/epanel-content-topbg.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/epanel/images/gallery-overlay.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/epanel/images/general-icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/epanel/images/help-image.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/epanel/images/integration-icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/epanel/images/layout-icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/epanel/images/logo.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/epanel/images/logo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/epanel/images/mainlink-bg.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/epanel/images/mainmenu-li-bottom.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/epanel/images/navigation-icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/epanel/images/no.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/epanel/images/panel-top-bg.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/epanel/images/postinfo-author.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/epanel/images/postinfo-categories.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/epanel/images/postinfo-comments.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/epanel/images/postinfo-date.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/epanel/images/save.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/epanel/images/secondary-active-bg.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/epanel/images/secondary-bg.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/epanel/images/secondary-li-mark.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/epanel/images/select.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/epanel/images/select2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/epanel/images/seo-icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/epanel/images/slider.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/epanel/images/support-icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/epanel/images/top-input-bg.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/epanel/images/yes.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/epanel/shortcodes/images/icon-author.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/epanel/shortcodes/images/icon-boxes.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/epanel/shortcodes/images/icon-buttons.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/epanel/shortcodes/images/icon-tabs.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/epanel/shortcodes/images/icon-toggle.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/epanel/shortcodes/images/shortcodes-sprite.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/images/footer-layouts.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/images/logo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/fonts/ETmodules_v2_4.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/fonts/ETmodules_v2_4.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/fonts/ETmodules_v2_4.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/fonts/etbuilder_v2_7.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/fonts/etbuilder_v2_7.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/fonts/etbuilder_v2_7.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/images/animated-overlay.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/images/cursor-select-goal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/images/cursor-select-subject.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/images/cursor-select-winner.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/images/jquery.minicolors.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/images/marker.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/images/right-click-options-carrot.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/images/ui-bg_flat_0_aaaaaa_40x100.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/images/ui-bg_flat_55_fbec88_40x100.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/images/ui-bg_glass_75_d0e5f5_1x400.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/images/ui-bg_glass_85_dfeffc_1x400.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/images/ui-bg_glass_95_fef1ec_1x400.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/images/ui-bg_gloss-wave_55_2e86b9_500x100.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/images/ui-bg_inset-hard_100_f5f8f9_1x100.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/images/ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/images/ui-icons_2e83ff_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/images/ui-icons_2e86b9_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/images/ui-icons_6da8d5_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/images/ui-icons_cd0a0a_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/images/ui-icons_d8e7f3_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/images/ui-icons_f9bd01_256x240.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/languages/ar.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/languages/bg_BG.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/languages/cs_CZ.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/languages/da_DK.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/languages/de_DE.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/languages/el.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/languages/es_ES.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/languages/fi.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/languages/fr_FR.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/languages/he_IL.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/languages/hu_HU.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/languages/id_ID.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/languages/it_IT.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/languages/ja.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/languages/ko_KR.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/languages/ms_MY.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/languages/nb_NO.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/languages/nl_NL.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/languages/pl_PL.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/languages/pt_BR.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/languages/ro_RO.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/languages/ru_RU.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/languages/sk_SK.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/languages/sr_RS.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/languages/sv_SE.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/languages/th.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/languages/tl.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/languages/tr_TR.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/languages/uk.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/languages/vi.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/languages/zh_CN.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/styles/images/preloader.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/styles/images/subscribe-loader.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/lang/ar.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/lang/bg_BG.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/lang/cs_CZ.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/lang/da_DK.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/lang/de_DE.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/lang/el.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/lang/en_US.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/lang/es_ES.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/lang/fi.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/lang/fr_FR.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/lang/he_IL.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/lang/hu_HU.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/lang/id_ID.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/lang/it_IT.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/lang/ja.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/lang/ko_KR.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/lang/ms_MY.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/lang/nb_NO.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/lang/nl_NL.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/lang/pl_PL.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/lang/pt_BR.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/lang/ro_RO.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/lang/ru_RU.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/lang/sk_SK.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/lang/sr_RS.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/lang/sv_SE.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/lang/th.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/lang/tl.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/lang/tr_TR.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/lang/uk.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/lang/vi.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/lang/zh_CN.mo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/psd/logo.psd" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/psd/logo_blank.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/screenshot.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/404.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/changelog.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/comments.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/core/admin/css/core.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/core/admin/css/portability.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/core/admin/css/updates.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/core/admin/fonts/builder.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/core/admin/fonts/modules.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/core/admin/includes/assets.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/core/admin/includes/cache.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/core/admin/includes/class-cache.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/core/admin/includes/class-portability.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/core/admin/includes/class-updates.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/core/admin/includes/portability.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/core/admin/js/core.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/core/admin/js/portability.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/core/components.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/core/functions.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/core/init.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/core/languages/ar.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/core/languages/bg_BG.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/core/languages/cs_CZ.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/core/languages/da_DK.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/core/languages/de_DE.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/core/languages/el.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/core/languages/en_US.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/core/languages/en_US.pot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/core/languages/es_ES.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/core/languages/fi.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/core/languages/fr_FR.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/core/languages/he_IL.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/core/languages/hu_HU.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/core/languages/id_ID.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/core/languages/it_IT.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/core/languages/ja.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/core/languages/ko_KR.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/core/languages/ms_MY.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/core/languages/nb_NO.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/core/languages/nl_NL.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/core/languages/pl_PL.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/core/languages/pt_BR.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/core/languages/ro_RO.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/core/languages/ru_RU.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/core/languages/sk_SK.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/core/languages/sr_RS.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/core/languages/sv_SE.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/core/languages/th.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/core/languages/tl.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/core/languages/tr_TR.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/core/languages/uk.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/core/languages/vi.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/core/languages/zh_CN.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/core/updates_init.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/css/editor-style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/css/meta-box-styles.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/css/theme-customizer-controls-styles.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/epanel/core_functions.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/epanel/css/panel.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/epanel/custom_functions.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/epanel/google-fonts/et_google_fonts.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/epanel/google-fonts/et_google_fonts.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/epanel/js/checkbox.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/epanel/js/colorpicker.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/epanel/js/custom_uploader.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/epanel/js/eye.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/epanel/js/functions-init.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/epanel/js/layout.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/epanel/js/wp-color-picker-alpha.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/epanel/shortcodes/css/shortcodes.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/epanel/shortcodes/css/shortcodes_responsive.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/epanel/shortcodes/js/editor_plugin.dev.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/epanel/shortcodes/js/editor_plugin.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/epanel/shortcodes/js/et_shortcodes_frontend.dev.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/epanel/shortcodes/js/et_shortcodes_frontend.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/epanel/shortcodes/shortcodes.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/et-pagebuilder/et-pagebuilder.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/footer.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/functions.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/header.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/ab-testing.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/class-et-builder-element.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/class-et-global-settings.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/comments_template.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/core.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/fonts/ETmodules_v2_4.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/fonts/etbuilder_v2_7.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/framework.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/functions.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/images/menu.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/images/stats-no-data.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/images/stats.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/languages/ar.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/languages/bg_BG.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/languages/cs_CZ.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/languages/da_DK.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/languages/de_DE.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/languages/el.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/languages/en_US.pot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/languages/es_ES.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/languages/fi.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/languages/fr_FR.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/languages/he_IL.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/languages/hu_HU.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/languages/id_ID.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/languages/it_IT.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/languages/ja.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/languages/ko_KR.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/languages/ms_MY.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/languages/nb_NO.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/languages/nl_NL.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/languages/pl_PL.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/languages/pt_BR.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/languages/ro_RO.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/languages/ru_RU.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/languages/sk_SK.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/languages/sr_RS.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/languages/sv_SE.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/languages/th.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/languages/tl.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/languages/tr_TR.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/languages/uk.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/languages/vi.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/languages/zh_CN.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/layouts.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/main-modules.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/main-structure-elements.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/scripts/admin_global_functions.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/scripts/advanced_options.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/scripts/builder.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/scripts/cache_notice.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/scripts/ext/chart.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/scripts/ext/jquery-ui-1.10.4.custom.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/scripts/ext/jquery-ui-1.11.4.custom.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/scripts/ext/jquery-ui-timepicker-addon.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/scripts/ext/jquery.minicolors.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/scripts/ext/jquery.tablesorter.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/scripts/ext/jquery.validate.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/scripts/ext/jquery.visible.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/scripts/ext/widgets.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/scripts/ext/wp-color-picker-alpha.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/scripts/ext/wp-color-picker-alpha.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/scripts/failure_notice.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/scripts/frontend-builder-global-functions.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/scripts/frontend-builder-preview.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/scripts/frontend-builder-scripts.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/scripts/jquery.easypiechart.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/scripts/jquery.fitvids.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/scripts/jquery.hashchange.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/scripts/jquery.magnific-popup.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/scripts/jquery.mobile.custom.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/scripts/library_scripts.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/scripts/reset_memory_limit_increase_setting.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/scripts/roles_admin.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/scripts/salvattore.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/scripts/waypoints.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/styles/advanced_options.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/styles/jquery-ui-1.10.4.custom.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/styles/library_menu.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/styles/library_pages.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/styles/magnific_popup.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/styles/notification_popup_styles.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/styles/preview.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/styles/roles_style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/styles/style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/styles/widgets.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/subscription/aweber/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/subscription/aweber/aweber.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/subscription/aweber/aweber_api.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/subscription/aweber/aweber_collection.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/subscription/aweber/aweber_entry.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/subscription/aweber/aweber_entry_data_array.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/subscription/aweber/aweber_response.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/subscription/aweber/curl_object.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/subscription/aweber/curl_response.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/subscription/aweber/exceptions.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/subscription/aweber/oauth_adapter.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/subscription/aweber/oauth_application.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/subscription/mailchimp/mailchimp.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/builder/template-preview.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/functions/choices.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/functions/installation.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/functions/sanitization.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/functions/sidebars.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/functions/tutorials.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/navigation.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/no-results.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/social_icons.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/widgets.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/widgets/widget-about.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/widgets/widget-ads.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/includes/widgets/widget-adsense.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/js/admin_post_settings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/js/custom.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/js/html5.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/js/menu_fix.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/js/smoothscroll.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/js/theme-customizer-controls.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/js/theme-customizer.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/lang/ar.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/lang/bg_BG.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/lang/cs_CZ.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/lang/da_DK.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/lang/de_DE.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/lang/el.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/lang/en_US.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/lang/es_ES.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/lang/fi.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/lang/fr_FR.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/lang/he_IL.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/lang/hu_HU.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/lang/id_ID.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/lang/it_IT.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/lang/ja.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/lang/ko_KR.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/lang/ms_MY.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/lang/nb_NO.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/lang/nl_NL.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/lang/pl_PL.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/lang/pt_BR.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/lang/ro_RO.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/lang/ru_RU.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/lang/sk_SK.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/lang/sr_RS.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/lang/sv_SE.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/lang/th.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/lang/tl.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/lang/tr_TR.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/lang/uk.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/lang/vi.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/lang/zh_CN.po" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/license.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/options_divi.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/page-template-blank.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/page.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/post_thumbnails_divi.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/readme.url" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/rtl.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/sidebar-footer.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/sidebar.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/single-project.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/single.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wp-content/themes/Divi/wpml-config.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/core/admin/fonts/core.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/core/admin/fonts/core.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/core/admin/fonts/core.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/core/admin/fonts/core.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/ab-testing.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/class-et-builder-element.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/class-et-global-settings.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/comments_template.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/core.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/fonts/ETmodules_v2_4.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/fonts/ETmodules_v2_4.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/fonts/ETmodules_v2_4.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/fonts/ETmodules_v2_4.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/fonts/etbuilder_v2_7.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/fonts/etbuilder_v2_7.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/fonts/etbuilder_v2_7.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/fonts/etbuilder_v2_7.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/framework.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/functions.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/images/ajax-loader.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/images/animated-overlay.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/images/cursor-select-goal.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/images/cursor-select-subject.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/images/cursor-select-winner.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/images/jquery.minicolors.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/images/marker.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/images/menu.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/images/right-click-options-carrot.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/images/stats-no-data.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/images/stats.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/images/ui-bg_flat_0_aaaaaa_40x100.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/images/ui-bg_flat_55_fbec88_40x100.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/images/ui-bg_glass_75_d0e5f5_1x400.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/images/ui-bg_glass_85_dfeffc_1x400.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/images/ui-bg_glass_95_fef1ec_1x400.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/images/ui-bg_gloss-wave_55_2e86b9_500x100.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/images/ui-bg_inset-hard_100_f5f8f9_1x100.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/images/ui-bg_inset-hard_100_fcfdfd_1x100.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/images/ui-icons_2e83ff_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/images/ui-icons_2e86b9_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/images/ui-icons_6da8d5_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/images/ui-icons_cd0a0a_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/images/ui-icons_d8e7f3_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/images/ui-icons_f9bd01_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/languages/ar.mo" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/languages/ar.po" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/languages/bg_BG.mo" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/languages/bg_BG.po" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/languages/cs_CZ.mo" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/languages/cs_CZ.po" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/languages/da_DK.mo" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/languages/da_DK.po" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/languages/de_DE.mo" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/languages/de_DE.po" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/languages/el.mo" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/languages/el.po" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/languages/en_US.pot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/languages/es_ES.mo" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/languages/es_ES.po" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/languages/fi.mo" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/languages/fi.po" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/languages/fr_FR.mo" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/languages/fr_FR.po" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/languages/he_IL.mo" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/languages/he_IL.po" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/languages/hu_HU.mo" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/languages/hu_HU.po" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/languages/id_ID.mo" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/languages/id_ID.po" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/languages/it_IT.mo" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/languages/it_IT.po" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/languages/ja.mo" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/languages/ja.po" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/languages/ko_KR.mo" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/languages/ko_KR.po" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/languages/ms_MY.mo" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/languages/ms_MY.po" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/languages/nb_NO.mo" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/languages/nb_NO.po" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/languages/nl_NL.mo" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/languages/nl_NL.po" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/languages/pl_PL.mo" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/languages/pl_PL.po" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/languages/pt_BR.mo" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/languages/pt_BR.po" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/languages/ro_RO.mo" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/languages/ro_RO.po" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/languages/ru_RU.mo" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/languages/ru_RU.po" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/languages/sk_SK.mo" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/languages/sk_SK.po" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/languages/sr_RS.mo" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/languages/sr_RS.po" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/languages/sv_SE.mo" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/languages/sv_SE.po" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/languages/th.mo" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/languages/th.po" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/languages/tl.mo" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/languages/tl.po" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/languages/tr_TR.mo" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/languages/tr_TR.po" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/languages/uk.mo" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/languages/uk.po" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/languages/vi.mo" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/languages/vi.po" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/languages/zh_CN.mo" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/languages/zh_CN.po" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/layouts.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/main-modules.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/main-structure-elements.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/scripts/admin_global_functions.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/scripts/advanced_options.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/scripts/builder.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/scripts/cache_notice.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/scripts/ext/chart.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/scripts/ext/jquery-ui-1.10.4.custom.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/scripts/ext/jquery-ui-1.11.4.custom.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/scripts/ext/jquery-ui-timepicker-addon.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/scripts/ext/jquery.minicolors.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/scripts/ext/jquery.tablesorter.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/scripts/ext/jquery.validate.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/scripts/ext/jquery.visible.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/scripts/ext/widgets.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/scripts/ext/wp-color-picker-alpha.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/scripts/ext/wp-color-picker-alpha.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/scripts/failure_notice.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/scripts/frontend-builder-global-functions.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/scripts/frontend-builder-preview.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/scripts/frontend-builder-scripts.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/scripts/jquery.easypiechart.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/scripts/jquery.fittext.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/scripts/jquery.fitvids.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/scripts/jquery.hashchange.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/scripts/jquery.magnific-popup.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/scripts/jquery.mobile.custom.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/scripts/library_scripts.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/scripts/reset_memory_limit_increase_setting.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/scripts/roles_admin.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/scripts/salvattore.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/scripts/waypoints.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/styles/advanced_options.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/styles/frontend-builder-plugin-style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/styles/images/preloader.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/styles/images/subscribe-loader.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/styles/jquery-ui-1.10.4.custom.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/styles/library_menu.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/styles/library_pages.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/styles/magnific_popup.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/styles/notification_popup_styles.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/styles/preview.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/styles/roles_style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/styles/style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/styles/widgets.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/subscription/aweber/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/subscription/aweber/aweber.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/subscription/aweber/aweber_api.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/subscription/aweber/aweber_collection.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/subscription/aweber/aweber_entry.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/subscription/aweber/aweber_entry_data_array.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/subscription/aweber/aweber_response.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/subscription/aweber/curl_object.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/subscription/aweber/curl_response.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/subscription/aweber/exceptions.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/subscription/aweber/oauth_adapter.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/subscription/aweber/oauth_application.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/subscription/mailchimp/mailchimp.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/framework/template-preview.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wp-content/themes/Avada Theme.rar" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/languages/admin-fr_FR.mo" afterPath="$PROJECT_DIR$/wp-content/languages/admin-fr_FR.mo" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/languages/admin-network-fr_FR.mo" afterPath="$PROJECT_DIR$/wp-content/languages/admin-network-fr_FR.mo" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/languages/fr_FR.mo" afterPath="$PROJECT_DIR$/wp-content/languages/fr_FR.mo" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/languages/plugins/jetpack-fr_FR.mo" afterPath="$PROJECT_DIR$/wp-content/languages/plugins/jetpack-fr_FR.mo" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/languages/plugins/stops-core-theme-and-plugin-updates-fr_FR.mo" afterPath="$PROJECT_DIR$/wp-content/languages/plugins/stops-core-theme-and-plugin-updates-fr_FR.mo" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/maintenance/languages/maintenance-cs_CZ.mo" afterPath="$PROJECT_DIR$/wp-content/plugins/maintenance/languages/maintenance-cs_CZ.mo" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/maintenance/languages/maintenance-de_DE.mo" afterPath="$PROJECT_DIR$/wp-content/plugins/maintenance/languages/maintenance-de_DE.mo" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/maintenance/languages/maintenance-es_ES.mo" afterPath="$PROJECT_DIR$/wp-content/plugins/maintenance/languages/maintenance-es_ES.mo" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/maintenance/languages/maintenance-fa-IR.mo" afterPath="$PROJECT_DIR$/wp-content/plugins/maintenance/languages/maintenance-fa-IR.mo" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/maintenance/languages/maintenance-fi.mo" afterPath="$PROJECT_DIR$/wp-content/plugins/maintenance/languages/maintenance-fi.mo" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/maintenance/languages/maintenance-fr_FR.mo" afterPath="$PROJECT_DIR$/wp-content/plugins/maintenance/languages/maintenance-fr_FR.mo" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/maintenance/languages/maintenance-it_IT.mo" afterPath="$PROJECT_DIR$/wp-content/plugins/maintenance/languages/maintenance-it_IT.mo" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/maintenance/languages/maintenance-nl_NL.mo" afterPath="$PROJECT_DIR$/wp-content/plugins/maintenance/languages/maintenance-nl_NL.mo" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/maintenance/languages/maintenance-pt_BR.mo" afterPath="$PROJECT_DIR$/wp-content/plugins/maintenance/languages/maintenance-pt_BR.mo" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/maintenance/languages/maintenance-ru_RU.mo" afterPath="$PROJECT_DIR$/wp-content/plugins/maintenance/languages/maintenance-ru_RU.mo" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/maintenance/languages/maintenance-tr_TR.mo" afterPath="$PROJECT_DIR$/wp-content/plugins/maintenance/languages/maintenance-tr_TR.mo" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/maintenance/languages/maintenance-uk.mo" afterPath="$PROJECT_DIR$/wp-content/plugins/maintenance/languages/maintenance-uk.mo" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/maintenance/languages/maintenance-zh_CN.mo" afterPath="$PROJECT_DIR$/wp-content/plugins/maintenance/languages/maintenance-zh_CN.mo" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/html5blank" afterPath="$PROJECT_DIR$/wp-content/themes/html5blank" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/html5blank/src/single.php" afterPath="$PROJECT_DIR$/wp-content/themes/html5blank/src/single.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.htaccess" afterPath="$PROJECT_DIR$/.htaccess" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-config.php" afterPath="$PROJECT_DIR$/wp-config.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/languages/admin-fr_FR.po" afterPath="$PROJECT_DIR$/wp-content/languages/admin-fr_FR.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/languages/admin-network-fr_FR.po" afterPath="$PROJECT_DIR$/wp-content/languages/admin-network-fr_FR.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/languages/fr_FR.po" afterPath="$PROJECT_DIR$/wp-content/languages/fr_FR.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/languages/plugins/jetpack-fr_FR.po" afterPath="$PROJECT_DIR$/wp-content/languages/plugins/jetpack-fr_FR.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/languages/plugins/stops-core-theme-and-plugin-updates-fr_FR.po" afterPath="$PROJECT_DIR$/wp-content/languages/plugins/stops-core-theme-and-plugin-updates-fr_FR.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/better-wp-security/better-wp-security.php" afterPath="$PROJECT_DIR$/wp-content/plugins/better-wp-security/better-wp-security.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/better-wp-security/core/history.txt" afterPath="$PROJECT_DIR$/wp-content/plugins/better-wp-security/core/history.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/better-wp-security/core/modules/backup/settings-page.php" afterPath="$PROJECT_DIR$/wp-content/plugins/better-wp-security/core/modules/backup/settings-page.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/better-wp-security/history.txt" afterPath="$PROJECT_DIR$/wp-content/plugins/better-wp-security/history.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/better-wp-security/readme.txt" afterPath="$PROJECT_DIR$/wp-content/plugins/better-wp-security/readme.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/changelog.txt" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/changelog.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/core/admin/css/core.css" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/core/admin/css/core.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/core/admin/css/portability.css" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/core/admin/css/portability.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/core/admin/includes/assets.php" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/core/admin/includes/assets.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/core/admin/includes/cache.php" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/core/admin/includes/cache.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/core/admin/includes/class-cache.php" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/core/admin/includes/class-cache.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/core/admin/includes/class-portability.php" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/core/admin/includes/class-portability.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/core/admin/includes/class-updates.php" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/core/admin/includes/class-updates.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/core/admin/includes/portability.php" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/core/admin/includes/portability.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/core/admin/js/core.js" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/core/admin/js/core.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/core/admin/js/portability.js" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/core/admin/js/portability.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/core/components.php" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/core/components.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/core/functions.php" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/core/functions.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/core/init.php" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/core/init.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/core/languages/ar.po" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/core/languages/ar.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/core/languages/bg_BG.po" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/core/languages/bg_BG.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/core/languages/cs_CZ.po" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/core/languages/cs_CZ.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/core/languages/da_DK.po" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/core/languages/da_DK.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/core/languages/de_DE.po" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/core/languages/de_DE.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/core/languages/el.po" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/core/languages/el.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/core/languages/en_US.po" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/core/languages/en_US.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/core/languages/es_ES.po" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/core/languages/es_ES.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/core/languages/fi.po" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/core/languages/fi.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/core/languages/fr_FR.po" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/core/languages/fr_FR.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/core/languages/he_IL.po" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/core/languages/he_IL.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/core/languages/hu_HU.po" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/core/languages/hu_HU.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/core/languages/id_ID.po" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/core/languages/id_ID.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/core/languages/it_IT.po" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/core/languages/it_IT.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/core/languages/ja.po" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/core/languages/ja.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/core/languages/ko_KR.po" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/core/languages/ko_KR.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/core/languages/ms_MY.po" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/core/languages/ms_MY.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/core/languages/nb_NO.po" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/core/languages/nb_NO.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/core/languages/nl_NL.po" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/core/languages/nl_NL.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/core/languages/pl_PL.po" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/core/languages/pl_PL.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/core/languages/pt_BR.po" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/core/languages/pt_BR.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/core/languages/ro_RO.po" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/core/languages/ro_RO.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/core/languages/ru_RU.po" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/core/languages/ru_RU.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/core/languages/sk_SK.po" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/core/languages/sk_SK.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/core/languages/sr_RS.po" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/core/languages/sr_RS.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/core/languages/sv_SE.po" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/core/languages/sv_SE.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/core/languages/th.po" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/core/languages/th.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/core/languages/tl.po" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/core/languages/tl.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/core/languages/tr_TR.po" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/core/languages/tr_TR.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/core/languages/uk.po" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/core/languages/uk.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/core/languages/vi.po" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/core/languages/vi.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/core/languages/zh_CN.po" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/core/languages/zh_CN.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/core/updates_init.php" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/core/updates_init.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/css/admin.css" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/css/admin.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/dashboard/css/et_dashboard.css" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/dashboard/css/et_dashboard.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/dashboard/css/fonts/ETdashboard.svg" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/dashboard/css/fonts/ETdashboard.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/dashboard/dashboard.php" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/dashboard/dashboard.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/dashboard/includes/google_fonts.php" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/dashboard/includes/google_fonts.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/dashboard/includes/options.php" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/dashboard/includes/options.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/dashboard/js/et_dashboard.js" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/dashboard/js/et_dashboard.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/dashboard/js/tinymce/LICENSE.TXT" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/dashboard/js/tinymce/LICENSE.TXT" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/dashboard/js/tinymce/changelog.txt" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/dashboard/js/tinymce/changelog.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/dashboard/js/tinymce/js/tinymce/license.txt" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/dashboard/js/tinymce/js/tinymce/license.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/dashboard/js/tinymce/js/tinymce/plugins/example/dialog.html" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/dashboard/js/tinymce/js/tinymce/plugins/example/dialog.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/dashboard/js/tinymce/js/tinymce/plugins/visualblocks/css/visualblocks.css" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/dashboard/js/tinymce/js/tinymce/plugins/visualblocks/css/visualblocks.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/dashboard/js/tinymce/js/tinymce/skins/lightgray/fonts/tinymce-small.svg" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/dashboard/js/tinymce/js/tinymce/skins/lightgray/fonts/tinymce-small.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/dashboard/js/tinymce/js/tinymce/skins/lightgray/fonts/tinymce.svg" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/dashboard/js/tinymce/js/tinymce/skins/lightgray/fonts/tinymce.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/dashboard/js/tinymce/js/tinymce/tinymce.min.js" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/dashboard/js/tinymce/js/tinymce/tinymce.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/divi-builder.php" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/divi-builder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/functions.php" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/functions.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/includes/navigation.php" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/includes/navigation.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/includes/no-results.php" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/includes/no-results.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/js/admin.js" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/js/admin.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/js/menu_fix.js" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/js/menu_fix.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/lang/et_builder_plugin-ar.po" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/lang/et_builder_plugin-ar.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/lang/et_builder_plugin-bg_BG.po" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/lang/et_builder_plugin-bg_BG.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/lang/et_builder_plugin-cs_CZ.po" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/lang/et_builder_plugin-cs_CZ.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/lang/et_builder_plugin-da_DK.po" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/lang/et_builder_plugin-da_DK.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/lang/et_builder_plugin-de_DE.po" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/lang/et_builder_plugin-de_DE.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/lang/et_builder_plugin-el.po" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/lang/et_builder_plugin-el.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/lang/et_builder_plugin-es_ES.po" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/lang/et_builder_plugin-es_ES.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/lang/et_builder_plugin-fi.po" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/lang/et_builder_plugin-fi.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/lang/et_builder_plugin-fr_FR.po" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/lang/et_builder_plugin-fr_FR.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/lang/et_builder_plugin-he_IL.po" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/lang/et_builder_plugin-he_IL.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/lang/et_builder_plugin-hu_HU.po" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/lang/et_builder_plugin-hu_HU.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/lang/et_builder_plugin-id_ID.po" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/lang/et_builder_plugin-id_ID.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/lang/et_builder_plugin-it_IT.po" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/lang/et_builder_plugin-it_IT.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/lang/et_builder_plugin-ja.po" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/lang/et_builder_plugin-ja.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/lang/et_builder_plugin-ko_KR.po" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/lang/et_builder_plugin-ko_KR.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/lang/et_builder_plugin-ms_MY.po" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/lang/et_builder_plugin-ms_MY.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/lang/et_builder_plugin-nb_NO.po" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/lang/et_builder_plugin-nb_NO.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/lang/et_builder_plugin-nl_NL.po" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/lang/et_builder_plugin-nl_NL.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/lang/et_builder_plugin-pl_PL.po" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/lang/et_builder_plugin-pl_PL.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/lang/et_builder_plugin-pt_BR.po" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/lang/et_builder_plugin-pt_BR.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/lang/et_builder_plugin-ro_RO.po" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/lang/et_builder_plugin-ro_RO.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/lang/et_builder_plugin-ru_RU.po" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/lang/et_builder_plugin-ru_RU.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/lang/et_builder_plugin-sk_SK.po" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/lang/et_builder_plugin-sk_SK.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/lang/et_builder_plugin-sr_RS.po" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/lang/et_builder_plugin-sr_RS.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/lang/et_builder_plugin-sv_SE.po" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/lang/et_builder_plugin-sv_SE.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/lang/et_builder_plugin-th.po" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/lang/et_builder_plugin-th.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/lang/et_builder_plugin-tl.po" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/lang/et_builder_plugin-tl.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/lang/et_builder_plugin-tr_TR.po" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/lang/et_builder_plugin-tr_TR.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/lang/et_builder_plugin-uk.po" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/lang/et_builder_plugin-uk.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/lang/et_builder_plugin-vi.po" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/lang/et_builder_plugin-vi.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/lang/et_builder_plugin-zh_CN.po" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/lang/et_builder_plugin-zh_CN.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/license.txt" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/license.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/theme-compat.php" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/theme-compat.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/theme-compat/evolve.php" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/theme-compat/evolve.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/theme-compat/flatsome.php" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/theme-compat/flatsome.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/theme-compat/js/flatsome-editor.js" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/theme-compat/js/flatsome-editor.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/theme-compat/js/make-editor.js" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/theme-compat/js/make-editor.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/theme-compat/make.php" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/theme-compat/make.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/theme-compat/raindrops.php" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/theme-compat/raindrops.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/theme-compat/virtue.php" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/theme-compat/virtue.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/theme-compat/weblizar.php" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/theme-compat/weblizar.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/divi-builder/theme-compat/zerif-lite.php" afterPath="$PROJECT_DIR$/wp-content/plugins/divi-builder/theme-compat/zerif-lite.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/maintenance/css/admin.css" afterPath="$PROJECT_DIR$/wp-content/plugins/maintenance/css/admin.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/maintenance/includes/admin.php" afterPath="$PROJECT_DIR$/wp-content/plugins/maintenance/includes/admin.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/maintenance/includes/functions.php" afterPath="$PROJECT_DIR$/wp-content/plugins/maintenance/includes/functions.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/maintenance/includes/update.php" afterPath="$PROJECT_DIR$/wp-content/plugins/maintenance/includes/update.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/init.js" afterPath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/init.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/select2/select2-bootstrap.css" afterPath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/select2/select2-bootstrap.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/select2/select2.css" afterPath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/select2/select2.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/select2/select2.js" afterPath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/select2/select2.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/select2/select2.min.js" afterPath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/select2/select2.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/select2/select2_locale_ar.js" afterPath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/select2/select2_locale_ar.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/select2/select2_locale_az.js" afterPath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/select2/select2_locale_az.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/select2/select2_locale_bg.js" afterPath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/select2/select2_locale_bg.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/select2/select2_locale_ca.js" afterPath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/select2/select2_locale_ca.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/select2/select2_locale_cs.js" afterPath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/select2/select2_locale_cs.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/select2/select2_locale_da.js" afterPath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/select2/select2_locale_da.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/select2/select2_locale_de.js" afterPath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/select2/select2_locale_de.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/select2/select2_locale_el.js" afterPath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/select2/select2_locale_el.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/select2/select2_locale_es.js" afterPath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/select2/select2_locale_es.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/select2/select2_locale_et.js" afterPath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/select2/select2_locale_et.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/select2/select2_locale_eu.js" afterPath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/select2/select2_locale_eu.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/select2/select2_locale_fa.js" afterPath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/select2/select2_locale_fa.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/select2/select2_locale_fi.js" afterPath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/select2/select2_locale_fi.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/select2/select2_locale_fr.js" afterPath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/select2/select2_locale_fr.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/select2/select2_locale_gl.js" afterPath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/select2/select2_locale_gl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/select2/select2_locale_he.js" afterPath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/select2/select2_locale_he.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/select2/select2_locale_hr.js" afterPath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/select2/select2_locale_hr.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/select2/select2_locale_hu.js" afterPath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/select2/select2_locale_hu.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/select2/select2_locale_id.js" afterPath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/select2/select2_locale_id.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/select2/select2_locale_is.js" afterPath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/select2/select2_locale_is.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/select2/select2_locale_it.js" afterPath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/select2/select2_locale_it.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/select2/select2_locale_ja.js" afterPath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/select2/select2_locale_ja.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/select2/select2_locale_ka.js" afterPath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/select2/select2_locale_ka.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/select2/select2_locale_ko.js" afterPath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/select2/select2_locale_ko.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/select2/select2_locale_lt.js" afterPath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/select2/select2_locale_lt.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/select2/select2_locale_lv.js" afterPath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/select2/select2_locale_lv.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/select2/select2_locale_mk.js" afterPath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/select2/select2_locale_mk.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/select2/select2_locale_ms.js" afterPath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/select2/select2_locale_ms.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/select2/select2_locale_nl.js" afterPath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/select2/select2_locale_nl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/select2/select2_locale_no.js" afterPath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/select2/select2_locale_no.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/select2/select2_locale_pl.js" afterPath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/select2/select2_locale_pl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/select2/select2_locale_pt-BR.js" afterPath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/select2/select2_locale_pt-BR.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/select2/select2_locale_pt-PT.js" afterPath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/select2/select2_locale_pt-PT.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/select2/select2_locale_ro.js" afterPath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/select2/select2_locale_ro.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/select2/select2_locale_rs.js" afterPath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/select2/select2_locale_rs.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/select2/select2_locale_ru.js" afterPath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/select2/select2_locale_ru.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/select2/select2_locale_sk.js" afterPath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/select2/select2_locale_sk.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/select2/select2_locale_sv.js" afterPath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/select2/select2_locale_sv.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/select2/select2_locale_th.js" afterPath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/select2/select2_locale_th.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/select2/select2_locale_tr.js" afterPath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/select2/select2_locale_tr.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/select2/select2_locale_ug-CN.js" afterPath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/select2/select2_locale_ug-CN.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/select2/select2_locale_uk.js" afterPath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/select2/select2_locale_uk.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/select2/select2_locale_vi.js" afterPath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/select2/select2_locale_vi.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/select2/select2_locale_zh-CN.js" afterPath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/select2/select2_locale_zh-CN.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/select2/select2_locale_zh-TW.js" afterPath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/select2/select2_locale_zh-TW.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/uploads_.js" afterPath="$PROJECT_DIR$/wp-content/plugins/maintenance/js/uploads_.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/maintenance/languages/maintenance-cs_CZ.po" afterPath="$PROJECT_DIR$/wp-content/plugins/maintenance/languages/maintenance-cs_CZ.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/maintenance/languages/maintenance-de_DE.po" afterPath="$PROJECT_DIR$/wp-content/plugins/maintenance/languages/maintenance-de_DE.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/maintenance/languages/maintenance-es_ES.po" afterPath="$PROJECT_DIR$/wp-content/plugins/maintenance/languages/maintenance-es_ES.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/maintenance/languages/maintenance-fa-IR.po" afterPath="$PROJECT_DIR$/wp-content/plugins/maintenance/languages/maintenance-fa-IR.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/maintenance/languages/maintenance-fi.po" afterPath="$PROJECT_DIR$/wp-content/plugins/maintenance/languages/maintenance-fi.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/maintenance/languages/maintenance-fr_FR.po" afterPath="$PROJECT_DIR$/wp-content/plugins/maintenance/languages/maintenance-fr_FR.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/maintenance/languages/maintenance-it_IT.po" afterPath="$PROJECT_DIR$/wp-content/plugins/maintenance/languages/maintenance-it_IT.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/maintenance/languages/maintenance-nl_NL.po" afterPath="$PROJECT_DIR$/wp-content/plugins/maintenance/languages/maintenance-nl_NL.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/maintenance/languages/maintenance-pt_BR.po" afterPath="$PROJECT_DIR$/wp-content/plugins/maintenance/languages/maintenance-pt_BR.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/maintenance/languages/maintenance-ru_RU.po" afterPath="$PROJECT_DIR$/wp-content/plugins/maintenance/languages/maintenance-ru_RU.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/maintenance/languages/maintenance-tr_TR.po" afterPath="$PROJECT_DIR$/wp-content/plugins/maintenance/languages/maintenance-tr_TR.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/maintenance/languages/maintenance-uk.po" afterPath="$PROJECT_DIR$/wp-content/plugins/maintenance/languages/maintenance-uk.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/maintenance/languages/maintenance-zh_CN.po" afterPath="$PROJECT_DIR$/wp-content/plugins/maintenance/languages/maintenance-zh_CN.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/maintenance/load/functions.php" afterPath="$PROJECT_DIR$/wp-content/plugins/maintenance/load/functions.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/maintenance/load/images/fonts-icon/general_foundicons.svg" afterPath="$PROJECT_DIR$/wp-content/plugins/maintenance/load/images/fonts-icon/general_foundicons.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/maintenance/load/images/fonts-icon/icons.style.css" afterPath="$PROJECT_DIR$/wp-content/plugins/maintenance/load/images/fonts-icon/icons.style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/maintenance/load/images/fonts-icon/social_foundicons.svg" afterPath="$PROJECT_DIR$/wp-content/plugins/maintenance/load/images/fonts-icon/social_foundicons.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/maintenance/load/index.php" afterPath="$PROJECT_DIR$/wp-content/plugins/maintenance/load/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/maintenance/load/js/jquery.backstretch.min.js" afterPath="$PROJECT_DIR$/wp-content/plugins/maintenance/load/js/jquery.backstretch.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/maintenance/load/js/jquery.blur.min.js" afterPath="$PROJECT_DIR$/wp-content/plugins/maintenance/load/js/jquery.blur.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/maintenance/load/js/jquery.frontend.js" afterPath="$PROJECT_DIR$/wp-content/plugins/maintenance/load/js/jquery.frontend.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/maintenance/load/style.css" afterPath="$PROJECT_DIR$/wp-content/plugins/maintenance/load/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/maintenance/maintenance.php" afterPath="$PROJECT_DIR$/wp-content/plugins/maintenance/maintenance.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/maintenance/readme.txt" afterPath="$PROJECT_DIR$/wp-content/plugins/maintenance/readme.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/maintenance/uninstall.php" afterPath="$PROJECT_DIR$/wp-content/plugins/maintenance/uninstall.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/stops-core-theme-and-plugin-updates/css/style.css" afterPath="$PROJECT_DIR$/wp-content/plugins/stops-core-theme-and-plugin-updates/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/stops-core-theme-and-plugin-updates/includes/MPSUM_Admin_Advanced.php" afterPath="$PROJECT_DIR$/wp-content/plugins/stops-core-theme-and-plugin-updates/includes/MPSUM_Admin_Advanced.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/stops-core-theme-and-plugin-updates/includes/MPSUM_Admin_Core.php" afterPath="$PROJECT_DIR$/wp-content/plugins/stops-core-theme-and-plugin-updates/includes/MPSUM_Admin_Core.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/stops-core-theme-and-plugin-updates/includes/MPSUM_Disable_Updates.php" afterPath="$PROJECT_DIR$/wp-content/plugins/stops-core-theme-and-plugin-updates/includes/MPSUM_Disable_Updates.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/stops-core-theme-and-plugin-updates/includes/MPSUM_Logs_List_Table.php" afterPath="$PROJECT_DIR$/wp-content/plugins/stops-core-theme-and-plugin-updates/includes/MPSUM_Logs_List_Table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/stops-core-theme-and-plugin-updates/main.php" afterPath="$PROJECT_DIR$/wp-content/plugins/stops-core-theme-and-plugin-updates/main.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/stops-core-theme-and-plugin-updates/readme.txt" afterPath="$PROJECT_DIR$/wp-content/plugins/stops-core-theme-and-plugin-updates/readme.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wp-smushit/assets/css/wp-smushit-admin.css" afterPath="$PROJECT_DIR$/wp-content/plugins/wp-smushit/assets/css/wp-smushit-admin.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wp-smushit/languages/wp-smushit.pot" afterPath="$PROJECT_DIR$/wp-content/plugins/wp-smushit/languages/wp-smushit.pot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wp-smushit/lib/class-wp-smush-admin.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wp-smushit/lib/class-wp-smush-admin.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wp-smushit/lib/class-wp-smush-resize.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wp-smushit/lib/class-wp-smush-resize.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wp-smushit/lib/class-wp-smush-ui.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wp-smushit/lib/class-wp-smush-ui.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wp-smushit/readme.txt" afterPath="$PROJECT_DIR$/wp-content/plugins/wp-smushit/readme.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wp-smushit/uninstall.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wp-smushit/uninstall.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/wp-smushit/wp-smush.php" afterPath="$PROJECT_DIR$/wp-content/plugins/wp-smushit/wp-smush.php" />
     </list>
     <ignored path="webofpat.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,81 +876,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/html5blank/src/css/style.css">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="141" column="1" selection-start-line="141" selection-start-column="1" selection-end-line="141" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sharebuttons.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/html5blank/src/sharebuttons.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
-              <caret line="23" column="81" selection-start-line="23" selection-start-column="81" selection-end-line="23" selection-end-column="81" />
-              <folding>
-                <marker date="1464426724057" expanded="true" signature="1012:1055" ph="..." />
-                <marker date="1464426724057" expanded="true" signature="1167:1281" ph="..." />
-                <marker date="1464426724057" expanded="true" signature="1325:2121" ph="..." />
-                <marker date="1464426724057" expanded="true" signature="1374:2110" ph="..." />
-                <marker date="1464426724057" expanded="true" signature="1557:2098" ph="..." />
-                <marker date="1464426724057" expanded="true" signature="1578:2083" ph="..." />
-                <marker date="1464426724057" expanded="true" signature="1619:2061" ph="..." />
-                <marker date="1464426724057" expanded="true" signature="1818:1882" ph="..." />
-                <marker date="1464426724057" expanded="true" signature="1986:2038" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="functions.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/html5blank/src/functions.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="477">
-              <caret line="316" column="16" selection-start-line="316" selection-start-column="11" selection-end-line="316" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sideleft.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/html5blank/src/sideleft.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="37" column="31" selection-start-line="37" selection-start-column="31" selection-end-line="37" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="single.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/html5blank/src/single.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="700">
-              <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="50" selection-end-column="206" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="loop.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/html5blank/src/loop.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="520">
-              <caret line="26" column="104" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="104" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="category.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/html5blank/src/category.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+            <state relative-caret-position="85">
+              <caret line="5" column="27" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -142,17 +923,19 @@
         <option value="$PROJECT_DIR$/wp-content/themes/html5blank/src/search.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/html5blank/src/tag.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/html5blank/src/template-demo.php" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/wp-content/themes/html5blank/src/loop.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/html5blank/src/Sahebuttons.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/html5blank/src/header.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/html5blank/src/sidemenu.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/html5blank/src/category.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/html5blank/src/sideleft.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/html5blank/src/css/style.css" />
         <option value="$PROJECT_DIR$/wp-content/themes/html5blank/src/functions.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/html5blank/src/sharebuttons.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/html5blank/src/single.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/html5blank/src/sharebuttons.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/html5blank/src/css/style.css" />
+        <option value="$PROJECT_DIR$/wp-config.php" />
+        <option value="$PROJECT_DIR$/.htaccess" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -197,6 +980,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -247,58 +1031,9 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webofpat.io" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webofpat.io" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wp-content" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="themes" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="html5blank" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webofpat.io" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webofpat.io" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wp-content" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="themes" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="html5blank" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -442,12 +1177,15 @@
       <workItem from="1464276354067" duration="286000" />
       <workItem from="1464277247911" duration="22000" />
       <workItem from="1464277571127" duration="2596000" />
-      <workItem from="1464319663279" duration="8396000" />
+      <workItem from="1464319663279" duration="10894000" />
+      <workItem from="1464469803874" duration="68000" />
+      <workItem from="1464874420529" duration="404000" />
+      <workItem from="1465208035903" duration="3092000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="94239000" />
+    <option name="totallyTimeSpent" value="100301000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1034" extended-state="6" />
@@ -463,7 +1201,6 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20260416" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Reviews" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286334" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="News Feed" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
@@ -473,6 +1210,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286334" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -496,20 +1234,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/html5blank/src/js/lib/modernizr-2.8.3.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/html5blank/src/js/lib/conditionizr-4.3.0.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Downloads/initializr/index.html" />
     <entry file="file://$PROJECT_DIR$/wp-content/themes/html5blank-2/src/js/lib/conditionizr-4.3.0.min.js" />
     <entry file="file://$USER_HOME$/Downloads/initializr/css/main.css" />
@@ -656,87 +1380,91 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/html5blank/src/header.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="723">
           <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-          <folding>
-            <marker date="1464323144934" expanded="true" signature="1457:1610" ph="..." />
-            <marker date="1464323144934" expanded="true" signature="1550:1578" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/html5blank/src/sideleft.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
+        <state relative-caret-position="629">
           <caret line="37" column="31" selection-start-line="37" selection-start-column="31" selection-end-line="37" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/html5blank/src/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="141" column="1" selection-start-line="141" selection-start-column="1" selection-end-line="141" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/html5blank/src/category.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
+        <state relative-caret-position="136">
           <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/html5blank/src/loop.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="26" column="104" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="104" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/html5blank/src/functions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="477">
+        <state relative-caret-position="5304">
           <caret line="316" column="16" selection-start-line="316" selection-start-column="11" selection-end-line="316" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/html5blank/src/single.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="833">
+          <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="50" selection-end-column="206" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/html5blank/src/loop.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="109" selection-start-line="11" selection-start-column="88" selection-end-line="11" selection-end-column="109" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/html5blank/src/sharebuttons.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="23" column="81" selection-start-line="23" selection-start-column="81" selection-end-line="23" selection-end-column="81" />
+        <state relative-caret-position="119">
+          <caret line="7" column="62" selection-start-line="7" selection-start-column="62" selection-end-line="7" selection-end-column="62" />
           <folding>
-            <marker date="1464426724057" expanded="true" signature="1012:1055" ph="..." />
-            <marker date="1464426724057" expanded="true" signature="1167:1281" ph="..." />
-            <marker date="1464426724057" expanded="true" signature="1325:2121" ph="..." />
-            <marker date="1464426724057" expanded="true" signature="1374:2110" ph="..." />
-            <marker date="1464426724057" expanded="true" signature="1557:2098" ph="..." />
-            <marker date="1464426724057" expanded="true" signature="1578:2083" ph="..." />
-            <marker date="1464426724057" expanded="true" signature="1619:2061" ph="..." />
-            <marker date="1464426724057" expanded="true" signature="1818:1882" ph="..." />
-            <marker date="1464426724057" expanded="true" signature="1986:2038" ph="..." />
+            <marker date="1464440884910" expanded="true" signature="1156:1182" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/html5blank/src/single.php">
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/html5blank/src/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="700">
-          <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="50" selection-end-column="206" />
+        <state relative-caret-position="694">
+          <caret line="105" column="21" selection-start-line="105" selection-start-column="21" selection-end-line="105" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="39" column="44" selection-start-line="39" selection-start-column="44" selection-end-line="39" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.htaccess">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="27" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
           <folding />
         </state>
       </provider>

@@ -209,11 +209,13 @@
 						$out_filed .= '<td>';
 							$out_filed .= '<filedset>';
 								$out_filed .= '<select class="select2_customize" name="lib_options['.$name.']" id="'.esc_attr($id).'">';
-								foreach ($gg_fonts[$curr_font][$vars] as $key) {
-									$out_filed .= '<option value="'.$key['id'] .'" '. selected( $value, $key['id'], false ) .'>'.$key['name'].'</option>';
+								if(!empty($gg_fonts[$curr_font])){
+									foreach ($gg_fonts[$curr_font][$vars] as $key) {
+										$out_filed .= '<option value="'.$key['id'] .'" '. selected( $value, $key['id'], false ) .'>'.$key['name'].'</option>';
+									}
 								}
 								$out_filed .= '</select>';
-							
+								
 							$out_filed .= '<filedset>';
 						$out_filed .= '</td>';	
 					$out_filed .= '</tr>';
@@ -285,7 +287,7 @@
 				do_action('maintenance_color_fields');
 				do_action('maintenance_font_fields');
 				generate_check_filed(__('Admin bar', 'maintenance'), __('Show admin bar', 'maintenance'), 'admin_bar_enabled', 'admin_bar_enabled', isset($mt_option['admin_bar_enabled']));
-				generate_check_filed(__('503', 'maintenance'), __('Service temporarily unavailable, Google analytics will be disable.', 'maintenance'), '503_enabled', '503_enabled',  isset($mt_option['503_enabled']));
+				generate_check_filed(__('503', 'maintenance'), __('Service temporarily unavailable, Google analytics will be disable.', 'maintenance'), '503_enabled', '503_enabled',  !empty($mt_option['503_enabled']));
 				
 				$gg_analytics_id = '';
 				if (!empty($mt_option['gg_analytics_id'])) {
@@ -401,8 +403,12 @@
 	
 	function get_font_fileds_action() {
 		$mt_option = mt_get_plugin_options(true);
-		echo get_fonts_field(__('Font family', 'maintenance'), 'body_font_family', 'body_font_family', esc_attr($mt_option['body_font_family'])); 	
-		echo get_fonts_subsets(__('Subsets', 'maintenance'), 'body_font_subset', 'body_font_subset', esc_attr($mt_option['body_font_subset'])); 			
+		echo get_fonts_field(__('Font family', 'maintenance'), 'body_font_family', 'body_font_family', esc_attr($mt_option['body_font_family'])); 
+ 		$subset = '';
+		if(!empty($mt_option['body_font_subset'])) {
+			$subset = $mt_option['body_font_subset'];
+		}
+		echo get_fonts_subsets(__('Subsets', 'maintenance'), 'body_font_subset', 'body_font_subset', esc_attr($subset));		
 	}	
 	add_action ('maintenance_font_fields', 'get_font_fileds_action', 10);
 	
@@ -534,10 +540,8 @@
 		$vtime_start = date_i18n( 'h:i:s A', strtotime( '01:00:00 am')); 
 		$vtime_end 	 = date_i18n( 'h:i:s A', strtotime( '12:59:59 pm')); 
 			
-		
-		$mt_options	= mt_get_plugin_options(true);
 			if (!is_user_logged_in()) {
-				if ($mt_options['state']) {
+				if (!empty($mt_options['state'])) {
 					
 					if (!empty($mt_options['expiry_date_start']))
 						$vdate_start = $mt_options['expiry_date_start'];
@@ -676,7 +680,7 @@
 			'is_blur'			=> false,
 			'blur_intensity'	=> 5,	
 			'admin_bar_enabled' => true,
-			'503_enabled'		=> true,
+			'503_enabled'		=> false,
 			'gg_analytics_id'   => '',
 			'is_login'			=> true,
 			'custom_css'		=> '',

@@ -521,3 +521,5 @@
 	Bug Fix: Don't rely on externally loaded MailChimp JavaScript.
 5.4.4 - 2016-05-26 - Chris Jean & Aaron D. Campbell
 	Bug Fix: Fixed bug that could cause some sites to lose settings when upgrading.
+5.4.5 - 2016-05-27 - Chris Jean & Aaron D. Campbell
+	Bug Fix: Fixed SQL query for Database Backups when "Backup Full Database" is enabled.
