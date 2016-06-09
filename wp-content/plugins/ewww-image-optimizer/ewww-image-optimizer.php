@@ -1,7 +1,7 @@
 <?php
 /**
  * Integrate image optimizers into WordPress.
- * @version 2.8.3
+ * @version 2.8.5
  * @package EWWW_Image_Optimizer
  */
 /*
@@ -10,7 +10,7 @@ Plugin URI: https://wordpress.org/extend/plugins/ewww-image-optimizer/
 Description: Reduce file sizes for images within WordPress including NextGEN Gallery and GRAND FlAGallery. Uses jpegtran, optipng/pngout, and gifsicle.
 Author: Shane Bishop
 Text Domain: ewww-image-optimizer
-Version: 2.8.3
+Version: 2.8.5
 Author URI: https://ewww.io/
 License: GPLv3
 */
@@ -55,25 +55,31 @@ function ewww_image_optimizer_exec_init() {
 	}
 	if ( is_multisite() && is_plugin_active_for_network( EWWW_IMAGE_OPTIMIZER_PLUGIN_FILE_REL ) ) {
 		// set the binary-specific network settings if they have been POSTed
-		if ( isset( $_POST['ewww_image_optimizer_delay'] ) ) {
-			if ( empty( $_POST['ewww_image_optimizer_skip_bundle'] ) ) $_POST['ewww_image_optimizer_skip_bundle'] = '';
-			update_site_option( 'ewww_image_optimizer_skip_bundle', $_POST['ewww_image_optimizer_skip_bundle'] );
+		if ( isset( $_POST['ewww_image_optimizer_delay'] ) && current_user_can( 'manage_options' ) && wp_verify_nonce( $_REQUEST['_wpnonce'], 'ewww_image_optimizer_options-options' ) ) {
+			if ( empty( $_POST['ewww_image_optimizer_skip_bundle'] ) ) {
+				update_site_option( 'ewww_image_optimizer_skip_bundle', false );
+			} else {
+				update_site_option( 'ewww_image_optimizer_skip_bundle', true );
+			}
 			if ( ! empty( $_POST['ewww_image_optimizer_optipng_level'] ) ) {
-				update_site_option( 'ewww_image_optimizer_optipng_level', $_POST['ewww_image_optimizer_optipng_level'] );
-				update_site_option( 'ewww_image_optimizer_pngout_level', $_POST['ewww_image_optimizer_pngout_level'] );
+				update_site_option( 'ewww_image_optimizer_optipng_level', (int) $_POST['ewww_image_optimizer_optipng_level'] );
+				update_site_option( 'ewww_image_optimizer_pngout_level', (int) $_POST['ewww_image_optimizer_pngout_level'] );
 			}
 //			if (empty($_POST['ewww_image_optimizer_disable_optipng'])) $_POST['ewww_image_optimizer_disable_optipng'] = '';
 //			update_site_option('ewww_image_optimizer_disable_optipng', $_POST['ewww_image_optimizer_disable_optipng']);
-			if (empty($_POST['ewww_image_optimizer_disable_pngout'])) $_POST['ewww_image_optimizer_disable_pngout'] = '';
-			update_site_option('ewww_image_optimizer_disable_pngout', $_POST['ewww_image_optimizer_disable_pngout']);
+			if ( empty( $_POST['ewww_image_optimizer_disable_pngout'] ) ) {
+				update_site_option( 'ewww_image_optimizer_disable_pngout', false );
+			} else {
+				update_site_option( 'ewww_image_optimizer_disable_pngout', true );
+			}
 		}
 	}
 	// register all the binary-specific EWWW IO settings
-	register_setting('ewww_image_optimizer_options', 'ewww_image_optimizer_skip_bundle');
-	register_setting('ewww_image_optimizer_options', 'ewww_image_optimizer_optipng_level');
-	register_setting('ewww_image_optimizer_options', 'ewww_image_optimizer_pngout_level');
-	register_setting('ewww_image_optimizer_options', 'ewww_image_optimizer_disable_optipng');
-	register_setting('ewww_image_optimizer_options', 'ewww_image_optimizer_disable_pngout');
+	register_setting('ewww_image_optimizer_options', 'ewww_image_optimizer_skip_bundle', 'boolval');
+	register_setting('ewww_image_optimizer_options', 'ewww_image_optimizer_optipng_level', 'intval');
+	register_setting('ewww_image_optimizer_options', 'ewww_image_optimizer_pngout_level', 'intval');
+	register_setting('ewww_image_optimizer_options', 'ewww_image_optimizer_disable_optipng', 'boolval');
+	register_setting('ewww_image_optimizer_options', 'ewww_image_optimizer_disable_pngout', 'boolval');
 	if ( defined( 'WPE_PLUGIN_VERSION' ) ) {
 		add_action( 'network_admin_notices', 'ewww_image_optimizer_notice_wpengine' );
 		add_action( 'admin_notices', 'ewww_image_optimizer_notice_wpengine' );
@@ -1583,7 +1589,7 @@ function ewww_image_optimizer( $file, $gallery_type = 4, $converted = false, $ne
 				// if optipng isn't disabled
 				if ( ! ewww_image_optimizer_get_option( 'ewww_image_optimizer_disable_optipng' ) ) {
 					// retrieve the optipng optimization level
-					$optipng_level = ewww_image_optimizer_get_option('ewww_image_optimizer_optipng_level');
+					$optipng_level = (int) ewww_image_optimizer_get_option('ewww_image_optimizer_optipng_level');
 					if (ewww_image_optimizer_get_option( 'ewww_image_optimizer_jpegtran_copy' ) && preg_match( '/0.7/', ewww_image_optimizer_tool_found( $tools['OPTIPNG'], 'o' ) ) && ! $keep_metadata ) {
 						$strip = '-strip all ';
 					} else {
@@ -1599,7 +1605,7 @@ function ewww_image_optimizer( $file, $gallery_type = 4, $converted = false, $ne
 				// if pngout isn't disabled
 				if ( ! ewww_image_optimizer_get_option( 'ewww_image_optimizer_disable_pngout' ) ) {
 					// retrieve the pngout optimization level
-					$pngout_level = ewww_image_optimizer_get_option( 'ewww_image_optimizer_pngout_level' );
+					$pngout_level = (int) ewww_image_optimizer_get_option( 'ewww_image_optimizer_pngout_level' );
 					// if the PNG file was created
 					if ( file_exists( $pngfile ) ) {
 						ewwwio_debug_message( 'optimizing converted PNG with pngout' );
@@ -1757,7 +1763,7 @@ function ewww_image_optimizer( $file, $gallery_type = 4, $converted = false, $ne
 				// if optipng is enabled
 				if( ! ewww_image_optimizer_get_option( 'ewww_image_optimizer_disable_optipng' ) ) {
 					// retrieve the optimization level for optipng
-					$optipng_level = ewww_image_optimizer_get_option( 'ewww_image_optimizer_optipng_level' );
+					$optipng_level = (int) ewww_image_optimizer_get_option( 'ewww_image_optimizer_optipng_level' );
 					if ( ewww_image_optimizer_get_option( 'ewww_image_optimizer_jpegtran_copy' ) && preg_match( '/0.7/', ewww_image_optimizer_tool_found( $tools['OPTIPNG'], 'o' ) ) && ! $keep_metadata ) {
 						$strip = '-strip all ';
 					} else {
@@ -1769,7 +1775,7 @@ function ewww_image_optimizer( $file, $gallery_type = 4, $converted = false, $ne
 				// if pngout is enabled
 				if( ! ewww_image_optimizer_get_option( 'ewww_image_optimizer_disable_pngout' ) ) {
 					// retrieve the optimization level for pngout
-					$pngout_level = ewww_image_optimizer_get_option( 'ewww_image_optimizer_pngout_level' );
+					$pngout_level = (int) ewww_image_optimizer_get_option( 'ewww_image_optimizer_pngout_level' );
 					// run pngout on the PNG file
 					exec( "$nice " . $tools['PNGOUT'] . " -s$pngout_level -q " . ewww_image_optimizer_escapeshellarg( $tempfile ) );
 				}
@@ -2060,7 +2066,7 @@ function ewww_image_optimizer( $file, $gallery_type = 4, $converted = false, $ne
 				// if optipng is enabled
 				if ( ! ewww_image_optimizer_get_option('ewww_image_optimizer_disable_optipng') && $tools['OPTIPNG']) {
 					// retrieve the optipng optimization level
-					$optipng_level = ewww_image_optimizer_get_option('ewww_image_optimizer_optipng_level');
+					$optipng_level = (int) ewww_image_optimizer_get_option('ewww_image_optimizer_optipng_level');
 					if ( ewww_image_optimizer_get_option( 'ewww_image_optimizer_jpegtran_copy' ) && preg_match( '/0.7/', ewww_image_optimizer_tool_found( $tools['OPTIPNG'], 'o' ) ) && ! $keep_metadata ) {
 						$strip = '-strip all ';
 					} else {
@@ -2072,7 +2078,7 @@ function ewww_image_optimizer( $file, $gallery_type = 4, $converted = false, $ne
 				// if pngout is enabled
 				if ( ! ewww_image_optimizer_get_option( 'ewww_image_optimizer_disable_pngout' ) && $tools['PNGOUT'] ) {
 					// retrieve the pngout optimization level
-					$pngout_level = ewww_image_optimizer_get_option('ewww_image_optimizer_pngout_level');
+					$pngout_level = (int) ewww_image_optimizer_get_option('ewww_image_optimizer_pngout_level');
 					// if $pngfile exists (which means optipng was run already)
 					if (file_exists($pngfile)) {
 						// run pngout on the PNG file
