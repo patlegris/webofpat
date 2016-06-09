@@ -200,7 +200,11 @@ class FusionSC_SharingBox {
 		$social_link = '';
 		switch( $args['social_network'] ) {
 			case 'facebook':
-				$social_link = 'http://www.facebook.com/sharer.php?m2w&s=100&p&#91;url&#93;=' . $link . '&p&#91;images&#93;&#91;0&#93;=' . wp_get_attachment_url( get_post_thumbnail_id( get_the_ID() ) ) . '&p&#91;title&#93;=' . rawurlencode( $title );
+				if ( ! wp_is_mobile() ) {
+					$social_link = 'http://www.facebook.com/sharer.php?m2w&s=100&p&#91;url&#93;=' . $link . '&p&#91;images&#93;&#91;0&#93;=' . wp_get_attachment_url( get_post_thumbnail_id( get_the_ID() ) ) . '&p&#91;title&#93;=' . rawurlencode( $title );
+				} else {
+            		$social_link = 'https://m.facebook.com/sharer.php?u=' . $link;
+				}
 				break;
 			case 'twitter':
 				$social_link = 'https://twitter.com/share?text=' . rawurlencode( html_entity_decode( $title, ENT_COMPAT, 'UTF-8' ) ) . '&url=' . rawurlencode( $link );

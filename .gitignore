@@ -1,9 +1,20 @@
 # Created by .ignore support plugin (hsz.mobi)
 /wp-content/plugins/
 /wp-admin/
-wp-content/upgrade/
-wp-content/uploads/2015/
-wp-content/uploads/2016/02/
-/wp-content/themes/twentysixteen/
-/wp-content/themes/twentyfourteen/
-/wp-content/themes/twentyfifteen/
+/wp-includes/
+/wp-content/uploads/
+wp-content/themes/Avada/.jscsrc
+wp-content/themes/Avada/.jshintrc
+wp-content/themes/Avada/assets/admin/js/avada-theme-update.js
+wp-content/themes/Avada/assets/js/infobox_packed.js
+wp-content/themes/Avada/codesniffer.ruleset.xml
+wp-content/themes/Avada/includes/avadaredux/custom-fields/ace_editor/
+wp-content/themes/Avada/includes/class-avada-fusion-builder-interface.php
+wp-content/themes/Avada/woocommerce/compatibility/2.5/
+wp-content/uploads/402.jpg
+wp-content/uploads/434.jpg
+wp-content/uploads/799.jpg
+wp-content/uploads/802.jpg
+wp-content/uploads/avada-styles/
+wp-content/uploads/avadaredux/
+wp-content/uploads/et_temp/

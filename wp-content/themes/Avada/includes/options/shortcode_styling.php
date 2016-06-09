@@ -1439,7 +1439,7 @@ function avada_options_section_shortcode_styling( $sections ) {
 						'default'     => '4000',
 						'type'        => 'slider',
 						'choices'     => array(
-							'min'  => '1000',
+							'min'  => '0',
 							'max'  => '20000',
 							'step' => '250',
 						),

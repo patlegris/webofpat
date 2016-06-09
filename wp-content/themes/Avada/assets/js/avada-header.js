@@ -1,11 +1,11 @@
 jQuery( document ).ready(function() {
 
-	"use strict";
+	'use strict';
 
 	// position dropdown menu correctly
 	jQuery.fn.fusion_position_menu_dropdown = function( variables ) {
 
-			if( ( js_local_vars.header_position == 'Top' && ! jQuery( 'body.rtl' ).length ) || js_local_vars.header_position == 'Left'  ) {
+			if( ( js_local_vars.header_position === 'Top' && ! jQuery( 'body.rtl' ).length ) || js_local_vars.header_position === 'Left'  ) {
 				return 	jQuery( this ).children( '.sub-menu' ).each( function() {
 
 					// reset attributes
@@ -24,12 +24,14 @@ jQuery( document ).ready(function() {
 							submenu_bottom_edge = submenu_top + submenu_height,
 							submenu_right_edge = submenu_left + submenu_width,
 							browser_bottom_edge = jQuery( window ).height(),
-							browser_right_edge = jQuery( window ).width();
+							browser_right_edge = jQuery( window ).width(),
+							admin_bar_height,
+							submenu_new_top_pos;
 
 						if(	jQuery( '#wpadminbar' ).length ) {
-							var admin_bar_height = jQuery( '#wpadminbar' ).height();
+							admin_bar_height = jQuery( '#wpadminbar' ).height();
 						} else {
-							var admin_bar_height = 0;
+							admin_bar_height = 0;
 						}
 
 						if( jQuery( '#side-header' ).length ) {
@@ -69,12 +71,12 @@ jQuery( document ).ready(function() {
 							}
 						}
 
-						// Calculate dropdown vertical position on side header
-						if( js_local_vars.header_position != 'Top' && submenu_bottom_edge > side_header_top + browser_bottom_edge && jQuery( window ).height() >= jQuery( '.side-header-wrapper' ).height() ) {
+						// Calculate dropdown vertical position on side header.
+						if( js_local_vars.header_position !== 'Top' && submenu_bottom_edge > side_header_top + browser_bottom_edge && jQuery( window ).height() >= jQuery( '.side-header-wrapper' ).height() ) {
 							if( submenu_height < browser_bottom_edge  ) {
-								var submenu_new_top_pos = ( -1 ) * ( submenu_bottom_edge - side_header_top - browser_bottom_edge + 20 );
+								submenu_new_top_pos = ( -1 ) * ( submenu_bottom_edge - side_header_top - browser_bottom_edge + 20 );
 							} else {
-								var submenu_new_top_pos = ( -1 ) * ( submenu_top - admin_bar_height );
+								submenu_new_top_pos = ( -1 ) * ( submenu_top - admin_bar_height );
 							}
 							submenu.css( 'top', submenu_new_top_pos );
 						}
@@ -535,6 +537,7 @@ jQuery( document ).ready(function() {
 			jQuery( this ).parent().addClass( 'fusion-main-menu-search-open' );
 
 			jQuery( this ).parent().append( '<style>.fusion-main-menu{overflow:visible!important;</style>' );
+			jQuery( this ).parent().find( '.fusion-custom-menu-item-contents .s' ).focus();
 
 			// position main menu search box on click positioning
 			if( js_local_vars.header_position == 'Top' ) {
@@ -1165,7 +1168,7 @@ jQuery( window ).load(function() {
 
 				window.$woo_store_notice = ( jQuery( '.demo_store' ).length ) ? jQuery( '.demo_store' ).outerHeight() : 0;
 
-				if( jQuery( '#wpadminbar' ).length >= 1 && jQuery( '.fusion-is-sticky' ).length >= 1 ) {
+				if ( jQuery( '.fusion-is-sticky' ).length ) {
 					var $sticky_trigger = jQuery( '.fusion-header' );
 
 					if ( window.$sticky_header_type == 2 ) {
@@ -1176,11 +1179,17 @@ jQuery( window ).load(function() {
 						}
 					}
 
-					// Unset the top value for all candidates
-					jQuery( '.fusion-header, .fusion-sticky-header-wrapper, .fusion-secondary-main-menu' ).css( 'top', '' );
+					if ( jQuery( '#wpadminbar' ).length ) {
+						// Unset the top value for all candidates
+						jQuery( '.fusion-header, .fusion-sticky-header-wrapper, .fusion-secondary-main-menu' ).css( 'top', '' );
 
-					// Set top value for coreect selector
-					jQuery( $sticky_trigger ).css( 'top', window.$wp_adminbar_height + window.$woo_store_notice );
+						// Set top value for coreect selector
+						jQuery( $sticky_trigger ).css( 'top', window.$wp_adminbar_height + window.$woo_store_notice );
+					}
+
+					if ( 'boxed' === js_local_vars.layout_mode ) {
+						jQuery( $sticky_trigger ).css( 'max-width', jQuery( '#wrapper' ).outerWidth() + 'px' );
+					}
 				}
 
 				// Refresh header v1, v2, v3 and v6
@@ -1222,7 +1231,7 @@ jQuery( window ).load(function() {
 									if ( window.original_logo_height > $menu_height + $menu_border_height ) {
 										window.$header_height = window.original_logo_height;
 									} else {
-										window.$header_heightt = $menu_height + $menu_border_height;
+										window.$header_height = $menu_height + $menu_border_height;
 									}
 
 									window.$header_height += parseInt( js_local_vars.header_padding_top ) + parseInt( js_local_vars.header_padding_bottom );
@@ -1373,7 +1382,7 @@ jQuery( window ).load(function() {
 						if( window.$sticky_header_type == 1 && ! Modernizr.mq( 'only screen and (max-width: ' + js_local_vars.side_header_break_point + 'px)' ) ) {
 							// Animate Header Height
 							if( ! Modernizr.mq( 'only screen and (max-width: ' + js_local_vars.side_header_break_point + 'px)' ) ) {
-								if ( $header_height == window.$initial_desktop_header_height ) {
+								if ( window.$header_height == window.$initial_desktop_header_height ) {
 									jQuery( window.$sticky_trigger ).stop(true, true).animate({
 										height: window.$scrolled_header_height
 									}, { queue: false, duration: $animation_duration, easing: 'easeOutCubic', complete: function() {
@@ -1393,7 +1402,7 @@ jQuery( window ).load(function() {
 							}
 
 							// Animate Logo
-							if( js_local_vars.sticky_header_shrinkage == '1' && $header_height == window.$initial_desktop_header_height ) {
+							if( js_local_vars.sticky_header_shrinkage == '1' && window.$header_height == window.$initial_desktop_header_height ) {
 								if( $logo ) {
 									var $scrolled_logo_height = $logo.height();
 
@@ -1518,14 +1527,14 @@ jQuery( window ).load(function() {
 						}
 
 						if( js_local_vars.layout_mode == 'boxed' ) {
-							jQuery( window.$sticky_trigger ).css( 'max-width', window.$site_width );
+							jQuery( window.$sticky_trigger ).css( 'max-width', jQuery( '#wrapper' ).outerWidth() );
 						}
 
 						if( window.$sticky_header_type == 1 ) {
 							// Animate Header Height
 
 							if( ! Modernizr.mq( 'only screen and (max-width: ' + js_local_vars.side_header_break_point + 'px)' ) ) {
-								if ( $header_height == window.$initial_desktop_header_height ) {
+								if ( window.$header_height == window.$initial_desktop_header_height ) {
 									jQuery( window.$sticky_trigger ).stop( true, true ).animate({
 										height: window.$scrolled_header_height
 									}, { queue: false, duration: $animation_duration, easing: 'easeOutCubic', complete: function() {
@@ -1550,7 +1559,7 @@ jQuery( window ).load(function() {
 								jQuery( '.fusion-header' ).addClass( 'fusion-sticky-shadow' );
 							}, 150 );
 
-							if( js_local_vars.sticky_header_shrinkage == '1' && $header_height == window.$initial_desktop_header_height ) {
+							if( js_local_vars.sticky_header_shrinkage == '1' && window.$header_height == window.$initial_desktop_header_height ) {
 								// Animate header padding
 								jQuery( window.$sticky_trigger ).find( '.fusion-row' ).stop( true, true ).animate({
 									'padding-top': 0,
@@ -1639,11 +1648,11 @@ jQuery( window ).load(function() {
 						// Animate Header Height to Original Size
 						if( ! Modernizr.mq( 'only screen and (max-width: ' + js_local_vars.side_header_break_point + 'px)' ) ) {
 							// Done to make sure that resize event while sticky is active doesn't lead to no animation on scroll up
-							if ( window.$sticky_header_type == 1 && $header_height == 65 ) {
-								$header_height = window.$initial_desktop_header_height;
+							if ( window.$sticky_header_type == 1 && window.$header_height == 65 ) {
+								window.$header_height = window.$initial_desktop_header_height;
 							}
 
-							if ( $header_height == window.$initial_desktop_header_height ) {
+							if ( window.$header_height == window.$initial_desktop_header_height ) {
 								jQuery( window.$sticky_trigger ).stop( true, true ).animate({
 									height: window.$header_height
 								}, { queue: false, duration: $animation_duration, easing: 'easeOutCubic', complete: function() {
@@ -1665,7 +1674,7 @@ jQuery( window ).load(function() {
 							jQuery( '.fusion-header-sticky-height' ).hide().css( 'height', window.$header_height + $menu_border_height );
 						}
 
-						if( js_local_vars.sticky_header_shrinkage == '1' && $header_height == window.$initial_desktop_header_height ) {
+						if( js_local_vars.sticky_header_shrinkage == '1' && window.$header_height == window.$initial_desktop_header_height ) {
 							// Animate header padding to Original Size
 							jQuery( window.$sticky_trigger ).find( '.fusion-row' ).stop( true, true ).animate({
 								'padding-top': js_local_vars.header_padding_top,

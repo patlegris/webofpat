@@ -54,6 +54,7 @@ function avada_woocommerce_h3_typography( $typography_elements ){
         $typography_elements['color'][]  = '.product-title';
         $typography_elements['family'][] = '.product-title';
         $typography_elements['size'][]   = '.product-title';
+        $typography_elements['size'][]   = '.product_list_widget li > a';
         $typography_elements['size'][]   = 'p.demo_store';
         
         $typography_elements['color'][]  = '.woocommerce-tabs .entry-content h3';
@@ -84,6 +85,7 @@ function avada_woocommerce_button_typography( $typography_elements ){
         $typography_elements['family'][] = '.woocommerce .login .button';
         $typography_elements['family'][] = '.woocommerce .register .button';
         $typography_elements['family'][] = '.woocommerce .avada-order-details .order-again .button';
+        $typography_elements['family'][] = '.woocommerce .track_order .button';
     }
 
     return $typography_elements;

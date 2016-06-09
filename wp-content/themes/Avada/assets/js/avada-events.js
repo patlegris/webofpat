@@ -44,8 +44,8 @@ jQuery( document ).ajaxComplete( function( event, request, settings ) {
 	});
 
 	// Fade in new posts when all images are loaded, then relayout isotope
-	$posts_container = jQuery( '#tribe-events .fusion-blog-layout-grid' );
-	$posts = $posts_container.find( '.post' );
+	var $posts_container = jQuery( '#tribe-events .fusion-blog-layout-grid' );
+	var $posts = $posts_container.find( '.post' );
 	$posts_container.css( 'height', $posts_container.height() );
 	$posts.hide();
 	imagesLoaded( $posts, function() {

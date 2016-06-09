@@ -111,31 +111,38 @@ do_action( 'woocommerce_before_cart' ); ?>
 				<?php
 			}
 		}
-
-		do_action( 'woocommerce_cart_contents' );
 		?>
-		<?php // Avada edit ?>
-		<?php wp_nonce_field( 'woocommerce-cart' ); ?>
+		<tr class="avada-cart-actions">
+			<td colspan="6" class="actions">
+			
+				<?php if ( wc_coupons_enabled() ) { ?>
+					<div class="coupon">
+
+						<label for="coupon_code"><?php _e( 'Coupon', 'woocommerce' ); ?>:</label> <input type="text" name="coupon_code" class="input-text" id="coupon_code" value="" placeholder="<?php esc_attr_e( 'Coupon code', 'woocommerce' ); ?>" /> <input type="submit" class="button" name="apply_coupon" value="<?php esc_attr_e( 'Apply Coupon', 'woocommerce' ); ?>" />
+
+						<?php do_action( 'woocommerce_cart_coupon' ); ?>
+					</div>
+				<?php } ?>				
+
+				<input type="submit" class="button" name="update_cart" value="<?php esc_attr_e( 'Update Cart', 'woocommerce' ); ?>" />
+
+				<?php do_action( 'woocommerce_cart_actions' ); ?>
+
+				<?php wp_nonce_field( 'woocommerce-cart' ); ?>
+			</td>
+		</tr>
 		<?php do_action( 'woocommerce_after_cart_contents' ); ?>
 	</tbody>
 </table>
 
 <?php do_action( 'woocommerce_after_cart_table' ); ?>
 
+</form>
+
 <div class="cart-collaterals">
 
 	<?php do_action( 'woocommerce_cart_collaterals' ); ?>
 
-	<div class="cart-totals-buttons">
-		<?php woocommerce_cart_totals(); ?>
-		<input type="submit" class="fusion-button button-default button-medium button default medium" name="update_cart" value="<?php _e( 'Update Cart', 'woocommerce' ); ?>" />
-		<?php if ( is_rtl() ) : ?>
-		<input type="submit" class="checkout-button fusion-button button-default button-medium button default medium alt wc-forward" name="proceed" value="<?php _e( 'Proceed to Checkout', 'woocommerce' ); ?> &larr;" />
-		<?php else: ?>
-		<input type="submit" class="checkout-button fusion-button button-default button-medium button default medium alt wc-forward" name="proceed" value="<?php _e( 'Proceed to Checkout', 'woocommerce' ); ?> &rarr;" />
-		<?php endif; ?>
-		<?php do_action( 'woocommerce_cart_actions' ); ?>
-	</div>
 </div>
 
 <?php do_action( 'woocommerce_after_cart' );

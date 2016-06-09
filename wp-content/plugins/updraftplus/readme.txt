@@ -3,7 +3,7 @@ Contributors: Backup with UpdraftPlus, DavidAnderson, DNutbourne
 Tags: backup, backups, restore, amazon backup, s3 backup, dropbox backup, google drive backup, rackspace cloud files, rackspace backup, dreamhost, dreamobjects backup, ftp backup, webdav backup, google cloud storage, onedrive, azure, back up, multisite, restoration, sftp backup, ftps, scp backup, migrate, duplicate, copy, mysql backup, database backup, db backups, website backup, wordpress backup, full backup, openstack backup, sicherung
 Requires at least: 3.2
 Tested up to: 4.5
-Stable tag: 1.12.12
+Stable tag: 1.12.13
 Author URI: https://updraftplus.com
 Donate link: http://david.dw-perspective.org.uk/donate
 License: GPLv3 or later
@@ -12,13 +12,13 @@ Backup and restoration made easy. Complete backups; manual or scheduled (backup 
 
 == Description ==
 
-<a href="https://updraftplus.com">UpdraftPlus</a> simplifies backups (and restoration). Backup into the cloud (Amazon S3 (or compatible), Dropbox, Google Drive, Rackspace Cloud, DreamObjects, FTP, Openstack Swift, UpdraftPlus Vault and email) and restore with a single click. Backups of files and database can have separate schedules. The paid version also backs up to Microsoft OneDrive, Microsoft Azure, Copy.Com, Google Cloud Storage, SFTP, SCP, and WebDAV.
+<a href="https://updraftplus.com">UpdraftPlus</a> simplifies backups (and restoration). Backup into the cloud (Amazon S3 (or compatible), Dropbox, Google Drive, Rackspace Cloud, DreamObjects, FTP, Openstack Swift, UpdraftPlus Vault and email) and restore with a single click. Backups of files and database can have separate schedules. The paid version also backs up to Microsoft OneDrive, Microsoft Azure, Google Cloud Storage, SFTP, SCP, and WebDAV.
 
 <strong>Top-quality:</strong> UpdraftPlus is the highest-ranking backup plugin on wordpress.org, with <strong>over 700,000 currently active installs</strong>. Widely tested and reliable, this is the world's #1 most popular and mostly highly rated scheduled backup plugin. Millions of backups completed!
 
 [vimeo https://vimeo.com/154870690]
 
-* Supports WordPress backups to UpdraftPlus Vault, Amazon S3 (or compatible), Dropbox, Rackspace Cloud Files, Google Drive, Google Cloud Storage, DreamHost DreamObjects, FTP, OpenStack (Swift) and email. Also (via a paid add-on) backup to Microsoft OneDrive, Microsoft Azure, Google Cloud Storage, Copy.Com, FTP over SSL, SFTP, SCP, and WebDAV (and compatible services, e.g. Yandex, Cubby, OwnCloud). Examples of S3-compatible providers: Cloudian, Connectria, Constant, Eucalyptus, Nifty, Nimbula, Cloudn.
+* Supports WordPress backups to UpdraftPlus Vault, Amazon S3 (or compatible), Dropbox, Rackspace Cloud Files, Google Drive, Google Cloud Storage, DreamHost DreamObjects, FTP, OpenStack (Swift) and email. Also (via a paid add-on) backup to Microsoft OneDrive, Microsoft Azure, Google Cloud Storage, FTP over SSL, SFTP, SCP, and WebDAV (and compatible services, e.g. Yandex, Cubby, OwnCloud). Examples of S3-compatible providers: Cloudian, Connectria, Constant, Eucalyptus, Nifty, Nimbula, Cloudn.
 * Quick restore (both file and database backups)
 * Backup automatically on a repeating schedule
 * Site duplicator/migrator: can copy sites, and (with add-on) duplicate them at new locations
@@ -127,9 +127,15 @@ The <a href="https://updraftplus.com/news/">UpdraftPlus backup blog</a> is the b
 
 N.B. Paid versions of UpdraftPlus Backup / Restore have a version number which is 1 higher in the first digit, and has an extra component on the end, but the changelog below still applies. i.e. changes listed for 1.12.12 of the free version correspond to changes made in 2.12.12.x of the paid version.
 
-= Development version - not yet released/supported =
+= Development version (not yet released/supported)
 
 * TWEAK: Extend cacheing of enumeration of uploads that was introduced in 1.11.1 to other data in wp-content also
+
+= 1.12.13 - 07/Jun/2016 =
+
+* TWEAK: Default the S3 secret key field type to 'password' instead of 'text'
+* TWEAK: Do more checks for active output buffers prior to spooling files to the browser (to prevent memory overflows)
+* TWEAK: Update bundled UDRPC library to version 1.4.7
 
 = 1.12.12 - 25/May/2016 =
 
@@ -219,4 +225,4 @@ We recognise and thank the following for code and/or libraries used and/or modif
 
 
 == Upgrade Notice ==
-* 1.12.12: Various small updates and fixes
+* 1.12.13: Various small updates and fixes

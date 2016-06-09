@@ -114,12 +114,12 @@ function avada_dynamic_css_array() {
 	}
 	if ( class_exists( 'WooCommerce' ) ) {
 		$link_color_elements[] = '.fusion-woo-featured-products-slider .price .amount';
-		$link_color_elements[] = 'z.my_account_orders thead tr th';
-		$link_color_elements[] = '.shop_table thead tr th';
-		$link_color_elements[] = '.cart_totals table th';
-		$link_color_elements[] = '.checkout .shop_table tfoot th';
-		$link_color_elements[] = '.checkout .payment_methods label';
-		$link_color_elements[] = '#final-order-details .mini-order-details th';
+		//$link_color_elements[] = '.my_account_orders thead tr th';
+		//$link_color_elements[] = '.shop_table thead tr th';
+		//$link_color_elements[] = '.cart_totals table th';
+		//$link_color_elements[] = '.checkout .shop_table tfoot th';
+		//$link_color_elements[] = '.checkout .payment_methods label';
+		//$link_color_elements[] = '#final-order-details .mini-order-details th';
 		$link_color_elements[] = '#main .product .product_title';
 		$link_color_elements[] = '.shop_table.order_details tr th';
 		$link_color_elements[] = '.widget_layered_nav li.chosen a';
@@ -180,7 +180,8 @@ function avada_dynamic_css_array() {
 			$css['global']['.woocommerce-tabs .entry-content']['margin']     = '0px';
 			$css['global']['.woocommerce-tabs .entry-content']['width']      = '100%';
 			$css['global']['.woocommerce-tabs .entry-content']['border-top'] = 'none';
-
+			
+			// For WooCommerce 2.6+ my account page this is in the content min media query
 		}
 
 		if ( '0' != Avada_Color::get_alpha_from_rgba( Avada()->settings->get( 'timeline_bg_color' ) ) ) {
@@ -231,6 +232,8 @@ function avada_dynamic_css_array() {
 	);
 	if ( class_exists( 'WooCommerce' ) ) {
 		$elements[] = '.woocommerce-tabs > .tabs .active a';
+		$elements[] = '.woocommerce-MyAccount-navigation > ul .is-active a';
+		$elements[] = '.woocommerce-checkout-nav .is-active a';
 	}
 	$css['global'][ avada_implode( $elements ) ]['background-color'] = Avada_Sanitize::color( Avada()->settings->get( 'content_bg_color' ) );
 
@@ -375,8 +378,16 @@ function avada_dynamic_css_array() {
 		$elements[] = '.woocommerce-pagination .next:hover:after';
 		$elements[] = '.woocommerce-tabs .tabs li.active a';
 		$elements[] = '.woocommerce-tabs .tabs li.active a .arrow:after';
-		$elements[] = '.woocommerce-side-nav li.active a';
-		$elements[] = '.woocommerce-side-nav li.active a:after';
+		$elements[] = '.woocommerce-side-nav li.is-active a';
+		$elements[] = '.woocommerce-side-nav li.is-active a:after';	
+		$elements[] = '.woocommerce-Pagination .woocommerce-Button:hover:before';
+		$elements[] = '.woocommerce-Pagination .woocommerce-Button:hover:after';
+		$elements[] = '.woocommerce-MyAccount-navigation ul li.is-active a';
+		$elements[] = '.woocommerce-MyAccount-navigation ul li.is-active a:after';
+		$elements[] = '.woocommerce-MyAccount-content .woocommerce-Addresses .edit:hover';
+		$elements[] = '.woocommerce-MyAccount-content .woocommerce-Addresses .edit:hover:after';
+		$elements[] = '.woocommerce-MyAccount-downloads .download-actions a:hover';
+		$elements[] = '.woocommerce-MyAccount-downloads .download-actions a:hover:after';
 		$elements[] = '.my_account_orders .order-actions a:hover:after';
 		$elements[] = '.avada-order-details .shop_table.order_details tfoot tr:last-child .amount';
 		$elements[] = '#wrapper .cart-checkout a:hover';
@@ -559,6 +570,8 @@ function avada_dynamic_css_array() {
 	}
 	if ( class_exists( 'WooCommerce' ) ) {
 		$elements[] = '.woocommerce-tabs > .tabs .active a';
+		$elements[] = '.woocommerce-MyAccount-navigation > ul .is-active a';
+		$elements[] = '.woocommerce-checkout-nav .is-active a';
 	}
 	$css['global'][ avada_implode( $elements ) ]['background-color'] = Avada_Sanitize::color( Avada()->settings->get( 'content_bg_color' ) );
 
@@ -622,6 +635,7 @@ function avada_dynamic_css_array() {
 		$elements[] = '.woocommerce .single_add_to_cart_button';
 		$elements[] = '.woocommerce button.button';
 		$elements[] = '.woocommerce .avada-shipping-calculator-form .button';
+		$elements[] = '.woocommerce .cart-collaterals .checkout-button';
 		$elements[] = '.woocommerce .checkout #place_order';
 		$elements[] = '.woocommerce .checkout_coupon .button';
 		$elements[] = '.woocommerce .login .button';
@@ -629,12 +643,14 @@ function avada_dynamic_css_array() {
 		$elements[] = '.woocommerce .avada-order-details .order-again .button';
 		$elements[] = '.woocommerce .avada-order-details .order-again .button';
 		$elements[] = '.woocommerce .lost_reset_password input[type="submit"]';
+		$elements[] = '.woocommerce-MyAccount-content form .button';
 	}
 	if ( class_exists( 'Tribe__Events__Main' ) ) {
 		$elements[] = '#tribe-bar-form .tribe-bar-submit input[type=submit]';
 		$elements[] = '#tribe-events .tribe-events-button';
 		$elements[] = '#tribe_events_filter_control #tribe_events_filters_toggle';
 		$elements[] = '#tribe_events_filter_control #tribe_events_filters_reset';
+		$elements[] = '.tribe-events-tickets .button';
 	}
 	$css['global'][ avada_implode( $elements ) ]['background'] = Avada_Sanitize::color( Avada()->settings->get( 'button_gradient_top_color' ) );
 	$css['global'][ avada_implode( $elements ) ]['color']      = Avada_Sanitize::color( Avada()->settings->get( 'button_accent_color' ) );
@@ -677,18 +693,21 @@ function avada_dynamic_css_array() {
 		$elements[] = '.no-cssgradients .woocommerce .single_add_to_cart_button';
 		$elements[] = '.no-cssgradients .woocommerce button.button';
 		$elements[] = '.no-cssgradients .woocommerce .avada-shipping-calculator-form .button';
+		$elements[] = '.no-cssgradients .woocommerce .cart-collaterals .checkout-button';
 		$elements[] = '.no-cssgradients .woocommerce .checkout #place_order';
 		$elements[] = '.no-cssgradients .woocommerce .checkout_coupon .button';
 		$elements[] = '.no-cssgradients .woocommerce .login .button';
 		$elements[] = '.no-cssgradients .woocommerce .register .button';
 		$elements[] = '.no-cssgradients .woocommerce .avada-order-details .order-again .button';
 		$elements[] = '.no-cssgradients .woocommerce .lost_reset_password input[type="submit"]';
+		$elements[] = '.no-cssgradients .woocommerce-MyAccount-content form .button';
 	}
 	if ( class_exists( 'Tribe__Events__Main' ) ) {
 		$elements[] = '.no-cssgradients #tribe-bar-form .tribe-bar-submit input[type=submit]';
 		$elements[] = '.no-cssgradients #tribe-events .tribe-events-button';
 		$elements[] = '.no-cssgradients #tribe_events_filter_control #tribe_events_filters_toggle';
 		$elements[] = '.no-cssgradients #tribe_events_filter_control #tribe_events_filters_reset';
+		$elements[] = '.no-cssgradients .tribe-events-tickets .button';
 	}
 	$css['global'][ avada_implode( $elements ) ]['background'] = Avada_Sanitize::color( Avada()->settings->get( 'button_gradient_top_color' ) );
 
@@ -720,18 +739,21 @@ function avada_dynamic_css_array() {
 		$elements[] = '.price_slider_amount button:hover';
 		$elements[] = '.woocommerce .single_add_to_cart_button:hover';
 		$elements[] = '.woocommerce .avada-shipping-calculator-form .button:hover';
+		$elements[] = '.woocommerce .cart-collaterals .checkout-button:hover';		
 		$elements[] = '.woocommerce .checkout #place_order:hover';
 		$elements[] = '.woocommerce .checkout_coupon .button:hover';
 		$elements[] = '.woocommerce .login .button:hover';
 		$elements[] = '.woocommerce .register .button:hover';
 		$elements[] = '.woocommerce .avada-order-details .order-again .button:hover';
 		$elements[] = '.woocommerce .lost_reset_password input[type="submit"]:hover';
+		$elements[] = '.woocommerce-MyAccount-content form .button:hover';
 	}
 	if ( class_exists( 'Tribe__Events__Main' ) ) {
 		$elements[] = '#tribe-bar-form .tribe-bar-submit input[type=submit]:hover';
 		$elements[] = '#tribe-events .tribe-events-button:hover';
 		$elements[] = '#tribe_events_filter_control #tribe_events_filters_toggle:hover';
 		$elements[] = '#tribe_events_filter_control #tribe_events_filters_reset:hover';
+		$elements[] = '.tribe-events-tickets .button:hover';
 	}
 	$css['global'][ avada_implode( $elements ) ]['background'] = Avada_Sanitize::color( Avada()->settings->get( 'button_gradient_top_color_hover' ) );
 	$css['global'][ avada_implode( $elements ) ]['color'] = $button_accent_hover_color;
@@ -770,18 +792,21 @@ function avada_dynamic_css_array() {
 		$elements[] = '.no-cssgradients .price_slider_amount button:hover';
 		$elements[] = '.no-cssgradients .woocommerce .single_add_to_cart_button:hover';
 		$elements[] = '.no-cssgradients .woocommerce .avada-shipping-calculator-form .button:hover';
+		$elements[] = '.no-cssgradients .woocommerce .cart-collaterals .checkout-button:hover';			
 		$elements[] = '.no-cssgradients .woocommerce .checkout #place_order:hover';
 		$elements[] = '.no-cssgradients .woocommerce .checkout_coupon .button:hover';
 		$elements[] = '.no-cssgradients .woocommerce .login .button:hover';
 		$elements[] = '.no-cssgradients .woocommerce .register .button:hover';
 		$elements[] = '.no-cssgradients .woocommerce .avada-order-details .order-again .button:hover';
 		$elements[] = '.no-cssgradients .woocommerce .lost_reset_password input[type="submit"]:hover';
+		$elements[] = '.no-cssgradients .woocommerce-MyAccount-content form .button:hover';
 	}
 	if ( class_exists( 'Tribe__Events__Main' ) ) {
 		$elements[] = '.no-cssgradients #tribe-bar-form .tribe-bar-submit input[type=submit]:hover';
 		$elements[] = '.no-cssgradients #tribe-events .tribe-events-button:hover';
 		$elements[] = '.no-cssgradients #tribe_events_filter_control #tribe_events_filters_toggle:hover';
 		$elements[] = '.no-cssgradients #tribe_events_filter_control #tribe_events_filters_reset:hover';
+		$elements[] = '.no-cssgradients .tribe-events-tickets .button:hover';
 	}
 	$css['global'][ avada_implode( $elements ) ]['background'] = Avada_Sanitize::color( Avada()->settings->get( 'button_gradient_top_color_hover' ) ) . ' !important';
 
@@ -989,6 +1014,7 @@ function avada_dynamic_css_array() {
 		$elements[] = '.woocommerce .single_add_to_cart_button';
 		$elements[] = '.woocommerce button.button';
 		$elements[] = '.woocommerce .avada-shipping-calculator-form .button';
+		$elements[] = '.woocommerce .cart-collaterals .checkout-button';			
 		$elements[] = '.woocommerce .checkout #place_order';
 		$elements[] = '.woocommerce .checkout_coupon .button';
 		$elements[] = '.woocommerce .login .button';
@@ -1038,6 +1064,7 @@ function avada_dynamic_css_array() {
 		$elements = array(
 			'.single-tribe_events .sidebar .widget h4',
 			'.single-tribe_events .sidebar .tribe-events-single-section-title',
+			'.single-tribe_events .sidebar .tribe-events-tickets-title',
 		);
 		$css['global'][ avada_implode( $elements ) ]['font-size'] = Avada_Sanitize::size( Avada()->settings->get( 'ec_sidew_font_size' ) );
 
@@ -1286,7 +1313,8 @@ function avada_dynamic_css_array() {
 		$elements = array(
 			'.single-tribe_events .sidebar .widget h4',
 			'.single-tribe_events .sidebar .widget .heading h4',
-			'.single-tribe_events .sidebar .tribe-events-single-section-title'
+			'.single-tribe_events .sidebar .tribe-events-single-section-title',
+			'.single-tribe_events .sidebar .tribe-events-tickets-title',
 		);
 		$css['global'][ avada_implode( $elements ) ]['color'] = Avada_Sanitize::color( Avada()->settings->get( 'ec_sidebar_heading_color' ) );
 
@@ -1310,7 +1338,8 @@ function avada_dynamic_css_array() {
 			'.single-tribe_events .sidebar .tribe-events-meta-group dd',
 			'.single-tribe_events .sidebar .tribe-mini-calendar-event',
 			'.single-tribe_events .sidebar .tribe-events-list-widget ol li',
-			'.single-tribe_events .sidebar .tribe-events-venue-widget li'
+			'.single-tribe_events .sidebar .tribe-events-venue-widget li',
+			'.single-tribe_events .sidebar .tribe-events-tickets td'
 		);
 		$css['global'][ avada_implode( $elements ) ]['border-color'] = Avada_Sanitize::color( Avada()->settings->get( 'ec_sidebar_divider_color' ) );
 	}
@@ -1329,7 +1358,8 @@ function avada_dynamic_css_array() {
 		$elements = array(
 			'.single-tribe_events .sidebar .widget .widget-title',
 			'.single-tribe_events .sidebar .widget .heading .widget-title',
-			'.single-tribe_events .sidebar .tribe-events-single-section-title'
+			'.single-tribe_events .sidebar .tribe-events-single-section-title',
+			'.single-tribe_events .sidebar .tribe-events-tickets-title',
 		);
 		$css['global'][ avada_implode( $elements ) ]['background-color'] = Avada_Sanitize::color( Avada()->settings->get( 'ec_sidebar_widget_bg_color' ) );
 
@@ -1475,16 +1505,20 @@ function avada_dynamic_css_array() {
 		$elements[] = '.fusion-hide-pagination-text .bbp-pagination .bbp-pagination-links .pagination-next';
 	}
 	if ( class_exists( 'WooCommerce' ) ) {
-		$elements[] = '.fusion-body .avada_myaccount_user';
-		$elements[] = '.fusion-body .myaccount_user_container span';
+		$elements[] = '.fusion-body .avada-myaccount-user';
+		$elements[] = '.fusion-body .avada-myaccount-user span';
 		$elements[] = '.woocommerce-pagination .page-numbers';
 		$elements[] = '.woo-tabs-horizontal .woocommerce-tabs > .tabs li';
 		$elements[] = '.woo-tabs-horizontal .woocommerce-tabs > .tabs';
 		$elements[] = '.woo-tabs-horizontal .woocommerce-tabs > .wc-tab';
-		$elements[] = '.fusion-body .woocommerce-side-nav li a';
+		$elements[] = '.fusion-body .woocommerce-side-nav li a';	
 		$elements[] = '.fusion-body .woocommerce-content-box';
 		$elements[] = '.fusion-body .woocommerce-content-box h2';
 		$elements[] = '.fusion-body .woocommerce .address h4';
+		$elements[] = '.fusion-body .woocommerce-MyAccount-navigation ul li a';	
+		$elements[] = '.fusion-body .woocommerce-MyAccount-content';
+		$elements[] = '.fusion-body .woocommerce-MyAccount-content h2';
+		$elements[] = '.fusion-body .woocommerce-MyAccount-content h3';
 		$elements[] = '.fusion-body .woocommerce-tabs .tabs li a';
 		$elements[] = '.fusion-body .woocommerce .social-share';
 		$elements[] = '.fusion-body .woocommerce .social-share li';
@@ -1657,6 +1691,7 @@ function avada_dynamic_css_array() {
 	$elements = array(
 		'.input-text',
 		'input[type="text"]',
+		'input[type="email"]',
 		'textarea',
 		'input.s',
 		'#comment-input input',
@@ -1726,6 +1761,7 @@ function avada_dynamic_css_array() {
 	$elements = array(
 		'.input-text',
 		'input[type="text"]',
+		'input[type="email"]',
 		'textarea',
 		'input.s',
 		'input.s .placeholder',
@@ -1856,6 +1892,7 @@ function avada_dynamic_css_array() {
 	$elements = array(
 		'.input-text',
 		'input[type="text"]',
+		'input[type="email"]',
 		'textarea',
 		'input.s',
 		'#comment-input input',
@@ -1933,6 +1970,7 @@ function avada_dynamic_css_array() {
 	$elements = array(
 		'.input-text:not(textarea)',
 		'input[type="text"]',
+		'input[type="email"]',
 		'input.s',
 		'#comment-input input',
 		'.post-password-form label input[type="password"]',
@@ -2466,16 +2504,19 @@ function avada_dynamic_css_array() {
 	}
 	if ( class_exists( 'WooCommerce' ) ) {
 		$elements[] = '.woocommerce .checkout #place_order';
+		$elements[] = '.woocommerce .cart-collaterals .checkout-button';	
 		$elements[] = '.woocommerce .single_add_to_cart_button';
 		$elements[] = '.woocommerce button.button';
 		$elements[] = '.woocommerce .login .button';
 		$elements[] = '.woocommerce .register .button';
+		$elements[] = '.woocommerce-MyAccount-content form .button';
 	}
 	if ( class_exists( 'Tribe__Events__Main' ) ) {
 		$elements[] = '#tribe-bar-form .tribe-bar-submit input[type=submit]';
 		$elements[] = '#tribe-events .tribe-events-button';
 		$elements[] = '#tribe_events_filter_control #tribe_events_filters_toggle';
 		$elements[] = '#tribe_events_filter_control #tribe_events_filters_reset';
+		$elements[] = '.tribe-events-tickets .button';
 	}
 	$css['global'][ avada_implode( $elements ) ]['border-color'] = Avada_Sanitize::color( Avada()->settings->get( 'button_accent_color' ) );
 
@@ -2500,13 +2541,16 @@ function avada_dynamic_css_array() {
 	}
 	if ( class_exists( 'WooCommerce' ) ) {
 		$elements[] = '.woocommerce .checkout #place_order';
+		$elements[] = '.woocommerce .cart-collaterals .checkout-button';	
 		$elements[] = '.woocommerce #wrapper .single_add_to_cart_button';
 		$elements[] = '.woocommerce .avada-shipping-calculator-form .button';
+		$elements[] = '.woocommerce-MyAccount-content form .button';
 	}
 	if ( class_exists( 'Tribe__Events__Main' ) ) {
 		$elements[] = '#tribe-events .tribe-events-button';
 		$elements[] = '#tribe_events_filter_control #tribe_events_filters_toggle';
 		$elements[] = '#tribe_events_filter_control #tribe_events_filters_reset';
+		$elements[] = '.tribe-events-tickets .button';		
 	}
 
 	switch ( $button_size ) {
@@ -2651,6 +2695,7 @@ function avada_dynamic_css_array() {
 		if ( class_exists( 'WooCommerce' ) ) {
 			$elements[] = '.woocommerce .login .button';
 			$elements[] = '.woocommerce .register .button';
+			$elements[] = '.woocommerce .cart-collaterals .checkout-button';	
 		}
 		$css['global'][ avada_implode( $elements ) ]['box-shadow'] = 'inset 0px 1px 0px #ffffff, 0px 2px 0px ' . Avada_Sanitize::color( Avada()->settings->get( 'button_bevel_color' ) ) . ', 1px 4px 4px 2px rgba(0, 0, 0, 0.3)';
 
@@ -2671,6 +2716,7 @@ function avada_dynamic_css_array() {
 		}
 		if ( class_exists( 'WooCommerce' ) ) {
 			$elements[] = '.woocommerce .checkout #place_order';
+			$elements[] = '.woocommerce .cart-collaterals .checkout-button';				
 			$elements[] = '.woocommerce .single_add_to_cart_button';
 			$elements[] = '.woocommerce button.button';
 		}
@@ -2740,13 +2786,16 @@ function avada_dynamic_css_array() {
 	}
 	if ( class_exists( 'WooCommerce' ) ) {
 		$elements[] = '.woocommerce .checkout #place_order';
+		$elements[] = '.woocommerce .cart-collaterals .checkout-button';	
 		$elements[] = '.woocommerce .single_add_to_cart_button';
 		$elements[] = '.woocommerce button.button';
 		$elements[] = '.woocommerce .login .button';
 		$elements[] = '.woocommerce .register .button';
+		$elements[] = '.woocommerce-MyAccount-content form .button';
 	}
 	if ( class_exists( 'Tribe__Events__Main' ) ) {
 		$elements[] = '#tribe-bar-form .tribe-bar-submit input[type=submit]';
+		$elements[] = '.tribe-events-tickets .button';
 	}
 	$css['global'][ avada_implode( $elements ) ]['border-width'] = intval( Avada()->settings->get( 'button_border_width' ) ) . 'px';
 	$css['global'][ avada_implode( $elements ) ]['border-style'] = 'solid';
@@ -2790,11 +2839,14 @@ function avada_dynamic_css_array() {
 		$elements[] = '.woocommerce .single_add_to_cart_button';
 		$elements[] = '.woocommerce button.button';
 		$elements[] = '.woocommerce .avada-shipping-calculator-form .button';
+		$elements[] = '.woocommerce .cart-collaterals .checkout-button';	
 		$elements[] = '.woocommerce .login .button';
 		$elements[] = '.woocommerce .register .button';
+		$elements[] = '.woocommerce-MyAccount-content form .button';
 	}
 	if ( class_exists( 'Tribe__Events__Main' ) ) {
 		$elements[] = '#tribe-bar-form .tribe-bar-submit input[type=submit]';
+		$elements[] = '.tribe-events-tickets .button';
 	}
 	if ( 'Pill' == Avada()->settings->get( 'button_shape' ) ) {
 		$css['global'][ avada_implode( $elements ) ]['border-radius'] = '25px';
@@ -3073,6 +3125,11 @@ function avada_dynamic_css_array() {
 	$css['global'][ avada_implode( array( 'h5', '.fusion-title-size-five' ) ) ]['margin-bottom']  = Avada_Sanitize::size( Avada()->settings->get( 'h5_typography', 'margin-bottom' ) );
 	$css['global'][ avada_implode( array( 'h6', '.fusion-title-size-six' ) ) ]['margin-top']      = Avada_Sanitize::size( Avada()->settings->get( 'h6_typography', 'margin-top' ) );
 	$css['global'][ avada_implode( array( 'h6', '.fusion-title-size-six' ) ) ]['margin-bottom']   = Avada_Sanitize::size( Avada()->settings->get( 'h6_typography', 'margin-bottom' ) );
+
+	if ( class_exists( 'WooCommerce' ) ) {
+		$css['global']['.woocommerce-Address-title']['margin-bottom'] = Avada_Sanitize::size( Avada()->settings->get( 'h3_typography', 'margin-bottom' ) );
+	}
+
 
 	/**
 	 * HEADER IS NUMBER 5
@@ -3361,6 +3418,10 @@ function avada_dynamic_css_array() {
 
 	$css['global']['.fusion-main-menu .sub-menu li a:hover']['background-color'] = Avada_Sanitize::color( Avada()->settings->get( 'menu_bg_hover_color' ) );
 
+	if ( class_exists( 'WooCommerce' ) ) {
+		$css['global']['.fusion-main-menu .fusion-menu-login-box-register']['color'] = Avada_Sanitize::color( Avada()->settings->get( 'menu_sub_color' ) );
+	}
+
 	$elements = array(
 		'.fusion-main-menu .sub-menu .current_page_item > a',
 		'.fusion-main-menu .sub-menu .current-menu-item > a',
@@ -3641,7 +3702,7 @@ function avada_dynamic_css_array() {
 	if ( class_exists( 'WooCommerce' ) ) {
 		$css['global']['.fusion-menu-cart-items']['width']   = intval( Avada()->settings->get( 'dropdown_menu_width' ) ) . 'px';
 
-		$css['global']['.fusion-menu-cart-items']['font-size']   = Avada_Sanitize::size( Avada()->settings->get( 'woo_icon_font_size' ) ) . 'px';
+		$css['global']['.fusion-menu-cart-items']['font-size']   = Avada_Sanitize::size( Avada()->settings->get( 'woo_icon_font_size' ) );
 		$css['global']['.fusion-menu-cart-items']['line-height'] = '1.5';
 
 		$css['global']['.fusion-menu-cart-items a']['color'] = Avada_Sanitize::color( Avada()->settings->get( 'menu_sub_color' ) );
@@ -3862,18 +3923,25 @@ function avada_dynamic_css_array() {
 
 	$css['global'][ avada_implode( $elements ) ]['padding'] = Avada_Sanitize::size( Avada()->settings->get( 'social_links_boxed_padding' ) );
 
-		/**
-		 * Search Page / Error Page - Dynamic Styling
-		 */
-		if ( Avada()->settings->get( 'checklist_icons_color' ) ) {
-			$elements = array(
-				'.fusion-body .error-menu li:before',
-				'.fusion-body .error-menu li:after'
-			);
+	/**
+	 * Search Page / Error Page - Dynamic Styling
+	 */
+	if ( Avada()->settings->get( 'checklist_icons_color' ) ) {
+		$elements = array(
+			'.fusion-body .error-menu li:before',
+			'.fusion-body .error-menu li:after'
+		);
 
-			$css['global'][ avada_implode( $elements ) ]['background-color'] = Avada()->settings->get( 'checklist_circle_color' );
-			$css['global'][ avada_implode( $elements ) ]['color'] = Avada()->settings->get( 'checklist_icons_color' );
-		}
+		$css['global'][ avada_implode( $elements ) ]['background-color'] = Avada()->settings->get( 'checklist_circle_color' );
+		$css['global'][ avada_implode( $elements ) ]['color'] = Avada()->settings->get( 'checklist_icons_color' );
+	}
+	
+	/**
+	 * Single Post Slideshow
+	 */	
+	if ( Avada()->settings->get( 'slideshow_smooth_height' ) || ( get_post_meta( 'auto' == $c_pageID, 'pyre_fimg_width', true ) && 'half' == get_post_meta( $c_pageID, 'pyre_width', true ) ) ) {
+		$css['global']['.fusion-flexslider.fusion-post-slideshow']['overflow'] = 'hidden';
+	}	
 
 	if ( class_exists( 'WooCommerce' ) ) {
 
@@ -4157,18 +4225,18 @@ function avada_dynamic_css_array() {
 		$elements = array(
 			'#tribe-events-content .tribe-events-calendar td'
 		);
-		$css['global'][ avada_implode( $elements ) ]['background-color'] = Avada_Sanitize::color( Avada()->settings->get( 'ec_border_color' ) );
+		$css['global'][ avada_implode( $elements ) ]['background-color'] = Avada_Sanitize::color( Avada()->settings->get( 'ec_calendar_bg_color' ) );
 
 
 		$elements = array(
 			'#tribe-events-content .tribe-events-calendar td.tribe-events-othermonth'
 		);
-		$css['global'][ avada_implode( $elements ) ]['background-color'] = Avada_Sanitize::color( fusion_adjust_brightness( Avada()->settings->get( 'ec_border_color' ), 80 ) );
+		$css['global'][ avada_implode( $elements ) ]['background-color'] = Avada_Sanitize::color( fusion_adjust_brightness( Avada()->settings->get( 'ec_calendar_bg_color' ), 80 ) );
 
 		$elements = array(
 			'#tribe-events-content .tribe-events-calendar td.tribe-events-othermonth'
 		);
-		$css['global'][ avada_implode( $elements ) ]['background-color'] = Avada_Sanitize::color( fusion_adjust_brightness( Avada()->settings->get( 'ec_border_color' ), 80 ) );
+		$css['global'][ avada_implode( $elements ) ]['background-color'] = Avada_Sanitize::color( fusion_adjust_brightness( Avada()->settings->get( 'ec_calendar_bg_color' ), 80 ) );
 
 		$elements = array(
 			'#tribe-events-content .tribe-events-calendar td',
@@ -4180,12 +4248,12 @@ function avada_dynamic_css_array() {
 			'#tribe-events-content .tribe-events-calendar td:hover',
 			'.tribe-week-today'
 		);
-		$css['global'][ avada_implode( $elements ) ]['background-color'] = Avada_Sanitize::color( fusion_adjust_brightness( Avada()->settings->get( 'ec_border_color' ), 60 ) );
+		$css['global'][ avada_implode( $elements ) ]['background-color'] = Avada_Sanitize::color( fusion_adjust_brightness( Avada()->settings->get( 'ec_calendar_bg_color' ), 60 ) );
 
 		$elements = array(
 			'.tribe-grid-allday',
 		);
-		$css['global'][ avada_implode( $elements ) ]['background-color'] = Avada_Sanitize::color( fusion_adjust_brightness( Avada()->settings->get( 'ec_border_color' ), 70 ) );
+		$css['global'][ avada_implode( $elements ) ]['background-color'] = Avada_Sanitize::color( fusion_adjust_brightness( Avada()->settings->get( 'ec_calendar_bg_color' ), 70 ) );
 
 		$elements = array(
 			'.recurring-info-tooltip',
@@ -5456,7 +5524,8 @@ function avada_dynamic_css_array() {
 
 				$elements = array(
 					'.woocommerce-tabs .tabs',
-					'.woocommerce-side-nav'
+					'.woocommerce-side-nav',
+					'.woocommerce-MyAccount-navigation'
 				);
 				$css[ $content_media_query ][ avada_implode( $elements ) ]['margin-bottom'] = '25px';
 
@@ -5469,7 +5538,7 @@ function avada_dynamic_css_array() {
 				$css[ $content_media_query ]['.woocommerce-tabs > .tabs .active a']['background-color'] = 'transparent';
 				$css[ $content_media_query ]['.woocommerce-tabs > .tabs li']['float'] = 'none';
 				$css[ $content_media_query ]['.woocommerce-tabs > .tabs li']['border-bottom'] = '1px solid';
-				$css[ $content_media_query ]['.woocommerce-tabs > .tabs li a']['padding'] = '10px 0';
+				$css[ $content_media_query ]['.woocommerce-tabs > .tabs li a']['padding'] = '10px 0';	
 			}
 		}
 
@@ -5685,6 +5754,8 @@ function avada_dynamic_css_array() {
 				'#main .has-sidebar .products li',
 				'.avada-myaccount-data .addresses .col-1',
 				'.avada-myaccount-data .addresses .col-2',
+				'.woocommerce-MyAccount-content .addresses .col-1',
+				'.woocommerce-MyAccount-content .addresses .col-2',				
 				'.avada-customer-details .addresses .col-1',
 				'.avada-customer-details .addresses .col-2'
 			);
@@ -5696,6 +5767,8 @@ function avada_dynamic_css_array() {
 			$elements = array(
 				'.avada-myaccount-data .addresses .col-1',
 				'.avada-myaccount-data .addresses .col-2',
+				'.woocommerce-MyAccount-content .addresses .col-1',
+				'.woocommerce-MyAccount-content .addresses .col-2',					
 				'.avada-customer-details .addresses .col-1',
 				'.avada-customer-details .addresses .col-2'
 			);
@@ -5742,12 +5815,17 @@ function avada_dynamic_css_array() {
 			$css[ $content_media_query ][ avada_implode( $elements ) ]['margin-left'] = '0';
 
 			$css[ $content_media_query ]['.avada-myaccount-data .my_account_orders .order-number']['padding-right'] = '8px';
-
 			$css[ $content_media_query ]['.avada-myaccount-data .my_account_orders .order-actions']['padding-left'] = '8px';
+			
+			$css[ $content_media_query ]['.woocommerce-MyAccount-content .my_account_orders .order-number']['padding-right'] = '8px';
+			$css[ $content_media_query ]['.woocommerce-MyAccount-content .my_account_orders .order-actions']['padding-left'] = '8px';			
 
 			$css[ $content_media_query ]['.shop_table .product-name']['width'] = '35%';
 
 			$css[ $content_media_query ]['form.checkout .shop_table tfoot th']['padding-right'] = '20px';
+
+			$css[ $content_media_query ]['.cart-collaterals']['-webkit-flex-direction'] = 'column';
+			$css[ $content_media_query ]['.cart-collaterals']['flex-direction'] = 'column';
 
 			$elements = array(
 				'#wrapper .product .images',
@@ -5756,6 +5834,9 @@ function avada_dynamic_css_array() {
 				'#wrapper .woocommerce-tabs .panel',
 				'#wrapper .woocommerce-side-nav',
 				'#wrapper .woocommerce-content-box',
+				'.fusion-body .cart-collaterals .cart_totals',
+				'.fusion-body .woocommerce-MyAccount-navigation',
+				'.fusion-body .woocommerce-MyAccount-content',
 				'#wrapper .shipping-coupon',
 				'#wrapper .cart-totals-buttons',
 				'#wrapper #customer_login .col-1',
@@ -5772,7 +5853,7 @@ function avada_dynamic_css_array() {
 				'#customer_login .col-1',
 				'.coupon'
 			);
-			$css[ $content_media_query ][ avada_implode( $elements ) ]['margin-bottom'] = '20px';
+			$css[ $content_media_query ][ avada_implode( $elements ) ]['margin-bottom'] = '30px';
 
 			$css[ $content_media_query ]['.shop_table .product-thumbnail']['float'] = 'none';
 
@@ -5786,7 +5867,8 @@ function avada_dynamic_css_array() {
 
 			$elements = array(
 				'.woocommerce-tabs .tabs',
-				'.woocommerce-side-nav'
+				'.woocommerce-side-nav',
+				'.woocommerce-MyAccount-navigation'
 			);
 			$css[ $content_media_query ][ avada_implode( $elements ) ]['margin-bottom'] = '25px';
 
@@ -5813,18 +5895,21 @@ function avada_dynamic_css_array() {
 
 			$css[ $content_media_query ]['.has-sidebar .woocommerce-container .social-share li']['width'] = '50%';
 
-			$css[ $content_media_query ]['.myaccount_user_container span']['width']        = '100%';
-			$css[ $content_media_query ]['.myaccount_user_container span']['float']        = 'none';
-			$css[ $content_media_query ]['.myaccount_user_container span']['display']      = 'block';
-			$css[ $content_media_query ]['.myaccount_user_container span']['padding']      = '5px 0px';
-			$css[ $content_media_query ]['.myaccount_user_container span']['border-right'] = 0;
+			$css[ $content_media_query ]['.avada-myaccount-user']['display']           = 'block';
+			$css[ $content_media_query ]['.avada-myaccount-user > span']['width']      = '100%';
+			$css[ $content_media_query ]['.avada-myaccount-user > span']['display']    = 'block';
+			$css[ $content_media_query ]['.avada-myaccount-user .username']['display'] = 'block';
+			$css[ $content_media_query ]['.avada-myaccount-user .username .not-user']['display'] = 'inline';
+			$css[ $content_media_query ]['.fusion-body .avada-myaccount-user .username .not-user']['padding'] = '0 5px;';
+			$css[ $content_media_query ]['.avada-myaccount-user > span']['padding']    = '5px 0px';
+			
+			$css[ $content_media_query ]['.avada-myaccount-user span']['border-right'] = 0;
 
-			$css[ $content_media_query ]['.myaccount_user_container span.username']['margin-top'] = '10px';
-
-			$css[ $content_media_query ]['.myaccount_user_container span.view-cart']['margin-bottom'] = '10px';
+			$css[ $content_media_query ]['.avada-myaccount-user']['padding-top']       = '10px';
+			$css[ $content_media_query ]['.avada-myaccount-user']['padding-bottom']    = '10px';
 
 			if ( is_rtl() ) {
-				$css[ $content_media_query ]['.rtl .myaccount_user_container span']['border-left'] = '0';
+				$css[ $content_media_query ]['.rtl .avada-myaccount-user span']['border-left'] = '0';
 			}
 
 			$elements = array(
@@ -5886,8 +5971,8 @@ function avada_dynamic_css_array() {
 
 		if ( class_exists( 'WooCommerce' ) ) {
 			$elements = array(
-				'.myaccount_user_container span.msg',
-				'.myaccount_user_container span:last-child'
+				'.avada-myaccount-user span.msg',
+				'.avada-myaccount-user > span:last-child'
 			);
 			$css[ $content_media_query ][ avada_implode( $elements ) ]['padding-left']  = '0 !important';
 			$css[ $content_media_query ][ avada_implode( $elements ) ]['padding-right'] = '0 !important';
@@ -6041,6 +6126,41 @@ function avada_dynamic_css_array() {
 		================================================================================================= */
 		$content_min_media_query = '@media only screen and (min-width: ' . ( intval( $side_header_width ) + intval( Avada()->settings->get( 'content_break_point' ) ) ) . 'px)';
 
+		// # WooCommerce
+		if ( class_exists( 'WooCommerce' ) ) {
+			if ( 'horizontal' == Avada()->settings->get( 'woocommerce_product_tab_design' ) ) {
+			
+				$elements = array( 
+					'.woocommerce-MyAccount-navigation > ul',
+					'.woocommerce-checkout-nav' 
+				);
+			
+				foreach ( $elements as $selector ) {
+					$css[ $content_min_media_query ][$selector]['width'] = '100%';
+					if ( is_rtl() ) {
+						$css[ $content_min_media_query ][$selector . ' li']['float'] = 'right';
+					} else {
+						$css[ $content_min_media_query ][$selector . ' li']['float'] = 'left';
+					}				
+					$css[ $content_min_media_query ][$selector . ' li a']['border']  = '1px solid transparent !important';
+					$css[ $content_min_media_query ][$selector . ' li a']['padding'] = '10px 20px';
+					$css[ $content_min_media_query ][$selector . ' li a']['height'] = 'auto';
+					$css[ $content_min_media_query ][$selector . ' li a']['line-height'] = 'normal';			
+					$css[ $content_min_media_query ][$selector . ' li a:after']['display'] = 'none';
+					$css[ $content_min_media_query ][$selector . ' .is-active']['border'] = '1px solid #dddddd';
+					$css[ $content_min_media_query ][$selector . ' .is-active']['border-bottom'] = 'none';
+					$css[ $content_min_media_query ][$selector . ' .is-active']['min-height'] = '40px';
+					$css[ $content_min_media_query ][$selector . ' .is-active']['margin-bottom'] = '-1px';
+					$css[ $content_min_media_query ][$selector . ' .is-active:hover a']['cursor'] = 'default';
+				}
+
+				$css['global']['.woocommerce-content-box.avada-checkout']['margin'] = '0';
+				$css['global']['.woocommerce-content-box.avada-checkout']['clear'] = 'both';
+				$css['global']['.woocommerce-MyAccount-navigation']['width'] = '100%';
+				$css['global']['.fusion-body .woocommerce-MyAccount-content']['margin'] = '0';
+			}
+		}
+
 		// # Shortcodes
 		// Tagline Box
 		$css[ $content_min_media_query ]['.fusion-reading-box-container .reading-box.reading-box-center']['text-align'] = 'center';
@@ -6191,8 +6311,12 @@ function avada_dynamic_css_array() {
 			$css[ $six_fourty_media_query ]['.shop_table .filler-td']['display'] = 'none';
 
 			$css[ $six_fourty_media_query ]['.my_account_orders .order-status']['display'] = 'none';
-
 			$css[ $six_fourty_media_query ]['.my_account_orders .order-date']['display'] = 'none';
+			
+			$css[ $six_fourty_media_query ]['.woocommerce-MyAccount-downloads .download-remaining']['display'] = 'none';
+			$css[ $six_fourty_media_query ]['.woocommerce-MyAccount-downloads .download-expires']['display'] = 'none';
+			
+			
 
 			$css[ $six_fourty_media_query ]['.my_account_orders .order-number time']['display']     = 'block !important';
 			$css[ $six_fourty_media_query ]['.my_account_orders .order-number time']['font-size']   = '10px';
@@ -6602,6 +6726,8 @@ function avada_dynamic_css_array() {
 			$css[ $media_query ][ avada_implode( $elements ) ]['display']      = 'block';
 			$css[ $media_query ][ avada_implode( $elements ) ]['margin-left']  = '0';
 			$css[ $media_query ][ avada_implode( $elements ) ]['margin-right'] = '0';
+			
+			$css[ $media_query ]['.woocommerce #customer_login .login .button']['margin-bottom'] = '10px';
 
 		}
 
@@ -7141,8 +7267,10 @@ function avada_dynamic_css_array() {
 			$ipad_portrait[ $ipad_portrait_media_query ]['.shop_table .product-name']['width'] = '35%';
 
 			$elements = array(
-				'#wrapper .woocommerce-side-nav',
+				'#wrapper .woocommerce-side-nav',		
 				'#wrapper .woocommerce-content-box',
+				'.fusion-body .woocommerce-MyAccount-navigation',				
+				'.fusion-body .woocommerce-MyAccount-content',
 				'#wrapper .shipping-coupon',
 				'#wrapper .cart_totals',
 				'#wrapper #customer_login .col-1',
@@ -7173,7 +7301,8 @@ function avada_dynamic_css_array() {
 
 			$elements = array(
 				'.woocommerce-tabs .tabs',
-				'.woocommerce-side-nav'
+				'.woocommerce-side-nav',
+				'.woocommerce-MyAccount-navigation'
 			);
 			$ipad_portrait[ $ipad_portrait_media_query ][ avada_implode( $elements ) ]['margin-bottom'] = '25px';
 
@@ -7198,15 +7327,22 @@ function avada_dynamic_css_array() {
 			$ipad_portrait[ $ipad_portrait_media_query ]['.woocommerce-container .social-share li']['width']         = '25%';
 
 			$ipad_portrait[ $ipad_portrait_media_query ]['.has-sidebar .woocommerce-container .social-share li']['width'] = '50%';
+			
+			$ipad_portrait[ $ipad_portrait_media_query ]['.avada-myaccount-user']['display']           = 'block';
+			$ipad_portrait[ $ipad_portrait_media_query ]['.avada-myaccount-user > span']['width']      = '100%';
+			$ipad_portrait[ $ipad_portrait_media_query ]['.avada-myaccount-user > span']['display']    = 'block';
+			$ipad_portrait[ $ipad_portrait_media_query ]['.avada-myaccount-user .username']['display'] = 'block';
+			$ipad_portrait[ $ipad_portrait_media_query ]['.avada-myaccount-user .username .not-user']['display'] = 'inline';
+			$ipad_portrait[ $ipad_portrait_media_query ]['.fusion-body .avada-myaccount-user .username .not-user']['padding'] = '0 5px;';
+			$ipad_portrait[ $ipad_portrait_media_query ]['.avada-myaccount-user > span']['padding']    = '5px 0px';
+			
+			$ipad_portrait[ $ipad_portrait_media_query ]['.avada-myaccount-user span']['border-right'] = 0;
 
-			$ipad_portrait[ $ipad_portrait_media_query ]['.myaccount_user_container span']['width']        = '100%';
-			$ipad_portrait[ $ipad_portrait_media_query ]['.myaccount_user_container span']['float']        = 'none';
-			$ipad_portrait[ $ipad_portrait_media_query ]['.myaccount_user_container span']['display']      = 'block';
-			$ipad_portrait[ $ipad_portrait_media_query ]['.myaccount_user_container span']['padding']      = '10px 0px';
-			$ipad_portrait[ $ipad_portrait_media_query ]['.myaccount_user_container span']['border-right'] = '0';
+			$ipad_portrait[ $ipad_portrait_media_query ]['.avada-myaccount-user']['padding-top']       = '10px';
+			$ipad_portrait[ $ipad_portrait_media_query ]['.avada-myaccount-user']['padding-bottom']    = '10px';			
 
 			if ( is_rtl() ) {
-				$ipad_portrait[ $ipad_portrait_media_query ]['.rtl .myaccount_user_container span']['border-left'] = '0';
+				$ipad_portrait[ $ipad_portrait_media_query ]['.rtl .avada-myaccount-user span']['border-left'] = '0';
 			}
 
 			$elements = array(
@@ -7258,8 +7394,8 @@ function avada_dynamic_css_array() {
 			$ipad_portrait[ $ipad_portrait_media_query ][ avada_implode( $elements ) ]['display'] = 'none !important';
 
 			$elements = array(
-				'.myaccount_user_container span.msg',
-				'.myaccount_user_container span:last-child'
+				'.avada-myaccount-user span.msg',
+				'.avada-myaccount-user > span:last-child'
 			);
 			$ipad_portrait[ $ipad_portrait_media_query ][ avada_implode( $elements ) ]['padding-left']  = '0 !important';
 			$ipad_portrait[ $ipad_portrait_media_query ][ avada_implode( $elements ) ]['padding-right'] = '0 !important';
@@ -7836,15 +7972,15 @@ function avada_dynamic_css_array() {
 		}
 	} else {
 		$header_bg_color = Avada()->settings->get( 'header_bg_color' );
-		if ( '' != $header_bg_opacity ) {
-			if ( 1 > Avada_Color::get_alpha_from_rgba( $header_bg_color ) ) {
-				$header_bg_color = Avada_Color::rgba2hex( $header_bg_color );
-			}
+		if ( 1 > Avada_Color::get_alpha_from_rgba( $header_bg_color ) ) {
+			$header_bg_color_rgb = Avada_Color::get_rgb( Avada_Color::rgba2hex( $header_bg_color ) );
+		} else {
+			$header_bg_color_rgb = Avada_Color::get_rgb( $header_bg_color );
 		}
-
+		
 		$css['global'][ avada_implode( $elements ) ]['background-color'] = $header_bg_color;
 		if ( ( function_exists( 'is_shop' ) && is_shop() && ! is_search() ) || ( ! is_archive() && ! is_404() && ! is_search() ) ) {
-			$css['global'][ avada_implode( $elements ) ]['background-color'] = Avada_Sanitize::color( Avada_Color::get_rgba( $header_bg_color, $header_bg_opacity ) );
+			$css['global'][ avada_implode( $elements ) ]['background-color'] = 'rgba(' . $header_bg_color_rgb[0] . ',' . $header_bg_color_rgb[1] . ',' . $header_bg_color_rgb[2] . ',' . $header_bg_opacity . ')';
 		}
 	}
 
@@ -7895,6 +8031,14 @@ function avada_dynamic_css_array() {
 	if ( 1 > $header_bg_opacity ) {
 		$css['global']['.fusion-header-wrapper .fusion-header']['background-image'] = 'url()';
 	}
+	
+	// Adjust header padding if opacity is not 1 for smooth scroll
+	if ( 1 > $header_bg_opacity ) {
+		$css['global']['.no-overflow-y .fusion-header-v1 .fusion-header']['padding-right'] = '39px';
+		$css['global']['.no-overflow-y .fusion-header-v2 .fusion-header']['padding-right'] = '39px';
+		$css['global']['.no-overflow-y .fusion-header-v3 .fusion-header']['padding-right'] = '39px';
+		$css['global']['.no-overflow-y .fusion-sticky-menu-only .fusion-secondary-main-menu']['padding-right'] = '39px';
+	}	
 
 	if ( 'no' == get_post_meta( $c_pageID, 'pyre_avada_rev_styles', true ) || ( Avada()->settings->get( 'avada_rev_styles' ) && 'yes' != get_post_meta( $c_pageID, 'pyre_avada_rev_styles', true ) ) ) {
 

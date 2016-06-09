@@ -6,8 +6,127 @@ http://theme-fusion.com/avada-doc/install-update/important-update-information/
 
 
 -----------------------------------------------------------------------------------------
+Version 4.0.3 - June 8th, 2016
+-----------------------------------------------------------------------------------------
+
+
+- NEW: alternate demo data import is now available for Avada 4 and higher
+- NEW: added option to choose if the single post title should be above or below the featured image
+- NEW: updated to Font Awesome 4.6.3
+- NEW: full support for WooCommerce 2.6
+- NEW: WooCommerce horizontal tabs mode will now also work on checkout and account page
+- NEW: added registration link to WooCommerce main menu account login dropdown
+- NEW: added responsive image support to image frame element, related posts and related portfolio items
+- NEW: added important update information and changelog to auto update screens
+- NEW: added additional options for the search page results contents
+- NEW: added antispambot() to email outputs from the theme
+- improved responsive images for 100% width pages, blog large layouts and single posts
+- improved WooCommerce multi page checkout error handling by adding additional error notice
+- improved theme options custom CSS field so that it is fully searchable, also below the fold
+- improved author page, by adding a custom author email address field in he admin user profile
+- updated Woocommerce shop message shortcode to new name
+- updated Google maps infox box js file and included it in Avada
+- updated isotope script to latest version
+- updated a few theme option descriptions for more convenience
+- fixed issue with WPML/PolyLang where saving theme options for "all languages" didn't work
+- fixed page reloading when click on anchor scrolling links
+- fixed WooCommerce Subscription plugin compatibility issue, where variations prices etc. were missing
+- fixed WooCommerce product variations showing quantities even if they are sold individually only
+- fixed WooCommerce most recent sorting being reversed
+- fixed WooCommerce menu cart dropdown font size not being applied correctly
+- fixed WooCommerce product slider image size for fixed images
+- fixed full width element margin issue on default page templates when usign 100% site width
+- fixes issue with NextGen Gallery where uppercase JPG extension breaks featured image
+- fixed tagline element overflow, when using floated shortcodes inside additional content
+- fixed theme options typography options being reset when changing between light and dark color scheme
+- fixed header transparency page option not working correctly when no bg color is chosen in page options
+- fixed Fusion Slider navigation arrows not being vertically centered when using transparent header
+- fixed Fusion Slider titles and descriptions not having correct line height
+- fixed Slider Revolution navigation arrows not being correctly displayed
+- fixed browser standard fonts falling back to Times
+- fixed buddyPress sidebar option not working for all pages
+- fixed recent works image sizes not being correct for 4 and 6 column layouts
+- fixed typo for the "Add Gravity Form" button in Fusion Builder
+- fixed twitter widget issue with API limits
+- fixed Google fonts not loading different char sets
+- fixed issue where rgba colors were displayed incorrectly on frontend in some cases
+- fixed header v6 menu disappearing on scroll if sticky menu is set
+- fixed sticky menu breaking mobile menus when using side header
+- fixed separator shortcode not working with unitess values for deprecated params
+- fixed sticky header width not being correct in boxed mode on device orientation change
+- fixed social media widget not working correctly when no social media icons are set in theme options
+- fixed issue with theme options color picker width for foreign languages
+- fixed contact page template thank you message not using correct user name
+- fixed sticky header content moving to left when smooth scroll is used
+- fixes suhosin values being incorrect on system status page when mega menu disabled
+- fixed Firefox javascript security error notice in modernizr library
+- fixed image frame element lift-up animation issue with left/right alignment of the element
+- fixed issue on single posts page, where smooth height setting made links below slideshow unclickable
+- fixed qTranslate plugin flags not being correctly aligned on menu
+- fixed PHP notice in class-avada-images.php
+- fixed issue on recent works element, where lightbox stopped to work after filter selection
+- fixed permission issues with wp_remote_get() and wp_remote_post() happening on some user servers
+- fixed image frame element sizing issue with images where the width/height values could not be retrieved from WP database
+- fixed Facebook social sharing on mobiles
+- fixed incompatibility issue with an init function, that raised error e.g. when All in One Event Calendar was activated
+- fixed W3C validator issues with social media icons
+- fixed Chrome rendering issue with zoom-in image hover and no spacing columns
+- fixed WP site title on demo imports
+- fixed equal heights columns issue with nested columns
+- fixed breadcrumbs issue where post type archive is empty on single post pages
+- fixed email icon not working correctly in social links widget
+
+
+-----------------------------------------------------------------------------------------
+Version 4.0.2 - April 28th, 2016
+-----------------------------------------------------------------------------------------
+
+
+- NEW: includes latest LayerSlider 5.6.6
+- improved main menu search field getting auto focus when search is toggled
+- improved button span option, so that it takes precedence over alignment option
+- improved testimonial speed option, so that it can be set to 0
+- updated system status page wp_remote_get() test URL
+- updated deprecated get_currentuserinfo() to wp_get_current_user() on custom WooCommerce templates
+- fixed social icons in theme options being reset after Avada 4.0.1 update
+- fixed additional shortcode option labels in theme options shortcode tab after search
+- fixed menu link target attribute not working on all mega menu levels
+- fixed custom fonts migration to 4.0.x issue
+- fixed WooCommerce featured product elements also showing non-featured products
+- fixed WooCommerce edit account page missing action hook
+- fixed WooCommerce cart item thumbnail filter being used on post checkout review page
+- fixed WooCommerce Subscription plugin issue, where price and description of variable products are not displayed
+- fixed WooCommerce elements wrongly taking up link color
+- fixed videos not correctly resizing in recent works carousel layout
+- fixed usage of removed image sizes
+- fixed videos in lightbox not being displayed
+- fixed WPML and PolyLang "All Languages" theme options not being saved to all languages
+- fixed WPML performance issue when string translation plugin is active
+- fixed font preview in theme options not working for all fonts
+- fixed "Lato" google font weight selection not being correct
+- fixed custom fonts not working in Internet Explorer
+- fixed a Chrome rendering bug in titles on events listing page
+- fixed Events Calendar issue where the border color affected calendar backgrounds
+- fixed number of portfolio item option being set to 0, not displaying all posts
+- fixed Avada Patcher for multisite setups
+- fixed Chrome issue where page was reloaded before anchor scrolling
+- fixed classic shop demo main menu shop button link for demo import
+- fixed button border color not being applied to main menu buttons
+- fixed social media theme options order not being applied to the social media widget
+- fixed display issue with Sermon Manager plugin
+- fixed image frame element images being wrongly rescaled if a lightbox image is used
+- fixed a rare logo issue, where dimensions are wrong because a WP thumbnail image is used
+- fixed content box elements link target not working correctly sometimes
+- fixed contact page map with custom style always having overlay color
+- fixed RTL positioning issue with menu alignment for headers v4 and v5
+- fixed typo avada-header.js
+- fixed a few PHP warnings
+
+
+-----------------------------------------------------------------------------------------
 Version 4.0.1 - April 18th, 2016
 -----------------------------------------------------------------------------------------
+
 
  - fixed maintenance mode preventing backend access on theme update
  - fixed some Theme Optins UI elemnets (like drag sliders, typography fields, code fields) not working

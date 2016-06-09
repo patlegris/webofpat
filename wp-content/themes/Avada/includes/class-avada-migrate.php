@@ -274,9 +274,9 @@ class Avada_Migrate extends Avada_Upgrade {
 							<?php
 							$migration_link = sprintf( '<a class="avada-migration-link" href="https://theme-fusion.com/knowledgebase/avada-v4-migration" target="_blank" title="%s">%s</a>', esc_html__( 'Migration Information' ), esc_html__( 'link' ) );
 							if ( ! empty( $this->available_languages ) ) {
-								printf( esc_html__( 'We have an amazing new update in store for you! Avada 4.0 now includes a new options panel powered by the AvadaRedux Framework. To complete the migration, we have backed up your existing theme options in your database, made a copy and then securely converted. If you have a multi-lingual site, each language will be updated individually one after another. For more detailed information, please visit this %s. Thank you for choosing Avada!', 'Avada' ), $migration_link );
+								printf( esc_html__( 'We have an amazing new update in store for you! Avada 4.0 now includes a new options panel powered by the Redux Framework. To complete the migration, we have backed up your existing theme options in your database, made a copy and then securely converted. If you have a multi-lingual site, each language will be updated individually one after another. For more detailed information, please visit this %s. Thank you for choosing Avada!', 'Avada' ), $migration_link );
 							} else {
-								printf( esc_html__( 'We have an amazing new update in store for you! Avada 4.0 now includes a new options panel powered by the AvadaRedux Framework. To complete the migration, we have backed up your existing theme options in your database, made a copy and then securely converted. For more detailed information, please visit this %s. Thank you for choosing Avada!', 'Avada' ), $migration_link );
+								printf( esc_html__( 'We have an amazing new update in store for you! Avada 4.0 now includes a new options panel powered by the Redux Framework. To complete the migration, we have backed up your existing theme options in your database, made a copy and then securely converted. For more detailed information, please visit this %s. Thank you for choosing Avada!', 'Avada' ), $migration_link );
 							}
 							?>
 						</div>

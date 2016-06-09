@@ -3,6 +3,15 @@
  * This file contains typography styles for The Events Calendar plugin
  *
  */
+ 
+ function avada_events_calendar_body_typography( $typography_elements ){
+    if ( class_exists( 'Tribe__Events__Main' ) ) {
+		$typography_elements['size'][]   = '.tribe-events-loop .tribe-events-event-meta';
+	}
+	
+    return $typography_elements;
+}
+add_filter( 'avada_body_typography_elements', 'avada_events_calendar_body_typography' );	
 
 // The Events Calendar css classes that inherit Avada's H3 typography settings
 function avada_events_calendar_h3_typography( $typography_elements ){

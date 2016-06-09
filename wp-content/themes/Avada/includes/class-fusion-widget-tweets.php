@@ -7,7 +7,7 @@ class Fusion_Widget_Tweets extends WP_Widget {
 		$widget_ops = array( 'classname' => 'tweets', 'description' => '' );
 		$control_ops = array( 'id_base' => 'tweets-widget' );
 
-		parent::__construct('tweets-widget', 'Avada: Twitter', $widget_ops, $control_ops);
+		parent::__construct( 'tweets-widget', 'Avada: Twitter', $widget_ops, $control_ops );
 
 	}
 
@@ -301,7 +301,7 @@ class Fusion_Widget_Tweets extends WP_Widget {
 
 		?>
 			<div style="overflow:hidden">
-				<?php if ( 'twitter_style' == $widget_type ): ?>
+				<?php if ( 'twitter_style' == $widget_type ) :  ?>
 					<a class="twitter-timeline" data-dnt="true" href="https://twitter.com/<?php echo $twitter_id; ?>" data-widget-id="<?php echo $widget_id; ?>" data-tweet-limit = "<?php echo $count; ?>" data-width="<?php echo $width; ?>" data-height="<?php echo $height; ?>" width="<?php echo $width; ?>" height="<?php echo $height; ?>" data-theme="<?php echo $theme; ?>" data-link-color="<?php echo $link_color; ?>" data-border-color="<?php echo $border_color; ?>" data-chrome="<?php echo $chrome; ?>">Twitter Tweets</a>
 				<?php else : ?>
 					<a class="twitter-timeline" data-dnt="true" href="https://twitter.com/<?php echo $twitter_id; ?>" data-widget-id="<?php echo $widget_id; ?>">Twitter Tweets</a>
@@ -365,8 +365,8 @@ class Fusion_Widget_Tweets extends WP_Widget {
 
 		extract( $widget_params );
 
-		$transName = 'list_tweets_' . $widget_id;	
-		$tweets_body = get_transient( $transName );
+		$trans_name  = 'tweets_' . $widget_id;
+		$tweets_body = get_transient( $trans_name );
 
 		if ( ! $tweets_body ) {
 			$token = get_option( 'cfTwitterToken_' . $widget_id );
@@ -378,7 +378,7 @@ class Fusion_Widget_Tweets extends WP_Widget {
 
 				// Preparing credentials
 				$credentials = $consumer_key . ':' . $consumer_secret;
-				$toSend = base64_encode( $credentials );
+				$to_send     = base64_encode( $credentials );
 
 				// Http post arguments
 				$args = array(
@@ -386,7 +386,7 @@ class Fusion_Widget_Tweets extends WP_Widget {
 					'httpversion' => '1.1',
 					'blocking'    => true,
 					'headers'     => array(
-						'Authorization' => 'Basic ' . $toSend,
+						'Authorization' => 'Basic ' . $to_send,
 						'Content-Type'  => 'application/x-www-form-urlencoded;charset=UTF-8',
 					),
 					'body' => array(
@@ -411,8 +411,8 @@ class Fusion_Widget_Tweets extends WP_Widget {
 				'httpversion' => '1.1',
 				'blocking'    => true,
 				'headers'     => array(
-					'Authorization' => "Bearer $token"
-				)
+					'Authorization' => "Bearer $token",
+				),
 			);
 
 			add_filter( 'https_ssl_verify', '__return_false' );
@@ -420,7 +420,8 @@ class Fusion_Widget_Tweets extends WP_Widget {
 			$response = wp_remote_get( $api_url, $args );
 			$tweets_body = wp_remote_retrieve_body( $response );
 
-			set_transient( $transName, $tweets_body, 600 );
+			set_transient( $trans_name, $tweets_body, 900 );
+
 
 		}
 
@@ -442,16 +443,15 @@ class Fusion_Widget_Tweets extends WP_Widget {
 								<?php foreach ( $tweets as $tweet ) : ?>
 									<li class="jtwt_tweet">
 										<p class="jtwt_tweet_text">
-											<?php
-											$latestTweet = $this->tweet_get_html( $tweet );
-											echo $latestTweet;
-											?>
+											<?php $latest_tweet = $this->tweet_get_html( $tweet ); ?>
+											<?php if ( ! $latest_tweet ) : ?>
+												<?php continue; ?>
+											<?php endif; ?>
+											<?php echo $latest_tweet; ?>
 										</p>
-										<?php
-										$twitterTime = strtotime( $tweet['created_at'] );
-										$timeAgo = $this->ago( $twitterTime );
-										?>
-										<a href="http://twitter.com/<?php echo $tweet['user']['screen_name']; ?>/statuses/<?php echo $tweet['id_str']; ?>" class="jtwt_date"><?php echo $timeAgo; ?></a>
+										<?php $twitter_time = strtotime( $tweet['created_at'] ); ?>
+										<?php $time_ago     = $this->ago( $twitter_time ); ?>
+										<a href="http://twitter.com/<?php echo $tweet['user']['screen_name']; ?>/statuses/<?php echo $tweet['id_str']; ?>" class="jtwt_date"><?php echo $time_ago; ?></a>
 									</li>
 								<?php endforeach; ?>
 							</ul>
@@ -464,21 +464,25 @@ class Fusion_Widget_Tweets extends WP_Widget {
 		}
 	}
 
-	/*
-	* Converts the tweet text into a HTML formatted string, incl. links for URLs, Hashtags and users
-	*
-	* @param string $tweet         The tweet text
-	* @param boolean $links     Flag if link tags for URLs should be added
-	* @param boolean $users     Flag if link tags for users should be added
-	* @param boolean $hashtags     Flag if link tags for hashtags should be added
-	* @param boolean $media     Flag if link tags for media should be added
-	*
-	* @return string             The HTML formatted tweet text
-	*/
+	/**
+	 * Converts the tweet text into a HTML formatted string, incl. links for URLs, Hashtags and users.
+	 *
+	 * @param string $tweet      The tweet text
+	 * @param boolean $links     Flag if link tags for URLs should be added.
+	 * @param boolean $users     Flag if link tags for users should be added.
+	 * @param boolean $hashtags  Flag if link tags for hashtags should be added.
+	 * @param boolean $media     Flag if link tags for media should be added.
+	 *
+	 * @return string|false      The HTML formatted tweet text.
+	 */
 	public function tweet_get_html( $tweet, $links = true, $users = true, $hashtags = true, $media = true ) {
 
 		if ( array_key_exists( 'retweeted_status', $tweet ) ) {
 			$tweet = $tweet['retweeted_status'];
+		}
+
+		if ( ! isset( $tweet['text'] ) ) {
+			return false;
 		}
 
 		$return = $tweet['text'];
@@ -494,7 +498,6 @@ class Fusion_Widget_Tweets extends WP_Widget {
 				$temp['replacement'] = '<a href="' . $e['expanded_url'] . '" target="_blank">' . $e['display_url'] . '</a>';
 				$entities[]          = $temp;
 			}
-
 		}
 
 		if ( $users && is_array( $tweet['entities']['user_mentions'] ) ) {
@@ -505,7 +508,6 @@ class Fusion_Widget_Tweets extends WP_Widget {
 				$temp['replacement'] = '<a href="https://twitter.com/' . $e['screen_name'] . '" target="_blank">@' . $e['screen_name'] . '</a>';
 				$entities[]          = $temp;
 			}
-
 		}
 
 		if ( $hashtags && is_array( $tweet['entities']['hashtags'] ) ) {
@@ -516,7 +518,6 @@ class Fusion_Widget_Tweets extends WP_Widget {
 				$temp['replacement'] = '<a href="https://twitter.com/hashtag/' . $e['text'] . '?src=hash" target="_blank">#' . $e['text'] . '</a>';
 				$entities[]          = $temp;
 			}
-
 		}
 
 		if ( $media && array_key_exists( 'media', $tweet['entities'] ) ) {
@@ -527,7 +528,6 @@ class Fusion_Widget_Tweets extends WP_Widget {
 				$temp['replacement'] = '<a href="' . $e['url'] . '" target="_blank">' . $e['display_url'] . '</a>';
 				$entities[]          = $temp;
 			}
-
 		}
 
 		usort( $entities, array( $this, 'sort_tweets' ) );
@@ -559,7 +559,7 @@ class Fusion_Widget_Tweets extends WP_Widget {
 			if ( is_array( $start ) ) {
 				$start = array_slice( $start, 0, $num );
 				foreach ( $start as $key => $value ) {
-					$start[$key] = is_int( $value ) ? $value : 0;
+					$start[ $key ] = is_int( $value ) ? $value : 0;
 				}
 			} else {
 				$start = array_pad( array( $start ), $num, $start );
@@ -571,7 +571,7 @@ class Fusion_Widget_Tweets extends WP_Widget {
 			} elseif ( is_array( $length ) ) {
 				$length = array_slice( $length, 0, $num );
 				foreach ( $length as $key => $value ) {
-					$length[$key] = isset( $value ) ? ( is_int( $value ) ? $value : $num ) : 0;
+					$length[ $key ] = isset( $value ) ? ( is_int( $value ) ? $value : $num ) : 0;
 				}
 			} else {
 				$length = array_pad( array( $length ), $num, $length );
@@ -582,7 +582,7 @@ class Fusion_Widget_Tweets extends WP_Widget {
 		}
 
 		preg_match_all( '/./us', (string) $string, $smatches );
-		preg_match_all('/./us', (string) $replacement, $rmatches );
+		preg_match_all( '/./us', (string) $replacement, $rmatches );
 		if ( null === $length ) {
 			$length = mb_strlen( $string );
 		}
@@ -618,18 +618,18 @@ class Fusion_Widget_Tweets extends WP_Widget {
 		$difference = $now - $time;
 		$tense = __( 'ago', 'Avada' );
 
-		for ( $j = 0; $difference >= $lengths[$j] && $j < count( $lengths ) -1; $j++ ) {
-			$difference /= $lengths[$j];
+		for ( $j = 0; $difference >= $lengths[ $j ] && $j < count( $lengths ) -1; $j++ ) {
+			$difference /= $lengths[ $j ];
 		}
 
 		$difference = round( $difference );
 
 		if ( 1 != $difference ) {
-			$periods[$j] = $periods_plural[$j];
+			$periods[ $j ] = $periods_plural[ $j ];
 		}
 
-		return sprintf( '%s %s %s', $difference, $periods[$j], $tense );
+		return sprintf( '%s %s %s', $difference, $periods[ $j ], $tense );
 	}
 }
 
-// Omit closing PHP tag to avoid "Headers already sent" issues.
+/* Omit closing PHP tag to avoid "Headers already sent" issues. */

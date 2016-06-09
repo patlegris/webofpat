@@ -45,6 +45,7 @@ rm -f Avada/.editorconfig &>/dev/null
 rm -f Avada/.gitignore &>/dev/null
 rm -f Avada/.gitmodules &>/dev/null
 rm -f Avada/build-release.sh &>/dev/null
+rm -f Avada/circle.yml &>/dev/null
 
 echo "Deleting the fusion-core.zip file from Avada. Don't worry, we'll add it again later."
 # delete the fusion-core zip file. We'll add a fresh copy later

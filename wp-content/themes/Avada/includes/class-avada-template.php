@@ -190,7 +190,9 @@ class Avada_Template {
 		if ( ! Avada()->settings->get( 'status_totop_mobile' ) ) {
 			$classes[] = 'no-mobile-totop';
 		}
-		if ( 'horizontal' == Avada()->settings->get( 'woocommerce_product_tab_design' ) && is_singular( 'product' ) ) {
+		if ( 'horizontal' == Avada()->settings->get( 'woocommerce_product_tab_design' ) && 
+			 ( is_singular( 'product' ) || class_exists( 'Woocommerce' ) && ( is_account_page() || is_checkout() ) )
+		) {
 			$classes[] = 'woo-tabs-horizontal';
 		}
 
@@ -263,9 +265,9 @@ class Avada_Template {
 			if ( 'None' != $sidebar_1 && 'None' != $sidebar_2 ) {
 				$classes[] = 'double-sidebars';
 			}
-		}
-
-		if ( ( ( class_exists( 'bbPress' ) && is_bbpress() ) || ( class_exists( 'BuddyPress' ) && is_buddypress() ) ) && ( class_exists( 'bbPress' ) && ! bbp_is_forum_archive() ) && ( class_exists( 'bbPress' ) && ! bbp_is_topic_archive() ) && ! ( class_exists( 'bbPress' ) && bbp_is_user_home() ) && ( class_exists( 'bbPress' ) && ! bbp_is_search() ) ) {
+		}		
+		
+		if ( ( ( class_exists( 'bbPress' ) && is_bbpress() ) || ( class_exists( 'BuddyPress' ) && is_buddypress() ) ) && ! ( class_exists( 'bbPress' ) && bbp_is_forum_archive() ) && ! ( class_exists( 'bbPress' ) && bbp_is_topic_archive() ) && ! ( class_exists( 'bbPress' ) && bbp_is_user_home() ) && ! ( class_exists( 'bbPress' ) && bbp_is_search() ) ) {
 			if ( Avada()->settings->get( 'bbpress_global_sidebar' ) ) {
 				if ( 'None' != $sidebar_1 ) {
 					$classes[] = 'has-sidebar';

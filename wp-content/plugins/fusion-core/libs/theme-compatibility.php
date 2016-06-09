@@ -6,6 +6,7 @@ class Avada_Compatibility {
 		$this->settings = new Avada_Compatibility_Settings();
 
 		require_once( 'class-avada-sanitize.php' );
+		require_once( 'class-avada-color.php' );
 	}
 }
 

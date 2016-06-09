@@ -611,7 +611,7 @@ if ( ! class_exists( 'AvadaReduxFramework_typography' ) ) {
 			}
 
 			if ( ! empty( $subsets ) ) {
-				$link .= "&amp;subset=" . implode( ',', $subsets );
+				$link .= "&subset=" . implode( ',', $subsets );
 			}
 
 
@@ -625,6 +625,16 @@ if ( ! class_exists( 'AvadaReduxFramework_typography' ) ) {
 		 * @since AvadaReduxFramework 3.1.8
 		 */
 		function makeGoogleWebfontString( $fonts ) {
+
+			$custom_fonts = Avada()->settings->get( 'custom_fonts' );
+			if ( ! empty( $custom_fonts ) && isset( $custom_fonts['name'] ) ) {
+				foreach ( $fonts as $key => $value ) {
+					if ( in_array( $key, $custom_fonts['name'] ) ) {
+						unset( $fonts[ $key ] );
+					}
+				}
+			}
+
 			$link    = "";
 			$subsets = array();
 
@@ -653,7 +663,7 @@ if ( ! class_exists( 'AvadaReduxFramework_typography' ) ) {
 			}
 
 			if ( ! empty( $subsets ) ) {
-				$link .= "&amp;subset=" . implode( ',', $subsets );
+				$link .= "&subset=" . implode( ',', $subsets );
 			}
 
 			return "'" . $link . "'";

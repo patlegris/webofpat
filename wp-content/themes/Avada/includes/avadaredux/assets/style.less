@@ -62,8 +62,21 @@
     background-color: @color-back-2;
     .avadaredux-group-tab {
       padding: 0 30px;
+      
+      &.accordionsChecked {
+      	> .form-table {
+      		display: none;
+      	}
+      }
+      
       .avadaredux-accordian-wrap {
         padding: 10px 25px;
+        
+        table {
+			tr:last-of-type {
+				display: none !important;
+			}
+        }
       }
       .avadaredux-accordion-field {
         &:last-of-type {
@@ -525,6 +538,7 @@
         }
         .iris-picker {
           width: ~'calc(100% - 2px)' !important;
+          min-width: 356px;
           .iris-square,
           .iris-slider,
           .iris-square-inner,
@@ -1293,6 +1307,7 @@
 
 	.iris-picker {
 		width: 310px !important;
+		min-width: 0;
 
 		.iris-picker-inner .iris-square {
 			width: 200px !important;

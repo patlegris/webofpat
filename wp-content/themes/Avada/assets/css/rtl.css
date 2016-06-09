@@ -485,6 +485,30 @@ Table of Contents
   margin-left: 0;
   margin-right: 12px;
 }
+.rtl .fusion-header-v4.fusion-header-menu-align-left .fusion-main-menu .fusion-menu,
+.rtl .fusion-header-v5.fusion-header-menu-align-left .fusion-main-menu .fusion-menu {
+  float: left;
+}
+.rtl .fusion-header-v4.fusion-header-menu-align-left .fusion-main-menu > ul > li,
+.rtl .fusion-header-v5.fusion-header-menu-align-left .fusion-main-menu > ul > li {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+}
+.rtl .fusion-header-v4.fusion-header-menu-align-right .fusion-main-menu > ul > li,
+.rtl .fusion-header-v5.fusion-header-menu-align-right .fusion-main-menu > ul > li {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+}
+.rtl .fusion-header-v4.fusion-header-menu-align-right .fusion-main-menu > ul > li:first-child,
+.rtl .fusion-header-v5.fusion-header-menu-align-right .fusion-main-menu > ul > li:first-child {
+  padding-right: 0;
+}
+.rtl .fusion-menu-login-box .fusion-login-box-submit,
+.rtl .fusion-menu-login-box .fusion-menu-login-box-register {
+  float: left;
+}
 .rtl .fusion-megamenu-wrapper {
   left: auto;
   right: 0;
@@ -1010,9 +1034,6 @@ Table of Contents
   margin-left: 25px;
   margin-right: 0;
 }
-.rtl .woocommerce .avada-shipping-calculator-form .button .woocommerce .shipping-calculator-form .button {
-  float: left;
-}
 .rtl .cart_totals table td {
   text-align: left;
 }
@@ -1080,28 +1101,72 @@ Table of Contents
 .rtl .woocommerce #customer_login .login .lost_password {
   float: right;
 }
-.rtl .myaccount_user_container .username {
+.rtl .myaccount_user_container .username .hello,
+.rtl .myaccount_user_container .username .not-user {
   padding-left: 0;
   padding-right: 25px;
 }
-.rtl .myaccount_user_container .username:before {
+.rtl .myaccount_user_container .username .hello:before {
   margin-left: 0;
   margin-right: -25px;
 }
-.rtl .myaccount_user_container span {
+.rtl .woocommerce-side-nav,
+.rtl .woocommerce-MyAccount-navigation {
+  float: right;
+}
+.rtl .woocommerce-side-nav li.active a:after,
+.rtl .woocommerce-MyAccount-navigation ul li.is-active a:after {
+  content: '\f104';
+  margin-left: 0px;
+  margin-right: 5px;
+}
+.rtl .woocommerce-MyAccount-content {
+  margin-left: 0;
+  margin-right: 240px;
+}
+.rtl .woocommerce-MyAccount-content .woocommerce-Addresses .edit:before {
+  vertical-align: bottom;
+  font-family: 'icomoon';
+  content: '\f104';
+  margin-right: 5px;
+}
+.rtl .woocommerce-MyAccount-content .woocommerce-Addresses .edit:after {
+  content: '';
+}
+.rtl .woocommerce-MyAccount-content .woocommerce-info .woocommerce-Button {
+  padding-left: 10px;
+  padding-right: 0;
+}
+.rtl form .woocommerce-Button,
+.rtl form button {
+  float: left;
+}
+.rtl .avada-myaccount-user > span {
   border-right: 0;
   border-left: 1px solid;
 }
-.rtl .myaccount_user_container span:last-child {
+.rtl .avada-myaccount-user > span:last-child {
   border-left: 0;
   padding-left: 0;
   padding-right: 20px;
 }
-.rtl .myaccount_user_container .view-cart a {
+.rtl .avada-myaccount-user .username .hello {
   padding-left: 0;
   padding-right: 25px;
 }
-.rtl .myaccount_user_container .view-cart a:before {
+.rtl .avada-myaccount-user .username .hello:before {
+  margin-left: 0;
+  margin-right: -25px;
+}
+.rtl .avada-myaccount-user .username .not-user {
+  padding-left: 0;
+  padding-right: 25px;
+}
+.rtl .avada-myaccount-user .view-cart a {
+  padding-left: 0;
+  padding-right: 25px;
+}
+.rtl .avada-myaccount-user .view-cart a:before {
   margin-left: 0;
   margin-right: -25px;
 }
@@ -1125,18 +1190,11 @@ Table of Contents
 .rtl .my_account_orders .order-status {
   text-align: right;
 }
-.rtl .my_account_orders .order-actions a:after {
+.rtl .my_account_orders .order-actions a:after,
+.rtl .woocommerce-MyAccount-downloads .download-actions a:after {
   content: '\f104';
   margin-left: 0;
   margin-right: 10px;
-}
-.rtl .woocommerce-side-nav {
-  float: right;
-}
-.rtl .woocommerce-side-nav li.active a:after {
-  content: '\f104';
-  margin-left: 0px;
-  margin-right: 5px;
 }
 .rtl .woocommerce .address .edit:after {
   content: '\f104';
@@ -1381,6 +1439,9 @@ Table of Contents
 .rtl .woocommerce .shipping-calculator-form .button {
   float: left;
 }
+.rtl .woocommerce .avada-shipping-calculator-form .fusion-column-last {
+  margin-bottom: 20px;
+}
 .rtl .shipping-calculator-form-nohide .fusion-button {
   float: left;
 }
@@ -1391,6 +1452,10 @@ Table of Contents
 }
 .rtl .cart-totals-buttons {
   float: right;
+}
+.rtl .cart-collaterals .cart_totals .fusion-button,
+.rtl .cart-collaterals .cart_totals .checkout-button {
+  float: left;
 }
 .rtl .cart-totals-container .fusion-button {
   float: left;

@@ -40,7 +40,7 @@ class Avada_Scripts {
 		if ( Avada()->settings->get( 'status_gmap' ) ) {
 			$map_api = 'http' . ( ( is_ssl() ) ? 's' : '' ) . '://maps.googleapis.com/maps/api/js?language=' . substr( get_locale(), 0, 2 );
 			wp_register_script( 'google-maps-api', $map_api, array(), $theme_info->get( 'Version' ), false );
-			wp_register_script( 'google-maps-infobox', 'http' . ( ( is_ssl() ) ? 's' : '' ) . '://google-maps-utility-library-v3.googlecode.com/svn/trunk/infobox/src/infobox_packed.js', array(), $theme_info->get( 'Version' ), false );
+			wp_register_script( 'google-maps-infobox', get_template_directory_uri() . '/assets/js/infobox_packed.js', array(), $theme_info->get( 'Version' ), false );
 		}
 
 		// Fix for WPML + Woocommerce
@@ -309,8 +309,8 @@ class Avada_Scripts {
 			'lightbox_slideshow_speed'      => (int) Avada()->settings->get( 'lightbox_slideshow_speed' ),
 			'lightbox_social'               => Avada()->settings->get( 'lightbox_social' ),
 			'lightbox_title'                => Avada()->settings->get( 'lightbox_title' ),
-			'lightbox_video_height'         => Avada()->settings->get( 'lightbox_video_dimensions', 'height' ),
-			'lightbox_video_width'          => Avada()->settings->get( 'lightbox_video_dimensions', 'width' ),
+			'lightbox_video_height'         => Avada_Sanitize::number( Avada()->settings->get( 'lightbox_video_dimensions', 'height' ) ),
+			'lightbox_video_width'          => Avada_Sanitize::number( Avada()->settings->get( 'lightbox_video_dimensions', 'width' ) ),
 			'logo_alignment'                => Avada()->settings->get( 'logo_alignment' ),
 			'logo_margin_bottom'            => Avada()->settings->get( 'logo_margin', 'bottom' ),
 			'logo_margin_top'               => Avada()->settings->get( 'logo_margin', 'top' ),
@@ -347,13 +347,8 @@ class Avada_Scripts {
 			'typography_sensitivity'        => Avada()->settings->get( 'typography_sensitivity' ),
 			'typography_factor'             => Avada()->settings->get( 'typography_factor' ),
 			'woocommerce_shop_page_columns' => Avada()->settings->get( 'woocommerce_shop_page_columns' ),
+			'woocommerce_checkout_error'	=>  __( 'Not all fields have been filled in correctly.', 'Avada' ),
 		);
-
-		if ( class_exists( 'WooCommerce' ) ) {
-			if ( version_compare( $woocommerce->version, '2.3', '>=' ) ) {
-				$local_variables['woocommerce_23'] = true;
-			}
-		}
 
 		$local_variables['side_header_width'] = ( 'Top' != Avada()->settings->get( 'header_position' ) ) ? intval( Avada()->settings->get( 'side_header_width' ) ) : '0';
 

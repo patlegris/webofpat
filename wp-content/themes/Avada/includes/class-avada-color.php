@@ -181,6 +181,10 @@ if ( ! class_exists( 'Avada_Color' ) ) {
 				'yellowgreen'          => '9ACD32'
 			);
 
+			if ( is_array( $color ) ) {
+				$color = $color[0];
+			}
+
 			// Remove any spaces and special characters before and after the string
 			$color = trim( $color );
 			// Check if the color is a standard word-color.
@@ -300,16 +304,18 @@ if ( ! class_exists( 'Avada_Color' ) ) {
 
 			// Remove parts of the string
 			$color = str_replace( array( 'rgba', '(', ')', ' ' ), '', $color );
+
 			if ( is_array( $color ) ) {
 				return ( isset( $color['color'] ) ) ? $color['color'] : '#ffffff';
 			}
 
 			// if not rgba, sanitize as HEX
-			if ( false !== strpos( $color, 'rgba' ) ) {
+			if ( false !== strpos( $color, '#' ) ) {
 				return self::sanitize_hex( $color );
 			}
 			// Convert to array
 			$color = explode( ',', $color );
+		
 			// This is not a valid rgba definition, so return white.
 			if ( 4 != count( $color ) ) {
 				return '#ffffff';
@@ -321,9 +327,9 @@ if ( ! class_exists( 'Avada_Color' ) ) {
 			$alpha = $color[3];
 
 			// Make sure all colors are 2 digits
-			$red   = ( 1 == strlen( $red ) ) ? $red . $red : $red;
-			$green = ( 1 == strlen( $green ) ) ? $green . $green : $green;
-			$blue  = ( 1 == strlen( $blue ) ) ? $blue . $blue : $blue;
+			$red   = ( 1 == strlen( $red ) ) ? '0' . $red : $red;
+			$green = ( 1 == strlen( $green ) ) ? '0' . $green : $green;
+			$blue  = ( 1 == strlen( $blue ) ) ? '0' . $blue : $blue;
 
 			// Combine hex parts
 			$hex = $red . $green . $blue;
@@ -605,6 +611,5 @@ if ( ! class_exists( 'Avada_Color' ) ) {
 			return round( $lum_diff, 2 );
 
 		}
-
 	}
 }

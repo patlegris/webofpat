@@ -6,7 +6,7 @@
 
 <div class="fusion-mobile-nav-holder<?php echo $mobile_menu_text_align; ?>"></div>
 
-<?php if ( has_nav_menu( 'sticky_navigation' ) ) : ?>
+<?php if ( has_nav_menu( 'sticky_navigation' ) && 'Top' == Avada()->settings->get( 'header_position' ) ) : ?>
 	<div class="fusion-mobile-nav-holder<?php echo $mobile_menu_text_align; ?> fusion-mobile-sticky-nav-holder"></div>
 <?php endif;
 

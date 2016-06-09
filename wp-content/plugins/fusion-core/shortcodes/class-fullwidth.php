@@ -39,6 +39,9 @@
 		function render( $args, $content = '' ) {
 			global $smof_data;
 
+			global $fusion_fwc_type;
+			$fusion_fwc_type = '';
+
 			$args = $this->deprecated_args( $args );
 
 			$defaults = FusionCore_Plugin::set_shortcode_defaults(
@@ -106,7 +109,7 @@
 				}
 			}
 
-			if ( is_page_template( '100-width.php' ) || is_page_template( 'blank.php' ) || ( '1' == fusion_get_option( 'portfolio_width_100', 'portfolio_width_100', $c_pageID ) || 'yes' == fusion_get_option( 'portfolio_width_100', 'portfolio_width_100', $c_pageID ) && 'avada_portfolio' == get_post_type( $c_pageID ) ) || ( avada_is_portfolio_template() && 'yes' == get_post_meta( $c_pageID, 'pyre_portfolio_width_100', true ) ) || '100-width.php' == $page_template ) {
+			if ( '100%' == Avada()->settings->get( 'site_width' ) || is_page_template( '100-width.php' ) || is_page_template( 'blank.php' ) || ( '1' == fusion_get_option( 'portfolio_width_100', 'portfolio_width_100', $c_pageID ) || 'yes' == fusion_get_option( 'portfolio_width_100', 'portfolio_width_100', $c_pageID ) && 'avada_portfolio' == get_post_type( $c_pageID ) ) || ( avada_is_portfolio_template() && 'yes' == get_post_meta( $c_pageID, 'pyre_portfolio_width_100', true ) ) || '100-width.php' == $page_template ) {
 
 				$width_100 = true;
 			}
@@ -121,7 +124,7 @@
 				} else {
 					$defaults['padding_left'] = '0px';
 				}
-				
+
 				// Set the correct paddings and negative margins for the "100% Width Left/Right Padding" option
 				$hundredplr_padding = Avada_Sanitize::size( $defaults['padding_left'] );
 				$hundredplr_padding_value = Avada_Sanitize::number( $hundredplr_padding );
@@ -143,7 +146,7 @@
 				} else {
 					$defaults['padding_right'] = '0px';
 				}
-				
+
 				// Set the correct paddings and negative margins for the "100% Width Left/Right Padding" option
 				$hundredplr_padding = Avada_Sanitize::size( $defaults['padding_right'] );
 				$hundredplr_padding_value = Avada_Sanitize::number( $hundredplr_padding );
@@ -152,7 +155,7 @@
 				if ( $hundredplr_padding_unit == '%' ) {
 					$fullwidth_max_width = 100 - 2 * $hundredplr_padding_value;
 					$defaults['padding_right'] = $hundredplr_padding_value / $fullwidth_max_width * 100 . $hundredplr_padding_unit;
-				}				
+				}
 			}
 
 			if( strpos( $defaults['padding_left'], '%' ) === false && strpos( $defaults['padding_left'], 'px' ) === false ) {
@@ -267,6 +270,8 @@
 
             if( $defaults['hundred_percent'] == 'yes' && $width_100 == true ) {
 
+            	$fusion_fwc_type = 'fullwidth';
+
 				$styles .= '<style type="text/css" scoped="scoped">';
 
 
@@ -296,6 +301,9 @@
 
                 $styles .= '</style>';
             } else {
+
+            	$fusion_fwc_type = 'contained';
+
                 if( ! $site_width_percent ) {
                     $styles .= '<style type="text/css" scoped="scoped">';
 
@@ -315,6 +323,8 @@
 			}
 
 			$this->fwc_counter++;
+
+			$fusion_fwc_type = '';
 
 			return $html;
 

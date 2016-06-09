@@ -21,7 +21,7 @@ class Avada {
 	 * @access public
 	 * @var string
 	 */
-	public static $version = '4.0.1';
+	public static $version = '4.0.3';
 
 	/**
 	 * The original option name.
@@ -63,6 +63,15 @@ class Avada {
 	 * @var bool
 	 */
 	public static $lang_applied = false;
+
+	/**
+	 * Dertermine if the current language is set to "all".
+	 *
+	 * @static
+	 * @access private
+	 * @var bool
+	 */
+	private static $language_is_all = false;
 
 	/**
 	 * Determine if we're currently upgrading/migration options.
@@ -342,6 +351,32 @@ class Avada {
 		}
 	}
 
+	/**
+	 * Change the private $language_is_all property.
+	 *
+	 * @static
+	 * @access public
+	 * @param bool $is_all Whether we're on the "all" language option or not.
+	 * @return null|void
+	 */
+	public static function set_language_is_all( $is_all ) {
+		if ( true === $is_all ) {
+			self::$language_is_all = true;
+			return;
+		}
+		self::$language_is_all = false;
+	}
+
+	/**
+	 * Get the private $language_is_all property.
+	 *
+	 * @static
+	 * @access public
+	 * @return bool
+	 */
+	public static function get_language_is_all() {
+		return self::$language_is_all;
+	}
 }
 
 // Omit closing PHP tag to avoid "Headers already sent" issues.

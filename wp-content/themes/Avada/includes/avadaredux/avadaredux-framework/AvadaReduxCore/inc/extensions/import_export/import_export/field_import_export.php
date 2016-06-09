@@ -89,7 +89,11 @@
 				// $this->field['type'] && $this->field['id'] is sanitized in the AvadaReduxFramework class, no need to re-sanitize it.
 				?>
 					<h4><?php esc_html_e( 'Import Options', 'avadaredux-framework' ); ?></h4>
-
+					<div class="avadaredux-section-desc">
+						<p class="description">
+							<?php echo esc_html( apply_filters( 'avadaredux-import-main-description', __( 'Important: Only Avada 4.0+ theme options can be imported. You cannot import theme options from Avada versions older than 4.0.', 'avadaredux-framework' ) ) ) ?>
+						</p>
+					</div>					
 					<p>
 						<a href="javascript:void(0);" id="avadaredux-import-code-button" class="button-secondary">
 							<?php

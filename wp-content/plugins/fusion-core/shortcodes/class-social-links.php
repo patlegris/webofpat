@@ -150,7 +150,7 @@ class FusionSC_SocialLinks {
 		$attr['target'] = self::$args['linktarget'];
 
 		if ( $args['social_network'] == 'mail' ) {
-			$link = ( 'http' === substr(  $args['social_link'], 0, 4 ) ) ? $args['social_link'] : 'mailto:' . str_replace( 'mailto:', '', $args['social_link'] );
+			$link = ( 'http' === substr(  $args['social_link'], 0, 4 ) ) ? $args['social_link'] : 'mailto:' . antispambot( str_replace( 'mailto:', '', $args['social_link'] ) );
 			$attr['target'] = '_self';
 		}
 

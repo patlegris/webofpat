@@ -335,6 +335,8 @@
     //display: block !important;
     padding: 0;
     z-index: 100000;
+    border: none;
+    .box-shadow( 3px 4px 21px rgba(0, 0, 0, 0.38) );
 
     .tribe-events-event-body {
         padding: 13px 22px 5px 22px;
@@ -499,6 +501,7 @@
   }
 
   .tribe-events-content {
+  	width: auto;
     padding: 30px;
   }
 
@@ -553,8 +556,14 @@
   }
 }
 
-.tribe-events-list .time-details, .tribe-events-list .tribe-events-venue-details {
+.tribe-events-list .time-details, 
+.tribe-events-list .tribe-events-venue-details {
   line-height: 1.5;
+}
+
+.tribe-events-list .tribe-events-venue-details {
+    font-style: italic;
+    font-weight: 400;
 }
 
 
@@ -770,6 +779,8 @@
 		> li {
 			margin-right: 3.5%;
 			width: 31%;
+			border: none;
+			background: none;
 
 			&:last-child {
 				margin-right: 0;
@@ -1249,6 +1260,7 @@
 
 .tribe-events-single ul.tribe-related-events li .tribe-related-event-info {
   line-height: 1.5;
+  padding: 1em 0 0;
 }
 
 
@@ -1358,6 +1370,45 @@
     border-width: 18px;
     margin-top: -18px;
   }
+}
+
+// Events Tickets
+.tribe-events-tickets {
+	table-layout: fixed;
+
+	.button {
+		margin-top: 10px;
+		
+		.fusion-body & {
+			margin-left: 0;
+		}
+	}
+	
+	tr {
+		.tribe-ticket,
+		.tickets_name,
+		.tickets_description {
+			display: table-cell;
+			padding: 10px;
+			width: 33%;
+			border: 1px solid;
+		}
+		
+		.tribe-ticket-quantity {
+			max-width: 100%;
+		}
+		
+		.tribe-tickets-attendees {
+			padding-top: 10px;
+		}
+	}
+	
+	.tribe-tickets-full-name-row,
+	.tribe-tickets-email-row {
+		input {
+			margin: 0 5px;
+		}
+	}
 }
 
 // Woocommerce Tickets

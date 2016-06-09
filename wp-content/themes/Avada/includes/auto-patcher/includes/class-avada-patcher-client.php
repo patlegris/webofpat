@@ -39,7 +39,7 @@ class Avada_Patcher_Client {
 	 * @return bool|array
 	 */
 	private function query_patch_server() {
-		$response = wp_remote_get( $this->remote_patches_uri );
+		$response = wp_remote_get( $this->remote_patches_uri, array( 'user-agent' => 'avada-patcher-client' ) );
 		// return false if we couldn't get to the server
 		if ( ! is_array( $response ) ) {
 			return false;
@@ -104,7 +104,8 @@ class Avada_Patcher_Client {
 	 */
 	private function cache_response() {
 		if ( false !== self::$patches && ! empty( self::$patches ) ) {
-			set_site_transient( self::$transient_name, self::$patches, 12 * HOUR_IN_SECONDS );
+			// Cache for 30 minutes
+			set_site_transient( self::$transient_name, self::$patches, 30 * 60 );
 		}
 	}
 

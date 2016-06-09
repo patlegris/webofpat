@@ -72,8 +72,14 @@
 .avadaredux-container #avadaredux-form-wrapper .avadaredux-group-tab {
   padding: 0 30px;
 }
+.avadaredux-container #avadaredux-form-wrapper .avadaredux-group-tab.accordionsChecked > .form-table {
+  display: none;
+}
 .avadaredux-container #avadaredux-form-wrapper .avadaredux-group-tab .avadaredux-accordian-wrap {
   padding: 10px 25px;
+}
+.avadaredux-container #avadaredux-form-wrapper .avadaredux-group-tab .avadaredux-accordian-wrap table tr:last-of-type {
+  display: none !important;
 }
 .avadaredux-container #avadaredux-form-wrapper .avadaredux-group-tab .avadaredux-accordion-field:last-of-type {
   margin-top: 60px;
@@ -495,6 +501,7 @@
 .avadaredux-container #avadaredux-form-wrapper .avadaredux-main .avadaredux-container-color_alpha .iris-picker,
 .avadaredux-container #avadaredux-form-wrapper .avadaredux-main .avadaredux-typography-container .wp-picker-container .iris-picker {
   width: calc(100% - 2px) !important;
+  min-width: 356px;
 }
 .avadaredux-container #avadaredux-form-wrapper .avadaredux-main .avadaredux-container-color .iris-picker .iris-square,
 .avadaredux-container #avadaredux-form-wrapper .avadaredux-main .avadaredux-container-color_alpha .iris-picker .iris-square,
@@ -1620,6 +1627,7 @@
 @media only screen and (min-width: 1200px) and (max-width: 1290px) {
   .avadaredux-container #avadaredux-form-wrapper .avadaredux-main .avadaredux-container-color_alpha .iris-picker {
     width: 310px !important;
+    min-width: 0;
   }
   .avadaredux-container #avadaredux-form-wrapper .avadaredux-main .avadaredux-container-color_alpha .iris-picker .iris-picker-inner .iris-square {
     width: 200px !important;

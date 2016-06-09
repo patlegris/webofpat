@@ -185,6 +185,7 @@ if ( is_admin() ) {
  */
 if ( class_exists( 'WooCommerce' ) ) {
 	include_once( get_template_directory() . '/includes/woo-config.php' );
+	$avada_woocommerce = new Avada_Woocommerce();
 }
 
 /**
@@ -216,7 +217,7 @@ get_template_part( 'templates/header' );
 global $content_width;
 if ( ! is_admin() ) {
 	if ( ! isset( $content_width ) || empty( $content_width ) ) {
-		$content_width = (int) Avada()->layout->get_content_width( 0 );
+		$content_width = (int) Avada()->layout->get_content_width();
 	}
 }
 
@@ -255,26 +256,6 @@ function avada_cat_count_span( $links ) {
 
 remove_action('wp_head', 'adjacent_posts_rel_link_wp_head');
 
-function avada_search_filter( $query ) {
-	if ( is_search() && $query->is_search ) {
-		if ( isset( $_GET ) && 1 < count( $_GET ) ) {
-			return $query;
-		}
-
-		$search_content = Avada()->settings->get( 'search_content' );
-
-		if ( 'Only Posts' == $search_content ) {
-			$query->set('post_type', 'post');
-		} elseif ( 'Only Pages' == $search_content ) {
-			$query->set('post_type', 'page');
-		}
-	}
-	return $query;
-}
-if ( ! is_admin() ) {
-	add_filter( 'pre_get_posts', 'avada_search_filter' );
-}
-
 function is_events_archive() {
 	if ( class_exists( 'Tribe__Events__Main' ) ) {
 		return ( tribe_is_month() || tribe_is_day() || tribe_is_past() || tribe_is_upcoming() || ( class_exists( 'Tribe__Events__Pro__Main' ) && ( tribe_is_week() || tribe_is_photo() || tribe_is_map() ) ) );
@@ -300,19 +281,6 @@ if ( Avada()->settings->get( 'status_opengraph' ) ) {
 	add_filter( 'language_attributes', 'avada_add_opengraph_doctype' );
 	add_action( 'wp_head', 'fusion_insert_og_meta', 5 );
 }
-
-function modify_contact_methods( $profile_fields ) {
-	// Add new fields
-	$profile_fields['author_facebook'] = 'Facebook ';
-	$profile_fields['author_twitter']  = 'Twitter';
-	$profile_fields['author_linkedin'] = 'LinkedIn';
-	$profile_fields['author_dribble']  = 'Dribble';
-	$profile_fields['author_gplus']    = 'Google+';
-	$profile_fields['author_custom']   = 'Custom Message';
-
-	return $profile_fields;
-}
-add_filter( 'user_contactmethods', 'modify_contact_methods' );
 
 /**
  * Modify admin CSS
@@ -628,7 +596,7 @@ function avada_get_sermon_content( $archive = false ) {
 	<?php if ( $archive ) : ?>
 		<?php ob_start(); ?>
 		<?php wpfc_sermon_description(); ?>
-		<?php $description = ( ob_get_clean() ) ? ob_get_clean() : ''; ?>
+		<?php $description = ob_get_clean(); ?>
 		<?php $excerpt_length = fusion_get_theme_option( 'excerpt_length_blog' ); ?>
 
 		<?php $sermon_content .= Avada()->blog->get_content_stripped_and_excerpted( $excerpt_length, $description ); ?>

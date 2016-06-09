@@ -968,7 +968,8 @@ function get_waypoint_offset( $object ) {
 		} else {
 			var $link_hash = ( document.location.hash.substring( 0, 2 )  == '#_' ) ? document.location.hash.replace( '#_', '#' ) : document.location.hash;
 		}
-			var $link_id = ( $link_hash.substring( 0, 2 )  == '#_' ) ? $link_hash.split( '#_' )[1] : $link_hash.split( '#' )[1];
+
+		var $link_id = ( $link_hash.substring( 0, 2 )  == '#_' ) ? $link_hash.split( '#_' )[1] : $link_hash.split( '#' )[1];
 
 		if( $link_hash && jQuery( this ).find( '.nav-tabs li a[href="' + $link_hash + '"]' ).length ) {
 			jQuery( this ).find( '.nav-tabs li' ).removeClass( 'active' );
@@ -1002,7 +1003,7 @@ function get_waypoint_offset( $object ) {
 				}
 			});
 
-			if ( ( $max_height ) && $tallest > $max_height) {
+			if ( ( $max_height ) && $tallest > $max_height ) {
 				$tallest = $max_height;
 			}
 
@@ -1103,7 +1104,7 @@ function get_waypoint_offset( $object ) {
 			var $filters = jQuery( this ).find( '.fusion-filter' ),
 				$filter_active = jQuery( this ).find( '.fusion-active' ),
 				$filter_active_link = $filter_active.children( 'a' ),
-				$filter_active_data_slug =  $filter_active_element.attr( 'data-filter' ).substr( 1 );
+				$filter_active_data_slug = $filter_active_link.attr( 'data-filter' ).substr( 1 );
 
 			// Loop through filters
 			if ( $filters ) {
@@ -1709,7 +1710,9 @@ jQuery( window ).load( function() { // start window_load_1
 	jQuery( '.double-sidebars.woocommerce .social-share > li' ).equalHeights();
 
 	jQuery( '.fusion-fullwidth.fusion-equal-height-columns' ).each( function() {
-		jQuery( this ).find( '.fusion-layout-column .fusion-column-wrapper' ).equalHeights();
+		jQuery( this ).find( '.fusion-layout-column .fusion-column-wrapper' ).not( function( $index, $element ) {
+			return jQuery( $element ).parents( '.fusion-column-wrapper' ).length ? 1 : 0;
+		}).equalHeights();
 	});
 
 	jQuery( '.fusion-layout-column .fusion-column-wrapper' ).fusion_set_bg_img_dims();
@@ -1717,7 +1720,9 @@ jQuery( window ).load( function() { // start window_load_1
 
 	jQuery( window ).on( 'resize', function() {
 		jQuery( '.fusion-fullwidth.fusion-equal-height-columns' ).each( function() {
-			jQuery( this ).find( '.fusion-layout-column .fusion-column-wrapper' ).equalHeights();
+			jQuery( this ).find( '.fusion-layout-column .fusion-column-wrapper' ).not( function( $index, $element ) {
+				return jQuery( $element ).parents( '.fusion-column-wrapper' ).length ? 1 : 0;
+			}).equalHeights();
 		});
 
 		jQuery( '.fusion-layout-column .fusion-column-wrapper' ).fusion_calculate_empty_column_height();
@@ -2073,14 +2078,6 @@ jQuery( document ).ready(function($) { // start document_ready_1
 		$sticky_header_height = get_sticky_header_height();
 	});
 
-	jQuery( '.fusion-menu a:not([href="#"], .fusion-megamenu-widgets-container a, .search-link), .fusion-mobile-nav-item a:not([href="#"], .search-link), .fusion-button:not([href="#"], input, button), .fusion-one-page-text-link:not([href="#"])' ).click( function() {
-		if ( location.pathname.replace( /^\//,'') == this.pathname.replace(/^\//,'') || location.hostname == this.hostname ) {
-			if ( this.hash ) {
-				jQuery( this ).fusion_scroll_to_anchor_target();
-			}
-		}
-	});
-
 	// Ititialize ScrollSpy script
 	jQuery( 'body' ).scrollspy({
 		target: '.fusion-menu',
@@ -2095,27 +2092,31 @@ jQuery( document ).ready(function($) { // start document_ready_1
     	jQuery( 'body' ).data()['bs.scrollspy'].options.offset = parseInt( $adminbar_height + $sticky_header_height + 1 );
     });
 
-	// If an outbound anchor link is clicked make sure the one page scrolling works on page load
-	jQuery('.fusion-menu a[href*="#"]:not([href^="#"]), .fusion-one-page-text-link[href*="#"]:not([href^="#"])' ).on( 'click', function( e ) {
-		// Current path
-		var $current_href = window.location.href.split( '#' ),
-			$current_path = ( $current_href[0].charAt( $current_href[0].length - 1 ) == '/' ) ? $current_href[0] : $current_href[0] + '/',
+	jQuery( '.fusion-menu a:not([href="#"], .fusion-megamenu-widgets-container a, .search-link), .fusion-mobile-nav-item a:not([href="#"], .search-link), .fusion-button:not([href="#"], input, button), .fusion-one-page-text-link:not([href="#"])' ).click( function( e ) {
+		if ( this.hash ) {
+			// Current path
+			var $current_href = window.location.href.split( '#' ),
+				$current_path = ( $current_href[0].charAt( $current_href[0].length - 1 ) == '/' ) ? $current_href[0] : $current_href[0] + '/',
 
-			// Target path
-			$target       = jQuery( this ).attr( 'href' ),
-			$target_array = $target.split( '#' ),
-			$target_id    = ( typeof $target_array[1] !== 'undefined' ) ? $target_array[1] : null,
-			$target_path = $target_array[0],
-			$target_path_last_char = $target_path.substring( $target_path.length - 1, $target_path.length );
+				// Target path
+				$target       = jQuery( this ).attr( 'href' ),
+				$target_array = $target.split( '#' ),
+				$target_id    = ( typeof $target_array[1] !== 'undefined' ) ? $target_array[1] : null,
+				$target_path = $target_array[0],
+				$target_path_last_char = $target_path.substring( $target_path.length - 1, $target_path.length );
 
 			if ( $target_path_last_char != '/' ) {
 				$target_path = $target_path + '/';
 			}
 
-		// If the link is outbound add an underscore right after the hash tag to make sure the link isn't present on the loaded page
-		if  ( $target_path != $current_path && $target_id ) {
 			e.preventDefault();
-			window.location = $target_path + '#_' + $target_id;
+
+			// If the link is outbound add an underscore right after the hash tag to make sure the link isn't present on the loaded page
+			if ( location.pathname.replace( /^\//,'') == this.pathname.replace(/^\//,'') || $target.charAt(0) == '#' ) {
+				jQuery( this ).fusion_scroll_to_anchor_target();
+			} else {
+				window.location = $target_path + '#_' + $target_id;
+			}
 		}
 	});
 
@@ -2461,6 +2462,9 @@ jQuery( document ).ready(function($) { // start document_ready_1
 				// Make sure that if $post_id is empty the filter category is only added once to the lightbox array
 				if ( $filter_active.length > 1 && jQuery.inArray( $filter_selector + $post_id + $portfolio_id, $lightbox_instances ) === -1 ) {
 					$lightbox_instances.push( $filter_selector + $post_id + $portfolio_id );
+				} else if ( 1 === $filter_active.length && -1 === jQuery.inArray( $post_id + $portfolio_id, $lightbox_instances ) ) {
+					$lightbox_instances.push( 'gallery' + $post_id + $portfolio_id );
+
 				}
 
 				jQuery( this ).find( '.fusion-rollover-gallery' ).attr( 'data-rel', $lightbox_string );
@@ -2485,7 +2489,7 @@ jQuery( document ).ready(function($) { // start document_ready_1
 	});
 
 	// Setup filters and click events for the faq page
-	jQuery( '.fusion-faqs' ).each( function() {
+	jQuery( '.fusion-faqs, .fusion-faq-shortcode' ).each( function() {
 		// Initialize the filters and corresponding posts
 		// Check if filters are displayed
 		var $faqs_page = jQuery( this ),
@@ -2653,6 +2657,8 @@ jQuery( document ).ready(function($) { // start document_ready_1
 		if ( jQuery( this ).data( 'link' ) ) {
  			if ( jQuery( this ).data( 'link-target' ) == '_blank' ) {
 				window.open( jQuery( this ).data( 'link' ), '_blank' );
+				jQuery( this ).find( '.heading-link' ).removeAttr( 'href' );
+				jQuery( this ).find( '.fusion-read-more' ).removeAttr( 'href' );
 			} else {
 				window.location = jQuery( this ).data( 'link' );
 			}
@@ -2915,7 +2921,7 @@ jQuery(document).ready(function() {
 		}
 	});
 
-	jQuery('.full-video, .video-shortcode, .wooslider .slide-content').not('#bbpress-forums full-video, #bbpress-forums .video-shortcode, #bbpress-forums .wooslider .slide-content').fitVids();
+	jQuery('.full-video, .video-shortcode, .wooslider .slide-content, .fusion-recent-works-carousel .fusion-video').not('#bbpress-forums .full-video, #bbpress-forums .video-shortcode, #bbpress-forums .wooslider .slide-content, #bbpress-forums .fusion-recent-works-carousel .fusion-video').fitVids();
 	jQuery('#bbpress-forums').fitVids();
 
 	register_youtube_players();
@@ -3568,24 +3574,31 @@ jQuery(window).load(function() {
 						jQuery(this_tfslider).find('.background').css('width', '100%');
 					}
 
-					if(jQuery(this_tfslider).data('parallax') == 1 && ! Modernizr.mq('only screen and (max-width: ' + js_local_vars.side_header_break_point + 'px)')) {
-						jQuery(this_tfslider).css('position', 'fixed');
-						if( jQuery( '.fusion-header-wrapper' ).css( 'position' ) != 'absolute' ) {
-							jQuery('.fusion-header-wrapper').css('position', 'relative');
+					if ( 1 === jQuery( this_tfslider ).data( 'parallax' ) && ! Modernizr.mq( 'only screen and (max-width: ' + js_local_vars.side_header_break_point + 'px)' ) ) {
+						jQuery( this_tfslider ).css( 'position', 'fixed' );
+						if ( 'absolute' != jQuery( '.fusion-header-wrapper' ).css( 'position' ) ) {
+							jQuery( '.fusion-header-wrapper' ).css( 'position', 'relative' );
+
+							var $navigationArrowsTranslate = 'translate(0, ' + ( headerHeight / 2 ) + 'px)';
+
 							if ( js_local_vars.slider_position == 'below' ) {
-								jQuery(this_tfslider).parents('.fusion-slider-container').css('margin-top', '-' + headerHeight + 'px');
+								jQuery( this_tfslider ).parents( '.fusion-slider-container' ).css( 'margin-top', '-' + headerHeight + 'px' );
 							}
+						} else {
+							var $navigationArrowsTranslate = 'translate(0, 0)';
 						}
+
+						jQuery( this_tfslider ).find( '.flex-direction-nav li a' ).css( '-webkit-transform', $navigationArrowsTranslate );
+						jQuery( this_tfslider ).find( '.flex-direction-nav li a' ).css( '-ms-transform', $navigationArrowsTranslate );
+						jQuery( this_tfslider ).find( '.flex-direction-nav li a' ).css( '-o-transform', $navigationArrowsTranslate );
+						jQuery( this_tfslider ).find( '.flex-direction-nav li a' ).css( '-moz-transform', $navigationArrowsTranslate );;
+						jQuery( this_tfslider ).find( '.flex-direction-nav li a' ).css( 'transform', $navigationArrowsTranslate );
+
 						jQuery('#main, .fusion-footer-widget-area, .fusion-footer-copyright-area, .fusion-page-title-bar').css('position', 'relative');
 						jQuery('#main, .fusion-footer-widget-area, .fusion-footer-copyright-area, .fusion-page-title-bar').css('z-index', '3');
 						jQuery('.fusion-header-wrapper').css('z-index', '5');
 						jQuery('.fusion-header-wrapper').css('height', headerHeight);
 
-						jQuery(this_tfslider).find('.flex-direction-nav li a').css('-webkit-transform', 'translate(0, ' + (headerHeight / 2) + 'px)');
-						jQuery(this_tfslider).find('.flex-direction-nav li a').css('-ms-transform', 'translate(0, ' + (headerHeight / 2) + 'px)');
-						jQuery(this_tfslider).find('.flex-direction-nav li a').css('-o-transform', 'translate(0, ' + (headerHeight / 2) + 'px)');
-						jQuery(this_tfslider).find('.flex-direction-nav li a').css('-moz-transform', 'translate(0, ' + (headerHeight / 2) + 'px)');
-						jQuery(this_tfslider).find('.flex-direction-nav li a').css('transform', 'translate(0, ' + (headerHeight / 2) + 'px)');
 
 						if(jQuery(this_tfslider).hasClass('fixed-width-slider')) {
 							if( js_local_vars.header_position == 'Left' || js_local_vars.header_position == 'Right' ) {
@@ -3945,25 +3958,29 @@ jQuery(window).load(function() {
 						}
 					}*/
 
-					if(jQuery(this_tfslider).data('parallax') == 1 && ! Modernizr.mq('only screen and (max-width: ' + js_local_vars.side_header_break_point + 'px)')) {
-						jQuery(this_tfslider).css('position', 'fixed');
-						if( jQuery( '.fusion-header-wrapper' ).css( 'position' ) != 'absolute' ) {
-							jQuery('.fusion-header-wrapper').css('position', 'relative');
+					if ( 1 === jQuery( this_tfslider ).data( 'parallax' ) && ! Modernizr.mq( 'only screen and (max-width: ' + js_local_vars.side_header_break_point + 'px)' ) ) {
+						jQuery( this_tfslider ).css( 'position', 'fixed' );
+						if ( 'absolute' != jQuery( '.fusion-header-wrapper' ).css( 'position' ) ) {
+							jQuery( '.fusion-header-wrapper' ).css( 'position', 'relative' );
+
+							var $navigationArrowsTranslate = 'translate(0, ' + ( headerHeight / 2 ) + 'px)';
 
 							if ( js_local_vars.slider_position == 'below' ) {
-								jQuery(this_tfslider).parents('.fusion-slider-container').css('margin-top', '-' + headerHeight + 'px');
+								jQuery( this_tfslider ).parents( '.fusion-slider-container' ).css( 'margin-top', '-' + headerHeight + 'px' );
 							}
+						} else {
+							var $navigationArrowsTranslate = 'translate(0, 0)';
 						}
+						jQuery( this_tfslider ).find( '.flex-direction-nav li a' ).css( '-webkit-transform', $navigationArrowsTranslate );
+						jQuery( this_tfslider ).find( '.flex-direction-nav li a' ).css( '-ms-transform', $navigationArrowsTranslate );
+						jQuery( this_tfslider ).find( '.flex-direction-nav li a' ).css( '-o-transform', $navigationArrowsTranslate );
+						jQuery( this_tfslider ).find( '.flex-direction-nav li a' ).css( '-moz-transform', $navigationArrowsTranslate );;
+						jQuery( this_tfslider ).find( '.flex-direction-nav li a' ).css( 'transform', $navigationArrowsTranslate );
+
 						jQuery('#main, .fusion-footer-widget-area, .fusion-footer-copyright-area, .fusion-page-title-bar').css('position', 'relative');
 						jQuery('#main, .fusion-footer-widget-area, .fusion-footer-copyright-area, .fusion-page-title-bar').css('z-index', '3');
 						jQuery('.fusion-header-wrapper').css('z-index', '5');
 						jQuery('.fusion-header-wrapper').css('height', headerHeight);
-
-						jQuery(this_tfslider).find('.flex-direction-nav li a').css('-webkit-transform', 'translate(0, ' + (headerHeight / 2) + 'px)');
-						jQuery(this_tfslider).find('.flex-direction-nav li a').css('-ms-transform', 'translate(0, ' + (headerHeight / 2) + 'px)');
-						jQuery(this_tfslider).find('.flex-direction-nav li a').css('-o-transform', 'translate(0, ' + (headerHeight / 2) + 'px)');
-						jQuery(this_tfslider).find('.flex-direction-nav li a').css('-moz-transform', 'translate(0, ' + (headerHeight / 2) + 'px)');
-						jQuery(this_tfslider).find('.flex-direction-nav li a').css('transform', 'translate(0, ' + (headerHeight / 2) + 'px)');
 
 						if(jQuery(this_tfslider).data('full_screen') == 1) {
 							jQuery(slider).find('.flex-control-nav').css('bottom', (headerHeight / 2));
@@ -5181,4 +5198,3 @@ if ( location.hash && location.hash.substring( 0, 2 ) === '#_' ) {
 		}
 	});
 }
-

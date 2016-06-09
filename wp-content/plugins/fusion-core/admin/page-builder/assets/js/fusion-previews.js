@@ -293,7 +293,7 @@
 		}
 
 		if ( subElements[3].value == 'yes' ) {
-			innerHtml 		= innerHtml.replace( 'selector:attrib' , 'width:100%;' );
+			innerHtml 		= innerHtml.replace( 'selector:attrib' , 'width:90%;' );
 		}
 
 		innerHtml 		= innerHtml.replace( $(innerHtml).find('span.fusion-button-text').html() , subElements[8].value );
@@ -1263,7 +1263,7 @@
 			typeof wp.shortcode.next('product_category', text_block_html) == 'object' ||
 			typeof wp.shortcode.next('recent_products', text_block_html) == 'object' ||
 			typeof wp.shortcode.next('featured_products', text_block_html) == 'object' ||
-			typeof wp.shortcode.next('woocommerce_shop_messages', text_block_html) == 'object'
+			typeof wp.shortcode.next('shop_messages', text_block_html) == 'object'
 			) {
 			insert_icon = '<span class="text-block-icon"><i class="fusiona-icon fusiona-shopping-cart"></i>Woo Shortcodes</span>';
 		}

@@ -76,7 +76,7 @@ class UpdraftPlus_BackupModule_updraftvault extends UpdraftPlus_BackupModule_s3 
 
 		if (!is_array($opts) || empty($opts['token']) || empty($opts['email'])) {
 			// Not connected
-			$updraftplus->log("UpdraftPlus Vault: this site is not connected - check your settings");
+			$updraftplus->log("UpdraftPlus Vault: this site has not been connected - check your settings");
 			$this->vault_config = $config;
 			$updraftplus->jobdata_set('updraftvault_config', $config);
 			return $config;

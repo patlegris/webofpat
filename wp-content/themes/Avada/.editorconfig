@@ -27,3 +27,7 @@ indent_size = 2
 
 [*.txt]
 end_of_line = crlf
+
+[*.yml]
+indent_style = space
+indent_size = 2

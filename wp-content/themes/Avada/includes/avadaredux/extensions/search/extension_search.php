@@ -48,7 +48,8 @@ if( !class_exists( 'AvadaReduxFramework_extension_search' ) ) {
 
 				if (empty($this->extension_dir)) {
 						$this->_extension_dir = trailingslashit(str_replace('\\', '/', dirname(__FILE__)));
-						$this->_extension_url = site_url(str_replace(trailingslashit(str_replace('\\', '/', ABSPATH)), '', $this->_extension_dir));
+						$this->_extension_url = trailingslashit( get_template_directory_uri() ) . 'includes/avadaredux/extensions/search/';
+						// $this->_extension_url = site_url(str_replace(trailingslashit(str_replace('\\', '/', ABSPATH)), '', $this->_extension_dir));
 				}
 
 				// Allow users to extend if they want

@@ -35,7 +35,7 @@ function avada_map_selector( $elements, $selector ) {
 
 /**
  * Get the array of dynamically-generated CSS and convert it to a string.
- * Parses the array and adds prefixes for browser-support.
+ * Parses the array and adds quotation marks to font families and prefixes for browser-support.
  */
 function avada_dynamic_css_parser( $css ) {
 	/**
@@ -44,12 +44,19 @@ function avada_dynamic_css_parser( $css ) {
 	foreach ( $css as $media_query => $elements ) {
 		foreach ( $elements as $element => $style_array ) {
 			foreach ( $style_array as $property => $value ) {
+				// font family
+				if ( 'font-family' == $property ) {
+					if ( false === strpos( $value, ',' ) && false === strpos( $value, "'" ) && false === strpos( $value, '"' ) ) {
+						$value = "'" . $value . "'";
+					}
+					$css[$media_query][$element]['font-family'] = $value;
+				} 
 				// border-radius
-				if ( 'border-radius' == $property ) {
+				elseif ( 'border-radius' == $property ) {
 					$css[$media_query][$element]['-webkit-border-radius'] = $value;
 				}
 				// box-shadow
-				if ( 'box-shadow' == $property ) {
+				elseif ( 'box-shadow' == $property ) {
 					$css[$media_query][$element]['-webkit-box-shadow'] = $value;
 					$css[$media_query][$element]['-moz-box-shadow']    = $value;
 				}
@@ -277,30 +284,30 @@ function avada_custom_fonts_font_faces( $css = '' ) {
 						// Start adding sources
 						$font_face .= 'src:';
 						// Add .eot file
-						if ( isset( $custom_fonts['eot'] ) && isset( $custom_fonts['eot'][ $key ] ) ) {
+						if ( isset( $custom_fonts['eot'] ) && isset( $custom_fonts['eot'][ $key ] ) && $custom_fonts['eot'][ $key ]['url'] ) {
 							$font_face .= 'url("' . str_replace( array( 'http://', 'https://' ), '//', $custom_fonts['eot'][ $key ]['url'] ) . '?#iefix") format("embedded-opentype")';
 							$firstfile = false;
 						}
 						// Add .woff file
-						if ( isset( $custom_fonts['woff'] ) && isset( $custom_fonts['woff'][ $key ] ) ) {
+						if ( isset( $custom_fonts['woff'] ) && isset( $custom_fonts['woff'][ $key ] ) && $custom_fonts['woff'][ $key ]['url'] ) {
 							$font_face .= ( $firstfile ) ? '' : ',';
 							$font_face .= 'url("' . str_replace( array( 'http://', 'https://' ), '//', $custom_fonts['woff'][ $key ]['url'] ) . '") format("woff")';
 							$firstfile = false;
 						}
 						// Add .woff2 file
-						if ( isset( $custom_fonts['woff2'] ) && isset( $custom_fonts['woff2'][ $key ] ) ) {
+						if ( isset( $custom_fonts['woff2'] ) && isset( $custom_fonts['woff2'][ $key ]['url'] ) && $custom_fonts['woff2'][ $key ]['url'] ) {
 							$font_face .= ( $firstfile ) ? '' : ',';
 							$font_face .= 'url("' . str_replace( array( 'http://', 'https://' ), '//', $custom_fonts['woff2'][ $key ]['url'] ) . '") format("woff2")';
 							$firstfile = false;
 						}
 						// Add .ttf file
-						if ( isset( $custom_fonts['ttf'] ) && isset( $custom_fonts['ttf'][ $key ] ) ) {
+						if ( isset( $custom_fonts['ttf'] ) && isset( $custom_fonts['ttf'][ $key ] ) && $custom_fonts['ttf'][ $key ]['url'] ) {
 							$font_face .= ( $firstfile ) ? '' : ',';
 							$font_face .= 'url("' . str_replace( array( 'http://', 'https://' ), '//', $custom_fonts['ttf'][ $key ]['url'] ) . '") format("truetype")';
 							$firstfile = false;
 						}
 						// Add .svg file
-						if ( isset( $custom_fonts['svg'] ) && isset( $custom_fonts['svg'][ $key ] ) ) {
+						if ( isset( $custom_fonts['svg'] ) && isset( $custom_fonts['svg'][ $key ] ) && $custom_fonts['svg'][ $key ]['url'] ) {
 							$font_face .= ( $firstfile ) ? '' : ',';
 							$font_face .= 'url("' . str_replace( array( 'http://', 'https://' ), '//', $custom_fonts['svg'][ $key ]['url'] ) . '") format("svg")';
 							$firstfile = false;
@@ -693,6 +700,8 @@ function avada_get_button_typography_elements() {
 		'.fusion-load-more-button',
 		'.comment-form input[type="submit"]',
 		'.ticket-selector-submit-btn[type="submit"]',
+		'.woocommerce .cart-collaterals .checkout-button',			
+		'.woocommerce-MyAccount-content form .button',
 	);
 
 	return $typography_elements;

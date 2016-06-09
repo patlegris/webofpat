@@ -64,7 +64,7 @@ class FusionSC_Separator {
 		self::$args = $defaults;
 
 		if( $bottom ) {
-			self::$args['bottom_margin'] = $bottom;
+			self::$args['bottom_margin'] = FusionCore_Plugin::validate_shortcode_attr_value( $bottom, 'px' );
 		}
 
 		if( $color ) {
@@ -72,10 +72,10 @@ class FusionSC_Separator {
 		}
 
 		if( $top ) {
-			self::$args['top_margin'] = $top;
+			self::$args['top_margin'] = FusionCore_Plugin::validate_shortcode_attr_value( $top, 'px' );
 
 			if( ! $bottom && $defaults['style'] != 'none' ) {
-				self::$args['bottom_margin'] = $top;
+				self::$args['bottom_margin'] = FusionCore_Plugin::validate_shortcode_attr_value( $top, 'px' );
 			}
 		}
 

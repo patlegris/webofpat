@@ -293,7 +293,7 @@ class Avada_Admin {
 			$avada_options['tf_purchase_code'] = $tf_purchase_code;
 
 			$prepare_request = array(
-				'user-agent' => 'WordPress/' . $wp_version . '; ' . home_url()
+				'user-agent' => 'avada-theme-registration'
 			);
 
 			$raw_response = wp_remote_post( 'http://marketplace.envato.com/api/v3/' . $tf_username . '/' . $tf_api . '/download-purchase:' . $tf_purchase_code . '.json', $prepare_request );
@@ -355,31 +355,38 @@ class Avada_Admin {
 					-moz-osx-font-smoothing: grayscale;
 				}
 			</style>
-		<?php endif;
+		
+			<?php 
+			global $pagenow;
+			
+			if ( $pagenow == 'themes.php' || $pagenow == 'update-core.php' ) {
+				wp_enqueue_script( 'welcome_screen', trailingslashit( get_template_directory_uri() ) . 'assets/admin/js/avada-theme-update.js' );
+			}
+		endif;
 	}
 
 	public function welcome_screen_scripts(){
-		wp_enqueue_style( 'avada_admin_css', trailingslashit( get_template_directory_uri() ) . '/assets/admin/css/avada-admin.css' );
-		wp_enqueue_style( 'welcome_screen_css', trailingslashit( get_template_directory_uri() ) . '/assets/admin/css/avada-welcome-screen.css' );
-		wp_enqueue_script( 'welcome_screen', trailingslashit( get_template_directory_uri() ) . '/assets/admin/js/avada-welcome-screen.js' );
+		wp_enqueue_style( 'avada_admin_css', trailingslashit( get_template_directory_uri() ) . 'assets/admin/css/avada-admin.css' );
+		wp_enqueue_style( 'welcome_screen_css', trailingslashit( get_template_directory_uri() ) . 'assets/admin/css/avada-welcome-screen.css' );
+		wp_enqueue_script( 'welcome_screen', trailingslashit( get_template_directory_uri() ) . 'assets/admin/js/avada-welcome-screen.js' );
 	}
 
 	public function support_screen_scripts(){
-		wp_enqueue_style( 'avada_admin_css', trailingslashit( get_template_directory_uri() ) . '/assets/admin/css/avada-admin.css' );
+		wp_enqueue_style( 'avada_admin_css', trailingslashit( get_template_directory_uri() ) . 'assets/admin/css/avada-admin.css' );
 	}
 
 	public function demos_screen_scripts(){
-		wp_enqueue_style( 'avada_admin_css', trailingslashit( get_template_directory_uri() ) . '/assets/admin/css/avada-admin.css' );
-		wp_enqueue_script( 'avada_admin_js', trailingslashit( get_template_directory_uri() ) . '/assets/admin/js/avada-admin.js' );
+		wp_enqueue_style( 'avada_admin_css', trailingslashit( get_template_directory_uri() ) . 'assets/admin/css/avada-admin.css' );
+		wp_enqueue_script( 'avada_admin_js', trailingslashit( get_template_directory_uri() ) . 'assets/admin/js/avada-admin.js' );
 	}
 
 	public function plugins_screen_scripts(){
-		wp_enqueue_style( 'avada_admin_css', trailingslashit( get_template_directory_uri() ) . '/assets/admin/css/avada-admin.css' );
+		wp_enqueue_style( 'avada_admin_css', trailingslashit( get_template_directory_uri() ) . 'assets/admin/css/avada-admin.css' );
 	}
 
 	public function status_screen_scripts(){
-		wp_enqueue_style( 'avada_admin_css', trailingslashit( get_template_directory_uri() ) . '/assets/admin/css/avada-admin.css' );
-		wp_enqueue_script( 'avada_admin_js', trailingslashit( get_template_directory_uri() ) . '/assets/admin/js/avada-admin.js' );
+		wp_enqueue_style( 'avada_admin_css', trailingslashit( get_template_directory_uri() ) . 'assets/admin/css/avada-admin.css' );
+		wp_enqueue_script( 'avada_admin_js', trailingslashit( get_template_directory_uri() ) . 'assets/admin/js/avada-admin.js' );
 	}
 
 	public function plugin_link( $item ) {

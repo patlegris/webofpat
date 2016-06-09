@@ -12,7 +12,20 @@ class Avada_Upgrade {
 
 	public function __construct() {
 
+		$this->database_theme_version  = get_option( 'avada_version', false );
+
 		$this->pre_400();
+		
+		// The previous version was less than 4.0.2
+		if ( $this->database_theme_version && version_compare( $this->database_theme_version, '4.0.2', '<' ) ) {
+			$this->pre_402();
+		}
+
+		// The previous version was less than 4.0.3
+		if ( $this->database_theme_version && version_compare( $this->database_theme_version, '4.0.3', '<' ) ) {
+			$this->pre_403();
+		}
+		
 		/**
 		 * Don't do anything when in the Customizer
 		 */
@@ -21,9 +34,8 @@ class Avada_Upgrade {
 			return;
 		}
 
-		$this->database_theme_version  = get_option( 'avada_version', false );
 		$this->previous_theme_versions = get_option( 'avada_previous_version', false );
-		$this->current_theme_version   = Avada::$version;
+		$this->current_theme_version   = Avada::get_theme_version();
 		$this->avada_options = get_option( Avada::get_option_name(), array() );
 
 		if ( is_array( $this->previous_theme_versions ) && ! empty( $this->previous_theme_versions ) ) {
@@ -37,7 +49,14 @@ class Avada_Upgrade {
 		if ( substr_count( $this->previous_theme_version, '.' ) == '1' ) {
 			$this->previous_theme_version .= '.0';
 		}
-
+		
+		if ( substr_count( $this->database_theme_version, '.' ) == '1' ) {
+			$this->database_theme_version .= '.0';
+		}	
+		if ( substr_count( $this->current_theme_version, '.' ) == '1' ) {
+			$this->current_theme_version .= '.0';
+		}		
+				
 		if ( empty( $this->avada_options ) ) {
 			// Fallback to previous options
 			$this->avada_options = get_option( 'avada_options', array() );
@@ -106,7 +125,7 @@ class Avada_Upgrade {
 				// Delete the TGMPA update notice dismiss flag, so that the flag is reset
 				delete_user_meta( $this->current_user->ID, 'tgmpa_dismissed_notice_tgmpa' );
 			}
-
+			
 			$this->update_version();
 
 			// The previous version was less than 3.8.5
@@ -134,6 +153,15 @@ class Avada_Upgrade {
 				$this->pre_400();
 			}
 
+			// The previous version was less than 4.0.2
+			if ( version_compare( $this->database_theme_version, '4.0.2', '<' ) ) {
+				$this->pre_402();
+			}
+			
+			// The previous version was less than 4.0.3
+			if ( version_compare( $this->database_theme_version, '4.0.3', '<' ) ) {
+				$this->pre_403();
+			}			
 		}
 
 		// Hook the dismiss notice functionality
@@ -297,6 +325,50 @@ class Avada_Upgrade {
 		Avada_AvadaRedux_Migration::get_instance();
 
 		self::clear_twiiter_widget_transients();
+	}
+
+	/**
+	 * Run if previous version is < 402
+	 */
+	public function pre_402() {
+		$options = get_option( Avada::get_option_name(), array() );
+		
+		// Update social-media repeaters
+		$social_media = Avada()->settings->get( 'social_media_icons' );
+		if ( isset( $social_media['redux_repeater_data'] ) ) {
+			$social_media['avadaredux_repeater_data'] = $social_media['redux_repeater_data'];
+			unset( $social_media['redux_repeater_data'] );
+			$options['social_media_icons'] = $social_media;			
+			update_option( Avada::get_option_name(), $options );
+		}
+		
+		// Update custom-fonts repeaters
+		$custom_fonts = Avada()->settings->get( 'custom_fonts' );
+		if ( isset( $custom_fonts['redux_repeater_data'] ) ) {
+			$custom_fonts['avadaredux_repeater_data'] = $custom_fonts['redux_repeater_data'];
+			unset( $custom_fonts['redux_repeater_data'] );
+			$options['custom_fonts'] = $custom_fonts;			
+			update_option( Avada::get_option_name(), $options );			
+		}
+	}
+	
+	/**
+	 * Run if previous version is < 403
+	 */
+	public function pre_403() {
+		$options = get_option( Avada::get_option_name(), array() );
+		
+		// Update the post title option
+		$post_title = Avada()->settings->get( 'blog_post_title' );
+
+		if ( $post_title ) {
+			$post_title = 'below';
+		} else {
+			$post_title = 'disabled';
+		}
+		
+		$options['blog_post_title'] = $post_title;			
+		update_option( Avada::get_option_name(), $options );
 	}
 
 	/**

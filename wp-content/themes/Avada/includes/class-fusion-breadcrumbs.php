@@ -72,7 +72,11 @@ class Fusion_Breadcrumbs {
 	private $html_markup;
 
 	/**
-	 * The one, true instance of this object
+	 * The one, true instance of this object.
+	 *
+	 * @static
+	 * @access private
+	 * @var null|object
 	 */
 	private static $instance = null;
 
@@ -98,7 +102,7 @@ class Fusion_Breadcrumbs {
 			 'error_prefix'           => __( '404 - Page not Found', 'Avada' ),
 		);
 
-		// Setup a filter for changeable variables and meger it with the defaults
+		// Setup a filter for changeable variables and merge it with the defaults
 		$args     = apply_filters( 'fusion_breadcrumbs_defaults', $defaults );
 		$defaults = wp_parse_args( $args, $defaults );
 
@@ -485,6 +489,9 @@ class Fusion_Breadcrumbs {
 		$link = $archive_title = '';
 
 		$post_type = $wp_query->query_vars['post_type'];
+		if ( ! $post_type ) {
+			$post_type = get_post_type();
+		}
 		$post_type_object = get_post_type_object( $post_type );
 
 		// Check if we have a post type object

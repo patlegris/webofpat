@@ -3,21 +3,32 @@
 class Avada_Patcher_Admin_Screen {
 
 	/**
-	 * The class constructor
+	 * Constructor.
+	 *
+	 * @access public
 	 */
 	public function __construct() {
+
 		// Call register settings function
 		add_action( 'admin_init', array( $this, 'settings' ) );
 		// Add the patcher to the support screen
 		add_action( 'avada/admin_pages/support/after_list', array( $this, 'form' ) );
+
 	}
 
 	/**
-	 * Register the settings
+	 * Register the settings.
+	 *
+	 * @access public
+	 * @return void
 	 */
 	public function settings() {
+
+		// Get the patches
 		$patches = Avada_Patcher_Client::get_patches();
 		if ( ! empty( $patches ) ) {
+
+			// Register settings for the patch contents.
 			foreach( $patches as $key => $value ) {
 				register_setting( 'avada_patcher_' . $key, 'avada_patch_contents_' . $key );
 			}
@@ -25,18 +36,22 @@ class Avada_Patcher_Admin_Screen {
 	}
 
 	/**
-	 * The page contents
+	 * The page contents.
+	 *
+	 * @access public
+	 * @return void Directly echoes the form.
 	 */
 	public function form() {
+
+		// Get the patches.
 		$patches = Avada_Patcher_Client::get_patches();
-		// Get the fusion-core plugin version
+		// Get the fusion-core plugin version.
 		$fusion_core_version = ( class_exists( 'FusionCore_Plugin' ) ) ? FusionCore_Plugin::VERSION : false;
-		// Get the avada theme version
+		// Get the avada theme version.
 		$avada_version = Avada::get_theme_version();
 
-		$available_patches = array();
-
 		// Determine if there are available patches, and build an array of them.
+		$available_patches = array();
 		$context = array( 'avada' => false, 'fusion-core' => false );
 		foreach ( $patches as $patch_id => $patch_args ) {
 			if ( ! isset( $patch_args['patch'] ) ) {
@@ -52,9 +67,13 @@ class Avada_Patcher_Admin_Screen {
 				}
 			}
 		}
-
+		// Make sure we have a unique array.
 		$available_patches = array_unique( $available_patches );
-		$applied_patches   = get_option( 'avada_applied_patches', array() );
+		// Sort the array by value and re-index the keys.
+		sort( $available_patches );
+
+		// Get an array of the already applied patches.
+		$applied_patches = get_site_option( 'avada_applied_patches', array() );
 		?>
 		<div class="avada-important-notice avada-auto-patcher">
 
@@ -77,11 +96,36 @@ class Avada_Patcher_Admin_Screen {
 							<th></th>
 						</tr>
 						</tr>
-						<?php foreach ( $patches as $patch_id => $patch_args ) : ?>
-							<?php if ( ! in_array( $patch_id, $available_patches ) ) : ?>
-								<?php continue; ?>
-							<?php endif; ?>
-							<?php $patch_applied = ( in_array( $patch_id, $applied_patches ) ) ? true : false; ?>
+						<?php foreach ( $available_patches as $key => $patch_id ) :
+
+							// Do not allow applying the patch initially.
+							// We'll have to check if they can later.
+							$can_apply = false;
+
+							// Make sure the patch exists
+							if ( ! array_key_exists( $patch_id, $patches ) ) {
+								continue;
+							}
+
+							// Get the patch arguments.
+							$patch_args = $patches[ $patch_id ];
+
+							// Has the patch been applied?
+							$patch_applied = ( in_array( $patch_id, $applied_patches ) ) ? true : false;
+
+							// If there is no previous patch, we can apply it.
+							if ( ! isset( $available_patches[ $key - 1 ] ) ) {
+								$can_apply = true;
+							}
+
+							// If the previous patch exists and has already been applied,
+							// then we can apply this one.
+							if ( isset( $available_patches[ $key - 1 ] ) ) {
+								if ( in_array( $available_patches[ $key - 1 ], $applied_patches ) ) {
+									$can_apply = true;
+								}
+							}
+							?>
 
 							<tr class="avada-patcher-table-head">
 								<td class="patch-id">#<?php echo intval( $patch_id ); ?></td>
@@ -93,12 +137,22 @@ class Avada_Patcher_Admin_Screen {
 									<?php endif; ?>
 								</td>
 								<td class="patch-apply">
-									<form method="post" action="options.php">
-										<?php settings_fields( 'avada_patcher_' . $patch_id ); ?>
-										<?php do_settings_sections( 'avada_patcher_' . $patch_id ); ?>
-										<input type="hidden" name="avada_patch_contents_<?php echo $patch_id; ?>" value="<?php echo self::format_patch( $patch_args ); ?>" />
-										<?php submit_button( esc_attr__( 'Apply Patch', 'Avada' ) ); ?>
-									</form>
+									<?php if ( $can_apply ) : ?>
+										<form method="post" action="options.php">
+											<?php settings_fields( 'avada_patcher_' . $patch_id ); ?>
+											<?php do_settings_sections( 'avada_patcher_' . $patch_id ); ?>
+											<input type="hidden" name="avada_patch_contents_<?php echo $patch_id; ?>" value="<?php echo self::format_patch( $patch_args ); ?>" />
+											<?php submit_button( esc_attr__( 'Apply Patch', 'Avada' ) ); ?>
+										</form>
+									<?php else : ?>
+										<span class="button disabled button-small">
+											<?php if ( isset( $available_patches[ $key - 1 ] ) ) : ?>
+												<?php printf( esc_html__( 'Please apply patch #%s first.', 'Avada' ), $available_patches[ $key - 1 ] ); ?>
+											<?php else : ?>
+												<?php esc_html_e( 'Patch cannot be currently aplied.', 'Avada' ); ?>
+											<?php endif; ?>
+										</span>
+									<?php endif; ?>
 								</td>
 							</tr>
 						<?php endforeach; ?>

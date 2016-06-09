@@ -740,6 +740,10 @@ function fusion_importer() {
 				update_option('show_on_front', 'page');
 				update_option('page_on_front', $homepage->ID); // Front Page
 			}
+			
+			// Import site title
+			$site_title = 'Avada ' . ucwords( str_replace( '_', ' ', $demo_type ) );
+			update_option( 'blogname', $site_title );			
 
 			// Fusion Sliders Import
 			if( $fs_exists == true ) {

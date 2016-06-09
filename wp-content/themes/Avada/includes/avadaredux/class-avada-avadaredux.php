@@ -2,11 +2,39 @@
 
 class Avada_AvadaRedux {
 
+	/**
+	 * The option name.
+	 *
+	 * @access public
+	 * @var string
+	 */
 	public $key;
+
+	/**
+	 * The version.
+	 *
+	 * @access public
+	 * @var string
+	 */
 	public $ver;
 
 	/**
+	 * Whether or not we're using "all" language.
+	 * This is needed in order to determine if on WPML or PolyLang
+	 * the user is using "all" language,
+	 * in which case we'll have to clone the saved settings
+	 * to all available languages.
+	 *
+	 * @static
+	 * @access private
+	 * @var bool
+	 */
+	private static $is_language_all = false;
+
+	/**
 	 * The class constructor
+	 *
+	 * @access public
 	 */
 	public function __construct() {
 
@@ -18,7 +46,14 @@ class Avada_AvadaRedux {
 
 	}
 
+	/**
+	 * Initializes and triggers all other actions/hooks.
+	 *
+	 * @access public
+	 */
 	public function init_avadaredux() {
+
+		self::$is_language_all = Avada::get_language_is_all();
 
 		$this->key = Avada::get_option_name();
 
@@ -53,6 +88,11 @@ class Avada_AvadaRedux {
 		add_action( 'avadaredux/options/' . Avada::get_option_name() . '/section/reset', array( $this, 'reset_cache' ) );
 		add_action( 'avadaredux/options/' . Avada::get_option_name() . '/saved', array( $this, 'reset_cache' ) );
 
+		// Save all languages
+		add_action( 'avadaredux/options/' . Avada::get_option_name() . '/reset', array( $this, 'save_all_languages' ) );
+		add_action( 'avadaredux/options/' . Avada::get_option_name() . '/section/reset', array( $this, 'save_all_languages' ) );
+		add_action( 'avadaredux/options/' . Avada::get_option_name() . '/saved', array( $this, 'save_all_languages' ) );
+
 		add_filter( 'avadaredux/' . Avada::get_option_name() . '/localize/reset', array( $this, 'reset_message_l10n' ) );
 		add_filter( 'avadaredux/' . Avada::get_option_name() . '/localize/reset_section', array( $this, 'reset_section_message_l10n' ) );
 		add_filter( 'avadaredux-import-file-description', array( $this, 'avadaredux_import_file_description_l10n' ) );
@@ -60,6 +100,8 @@ class Avada_AvadaRedux {
 
 	/**
 	 * Triggers the cache reset
+	 *
+	 * @access public
 	 */
 	public function reset_cache() {
 		Avada()->dynamic_css->reset_all_caches();
@@ -69,6 +111,8 @@ class Avada_AvadaRedux {
 	 * Register the page and then unregister it.
 	 * This allows the user to access the URL of the page,
 	 * but without an actual menu for the page.
+	 *
+	 * @access public
 	 */
 	public function deprecated_adminpage_hook() {
 		add_submenu_page( 'themes.php', __( 'Avada Options have moved!', 'Avada' ), __( 'Avada Options', 'Avada' ), 'edit_theme_options', 'optionsframework', array( $this, 'deprecated_adminpage' ) );
@@ -79,8 +123,11 @@ class Avada_AvadaRedux {
 	 * Creates a countdown counter and then redirects the user to the new admin page.
 	 * We're using this to accomodate users that perhaps have the page bookmarked.
 	 * This way they won't get an error page but we'll gracefully migrate them to the new page.
+	 *
+	 * @access public
 	 */
-	public function deprecated_adminpage() { ?>
+	public function deprecated_adminpage() {
+		?>
 		<script type="text/javascript">
 			var count = 6;
 			var redirect = "<?php echo admin_url( 'themes.php?page=avada_options' ); ?>";
@@ -103,6 +150,8 @@ class Avada_AvadaRedux {
 	/**
 	 * Removes avadaredux admin notices & nag messages
 	 * as well as the avadaredux demo mode.
+	 *
+	 * @access public
 	 */
 	public function remove_avadaredux_notices() {
 		if ( class_exists( 'AvadaReduxFrameworkPlugin' ) ) {
@@ -116,24 +165,22 @@ class Avada_AvadaRedux {
 
 	/**
 	 * The main parser
+	 *
+	 * @access public
 	 */
 	public function parse() {
-		/**
-		 * Instantiate the Avada_Options object
-		 */
+
+		// Instantiate the Avada_Options object.
 		$avada_sections = new Avada_Options();
-		/**
-		 * Start looping through the sections from the $avada_sections object
-		 */
+
+		// Start looping through the sections from the $avada_sections object.
 		foreach ( $avada_sections->sections as $section ) {
-			/**
-			 * Create the section
-			 */
+
+			// Create the section.
 			$this->create_section( $section );
-			/**
-			 * Start looping through the section's fields.
-			 * Make sure we have fields defined before proceeding.
-			 */
+
+			// Start looping through the section's fields.
+			// Make sure we have fields defined before proceeding.
 			if ( isset( $section['fields'] ) ) {
 				foreach ( $section['fields'] as $field ) {
 					if ( isset( $field['type'] ) ) {
@@ -141,35 +188,35 @@ class Avada_AvadaRedux {
 							if ( ! isset( $field['id'] ) ) {
 								continue;
 							}
-							/**
-							 * This is a subsection so first we need to add the section.
-							 */
+
+							// This is a subsection so first we need to add the section.
 							$this->create_subsection( $field );
-							/**
-							 * Make sure we have fields defined before proceeding.
-							 * We'll need to add these fields to the subsection.
-							 */
+
+							// Make sure we have fields defined before proceeding.
+							// We'll need to add these fields to the subsection.
 							if ( isset( $field['fields'] ) && is_array( $field['fields'] ) ) {
 								foreach ( $field['fields'] as $subfield ) {
 									$this->create_field( $subfield, $field['id'] );
 								}
 							}
 						} elseif ( 'accordion' == $field['type'] ) {
-							/**
-							 * Make sure we have fields defined before proceeding.
-							 * We'll need to add these fields to the subsection.
-							 */
+
+							// Make sure we have fields defined before proceeding.
+							// We'll need to add these fields to the subsection.
 							if ( isset( $field['fields'] ) && is_array( $field['fields'] ) ) {
+
 								// Open the accordion
 								$accordion_start             = $field;
 								$accordion_start['position'] = 'start';
 								$accordion_start['id']       = $field['id'] . '_start_accordion';
 								$this->create_field( $accordion_start, $section['id'] );
-								// Add the fields inside the accordion
+
+								// Add the fields inside the accordion.
 								foreach ( $field['fields'] as $subfield ) {
 									$this->create_field( $subfield, $section['id'] );
 								}
-								// Close the accordion
+
+								// Close the accordion.
 								$accordion_end             = $field;
 								$accordion_end['position'] = 'end';
 								$accordion_end['id']       = $field['id'] . '_end_accordion';
@@ -185,7 +232,10 @@ class Avada_AvadaRedux {
 	}
 
 	/**
-	 * Create a section
+	 * Create a section.
+	 *
+	 * @access public
+	 * @param array $section The section arguments.
 	 */
 	public function create_section( $section ) {
 
@@ -207,7 +257,10 @@ class Avada_AvadaRedux {
 	}
 
 	/**
-	 * Creates a subsection
+	 * Creates a subsection.
+	 *
+	 * @access public
+	 * @param array $subsection The subsection arguments.
 	 */
 	public function create_subsection( $subsection ) {
 
@@ -225,7 +278,11 @@ class Avada_AvadaRedux {
 	}
 
 	/**
-	 * Convert a field
+	 * Creates a field.
+	 *
+	 * @access public
+	 * @param array       $field      The field arguments.
+	 * @param null|string $section_id The ID of the section.
 	 */
 	public function create_field( $field, $section_id = null ) {
 
@@ -237,22 +294,6 @@ class Avada_AvadaRedux {
 		$args['class']       = ( isset( $field['class'] ) ) ? $field['class'] . ' avada_options' : 'avada_options';
 		$args['options']     = ( isset( $field['choices'] ) ) ? $field['choices'] : array();
 		$args['required']    = array();
-
-		// WPML compatibility tweaks
-		if ( class_exists( 'SitePress' ) ) {
-			if ( '' != $args['title'] ) {
-				do_action( 'wpml_register_single_string', __( 'Avada Administration', 'Avada' ), $field['id'] . '_title', $args['title'] );
-				$args['title'] = apply_filters( 'wpml_translate_single_string', $args['title'], __( 'Avada Administration', 'Avada' ), $field['id'] . '_title', null );
-			}
-			if ( '' != $args['subtitle'] ) {
-				do_action( 'wpml_register_single_string', __( 'Avada Administration', 'Avada' ), $field['id'] . '_subtitle', $args['subtitle'] );
-				$args['subtitle'] = apply_filters( 'wpml_translate_single_string', $args['subtitle'], __( 'Avada Administration', 'Avada' ), $field['id'] . '_subtitle', null );
-			}
-			if ( '' != $args['description'] ) {
-				do_action( 'wpml_register_single_string', __( 'Avada Administration', 'Avada' ), $field['id'] . '_description', $args['description'] );
-				$args['description'] = apply_filters( 'wpml_translate_single_string', $args['description'], __( 'Avada Administration', 'Avada' ), $field['id'] . '_description', null );
-			}
-		}
 
 		if ( isset( $field['required'] ) && is_array( $field['required'] ) && ! empty( $field['required'] ) ) {
 			foreach ( $field['required'] as $requirement ) {
@@ -337,6 +378,7 @@ class Avada_AvadaRedux {
 				$args['class']   .= ' dimension';
 				$args['options']  = '';
 				$args['validate_callback'] = 'avada_avadaredux_validate_dimension';
+
 				if ( in_array( $field['id'], $font_size_dimension_fields ) ) {
 					// $args['subtitle'] = sprintf( esc_html__( '%s Enter value including a CSS unit, ex: %s. Valid CSS units for this field are px, em, rem.', 'Avada' ), $args['subtitle'], $field['default'] );
 					$args['validate_callback'] = 'avada_avadaredux_validate_font_size';
@@ -346,7 +388,11 @@ class Avada_AvadaRedux {
 				}
 				break;
 			case 'dimensions':
-				$args['subtitle'] = sprintf( esc_html__( '%s Enter values including any valid CSS unit, ex: %s.', 'Avada' ), $args['subtitle'], implode( ', ', $field['default'] ) );
+				if ( 'lightbox_video_dimensions' == $field['id'] ) {
+					$args['subtitle'] = sprintf( esc_html__( '%s In pixels, ex: %s.', 'Avada' ), $args['subtitle'], implode( ', ', $field['default'] ) );
+				} else {
+					$args['subtitle'] = sprintf( esc_html__( '%s Enter values including any valid CSS unit, ex: %s.', 'Avada' ), $args['subtitle'], implode( ', ', $field['default'] ) );
+				}
 				$args['validate_callback'] = 'avada_avadaredux_validate_dimensions';
 				break;
 			case 'spacing':
@@ -605,7 +651,7 @@ class Avada_AvadaRedux {
 			case 'custom':
 				$args['type']        = 'raw';
 				$args['full_width']  = true;
-				if ( isset( $field['style'] ) && $field['style'] == 'heading' ) {
+				if ( isset( $field['style'] ) && 'heading' == $field['style'] ) {
 					$args['content'] = '<div class="avadaredux-field-info"><p class="avadaredux-info-desc" style="font-size:13px;"><b>' .$field['description'] . '</b></p></div>';
 					$args['class'] .= ' custom-heading';
 				} else {
@@ -631,6 +677,11 @@ class Avada_AvadaRedux {
 
 	}
 
+	/**
+	 * Enqueue additional scripts.
+	 *
+	 * @access public
+	 */
 	public function enqueue() {
 		$vars = array(
 			'option_name' => Avada::get_option_name(),
@@ -642,6 +693,12 @@ class Avada_AvadaRedux {
 		wp_enqueue_script( 'avada-avadaredux-custom-js' );
 	}
 
+	/**
+	 * Applies custom CSS in the panel
+	 * so that it matches the selected admin-colors.
+	 *
+	 * @access public
+	 */
 	public function dynamic_css() {
 		$screen = get_current_screen();
 
@@ -650,10 +707,10 @@ class Avada_AvadaRedux {
 			return;
 		}
 
-		// Get the user's admin colors
+		// Get the user's admin colors.
 		$color_scheme = get_user_option( 'admin_color' );
 
-		// If no theme is active set it to 'fresh'
+		// If no theme is active set it to 'fresh'.
 		if ( empty( $color_scheme ) ) {
 			$color_scheme = 'fresh';
 		}
@@ -703,6 +760,12 @@ class Avada_AvadaRedux {
 		}
 	}
 
+	/**
+	 * Gets the main admin-color scheme.
+	 *
+	 * @access public
+	 * @return array
+	 */
 	public function get_main_colors( $scheme ) {
 		$main_colors = array(
 			'color_back_1' => '',
@@ -713,7 +776,7 @@ class Avada_AvadaRedux {
 			'color_accent_2' => '',
 		);
 
-		// Get the active admin theme
+		// Get the active admin theme.
 		global $_wp_admin_css_colors;
 
 		if ( ! isset( $_wp_admin_css_colors[ $scheme ] ) ) {
@@ -788,6 +851,13 @@ class Avada_AvadaRedux {
 		return $main_colors;
 	}
 
+	/**
+	 * Gets the text colors depending on the admin-color-scheme.
+	 *
+	 * @access public
+	 * @param string $scheme The selected admin theme.
+	 * @return array
+	 */
 	public function get_text_colors( $scheme ) {
 		$text_colors = array();
 
@@ -870,6 +940,8 @@ class Avada_AvadaRedux {
 
 	/**
 	 * Create the AvadaRedux Config.
+	 *
+	 * @access public
 	 */
 	public function add_config() {
 
@@ -896,6 +968,7 @@ class Avada_AvadaRedux {
 			'templates_path'       => dirname( __FILE__ ) . '/panel_templates/',
 			'show_options_object'  => false,
 			'forced_dev_mode_off'  => true,
+			'footer_credit'        => ' ',
 		);
 		if ( class_exists( 'AvadaRedux' ) ) {
 			AvadaRedux::setArgs( $this->key, $args );
@@ -906,6 +979,7 @@ class Avada_AvadaRedux {
 	/**
 	* Save buider and code block encoding as option
 	*
+	* @access public
 	* @since 4.0
 	* @return void
 	*/
@@ -915,8 +989,73 @@ class Avada_AvadaRedux {
 	}
 
 	/**
-	 * Modify the AvadaRedux reset message (global)
+	 * When in Polylang or WPML we're using "all" languages,
+	 * saved options should be copied to ALL languages.
 	 *
+	 * @access public
+	 * @since 4.0.2
+	 */
+	public function save_all_languages() {
+
+		$is_all = self::$is_language_all;
+		if ( ! $is_all ) {
+
+			// Check the HTTP referrer to determine if the language is set to "all".
+			if ( isset( $_SERVER['HTTP_REFERER'] ) ) {
+				$parsed_url = parse_url( $_SERVER['HTTP_REFERER'] );
+				if ( isset( $parsed_url['query'] ) ) {
+					parse_str( $parsed_url['query'] );
+					if ( isset( $lang ) && 'all' == $lang ) {
+						$is_all = true;
+					}
+				}
+			}
+		}
+
+		if ( ! $is_all ) {
+			return;
+		}
+
+		// Get the options.
+		$option_name          = Avada::get_option_name();
+		$original_option_name = Avada::get_original_option_name();
+		$options              = get_option( $option_name );
+
+		// Get available languages.
+		$all_languages = Avada_Multilingual::get_available_languages();
+
+		// Get default language
+		$default_language = Avada_Multilingual::get_default_language();
+
+		if ( 'en' !== $default_language ) {
+			update_option( $original_option_name . '_' . $default_language, $options );
+			update_option( $original_option_name, $options );
+		}
+
+		foreach ( $all_languages as $language ) {
+
+			// Skip English.
+			if ( '' === $language || 'en' === $language ) {
+				continue;
+			}
+
+			// Skip the main language if something other than English.
+			// We've already handled that above.
+			if ( 'en' !== $default_language && $default_language === $language ) {
+				continue;
+			}
+
+			// Copy options to the new language.
+			update_option( $original_option_name . '_' . $language, $options );
+
+		}
+
+	}
+
+	/**
+	 * Modify the AvadaRedux reset message (global).
+	 *
+	 * @access public
 	 * @return string
 	 */
 	public function reset_message_l10n() {
@@ -926,6 +1065,7 @@ class Avada_AvadaRedux {
 	/**
 	 * Modify the AvadaRedux reset message (section)
 	 *
+	 * @access public
 	 * @return string
 	 */
 	public function reset_section_message_l10n() {
@@ -935,10 +1075,10 @@ class Avada_AvadaRedux {
 	/**
 	 * Modify the import file description
 	 *
+	 * @access public
 	 * @return string
 	 */
 	public function avadaredux_import_file_description_l10n() {
 		return esc_html__( 'Copy the contents of the json file and paste it below. Then click "Import" to restore your setings.', 'Avada' );
 	}
-
 }

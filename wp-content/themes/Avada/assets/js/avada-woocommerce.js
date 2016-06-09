@@ -1,69 +1,74 @@
 /**
  * WooCommerce Quanity buttons add-back
  */
-jQuery(
-    function( $ ) {
-        if ( typeof js_local_vars.woocommerce_23 !== 'undefined' ) {
-            var $testProp = $( 'div.quantity:not(.buttons_added), td.quantity:not(.buttons_added)' ).find( 'qty' );
-            if ( $testProp && $testProp.prop( 'type' ) != 'date' ) {
-                // Quantity buttons
-                $( 'div.quantity:not(.buttons_added), td.quantity:not(.buttons_added)' ).addClass( 'buttons_added' ).append( '<input type="button" value="+" class="plus" />' ).prepend( '<input type="button" value="-" class="minus" />' );
+function avadaAddWoocommerceQuantityBoxes( $parent ) {
+	var $quantityBoxes = jQuery( 'div.quantity:not(.buttons_added), td.quantity:not(.buttons_added)' ).find( '.qty' );
 
-                // Target quantity inputs on product pages
-                $( 'input.qty:not(.product-quantity input.qty)' ).each(
-                    function() {
+	if ( $quantityBoxes && $quantityBoxes.prop( 'type' ) != 'date' ) {
 
-                        var min = parseFloat( $( this ).attr( 'min' ) );
+		// Add plus and minus boxes
+		$quantityBoxes.parent().addClass( 'buttons_added' ).append( '<input type="button" value="+" class="plus" />' ).prepend( '<input type="button" value="-" class="minus" />' );
 
-                        if ( min && min > 0 && parseFloat( $( this ).val() ) < min ) {
-                            $( this ).val( min );
-                        }
-                    }
-                );
+		// Target quantity inputs on product pages
+		jQuery( 'input.qty:not(.product-quantity input.qty)' ).each( function() {
+				var $min = parseFloat( jQuery( this ).attr( 'min' ) );
 
-                $( document ).on(
-                    'click', '.plus, .minus', function() {
+				if ( $min && $min > 0 && parseFloat( jQuery( this ).val() ) < $min ) {
+					jQuery( this ).val( $min );
+				}
+		});
 
-                        // Get values
-                        var $qty = $( this ).closest( '.quantity' ).find( '.qty' ),
-                            currentVal = parseFloat( $qty.val() ),
-                            max = parseFloat( $qty.attr( 'max' ) ),
-                            min = parseFloat( $qty.attr( 'min' ) ),
-                            step = $qty.attr( 'step' );
+		jQuery( '.plus, .minus' ).unbind( 'click' );
 
-                        // Format values
-                        if ( !currentVal || currentVal === '' || currentVal === 'NaN' ) currentVal = 0;
-                        if ( max === '' || max === 'NaN' ) max = '';
-                        if ( min === '' || min === 'NaN' ) min = 0;
-                        if ( step === 'any' || step === '' || step === undefined || parseFloat( step ) === 'NaN' ) step = 1;
+		jQuery( '.plus, .minus' ).on( 'click', function() {
 
-                        // Change the value
-                        if ( $( this ).is( '.plus' ) ) {
+				// Get values
+				var $quantityBox = jQuery( this ).parent().find( '.qty' ),
+					$currentQuantity = parseFloat( $quantityBox.val() ),
+					$maxQuantity = parseFloat( $quantityBox.attr( 'max' ) ),
+					$minQuantity = parseFloat( $quantityBox.attr( 'min' ) ),
+					$step = $quantityBox.attr( 'step' );
 
-                            if ( max && ( max == currentVal || currentVal > max ) ) {
-                                $qty.val( max );
-                            } else {
-                                $qty.val( currentVal + parseFloat( step ) );
-                            }
+				// Fallback default values
+				if ( ! $currentQuantity || '' === $currentQuantity  || 'NaN' === $currentQuantity ) {
+					$currentQuantity = 0;
+				}
+				if ( '' === $maxQuantity || 'NaN' === $maxQuantity ) {
+					$maxQuantity = '';
+				}
 
-                        } else {
+				if ( '' === $minQuantity || 'NaN' === $minQuantity ) {
+					$minQuantity = 0;
+				}
+				if ( 'any' === $step || '' === $step  || undefined === $step || 'NaN' === parseFloat( $step )  ) {
+					$step = 1;
+				}
 
-                            if ( min && ( min == currentVal || currentVal < min ) ) {
-                                $qty.val( min );
-                            } else if ( currentVal > 0 ) {
-                                $qty.val( currentVal - parseFloat( step ) );
-                            }
+				// Change the value
+				if ( jQuery( this ).is( '.plus' ) ) {
 
-                        }
+					if ( $maxQuantity && ( $maxQuantity == $currentQuantity || $currentQuantity > $maxQuantity ) ) {
+						$quantityBox.val( $maxQuantity );
+					} else {
+						$quantityBox.val( $currentQuantity + parseFloat( $step ) );
+					}
 
-                        // Trigger change event
-                        $qty.trigger( 'change' );
-                    }
-                );
-            }
-        }
-    }
-);
+				} else {
+
+					if ( $minQuantity && ( $minQuantity == $currentQuantity || $currentQuantity < $minQuantity ) ) {
+						$quantityBox.val( $minQuantity );
+					} else if ( $currentQuantity > 0 ) {
+						$quantityBox.val( $currentQuantity - parseFloat( $step ) );
+					}
+
+				}
+
+				// Trigger change event
+				$quantityBox.trigger( 'change' );
+			}
+		);
+	}
+}
 
 function fusionResizeCrossfadeImages( $parent ) {
 	var $parent_height = $parent.height();
@@ -110,99 +115,111 @@ function fusion_calc_woocommerce_tabs_layout( $tab_selector ) {
 };
 
 // Resize crossfade images and square to be the largest image and also vertically centered
-jQuery( window ).load(
-    function() {
-		jQuery( '.variations_form' ).find( '.variations .single_variation_wrap .woocommerce-variation-description' ).remove();
+jQuery( window ).load( function() {
+	jQuery( '.variations_form' ).find( '.variations .single_variation_wrap .woocommerce-variation-description' ).remove();
 
-        jQuery( window ).resize(
-            function() {
-				jQuery( '.crossfade-images' ).each(
-					function() {
-						fusion_resize_crossfade_images_container( jQuery( this ) );
-						fusionResizeCrossfadeImages( jQuery( this ) );
-					}
-				);
-            }
-        );
-
-        jQuery( '.crossfade-images' ).each(
-            function() {
-                fusion_resize_crossfade_images_container( jQuery( this ) );
-                fusionResizeCrossfadeImages( jQuery( this ) );
-            }
-        );
-
-		// Make the onsale badge also work on products without image
-        jQuery( '.product-images' ).each(
-            function() {
-                if ( ! jQuery( this ).find( 'img' ).length && jQuery( this ).find( '.onsale' ).length ) {
-					jQuery( this ).css( 'min-height', '45px' );
+	jQuery( window ).resize(
+		function() {
+			jQuery( '.crossfade-images' ).each(
+				function() {
+					fusion_resize_crossfade_images_container( jQuery( this ) );
+					fusionResizeCrossfadeImages( jQuery( this ) );
 				}
-            }
-        );
+			);
+		}
+	);
 
-		jQuery( '.woocommerce .images #carousel a' ).click( function(e) {
-			e.preventDefault();
-		});
+	jQuery( '.crossfade-images' ).each(
+		function() {
+			fusion_resize_crossfade_images_container( jQuery( this ) );
+			fusionResizeCrossfadeImages( jQuery( this ) );
+		}
+	);
 
-        // Make sure the variation image is also changed in the thumbs carousel and for lightbox
-		jQuery( '.variations_form' ).on( 'change', '.variations select', function( event ) {
-			var $variations_form = jQuery( this ).parents( '.variations_form' );
+	// Make the onsale badge also work on products without image
+	jQuery( '.product-images' ).each(
+		function() {
+			if ( ! jQuery( this ).find( 'img' ).length && jQuery( this ).find( '.onsale' ).length ) {
+				jQuery( this ).css( 'min-height', '45px' );
+			}
+		}
+	);
 
-			// Timeout needed to get updated image src attribute
-			setTimeout( function() {
-				var $slider_first_image = jQuery( '.images' ).find( '#slider img:eq(0)' ),
-					$slider_first_image_parent_link = $slider_first_image.parent(),
-					$slider_first_image_src = $slider_first_image.attr( 'src' ),
-					$thumbs_first_image = jQuery( '.images' ).find( '#carousel img:eq(0)' );
+	jQuery( '.woocommerce .images #carousel a' ).click( function(e) {
+		e.preventDefault();
+	});
 
-				if ( $slider_first_image_parent_link && $slider_first_image_parent_link.attr( 'href' ) ) {
-					$slider_first_image_src = $slider_first_image_parent_link.attr( 'href' );
-				}
+	// Make sure the variation image is also changed in the thumbs carousel and for lightbox
+	jQuery( '.variations_form' ).on( 'change', '.variations select', function( event ) {
+		var $variations_form = jQuery( this ).parents( '.variations_form' );
 
-				$slider_first_image.parent().attr( 'href', $slider_first_image_src );
-				$slider_first_image.removeAttr( 'sizes' );
-				$slider_first_image.removeAttr( 'srcset' );
+		// Timeout needed to get updated image src attribute
+		setTimeout( function() {
+			var $slider_first_image = jQuery( '.images' ).find( '#slider img:eq(0)' ),
+				$slider_first_image_parent_link = $slider_first_image.parent(),
+				$slider_first_image_src = $slider_first_image.attr( 'src' ),
+				$thumbs_first_image = jQuery( '.images' ).find( '#carousel img:eq(0)' );
 
-				// Refresh the lightbox
-				$avada_lightbox.refresh_lightbox();
+			if ( $slider_first_image_parent_link && $slider_first_image_parent_link.attr( 'href' ) ) {
+				$slider_first_image_src = $slider_first_image_parent_link.attr( 'href' );
+			}
 
-				$thumbs_first_image.attr( 'src', $slider_first_image_src );
-				$thumbs_first_image.removeAttr( 'sizes' );
-				$thumbs_first_image.removeAttr( 'srcset' );
+			$slider_first_image.parent().attr( 'href', $slider_first_image_src );
+			$slider_first_image.removeAttr( 'sizes' );
+			$slider_first_image.removeAttr( 'srcset' );
 
-				var $slider = jQuery( '.images #slider' ).data( 'flexslider' );
-				if ( $slider ) {
-					$slider.resize();
-				}
+			// Refresh the lightbox
+			$avada_lightbox.refresh_lightbox();
 
-				var $slider = jQuery( '.images #carousel' ).data( 'flexslider' );
-				if ( $slider ) {
-					$slider.resize();
-				}
+			$thumbs_first_image.attr( 'src', $slider_first_image_src );
+			$thumbs_first_image.removeAttr( 'sizes' );
+			$thumbs_first_image.removeAttr( 'srcset' );
 
-				$variations_form.find( '.variations .single_variation_wrap .woocommerce-variation-description' ).remove();
+			var $slider = jQuery( '.images #slider' ).data( 'flexslider' );
+			if ( $slider ) {
+				$slider.resize();
+			}
 
-			}, 1 );
+			var $slider = jQuery( '.images #carousel' ).data( 'flexslider' );
+			if ( $slider ) {
+				$slider.resize();
+			}
 
-			setTimeout( function() {
-				$avada_lightbox.refresh_lightbox();
+			//$variations_form.find( '.variations .single_variation_wrap .woocommerce-variation-description' ).remove();
 
-				var $slider = jQuery( '.images #slider' ).data( 'flexslider' );
-				if ( $slider ) {
-					$slider.resize();
-				}
-			}, 500 );
+		}, 1 );
 
-			setTimeout( function() {
-				$avada_lightbox.refresh_lightbox();
-			}, 1500 );
-		});
-    }
-);
+		setTimeout( function() {
+			$avada_lightbox.refresh_lightbox();
+
+			var $slider = jQuery( '.images #slider' ).data( 'flexslider' );
+			if ( $slider ) {
+				$slider.resize();
+			}
+		}, 500 );
+
+		setTimeout( function() {
+			$avada_lightbox.refresh_lightbox();
+		}, 1500 );
+	});
+});
 
 jQuery( document ).ready( function() {
-	jQuery( '.variations_form > .single_variation_wrap .woocommerce-variation' ).remove();
+	avadaAddWoocommerceQuantityBoxes();
+
+	jQuery( '.fusion-update-cart' ).on( 'click', function(e) {
+		e.preventDefault();
+		jQuery( '.cart .actions > .button' ).trigger( 'click' );
+	});
+
+	jQuery( '.fusion-apply-coupon' ).on( 'click', function(e) {
+		e.preventDefault();
+		jQuery( '.cart .actions .coupon #coupon_code' ).val( jQuery( '#avada_coupon_code' ).val() );
+		jQuery( '.cart .actions .coupon .button' ).trigger( 'click' );
+	});
+
+	jQuery( '.product-type-variable .variations_form > .single_variation_wrap .woocommerce-variation-price' ).remove();
+	jQuery( '.product-type-variable .variations_form > .single_variation_wrap .woocommerce-variation-availability' ).remove();
 
 	jQuery( 'body' ).on( 'click', '.add_to_cart_button', function(e) {
 		var $add_to_cart_button = jQuery( this );
@@ -229,31 +246,6 @@ jQuery( document ).ready( function() {
 	jQuery('.catalog-ordering .sort-count .current-li a').html(jQuery('.catalog-ordering .sort-count ul li.current a').html());
 	jQuery('.woocommerce .shop_table .variation dd').after('<br />');
 	jQuery('.woocommerce .avada-myaccount-data th.order-actions').text(js_local_vars.order_actions);
-
-	// My account page error check
-	if ( jQuery( '.avada_myaccount_user' ).length && jQuery( '.woocommerce-error' ).length && ! jQuery( '.avada-myaccount-nav' ).find( '.active' ).children().hasClass( 'address' ) ) {
-		jQuery( '.avada-myaccount-nav' ).find( '.active' ).removeClass( 'active' );
-		jQuery( '.avada-myaccount-nav' ).find( '.account' ).parent().addClass( 'active' );
-	}
-
-	var avada_myaccount_active = jQuery('.avada-myaccount-nav').find('.active a');
-
-	if(avada_myaccount_active.hasClass('address') ) {
-		jQuery('.avada-myaccount-data .edit_address_heading').fadeIn();
-	} else {
-		jQuery('.avada-myaccount-data h2:nth-of-type(1)').fadeIn();
-	}
-
-	if(avada_myaccount_active.hasClass('downloads') ) {
-		jQuery('.avada-myaccount-data .digital-downloads').fadeIn();
-	} else if(avada_myaccount_active.hasClass('orders') ) {
-		jQuery('.avada-myaccount-data .my_account_orders').fadeIn();
-	} else if(avada_myaccount_active.hasClass('address') ) {
-		jQuery('.avada-myaccount-data .myaccount_address, .avada-myaccount-data .address').fadeIn();
-	} else if(avada_myaccount_active ) {
-		jQuery('.avada-myaccount-data .edit-account-form, .avada-myaccount-data .edit-account-heading').fadeIn();
-		jQuery('.avada-myaccount-data h2:nth-of-type(1)').hide();
-	}
 
 	jQuery('body.rtl .avada-myaccount-data .my_account_orders .order-status').each( function() {
 		jQuery( this ).css( 'text-align', 'right' );
@@ -299,6 +291,13 @@ jQuery( document ).ready( function() {
 		});
 	});
 
+	jQuery('.woocommerce-tabs #comments > h2').each( function() {
+		var $comments_heading = jQuery( this ).replaceWith( function () {
+		    return '<h3>' + jQuery( this ).html() + '</h3>';
+		});
+	});
+
+
 	if ( jQuery( 'body .sidebar' ).css( 'display' ) == 'block' ) {
 		fusion_calc_woocommerce_tabs_layout( '.woocommerce-tabs .tabs-horizontal' );
 	}
@@ -331,7 +330,7 @@ jQuery( document ).ready( function() {
 		return false;
 	});
 
-	jQuery( 'body' ).on( 'click', '.woocommerce-checkout-nav a,.continue-checkout', function(e) {
+	jQuery( '.woocommerce-checkout-nav a,.continue-checkout' ).on( 'click', function(e) {
 		var $admin_bar_height = ( jQuery( '#wpadminbar' ).length ) ? jQuery( '#wpadminbar' ).height() : 0,
 			$header_div_children = jQuery( '.fusion-header-wrapper').find( 'div' ),
 			$sticky_header_height = 0;
@@ -343,6 +342,7 @@ jQuery( document ).ready( function() {
 		});
 
 		e.preventDefault();
+		jQuery( '.avada-checkout-error' ).parent().remove();
 
 		if ( ! jQuery( '.woocommerce .avada-checkout' ).find( '.woocommerce-invalid' ).is( ':visible' ) ) {
 			var $data_name = jQuery( this ).attr( 'data-name' ),
@@ -361,12 +361,22 @@ jQuery( document ).ready( function() {
 				jQuery( 'form.checkout' ).find( '#order_review_heading ').fadeIn();
 			}
 
-			jQuery( '.woocommerce-checkout-nav li' ).removeClass( 'active' );
-			jQuery( '.woocommerce-checkout-nav' ).find( '[data-name=' + $data_name + ']' ).parent().addClass( 'active' );
+			jQuery( '.woocommerce-checkout-nav li' ).removeClass( 'is-active' );
+			jQuery( '.woocommerce-checkout-nav' ).find( '[data-name=' + $data_name + ']' ).parent().addClass( 'is-active' );
 
 			if ( jQuery( this ).hasClass( 'continue-checkout' ) && jQuery( window ).scrollTop() > 0 ) {
-				jQuery( 'html, body' ).animate( {scrollTop: jQuery( '.woocommerce-content-box.avada-checkout' ).offset().top - $admin_bar_height - $sticky_header_height }, 500 );
+				if ( jQuery( '.woo-tabs-horizontal' ).length ) {
+					var $scrollAnchor = jQuery( '.woocommerce-checkout-nav' );
+				} else {
+					var $scrollAnchor = jQuery( '.woocommerce-content-box.avada-checkout' );
+				}
+
+				jQuery( 'html, body' ).animate( {scrollTop: $scrollAnchor.offset().top - $admin_bar_height - $sticky_header_height }, 500 );
 			}
+		} else {
+			jQuery( '.woocommerce .avada-checkout .woocommerce-checkout' ).prepend( '<ul class="woocommerce-error"><li class="avada-checkout-error">' + js_local_vars.woocommerce_checkout_error + '</li><ul>' );
+
+			jQuery( 'html, body' ).animate( {scrollTop: jQuery( '.woocommerce-error' ).offset().top - $admin_bar_height - $sticky_header_height }, 500 );
 		}
 
 		// set heights of select arrows correctly
@@ -385,7 +395,37 @@ jQuery( document ).ready( function() {
 		}
 	);
 
-	jQuery( 'body' ).on( 'click', '.avada-myaccount-nav a', function(e) {
+	/**
+	 * WooCommerce pre 2.6 compatibility
+	 */
+
+	 // My account page error check
+	 if ( jQuery( '.avada_myaccount_user' ).length && jQuery( '.woocommerce-error' ).length && ! jQuery( '.avada-myaccount-nav.avada-woocommerce-pre26' ).find( '.active' ).children().hasClass( 'address' ) ) {
+		 jQuery( '.avada-myaccount-nav.avada-woocommerce-pre26' ).find( '.is-active' ).removeClass( 'is-active' );
+		 jQuery( '.avada-myaccount-nav.avada-woocommerce-pre26' ).find( '.account' ).parent().addClass( 'is-active' );
+	 }
+
+	 var avada_myaccount_active = jQuery('.avada-myaccount-nav.avada-woocommerce-pre26').find('.is-active a');
+
+	 if(avada_myaccount_active.hasClass('address') ) {
+		 jQuery('.avada-myaccount-data .edit_address_heading').fadeIn();
+	 } else {
+		 jQuery('.avada-myaccount-data h2:nth-of-type(1)').fadeIn();
+	 }
+
+	 if(avada_myaccount_active.hasClass('downloads') ) {
+		 jQuery('.avada-myaccount-data .digital-downloads').fadeIn();
+	 } else if(avada_myaccount_active.hasClass('orders') ) {
+		 jQuery('.avada-myaccount-data .my_account_orders').fadeIn();
+	 } else if(avada_myaccount_active.hasClass('address') ) {
+		 jQuery('.avada-myaccount-data .myaccount_address, .avada-myaccount-data .address').fadeIn();
+	 } else if(avada_myaccount_active ) {
+		 jQuery('.avada-myaccount-data .edit-account-form, .avada-myaccount-data .edit-account-heading').fadeIn();
+		 jQuery('.avada-myaccount-data h2:nth-of-type(1)').hide();
+	 }
+
+
+	jQuery( '.avada-myaccount-nav.avada-woocommerce-pre26 a' ).on( 'click', function(e) {
 		e.preventDefault();
 
 		jQuery('.avada-myaccount-data h2, .avada-myaccount-data .digital-downloads, .avada-myaccount-data .my_account_orders, .avada-myaccount-data .myaccount_address, .avada-myaccount-data .address, .avada-myaccount-data .edit-account-heading, .avada-myaccount-data .edit-account-form').hide();
@@ -418,7 +458,18 @@ jQuery( document ).ready( function() {
 			jQuery('.avada-myaccount-data .edit-account-heading, .avada-myaccount-data .edit-account-form').fadeIn();
 		}
 
-		jQuery('.avada-myaccount-nav li').removeClass('active');
-		jQuery(this).parent().addClass('active');
+		jQuery('.avada-myaccount-nav li').removeClass('is-active');
+		jQuery(this).parent().addClass('is-active');
+	});
+});
+
+// Reintalize scripts after ajax
+jQuery( document ).ajaxComplete( function() {
+	avadaAddWoocommerceQuantityBoxes();
+
+	jQuery( '.fusion-update-cart' ).unbind( 'click' );
+	jQuery( '.fusion-update-cart' ).on( 'click', function(e) {
+		e.preventDefault();
+		jQuery( '.cart .actions > .button' ).trigger( 'click' );
 	});
 });

@@ -38,6 +38,8 @@ Table of Contents
 	backface-visibility: hidden;
 	
 	.transition(background-color 0.25s ease-in-out);
+	
+	 -webkit-transform: translate3d(0px,0px,0px);
 }
 
 .fusion-header-backface {
@@ -959,7 +961,7 @@ body.side-header-right {
 			}
 		}
 		
-	}	
+	}
 	
 	.fusion-flyout-menu {
 		.flex();
@@ -967,6 +969,12 @@ body.side-header-right {
 		overflow-y: auto;
 		padding: 0 25px 25px 25px;		
 		height: 100%;
+		
+		&.fusion-main-menu {
+			.fusion-is-sticky & {
+				.flex();
+			}
+		}
 		
 		.fusion-menu {
 			width: 100%;
@@ -986,6 +994,8 @@ body.side-header-right {
 			}
 		}
 	}
+	
+	
 
 	.fusion-flyout-search {
 		.flex();
@@ -1428,8 +1438,15 @@ body.side-header-right {
 		margin-bottom: 10px;
 	}
 
-	.fusion-login-box-submit, .fusion-remember-checkbox {
+	.fusion-login-box-submit, 
+	.fusion-remember-checkbox {
 		margin-bottom: 0;
+	}
+	
+	.fusion-menu-login-box-register {
+		clear: both;
+		float: right;
+		padding-top: 10px;
 	}
 }
 

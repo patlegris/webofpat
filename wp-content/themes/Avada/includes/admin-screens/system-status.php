@@ -242,7 +242,7 @@ $theme_fusion_url = 'https://theme-fusion.com/';
 						$registered_navs = get_nav_menu_locations();
 						$menu_items_count = array( "0" => "0" );
 						foreach( $registered_navs as $handle => $registered_nav ) {
-							$menu = wp_get_nav_menu_object( $registered_nav );
+							$menu = wp_get_nav_menu_object( $registered_nav );						
 							if ( $menu ) {
 								$menu_items_count[] = $menu->count;
 							}
@@ -252,7 +252,7 @@ $theme_fusion_url = 'https://theme-fusion.com/';
 						if ( Avada()->settings->get( 'disable_megamenu' ) ) {
 							$required_input_vars = $max_items * 20;
 						} else {
-							$required_input_vars = ini_get( 'suhosin.post.max_vars' );
+							$required_input_vars = $max_items * 12;
 						}
 						?>
 						<td><?php
@@ -260,7 +260,7 @@ $theme_fusion_url = 'https://theme-fusion.com/';
 							$required_input_vars = $required_input_vars + ( 500 + 1000 );
 
 							if ( $max_input_vars < $required_input_vars ) {
-								echo '<mark class="error">' . sprintf( __( '%s - Recommended Value: %s.<br />Max input vars limitation will truncate POST data such as menus. See: <a href="%s" target="_blank">Increasing max input vars limit.</a>', 'Avada' ), $max_input_vars, '<strong>' . ( $required_input_vars + ( 500 + 1000 ) ) . '</strong>', 'http://sevenspark.com/docs/ubermenu-3/faqs/menu-item-limit' ) . '</mark>';
+								echo '<mark class="error">' . sprintf( __( '%s - Recommended Value: %s.<br />Max input vars limitation will truncate POST data such as menus. See: <a href="%s" target="_blank">Increasing max input vars limit.</a>', 'Avada' ), $max_input_vars, '<strong>' . ( $required_input_vars ) . '</strong>', 'http://sevenspark.com/docs/ubermenu-3/faqs/menu-item-limit' ) . '</mark>';
 							} else {
 								echo '<mark class="yes">' . $max_input_vars . '</mark>';
 							}
@@ -342,14 +342,14 @@ $theme_fusion_url = 'https://theme-fusion.com/';
 				<tr>
 					<td data-export-label="WP Remote Get"><?php _e( 'WP Remote Get:', 'Avada' ); ?></td>
 					<td class="help"><?php echo '<a href="#" class="help_tip" data-tip="' . esc_attr__( 'Avada uses this method to communicate with different APIs, e.g. Google, Twitter, Facebook.', 'Avada'  ) . '">[?]</a>'; ?></td>
-					<?php $response = wp_remote_get( 'http://theme-fusion.com/avada/test.php', array( 'decompress' => false ) ); ?>
-					<td><?php echo ( ! is_wp_error( $response ) && $response['response']['code'] >= 200 && $response['response']['code'] < 300 ) ? '<mark class="yes">&#10004;</mark>' : '<mark class="error">wp_remote_get() failed. Some theme features may not work. Please contact your hosting provider and make sure that http://theme-fusion.com/avada/test.php is not blocked.</mark>'; ?></td>
+					<?php $response = wp_remote_get( 'http://avada.theme-fusion.com/test.php', array( 'decompress' => false, 'user-agent' => 'avada-remote-get-test' ) ); ?>
+					<td><?php echo ( ! is_wp_error( $response ) && $response['response']['code'] >= 200 && $response['response']['code'] < 300 ) ? '<mark class="yes">&#10004;</mark>' : '<mark class="error">wp_remote_get() failed. Some theme features may not work. Please contact your hosting provider and make sure that http://avada.theme-fusion.com/test.php is not blocked.</mark>'; ?></td>
 				</tr>
 				<tr>
 					<td data-export-label="WP Remote Post"><?php _e( 'WP Remote Post:', 'Avada' ); ?></td>
 					<td class="help"><?php echo '<a href="#" class="help_tip" data-tip="' . esc_attr__( 'Avada uses this method to communicate with different APIs, e.g. Google, Twitter, Facebook.', 'Avada'  ) . '">[?]</a>'; ?></td>
-					<?php $response = wp_remote_post( 'http://theme-fusion.com/avada/test.php', array( 'decompress' => false ) ); ?>
-					<td><?php echo ( ! is_wp_error( $response ) && $response['response']['code'] >= 200 && $response['response']['code'] < 300 ) ? '<mark class="yes">&#10004;</mark>' : '<mark class="error">wp_remote_post() failed. Some theme features may not work. Please contact your hosting provider and make sure that http://theme-fusion.com/avada/test.php is not blocked.</mark>'; ?></td>
+					<?php $response = wp_remote_post( 'http://avada.theme-fusion.com/test.php', array( 'decompress' => false, 'user-agent' => 'avada-remote-post-test' ) ); ?>
+					<td><?php echo ( ! is_wp_error( $response ) && $response['response']['code'] >= 200 && $response['response']['code'] < 300 ) ? '<mark class="yes">&#10004;</mark>' : '<mark class="error">wp_remote_post() failed. Some theme features may not work. Please contact your hosting provider and make sure that http://avada.theme-fusion.com/test.php is not blocked.</mark>'; ?></td>
 				</tr>
 				<tr>
 					<td data-export-label="GD Library"><?php _e( 'GD Library:', 'Avada' ); ?></td>

@@ -8,6 +8,7 @@
  *
  */
 function avada_options_section_colors( $sections ) {
+	$options = get_option( Avada::get_option_name(), array() );
 
 	$light = array();
 	$light['header_bg_color'] = '#ffffff';
@@ -28,12 +29,19 @@ function avada_options_section_colors( $sections ) {
 	$light['form_border_color'] = '#d2d2d2';
 	$light['tagline_font_color'] = '#747474';
 	$light['page_title_color'] = '#333333';
+	$light['h1_typography'] = isset( $options['h1_typography'] ) ? $options['h1_typography'] : array();
 	$light['h1_typography']['color'] = '#333333';
+	$light['h2_typography'] = isset( $options['h2_typography'] ) ? $options['h2_typography'] : array();
 	$light['h2_typography']['color'] = '#333333';
+	$light['h3_typography'] = isset( $options['h3_typography'] ) ? $options['h3_typography'] : array();
 	$light['h3_typography']['color'] = '#333333';
+	$light['h4_typography'] = isset( $options['h4_typography'] ) ? $options['h4_typography'] : array();
 	$light['h4_typography']['color'] = '#333333';
+	$light['h5_typography'] = isset( $options['h5_typography'] ) ? $options['h5_typography'] : array();
 	$light['h5_typography']['color'] = '#333333';
+	$light['h6_typography'] = isset( $options['h6_typography'] ) ? $options['h6_typography'] : array();
 	$light['h6_typography']['color'] = '#333333';
+	$light['body_typography'] = isset( $options['body_typography'] ) ? $options['body_typography'] : array();
 	$light['body_typography']['color'] = '#747474';
 	$light['link_color'] = '#333333';
 	$light['menu_h45_bg_color'] = '#FFFFFF';
@@ -138,12 +146,19 @@ function avada_options_section_colors( $sections ) {
 	$dark['form_border_color'] = '#212122';
 	$dark['tagline_font_color'] = '#ffffff';
 	$dark['page_title_color'] = '#ffffff';
+	$dark['h1_typography'] = isset( $options['h1_typography'] ) ? $options['h1_typography'] : array();
 	$dark['h1_typography']['color'] = '#ffffff';
+	$dark['h2_typography'] = isset( $options['h2_typography'] ) ? $options['h2_typography'] : array();
 	$dark['h2_typography']['color'] = '#ffffff';
+	$dark['h3_typography'] = isset( $options['h3_typography'] ) ? $options['h3_typography'] : array();
 	$dark['h3_typography']['color'] = '#ffffff';
+	$dark['h4_typography'] = isset( $options['h4_typography'] ) ? $options['h4_typography'] : array();
 	$dark['h4_typography']['color'] = '#ffffff';
+	$dark['h5_typography'] = isset( $options['h5_typography'] ) ? $options['h5_typography'] : array();
 	$dark['h5_typography']['color'] = '#ffffff';
+	$dark['h6_typography'] = isset( $options['h6_typography'] ) ? $options['h6_typography'] : array();
 	$dark['h6_typography']['color'] = '#ffffff';
+	$dark['body_typography'] = isset( $options['body_typography'] ) ? $options['body_typography'] : array();
 	$dark['body_typography']['color'] = '#aaa9a9';
 	$dark['link_color'] = '#ffffff';
 	$dark['menu_h45_bg_color'] = '#29292A';

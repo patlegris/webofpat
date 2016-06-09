@@ -76,7 +76,7 @@ if ( ! class_exists( 'Avada_AvadaRedux_Get_GoogleFonts' ) ) {
 				'600'       => array( 'id' => '600',       'name' => esc_attr__( 'Semi-Bold 600', 'Avada' ) ),
 				'700'       => array( 'id' => '700',       'name' => esc_attr__( 'Bold 700', 'Avada' ) ),
 				'700italic' => array( 'id' => '700italic', 'name' => esc_attr__( 'Bold 700 Italic', 'Avada' ) ),
-				'900'       => array( 'id' => '900',       'name' => esc_attr__( 'Normal 400', 'Avada' ) ),
+				'900'       => array( 'id' => '900',       'name' => esc_attr__( 'Ultra-Bold 900', 'Avada' ) ),
 				'900italic' => array( 'id' => '900italic', 'name' => esc_attr__( 'Ultra-Bold 900 Italic', 'Avada' ) ),
 				'100italic' => array( 'id' => '100italic', 'name' => esc_attr__( 'Ultra-Light 100 Italic', 'Avada' ) ),
 				'300italic' => array( 'id' => '300italic', 'name' => esc_attr__( 'Book 300 Italic', 'Avada' ) ),

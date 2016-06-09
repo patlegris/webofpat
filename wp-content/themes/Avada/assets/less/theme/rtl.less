@@ -587,6 +587,50 @@ Table of Contents
 			margin-right: 12px;
 		}
 	}
+	
+	.fusion-header-v4,
+	.fusion-header-v5 {
+		&.fusion-header-menu-align-left {
+			.fusion-main-menu {
+				.fusion-menu {
+					float: left;
+				}
+				
+				> ul {
+					> li {
+						display: inline-block;
+						float: none;
+						vertical-align: top;
+					}
+				}
+			}
+		}
+		
+		&.fusion-header-menu-align-right {
+			.fusion-main-menu {
+				> ul {
+					> li {
+						display: inline-block;
+						float: none;
+						vertical-align: top;
+
+						&:first-child {
+							padding-right: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	// Login Box
+	.fusion-menu-login-box {
+		.fusion-login-box-submit,
+		.fusion-menu-login-box-register {
+			float: left;
+		}
+	}
+	
 
 /* Megamenu Styles
 ================================================================================================= */
@@ -1191,7 +1235,8 @@ Table of Contents
 		margin-left: 20px;
 	}
 
-	.woocommerce-message, .woocommerce-info {
+	.woocommerce-message, 
+	.woocommerce-info {
 		padding-left: 0;
 		text-align: right;
 		&:before {
@@ -1291,10 +1336,7 @@ Table of Contents
 		margin-left: 25px;
 		margin-right: 0;
 	}
-	.woocommerce .avada-shipping-calculator-form .button
-	.woocommerce .shipping-calculator-form .button {
-		float: left;
-	}
+	
 	.cart_totals table td {
 		text-align: left;
 	}
@@ -1362,31 +1404,108 @@ Table of Contents
 	.woocommerce #customer_login .login .lost_password {
 		float: right;
 	}
-	.myaccount_user_container .username {
-		padding-left: 0;
-		padding-right: 25px;
+	
+	.myaccount_user_container {
+		.username { 
+			.hello,
+			.not-user {
+				padding-left: 0;
+				padding-right: 25px;
+			}
+			
+			.hello:before {
+				margin-left: 0;
+				margin-right: -25px;
+			}
+		}
 	}
-	.myaccount_user_container .username:before {
+	
+	.woocommerce-side-nav,
+	.woocommerce-MyAccount-navigation {
+		float: right;
+	}
+	.woocommerce-side-nav li.active a:after,
+	.woocommerce-MyAccount-navigation ul li.is-active a:after {
+		content: @left-arrow-small;
+		margin-left: 0px;
+		margin-right: 5px;
+	}	
+	
+	.woocommerce-MyAccount-content {
 		margin-left: 0;
-		margin-right: -25px;
+		margin-right: 240px;
+		
+		.woocommerce-Addresses {
+			.edit {
+				&:before {
+					vertical-align: bottom;
+					font-family: @icon-font;				
+					content: @left-arrow-small;
+					margin-right: 5px;
+				}
+				
+				&:after {
+					content: '';
+				}
+			}
+		}
+		
+		.woocommerce-info {
+			.woocommerce-Button {
+				padding-left: 10px;
+				padding-right: 0;
+			}
+		}		
+	}	
+	
+	form {
+		.woocommerce-Button,
+		button {
+			float: left;
+		}
+	}	
+	
+	.avada-myaccount-user {
+		> span {
+			border-right: 0;
+			border-left: 1px solid;
+			
+			&:last-child {
+				border-left: 0;
+				padding-left: 0;
+				padding-right: 20px;
+			}
+		}
+
+		.username {		
+			.hello {
+				padding-left: 0;
+				padding-right: 25px;
+				
+				&:before {
+					margin-left: 0;
+					margin-right: -25px;
+				}				
+			}
+			
+			.not-user {
+				padding-left: 0;
+				padding-right: 25px;			
+			}
+		}
+		
+		.view-cart a {
+			padding-left: 0;
+			padding-right: 25px;
+			
+			&:before {
+				margin-left: 0;
+				margin-right: -25px;
+			}			
+		}	
 	}
-	.myaccount_user_container span {
-		border-right: 0;
-		border-left: 1px solid;
-	}
-	.myaccount_user_container span:last-child {
-		border-left: 0;
-		padding-left: 0;
-		padding-right: 20px;
-	}
-	.myaccount_user_container .view-cart a {
-		padding-left: 0;
-		padding-right: 25px;
-	}
-	.myaccount_user_container .view-cart a:before {
-		margin-left: 0;
-		margin-right: -25px;
-	}
+	
+	
 	.avada-order-details .shop_table.order_details .product-total {
 		text-align: left;
 	}
@@ -1407,19 +1526,14 @@ Table of Contents
 	.my_account_orders .order-status {
 		text-align: right;
 	}
-	.my_account_orders .order-actions a:after {
+	
+	.my_account_orders .order-actions a:after,
+	.woocommerce-MyAccount-downloads .download-actions a:after {
 		content: @left-arrow-small;
 		margin-left: 0;
 		margin-right: 10px;
 	}
-	.woocommerce-side-nav {
-		float: right;
-	}
-	.woocommerce-side-nav li.active a:after {
-		content: @left-arrow-small;
-		margin-left: 0px;
-		margin-right: 5px;
-	}
+	
 	.woocommerce .address .edit:after {
 		content: @left-arrow-small;
 		margin-left: 0px;
@@ -1660,9 +1774,15 @@ Table of Contents
 		clear: left;
 		margin-left: 0;
 	}
-	.woocommerce .avada-shipping-calculator-form .button, .woocommerce .shipping-calculator-form .button {
+	.woocommerce .avada-shipping-calculator-form .button, 
+	.woocommerce .shipping-calculator-form .button {
 		float: left;
 	}
+	
+	.woocommerce .avada-shipping-calculator-form .fusion-column-last {
+		margin-bottom: 20px;
+	}
+	
 	.shipping-calculator-form-nohide .fusion-button {
 		float: left;
 	}
@@ -1676,6 +1796,15 @@ Table of Contents
 	.cart-totals-buttons {
 		float: right;
 	}
+	
+	.cart-collaterals {
+		.cart_totals {
+			.fusion-button,
+			.checkout-button {
+				float: left;
+			}
+		}
+	}	
 
 	.cart-totals-container .fusion-button {
 		float: left;

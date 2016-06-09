@@ -311,7 +311,20 @@ if ( ! function_exists( 'avada_is_portfolio_template' ) ) {
 if ( ! function_exists( 'avada_get_image_size_dimensions' ) ) {
 	function avada_get_image_size_dimensions( $image_size = 'full' ) {
 		global $_wp_additional_image_sizes;
-		return ( 'full' == $image_size ) ? array( 'height' => 'auto', 'width' => '100%' ) : array( 'height' => $_wp_additional_image_sizes[ $image_size ]['height'] . 'px', 'width' => $_wp_additional_image_sizes[ $image_size ]['width'] . 'px' );
+		
+		
+		if ( 'full' == $image_size ) {
+			$image_dimension = array( 'height' => 'auto', 'width' => '100%' );
+		} else {
+			if ( 'portfolio-six' == $image_size ) {
+				$image_size = 'portfolio-five';
+			} else if ( 'portfolio-four' == $image_size ) {
+				$image_size = 'portfolio-three';
+			}
+			$image_dimension = array( 'height' => $_wp_additional_image_sizes[ $image_size ]['height'] . 'px', 'width' => $_wp_additional_image_sizes[ $image_size ]['width'] . 'px' );
+		}
+		
+		return $image_dimension;
 	}
 }
 
@@ -726,6 +739,7 @@ if ( ! function_exists( 'avada_add_login_box_to_nav' ) ) {
 											$items .= '<input type="hidden" name="redirect" value="' . esc_url( ( isset( $_SERVER['HTTP_REFERER'] ) ) ? $_SERVER['HTTP_REFERER'] : $_SERVER['REQUEST_URI'] ) . '">';
 										$items .= '</p>';
 									$items .= '</form>';
+									$items .= '<a class="fusion-menu-login-box-register" href="' . get_permalink( get_option( 'woocommerce_myaccount_page_id' ) ) . '" title="' . __( 'Register', 'Avada' ) . '">' . __( 'Register', 'Avada' ) . '</a>';
 								$items .= '</div>';
 							} else {
 								$items .= '<ul class="sub-menu">';
@@ -767,7 +781,7 @@ if ( ! function_exists( 'avada_nav_woo_cart' ) ) {
 				$main_cart_class        = 'fusion-main-menu-cart';
 				$cart_link_active_class = 'fusion-main-menu-icon fusion-main-menu-icon-active';
 
-				if ( Avada()->settings->get( 'woocommerce_cart_counter') ) {
+				if ( Avada()->settings->get( 'woocommerce_cart_counter' ) ) {
 					$cart_link_active_text = '<span class="fusion-widget-cart-number">' . $woocommerce->cart->get_cart_contents_count() . '</span>';
 					$main_cart_class      .= ' fusion-widget-cart-counter';
 				}
@@ -790,9 +804,10 @@ if ( ! function_exists( 'avada_nav_woo_cart' ) ) {
 
 			$cart_link_markup = '<a class="' . $cart_link_active_class . '" href="' . $woo_cart_page_link . '"><span class="menu-text">' . $cart_link_active_text . '</span></a>';
 
-			if (  $is_enabled ) {
-
+			if ( $is_enabled ) {
+				
 				$items = '<li class="fusion-custom-menu-item fusion-menu-cart ' . $main_cart_class . '">';
+
 					if ( $woocommerce->cart->get_cart_contents_count() ) {
 						$checkout_link = get_permalink( get_option('woocommerce_checkout_page_id') );
 
@@ -820,6 +835,7 @@ if ( ! function_exists( 'avada_nav_woo_cart' ) ) {
 					} else {
 						$items .= '<a class="' . $cart_link_inactive_class . '" href="' . $woo_cart_page_link . '"><span class="menu-text">' . $cart_link_inactive_text . '</span></a>';
 					}
+			
 				$items .= '</li>';
 			}
 		}
@@ -873,7 +889,7 @@ if ( ! function_exists( 'avada_add_woo_cart_to_nav' ) ) {
 			// disable woo cart on ubermenu navigations
 			$ubermenu = true;
 		}
-
+		
 		if ( Avada()->settings->get( 'header_layout' ) != 'v6' ) {
 			if ( $ubermenu == false && $args->theme_location == 'main_navigation' || $args->theme_location == 'sticky_navigation' ) {
 				$items .= avada_nav_woo_cart( 'main' );

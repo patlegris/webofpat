@@ -3599,6 +3599,12 @@ a:active, a:focus {
 	border-bottom: 0 !important;
 }
 
+.fusion_element_box .menu-item-handle .edit-element i,
+.fusion_element_box .menu-item-handle .clone-element i,
+.fusion_element_box .menu-item-handle .delete-element i {
+	line-height: 20px;
+}
+
 .fusion_element_box .handler,
 .fusion_layout_column .fusion_element_box .handler,
 .fusion_full_width .ui-droppable .fusion_element_box .handler {
@@ -3941,7 +3947,7 @@ a:active, a:focus {
 #fusion_image_frame .img_frame_section img {
 	width: 100%;
 	float: left;
-	height: 100%;
+	height: auto;
 	margin-top: 10px;
 	margin-bottom: 2px;
 	border: 1px solid #e4e4e4;

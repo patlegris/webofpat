@@ -401,10 +401,14 @@ if ( ! function_exists( 'avada_avadaredux_validate_custom_fonts' ) ) {
 	function avada_avadaredux_validate_custom_fonts( $field, $value, $existing_value ) {
 		$return = array();
 
+		if ( isset( $value['name'] ) ) {
+
 			foreach ( $value['name'] as $name_key => $name_value ) {
 				$value['name'][ $name_key ] = trim( $name_value );
 				$value['name'][ $name_key ] = str_replace( ' ', '-', $value['name'][ $name_key ] );
 			}
+
+		}
 
 		return array(
 			'value' => $value,

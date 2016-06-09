@@ -21,11 +21,12 @@ class Fusion_Widget_Facebook_Page extends WP_Widget {
 		$title        = apply_filters( 'widget_title', isset( $instance['title'] ) ? $instance['title'] : '' );
 		$language     = get_locale();
 		$page_url     = isset( $instance['page_url'] ) ? $instance['page_url'] : '';
+		$app_id       = isset( $instance['app_id'] ) ? $instance['app_id'] : '';
 		$widget_width = isset( $instance['width'] ) ? $instance['width'] : 268;
 		$show_faces   = isset( $instance['show_faces'] ) ? 'true' : 'false';
 		$show_stream  = isset( $instance['show_stream'] ) ? 'true' : 'false';
 		$show_header  = isset( $instance['show_header'] ) ? 'false' : 'true';
-		$small_header  = isset( $instance['small_header'] ) ? 'true' : 'false';
+		$small_header = isset( $instance['small_header'] ) ? 'true' : 'false';
 		$height       = '65';
 
 		$height = ( 'true' == $show_faces ) ? '240' : $height;
@@ -52,7 +53,7 @@ class Fusion_Widget_Facebook_Page extends WP_Widget {
 			  var js, fjs = d.getElementsByTagName(s)[0];
 			  if (d.getElementById(id)) return;
 			  js = d.createElement(s); js.id = id;
-			  js.src = "//connect.facebook.net/<?php echo $language; ?>/sdk.js#xfbml=1&version=v2.5";
+			  js.src = "//connect.facebook.net/<?php echo $language; ?>/sdk.js#xfbml=1&version=v2.6&appId=<?php echo $app_id; ?>";
 			  fjs.parentNode.insertBefore(js, fjs);
 			}(document, 'script', 'facebook-jssdk'));
 
@@ -89,11 +90,12 @@ class Fusion_Widget_Facebook_Page extends WP_Widget {
 
 		$instance['title']        = strip_tags( $new_instance['title'] );
 		$instance['page_url']     = $new_instance['page_url'];
+		$instance['app_id']       = $new_instance['app_id'];
 		$instance['width']        = $new_instance['width'];
 		$instance['show_faces']   = $new_instance['show_faces'];
 		$instance['show_stream']  = $new_instance['show_stream'];
 		$instance['show_header']  = $new_instance['show_header'];
-		$instance['small_header']  = $new_instance['small_header'];
+		$instance['small_header'] = $new_instance['small_header'];
 
 		return $instance;
 
@@ -104,6 +106,7 @@ class Fusion_Widget_Facebook_Page extends WP_Widget {
 		$defaults = array(
 			'title'        => __( 'Find us on Facebook', 'Avada' ),
 			'page_url'     => '',
+			'app_id'       => '',
 			'width'        => '268',
 			'show_faces'   => 'on',
 			'show_stream'  => false,
@@ -113,7 +116,7 @@ class Fusion_Widget_Facebook_Page extends WP_Widget {
 
 		$instance = wp_parse_args( (array) $instance, $defaults ); ?>
 
-		<h4 style="line-height: 1.6em;"><?php _e( 'IMPORTANT: Facebook has abandoned color scheme option for the page plugin, thus the option is also no longer available in the widget.', 'Avada' ); ?></a></h4>
+		<h4 style="line-height: 1.6em;"><?php _e( 'IMPORTANT: Please create a Facebook App and use its ID for features like sharing.', 'Avada' ); ?> <a href="https://developers.facebook.com/docs/apps/register" target="_blank"><?php _e( 'See Instructions.', 'Avada' ); ?></a></h4>
 
 		<p>
 			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:', 'Avada' ); ?></label>
@@ -124,6 +127,11 @@ class Fusion_Widget_Facebook_Page extends WP_Widget {
 			<label for="<?php echo $this->get_field_id( 'page_url' ); ?>"><?php _e( 'Facebook Page URL:', 'Avada' ); ?></label>
 			<input class="widefat" type="text" id="<?php echo $this->get_field_id( 'page_url' ); ?>" name="<?php echo $this->get_field_name( 'page_url' ); ?>" value="<?php echo $instance['page_url']; ?>" />
 		</p>
+		
+		<p>
+			<label for="<?php echo $this->get_field_id( 'app_id' ); ?>"><?php _e( 'Facebook App ID:', 'Avada' ); ?></label>
+			<input class="widefat" type="text" id="<?php echo $this->get_field_id( 'app_id' ); ?>" name="<?php echo $this->get_field_name( 'app_id' ); ?>" value="<?php echo $instance['app_id']; ?>" />
+		</p>		
 
 		<p>
 			<label for="<?php echo $this->get_field_id( 'width' ); ?>"><?php _e( 'Width (has to be between 180 and 500):', 'Avada' ); ?></label>

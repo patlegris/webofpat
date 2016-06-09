@@ -523,7 +523,7 @@ if ( ! function_exists( 'avada_get_page_title_bar_contents' ) ) {
 		if ( ! $title ) {
 			$title = get_the_title( $post_id );
 
-			// Only assing blog title theme option to default blog page and not posts page
+			// Only assign blog title theme option to default blog page and not posts page
 			if ( is_home() && get_option( 'show_on_front' ) != 'page' ) {
 				$title = Avada()->settings->get( 'blog_title' );
 			}
@@ -564,7 +564,7 @@ if ( ! function_exists( 'avada_get_page_title_bar_contents' ) ) {
 			}
 		}
 
-		// Only assing blog subtitle theme option to default blog page and not posts page
+		// Only assign blog subtitle theme option to default blog page and not posts page
 		if ( ! $subtitle && is_home() && get_option( 'show_on_front' ) != 'page' ) {
 			$subtitle = Avada()->settings->get( 'blog_subtitle' );
 		}

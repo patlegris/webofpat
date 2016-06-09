@@ -4,7 +4,7 @@ Description: The #1 selling theme of all time that allows you to build virtually
 Author: ThemeFusion
 Theme URI: http://avada.theme-fusion.com/
 Author URI: http://themeforest.net/user/ThemeFusion
-Version: 4.0.1
+Version: 4.0.3
 License: Themeforest Split Licence
 License URI: -
 Text Domain: Avada
@@ -2155,6 +2155,7 @@ table.ui-datepicker td a,
 }
 .input-text,
 input[type="text"],
+input[type="email"],
 #tribe-bar-form input[type=text],
 .tribe-bar-disabled #tribe-bar-form .tribe-bar-filters input[type=text] {
   border: 1px solid #d2d2d2;
@@ -2164,6 +2165,11 @@ input[type="text"],
   margin-right: 1%;
   width: 100%;
   box-sizing: border-box;
+}
+.select2-container .select2-choice,
+.select2-results .select2-result-label {
+  padding-left: 15px;
+  padding-right: 15px;
 }
 #tribe-bar-form input[type=text]::-webkit-input-placeholder {
   font-style: normal;
@@ -4697,7 +4703,7 @@ blockquote *:last-child {
 }
 /* Tagcloud */
 .tagcloud a {
-  font-size: 13px !important;
+  font-size: 13px;
   display: inline-block;
   padding: 0 10px;
   min-height: 28px;
@@ -4885,6 +4891,7 @@ Table of Contents
   -webkit-transform: background-color 0.25s ease-in-out;
   transform: background-color 0.25s ease-in-out;
   transition: background-color 0.25s ease-in-out;
+  -webkit-transform: translate3d(0px, 0px, 0px);
 }
 .fusion-header-backface {
   -webkit-backface-visibility: hidden;
@@ -5716,6 +5723,11 @@ body.side-header-right.rtl #side-header .login-box {
   padding: 0 25px 25px 25px;
   height: 100%;
 }
+.fusion-is-sticky .fusion-header-v6 .fusion-flyout-menu.fusion-main-menu {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
 .fusion-header-v6 .fusion-flyout-menu .fusion-menu {
   width: 100%;
   text-align: center;
@@ -6085,6 +6097,11 @@ body.side-header-right.rtl #side-header .login-box {
 .fusion-menu-login-box .fusion-login-box-submit,
 .fusion-menu-login-box .fusion-remember-checkbox {
   margin-bottom: 0;
+}
+.fusion-menu-login-box .fusion-menu-login-box-register {
+  clear: both;
+  float: right;
+  padding-top: 10px;
 }
 .fusion-login-box-submit {
   float: right;
@@ -7208,7 +7225,8 @@ Table of Contents
 	03 NextGEN
 	43 Lightbox Plus Colorbox
 	05 Polylang Styles
-	06 Sermon Manager Styles
+	06 qTranslate Styles
+	07 Sermon Manager Styles
 ================================================================================================= */
 /* WordPress Styles
 ================================================================================================= */
@@ -7248,6 +7266,13 @@ div#shDisplay {
 .fusion-secondary-menu .lang-item > a img {
   vertical-align: middle;
   padding: 0 2px;
+}
+/* qTranslate Styles
+================================================================================================= */
+.qtranxs-lang-menu > a img,
+.qtranxs-lang-menu-item > a img {
+  vertical-align: middle;
+  padding: 0 3px;
 }
 /* Sermon Manager Styles
 ================================================================================================= */
@@ -7328,6 +7353,7 @@ Table of Contents
 .tfs-slider .slide-content-container .fusion-title-sc-wrapper {
   display: inline-block;
   padding: 0;
+  line-height: 1;
 }
 .tfs-slider .slide-content-container .fusion-block-element {
   display: block;
@@ -7993,7 +8019,6 @@ Table of Contents
 }
 .fusion-image-hovers .hover-type-zoomin {
   overflow: hidden;
-  -webkit-mask-image: -webkit-radial-gradient(white, black);
 }
 .fusion-image-hovers .hover-type-zoomin img,
 .fusion-image-hovers .hover-type-zoomin .tribe-events-event-image,
@@ -8012,7 +8037,6 @@ Table of Contents
 }
 .fusion-image-hovers .hover-type-zoomout {
   overflow: hidden;
-  -webkit-mask-image: -webkit-radial-gradient(white, black);
 }
 .fusion-image-hovers .hover-type-zoomout img,
 .fusion-image-hovers .hover-type-zoomout .tribe-events-event-image,
@@ -8035,6 +8059,14 @@ Table of Contents
   display: inline-block;
   position: relative;
   max-width: 100%;
+}
+.fusion-image-hovers .imageframe-liftup.fusion-imageframe-liftup-left {
+  float: left;
+  margin-right: 25px;
+}
+.fusion-image-hovers .imageframe-liftup.fusion-imageframe-liftup-right {
+  float: right;
+  margin-left: 25px;
 }
 .fusion-image-hovers .imageframe-liftup span {
   opacity: 1;
@@ -8402,6 +8434,8 @@ Table of Contents
 #tribe-events-content .tribe-events-tooltip {
   padding: 0;
   z-index: 100000;
+  border: none;
+  box-shadow: 3px 4px 21px rgba(0, 0, 0, 0.38);
 }
 #tribe-events-content .tribe-events-tooltip .tribe-events-event-body {
   padding: 13px 22px 5px 22px;
@@ -8531,6 +8565,7 @@ Table of Contents
   border-right: none;
 }
 #tribe-events .tribe-events-list .tribe-events-content {
+  width: auto;
   padding: 30px;
 }
 #tribe-events .tribe-events-list .tribe-events-event-meta .tribe-events-gmap,
@@ -8571,6 +8606,10 @@ Table of Contents
 .tribe-events-list .time-details,
 .tribe-events-list .tribe-events-venue-details {
   line-height: 1.5;
+}
+.tribe-events-list .tribe-events-venue-details {
+  font-style: italic;
+  font-weight: 400;
 }
 #tribe-events .tribe-events-day .type-tribe_events {
   margin: 0;
@@ -8748,6 +8787,8 @@ Table of Contents
 .tribe-events-single ul.tribe-related-events > li {
   margin-right: 3.5%;
   width: 31%;
+  border: none;
+  background: none;
 }
 .tribe-events-single ul.tribe-related-events > li:last-child {
   margin-right: 0;
@@ -9165,6 +9206,7 @@ Table of Contents
 }
 .tribe-events-single ul.tribe-related-events li .tribe-related-event-info {
   line-height: 1.5;
+  padding: 1em 0 0;
 }
 .tribe-events-tooltip:after,
 .tribe-events-tooltip:before {
@@ -9259,6 +9301,33 @@ Table of Contents
   border-left-color: #fff;
   border-width: 18px;
   margin-top: -18px;
+}
+.tribe-events-tickets {
+  table-layout: fixed;
+}
+.tribe-events-tickets .button {
+  margin-top: 10px;
+}
+.fusion-body .tribe-events-tickets .button {
+  margin-left: 0;
+}
+.tribe-events-tickets tr .tribe-ticket,
+.tribe-events-tickets tr .tickets_name,
+.tribe-events-tickets tr .tickets_description {
+  display: table-cell;
+  padding: 10px;
+  width: 33%;
+  border: 1px solid;
+}
+.tribe-events-tickets tr .tribe-ticket-quantity {
+  max-width: 100%;
+}
+.tribe-events-tickets tr .tribe-tickets-attendees {
+  padding-top: 10px;
+}
+.tribe-events-tickets .tribe-tickets-full-name-row input,
+.tribe-events-tickets .tribe-tickets-email-row input {
+  margin: 0 5px;
 }
 #tribe-events .tribe-events-tickets .woocommerce {
   min-width: 107px;
@@ -9611,7 +9680,9 @@ Table of Contents
 .gform_wrapper .gform_button,
 .gform_wrapper .button,
 .woocommerce .checkout #place_order,
-.bbp-submit-wrapper .button {
+.woocommerce .cart-collaterals .checkout-button,
+.bbp-submit-wrapper .button,
+.tribe-events-tickets .button {
   display: inline-block;
   position: relative;
   outline: 0;
@@ -9630,14 +9701,18 @@ Table of Contents
 .gform_wrapper .gform_button:before,
 .gform_wrapper .button:before,
 .woocommerce .checkout #place_order:before,
+.woocommerce .cart-collaterals .checkout-button:before,
 .bbp-submit-wrapper .button:before,
+.tribe-events-tickets .button:before,
 .fusion-button:after,
 .post-password-form input[type="submit"]:after,
 .wpcf7-submit:after,
 .gform_wrapper .gform_button:after,
 .gform_wrapper .button:after,
 .woocommerce .checkout #place_order:after,
-.bbp-submit-wrapper .button:after {
+.woocommerce .cart-collaterals .checkout-button:after,
+.bbp-submit-wrapper .button:after,
+.tribe-events-tickets .button:after {
   content: " ";
   display: table;
 }
@@ -9647,7 +9722,9 @@ Table of Contents
 .gform_wrapper .gform_button:after,
 .gform_wrapper .button:after,
 .woocommerce .checkout #place_order:after,
-.bbp-submit-wrapper .button:after {
+.woocommerce .cart-collaterals .checkout-button:after,
+.bbp-submit-wrapper .button:after,
+.tribe-events-tickets .button:after {
   clear: both;
 }
 .fusion-button:hover,
@@ -9656,7 +9733,9 @@ Table of Contents
 .gform_wrapper .gform_button:hover,
 .gform_wrapper .button:hover,
 .woocommerce .checkout #place_order:hover,
-.bbp-submit-wrapper .button:hover {
+.woocommerce .cart-collaterals .checkout-button:hover,
+.bbp-submit-wrapper .button:hover,
+.tribe-events-tickets .button:hover {
   transition: all .3s;
 }
 .fusion-button:focus,
@@ -9665,7 +9744,9 @@ Table of Contents
 .gform_wrapper .gform_button:focus,
 .gform_wrapper .button:focus,
 .woocommerce .checkout #place_order:focus,
-.bbp-submit-wrapper .button:focus {
+.woocommerce .cart-collaterals .checkout-button:focus,
+.bbp-submit-wrapper .button:focus,
+.tribe-events-tickets .button:focus {
   outline: 0;
 }
 .fusion-button-text,
@@ -13893,6 +13974,10 @@ table {
   margin: 0 0 7px;
   line-height: 20px;
   font-size: 18px;
+}
+.fusion-reading-box-container .reading-box-additional {
+  display: inline-block;
+  width: 100%;
 }
 .fusion-reading-box-container .fusion-desktop-button {
   display: block;

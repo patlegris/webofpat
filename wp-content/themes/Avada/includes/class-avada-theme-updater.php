@@ -71,7 +71,7 @@ class Avada_Theme_Updater {
 				'request' => json_encode($args),
 				'api-key' => md5(home_url())
 			),
-			'user-agent' => 'WordPress/'. $wp_version .'; '. home_url()
+			'user-agent' => 'avada-theme-updater'
 		);
 	}
 

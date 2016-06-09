@@ -155,6 +155,8 @@
   float: none;
 }
 
+.products .product-list-view .product-details-container .clearfix { display: inline-block; }
+
 @media only screen and (max-width: 800px ) {
 
 	.woocommerce .checkout_coupon .promo-code-heading {

@@ -618,7 +618,6 @@
 
         // Show more preview stuff
         if ( $( '#' + mainID ).hasClass( 'typography-initialized' ) ) {
-            //console.log('here2');
             var isPreviewSize = $( '#' + mainID + ' .typography-preview' ).data( 'preview-size' );
 
             if ( isPreviewSize == '0' ) {
@@ -628,7 +627,7 @@
             $( '#' + mainID + ' .typography-preview' ).css( 'font-weight', style );
 
             //show in the preview box the font
-            $( '#' + mainID + ' .typography-preview' ).css( 'font-family', family + ', sans-serif' );
+            $( '#' + mainID + ' .typography-preview' ).css( 'font-family', '"' + family + '", sans-serif' );
 
             if ( family === 'none' && family === '' ) {
                 //if selected is not a font remove style "font-family" at preview box

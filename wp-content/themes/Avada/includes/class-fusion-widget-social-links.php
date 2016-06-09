@@ -83,13 +83,21 @@ class Fusion_Widget_Social_Links extends WP_Widget {
 		}
 
 		$social_networks_ordered = array();
-
-		if ( $to_social_networks ) {
-			// Loop through the set social networks and order them according to the Theme Options > Social Media tab ordering
+		
+		if ( $to_social_networks && 0 < count( $to_social_networks['avadaredux_repeater_data'] ) ) {
+			// Loop through the set of social networks and order them according to the Theme Options > Social Media tab ordering
 			// Append those icons that are not set in Theme Options at the end
 			foreach ( $social_networks as $name => $value ) {
 
-				$social_network_position = array_search( $value, $to_social_networks['icon'] );
+				if ( 'fb' == $value ) {
+					$compare_value = 'facebook';
+				} elseif ( 'google' == $value ) {
+					$compare_value = 'gplus';
+				} else {
+					$compare_value = $value;
+				}
+
+				$social_network_position = array_search( $compare_value, $to_social_networks['icon'] );
 
 				if ( $social_network_position || 0 === $social_network_position ) {
 					$social_networks_ordered[ $social_network_position ] = $name;
@@ -118,6 +126,7 @@ class Fusion_Widget_Social_Links extends WP_Widget {
 				}
 			}
 		}
+		
 		ksort( $social_networks_ordered );
 		$social_networks_ordered = array_merge( $social_networks_ordered, $social_networks );
 
@@ -152,9 +161,11 @@ class Fusion_Widget_Social_Links extends WP_Widget {
 				$box_color_count  = 0;
 
 				foreach ( $social_networks_ordered as $name => $value ) {
-
 					if ( is_string( $value ) ) {
-						$name = $value;
+						if ( $to_social_networks && 0 < count( $to_social_networks['avadaredux_repeater_data'] ) ) {
+							$name = $value;
+						}
+					
 						$value = str_replace( '_link', '', $value );
 
 						$value = ( 'fb' == $value ) ? 'facebook' : $value;
@@ -203,11 +214,18 @@ class Fusion_Widget_Social_Links extends WP_Widget {
 						$tooltip_params = sprintf( ' data-placement="%s" data-title="%s" data-toggle="tooltip" data-original-title="" ', strtolower( $instance['tooltip_pos'] ), ucwords( $tooltip ) );
 					}
 
-					if ( is_string( $value ) ) : ?>
+					if ( is_string( $value ) ) :
+						if ( 'mail' == $value ) {
+							$instance[ $name ] = 'mailto:' . antispambot( $instance[ $name ] );
+						}
+						?>
 						<a class="fusion-social-network-icon fusion-tooltip fusion-<?php echo $value; ?> fusion-icon-<?php echo $value; ?>" href="<?php echo $instance[ $name ]; ?>"<?php echo $tooltip_params; ?>title="<?php echo ucwords( $tooltip ); ?>" <?php echo $nofollow; ?> target="<?php echo $instance['linktarget']; ?>" style="<?php echo $style; echo $icon_style; echo $box_style; ?>"></a>
 
-					<?php else : ?>
-
+					<?php else : 
+						if ( 'mail' == $value ) {
+							$value['network_link'] = 'mailto:' . antispambot( $value['network_link'] );
+						}
+						?>
 						<a class="fusion-social-network-icon fusion-tooltip" target="<?php echo $instance['linktarget']; ?>" href="<?php echo $value['network_link']; ?>"<?php echo $nofollow; echo $tooltip_params; ?>title="" style="<?php echo $style; ?>"><img src="<?php echo $value['network_icon']; ?>" height="<?php echo $value['network_icon_height']; ?>" width="<?php echo $value['network_icon_width']; ?>" alt="<?php echo $value['network_name']; ?>" /></a>
 					<?php endif;
 

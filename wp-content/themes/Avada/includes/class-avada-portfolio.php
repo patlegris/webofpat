@@ -17,7 +17,13 @@ class Avada_Portfolio {
 	public function set_post_filters( $query ) {
 
 		if ( ! is_admin() && $query->is_main_query() && ( is_tax( 'portfolio_category' ) || is_tax( 'portfolio_skills' ) || is_tax( 'portfolio_tags' ) ) ) {
-			$query->set( 'posts_per_page', Avada()->settings->get( 'portfolio_items' ) );
+			// If TO setting is set to 0, all items should show
+			$number_of_portfolio_items = Avada()->settings->get( 'portfolio_items' );
+			if ( '0' == $number_of_portfolio_items ) {
+				$number_of_portfolio_items = -1;
+			}
+			
+			$query->set( 'posts_per_page', $number_of_portfolio_items );
 		}
 
 		return $query;

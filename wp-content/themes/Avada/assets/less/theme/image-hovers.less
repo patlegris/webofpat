@@ -1,7 +1,6 @@
 .fusion-image-hovers {
   .hover-type-zoomin {
     overflow: hidden;
-    -webkit-mask-image: -webkit-radial-gradient(white, black);
 
     img, .tribe-events-event-image, .fusion-column-inner-bg-image {
       opacity: 1;
@@ -18,7 +17,6 @@
 
   .hover-type-zoomout {
     overflow: hidden;
-    -webkit-mask-image: -webkit-radial-gradient(white, black);
 
     img, .tribe-events-event-image, .fusion-column-inner-bg-image {
       opacity: 1;
@@ -39,6 +37,16 @@
     display: inline-block;
     position: relative;
     max-width: 100%;
+    
+    &.fusion-imageframe-liftup-left {
+    	float: left;
+    	margin-right: 25px;
+    }
+    
+    &.fusion-imageframe-liftup-right {
+    	float: right;
+    	margin-left: 25px;
+    }
 
     span {
       opacity: 1;

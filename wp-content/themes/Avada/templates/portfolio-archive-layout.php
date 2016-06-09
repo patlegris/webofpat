@@ -44,7 +44,7 @@ $post_featured_image_size_dimensions = avada_get_image_size_dimensions( $portfol
 $column_spacing_class = $column_spacing = '';
 if ( ! strpos( $portfolio_layout_setting, 'one' ) ) {
 	$column_spacing_class = ' fusion-col-spacing';
-	$column_spacing = sprintf( ' style="padding:%spx;"', str_replace( 'px', '', Avada()->settings->get( 'portfolio_column_spacing' ) ) / 2 );
+	$column_spacing = sprintf( ' style="padding:%spx;"', Avada()->settings->get( 'portfolio_column_spacing' ) / 2 );
 }
 
 // Get the correct ID of the archive
@@ -109,7 +109,7 @@ $archive_id = get_queried_object_id();
 						<?php else : ?>
 							<?php
 							if ( $portfolio_image_size == 'full' ) {
-								Avada()->images->set_grid_image_meta( array( 'layout' => 'portfolio_full', 'columns' => $portfolio_columns_int ) );
+								Avada()->images->set_grid_image_meta( array( 'layout' => 'portfolio_full', 'columns' => $portfolio_columns_int, 'gutter_width' => Avada()->settings->get( 'portfolio_column_spacing' ) ) );
 							}
 							echo avada_render_first_featured_image_markup( $post->ID, $portfolio_image_size, get_permalink( $post->ID ), true );
 							Avada()->images->set_grid_image_meta( array() );
@@ -182,7 +182,7 @@ $archive_id = get_queried_object_id();
 											</a>
 											<?php
 											/**
-											 * Render the "View Project" button only is a project url was set
+											 * Render the "View Project" button only if a project url was set
 											 */
 											?>
 											<?php if ( fusion_get_page_option( 'project_url', $post->ID ) ) : ?>

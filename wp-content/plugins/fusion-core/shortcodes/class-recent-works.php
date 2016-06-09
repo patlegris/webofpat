@@ -213,7 +213,7 @@ class FusionSC_RecentWorks {
 
 					// Get the post image
 					if ( $this->image_size == 'full' && property_exists( Avada(), 'images' ) ) {
-						Avada()->images->set_grid_image_meta( array( 'layout' => 'portfolio_full', 'columns' => $columns ) );
+						Avada()->images->set_grid_image_meta( array( 'layout' => 'portfolio_full', 'columns' => $columns, 'gutter_width' => $column_spacing ) );
 					}	
 					$image = avada_render_first_featured_image_markup( get_the_ID(), $this->image_size, get_permalink( get_the_ID() ), TRUE, FALSE, FALSE, 'default', $show_title, '', $gallery_id );
 					if ( property_exists( Avada(), 'images' ) ) {
@@ -257,9 +257,9 @@ class FusionSC_RecentWorks {
 
 					$image = sprintf( '<div class="fusion-image-wrapper fusion-video" style="max-width:%s;">%s</div>', $video_max_width, fusion_get_page_option( 'video', get_the_ID() ) );
 				} else {
-					// Get the post image
+					// Get the post image			
 					if ( $this->image_size == 'full' && property_exists( Avada(), 'images' ) ) {
-						Avada()->images->set_grid_image_meta( array( 'layout' => 'portfolio_full', 'columns' => $columns ) );
+						Avada()->images->set_grid_image_meta( array( 'layout' => 'portfolio_full', 'columns' => $columns, 'gutter_width' => $column_spacing ) );
 					}
 					$image = avada_render_first_featured_image_markup( get_the_ID(), $this->image_size, get_permalink( get_the_ID() ), TRUE, FALSE, FALSE, 'default', 'default', '', $gallery_id );
 					if ( property_exists( Avada(), 'images' ) ) {
@@ -573,9 +573,19 @@ class FusionSC_RecentWorks {
 		// Set the image size according to picture size param and layout
 		if ( self::$args['picture_size'] == 'fixed' ) {
 			if ( self::$args['layout'] == 'carousel' ) {
-				$this->image_size = 'portfolio-two';
+				if ( 'six' == $this->column || 'five' == $this->column || 'four' == $this->column ) {
+					$this->image_size = 'blog-medium';
+				} else {
+					$this->image_size = 'portfolio-two';
+				}
 			} else {
-				$this->image_size = 'portfolio-' . $this->column;
+				if ( 'six' == $this->column ) {
+					$this->image_size = 'portfolio-five';
+				} else if ( 'four' == $this->column ) {
+					$this->image_size = 'portfolio-three';
+				} else {
+					$this->image_size = 'portfolio-' . $this->column;
+				}
 			}
 		} else {
 			$this->image_size = 'full';

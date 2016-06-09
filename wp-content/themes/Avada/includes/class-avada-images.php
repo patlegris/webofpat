@@ -155,7 +155,10 @@ class Avada_Images {
 			if ( ! $is_safari_below_v9 ) {
 				// Only include the uncropped sizes in srcset
 				foreach ( $sources as $width => $source ) {
-					if ( ! in_array( $width, self::$grid_accepted_widths ) ) {
+					// Make sure the original image isn't deleted
+					preg_match( '/-\d+x\d+(?=\.(jpg|jpeg|png|gif|tiff|svg)$)/i', $source['url'], $matches );
+				
+					if ( ! in_array( $width, self::$grid_accepted_widths ) && isset( $matches[0] )  ) {
 						unset( $sources[$width] );
 					}
 				}
@@ -168,7 +171,7 @@ class Avada_Images {
 						// Unset cropped sizes
 						unset( $sources[$width] );
 					} else {
-						// Reset the sourcesto x descriptor
+						// Reset the sources to x descriptor
 						if ( in_array( $width, $accepted_widths ) ) {
 							$sources[$width]['descriptor'] = 'x';
 							$sources[$width]['value'] = array_search( $width, $accepted_widths ) + 1;
@@ -205,8 +208,16 @@ class Avada_Images {
 			$content_break_point = $side_header_width + intval( Avada()->settings->get( 'content_break_point' ) );
 			$content_width = Avada()->layout->get_content_width();
 
+			if ( isset( self::$grid_image_meta['gutter_width'] ) ) {
+				$content_width -= self::$grid_image_meta['gutter_width'] * ( (int) self::$grid_image_meta['columns'] - 1 );
+			}
+
 			// Grid
-			if ( 'grid' == self::$grid_image_meta['layout'] || 'portfolio_full' == self::$grid_image_meta['layout'] ) {
+			if ( 'grid' == self::$grid_image_meta['layout'] || 
+				 'portfolio_full' == self::$grid_image_meta['layout'] ||
+				 'related-posts' == self::$grid_image_meta['layout']
+			) {
+
 				$main_break_point = (int) Avada()->settings->get( 'grid_main_break_point' );
 				if ( 640 < $main_break_point ) {
 					$breakpoint_range = $main_break_point - 640;
@@ -223,17 +234,29 @@ class Avada_Images {
 				$break_points[2] = $break_points[6] - 4 * $breakpoint_interval;
 				$break_points[1] = $break_points[6] - 5 * $breakpoint_interval;
 				$sizes = '';
+
+				// Make sure image sizes will be correct for 100% width pages
+				if ( Avada()->layout->is_current_wrapper_hundred_percent() ) {
+
+					$largest_breakpoint = $main_break_point + 200;
+					$columns = (int) self::$grid_image_meta['columns'];
+					$width = round( 100 / $columns );
+					$sizes .= sprintf( '(min-width: %spx) %svw, ', $largest_breakpoint, $width );
+
+				}
+
 				foreach( $break_points as $columns => $breakpoint ) {
 
 					if ( $columns <= (int) self::$grid_image_meta['columns'] ) {
 						$width = $content_width / $columns;
 						if ( $breakpoint < $width ) {
-						 $width = $breakpoint + $breakpoint_interval;
+							$width = $breakpoint + $breakpoint_interval;
 						}
 						$sizes .= sprintf( '(min-width: %spx) %spx, ', round( $breakpoint ), round( $width ) );
 					}
-
 				}
+
+
 				$sizes .= '100vw';
 
 			// Timeline
@@ -264,6 +287,7 @@ class Avada_Images {
      * @return string The html markup of the image.
      */
 	public function edit_grid_image_src( $html, $post_id = null, $post_thumbnail_id = null, $size = null, $attr = null ) {
+
 		if ( isset( self::$grid_image_meta['layout'] ) && in_array( self::$grid_image_meta['layout'], self::$supported_grid_layouts ) && $size == 'full' ) {
 
 			$image_size = $this->get_grid_image_base_size( $post_thumbnail_id, self::$grid_image_meta['layout'], self::$grid_image_meta['columns'] );
@@ -292,17 +316,22 @@ class Avada_Images {
 
 		// Get image metadata
 		$image_meta = wp_get_attachment_metadata( $post_thumbnail_id );
-		$image_sizes = $image_meta['sizes'];
-		
-		if ( $image_sizes ) {
-			foreach ( $image_sizes as $name => $image ) {
-				if ( in_array( $name, self::$grid_accepted_widths ) ) {
-					// Create accepted sizes array
-					if ( $image['width'] ) {
-						$sizes[ $image['width'] ] = $name;
+
+		if ( $image_meta ) {
+			$image_sizes = $image_meta['sizes'];
+
+			if ( $image_sizes && is_array( $image_sizes ) ) {
+				foreach ( $image_sizes as $name => $image ) {
+					if ( in_array( $name, self::$grid_accepted_widths ) ) {
+						// Create accepted sizes array
+						if ( $image['width'] ) {
+							$sizes[ $image['width'] ] = $name;
+						}
 					}
 				}
 			}
+			
+			$sizes[$image_meta['width']] = 'full';
 		}
 
 		if ( false !== strpos( $layout, 'large' ) ) {
@@ -372,7 +401,7 @@ class Avada_Images {
 		if ( false !== strpos( $attachment_url, $upload_dir_paths_baseurl ) ) {
 
 			// If this is the URL of an auto-generated thumbnail, get the URL of the original image
-			$attachment_url = preg_replace( '/-\d+x\d+(?=\.(jpg|jpeg|png|gif)$)/i', '', $attachment_url );
+			$attachment_url = preg_replace( '/-\d+x\d+(?=\.(jpg|jpeg|png|gif|tiff|svg)$)/i', '', $attachment_url );
 
 			// Remove the upload path base directory from the attachment URL
 			$attachment_url = str_replace( $upload_dir_paths_baseurl . '/', '', $attachment_url );

@@ -103,6 +103,10 @@ class FusionSC_Button {
 		if( $defaults['modal'] ) {
 			$defaults['link'] = '#';
 		}
+		
+		if ( 'default' == $defaults['stretch'] ) {
+			$defaults['stretch'] = Avada()->settings->get( 'button_span' );
+		}
 
 		$defaults['type'] = strtolower( $defaults['type'] );
 
@@ -299,8 +303,10 @@ class FusionSC_Button {
 		$html = sprintf( '%s<a %s>%s</a>', $style_tag, FusionCore_Plugin::attributes( 'button-shortcode' ), $inner_content );
 
 		// Add wrapper to the button for alignment and scoped styling
-		if ( $alignment ) {
+		if ( $alignment && $stretch == 'no' ) {
 			$alignment = ' fusion-align' . $alignment;
+		} else {
+			$alignment = '';
 		}
 
 		$html = sprintf( '<div class="fusion-button-wrapper%s">%s</div>', $alignment, $html );

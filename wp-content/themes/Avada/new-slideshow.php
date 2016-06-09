@@ -66,13 +66,12 @@ $size = ( 'Grid' == $layout || 'Timeline' == $layout ) ? 'full' : $size;
 					</div>
 				</li>
 			<?php endif; ?>
-
 			<?php 
 			if ( 'Grid' == $layout ) {
-				Avada()->images->set_grid_image_meta( array( 'layout' => strtolower( $layout ), 'columns' => Avada()->settings->get( 'blog_grid_columns' ) ) );
+				Avada()->images->set_grid_image_meta( array( 'layout' => strtolower( $layout ), 'columns' => Avada()->settings->get( 'blog_grid_columns' ), 'gutter_width' => Avada()->settings->get( 'blog_grid_column_spacing' ) ) );
 			} elseif ( 'Timeline' == $layout ) {
 				Avada()->images->set_grid_image_meta( array( 'layout' => strtolower( $layout ), 'columns' => '2' ) );
-			} elseif ( false !== strpos( $layout, 'large' ) && 'full' == $size ) {
+			} elseif ( false !== strpos( $layout, 'Large' ) && 'full' == $size ) {
 				Avada()->images->set_grid_image_meta( array( 'layout' => strtolower( $layout ), 'columns' => '1' ) );			
 			}
 			?>

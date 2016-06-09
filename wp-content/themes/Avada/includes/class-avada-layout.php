@@ -415,23 +415,106 @@ class Avada_Layout {
 		}
 		return $classes;
 	}
-
+	
 	/**
-	 * Get column width of the current page
+	 * Checks is the current page is a 100% width page.
 	 *
-	 * @var     $column     integer (0=main, 1=sidebar1, 2-sidebar2)
-	 * @return  integer
+	 * @param integer $page_id     A custom page ID.
+	 * @return bool
 	 */
-	public function get_content_width( $column = 0 ) {
+	public function is_hundred_percent_template( $page_id = false ) {
+		if ( ! $page_id ) {
+			$page_id = $c_pageID = Avada()->c_pageID();
+		}
+		
+		$page_template = '';
+	
+		if ( function_exists( 'is_woocommerce' ) && is_woocommerce() ) {
+			$custom_fields = get_post_custom_values( '_wp_page_template', $c_pageID );
+			$page_template = ( is_array( $custom_fields ) && ! empty( $custom_fields ) ) ? $custom_fields[0] : '';
+		}
+
+		if ( 'tribe_events' == get_post_type( $c_pageID ) && '100-width.php' == tribe_get_option( 'tribeEventsTemplate', 'default' ) ) {
+			$page_template = '100-width.php';
+		}
+
+		if (
+			'100%' == Avada()->settings->get( 'site_width' ) ||
+			is_page_template( '100-width.php' ) ||
+			is_page_template( 'blank.php' ) ||
+			'100-width.php' == $page_template ||
+			( ( '1' == fusion_get_option( 'portfolio_width_100', 'portfolio_width_100', $c_pageID ) || 'yes' == fusion_get_option( 'portfolio_width_100', 'portfolio_width_100', $c_pageID ) ) && is_singular( 'avada_portfolio' ) ) ||
+			( ( '1' == fusion_get_option( 'blog_width_100', 'portfolio_width_100', $c_pageID ) || 'yes' == fusion_get_option( 'blog_width_100', 'portfolio_width_100', $c_pageID ) ) && is_singular( 'post' ) ) ||
+			( 'yes' == fusion_get_page_option( 'portfolio_width_100', $c_pageID ) && ! is_singular( array( 'post', 'avada_portfolio' ) ) ) ||
+			( avada_is_portfolio_template() && 'yes' == get_post_meta( $c_pageID, 'pyre_portfolio_width_100', true ) )
+		) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	
+	public function is_current_wrapper_hundred_percent() {
+		if ( $this->is_hundred_percent_template() ) {
+			global $fusion_fwc_type;
+
+			if ( ! isset( $fusion_fwc_type ) ||
+				 ( isset( $fusion_fwc_type ) && ( '' == $fusion_fwc_type || 'fullwidth' == $fusion_fwc_type ) )
+			) {
+				return true;
+			} else {
+				return false;
+			}
+		} else {
+			return false;
+		} 
+		
+	}
+		
+	/**
+	 * Get column width of the current page.
+	 *
+	 * @param integer|string $site_width     A custom site width.
+	 * @return integer
+	 */
+	public function get_content_width( $site_width = 0 ) {
 		/**
 		 * The content width
 		 */
 		$options = get_option( Avada::get_option_name() );
-		$site_width = ( isset( $options['site_width'] ) ) ? $options['site_width'] : '1100px';
+		$page_padding = 0;
+		
+		if ( ! $site_width ) {
+			$site_width = ( isset( $options['site_width'] ) ) ? $options['site_width'] : '1100px';
+			
+			if ( $this->is_current_wrapper_hundred_percent() ) {
+
+				$site_width = '100%';				
+
+				// Get 100% Width Left/Right Padding
+				$page_padding = ( isset( $options['hundredp_padding'] ) ) ? $options['hundredp_padding'] : '0';
+				
+				// 100% Width Left/Right Padding is using %
+				if ( false !== strpos( $page_padding, '%' ) ) {
+					$page_padding = Avada_Helper::percent_to_pixels( $page_padding );
+				}
+				// 100% Width Left/Right Padding is using ems
+				elseif ( false !== strpos( $page_padding, 'em' ) ) {
+					$page_padding = Avada_Helper::ems_to_pixels( $page_padding );
+				}
+				
+			}
+			
+		}
+		
 		if ( intval( $site_width ) ) {
 			// Site width is using %
 			if ( false !== strpos( $site_width, '%' ) ) {
 				$site_width = Avada_Helper::percent_to_pixels( $site_width );
+				
+				// Subtract side header width from remaining content width
+				$side_header_width = ( 'Top' == Avada()->settings->get( 'header_position' ) ) ? 0 : intval( Avada()->settings->get( 'side_header_width' ) );
+				$site_width -= $side_header_width;
 			}
 			// Site width is using ems
 			elseif ( false !== strpos( $site_width, 'em' ) ) {
@@ -441,6 +524,9 @@ class Avada_Layout {
 			// fallback to 1100px
 			$site_width = 1100;
 		}
+		
+		$site_width -= 2 * $page_padding;
+		
 		/**
 		 * Sidebars width
 		 */
@@ -495,7 +581,6 @@ class Avada_Layout {
 			$columns = 2;
 		}
 		$gutter = ( 1 < $columns ) ? 80 : 0;
-		// $extra_gutter = ( $columns - 1 ) * $gutter;
 		$extra_gutter = $gutter;
 
 		$sidebar_1_width = (int) $sidebar_1_width;

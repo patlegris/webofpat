@@ -93,26 +93,8 @@ class FusionSC_Imageframe {
 			$img_styles = sprintf( ' style="%s"', $border_radius );
 		}
 
-		$img_classes = 'img-responsive';
-
-		// Get custom classes from the img tag
-		preg_match( '/(class=["\'](.*?)["\'])/', $content, $classes );
-
-		if ( ! empty( $classes ) ) {
-			$img_classes .= ' ' . $classes[2];
-		}
-
-		$img_classes = sprintf( 'class="%s"', $img_classes );
-
-		// Add custom and responsive class and the needed styles to the img tag
-		if( ! empty( $classes ) ) {
-			$content = str_replace( $classes[0], $img_classes . $img_styles , $content );
-		} else {
-			$content = str_replace( '/>', $img_classes . $img_styles . '/>', $content );
-		}
-
 		// Alt tag
-		$alt_tag = $image_url = '';
+		$alt_tag = $image_url = $image_id = '';
 
 		preg_match( '/(src=["\'](.*?)["\'])/', $content, $src );
 		if ( array_key_exists( '2', $src ) ) {
@@ -125,10 +107,14 @@ class FusionSC_Imageframe {
 				$lightbox_image = self::$args['pic_link'];
 			}
 			
-			$this->image_data = FusionCore_Plugin::get_attachment_data_from_url( $lightbox_image );
+			$this->image_data = FusionCore_Plugin::get_attachment_data_from_url( self::$args['pic_link'] );
 
 			if ( $this->image_data ) {
-				$content = str_replace( '/>', 'width="' . $this->image_data['width'] . '" height="' . $this->image_data['height'] . '"/>' , $content );
+				$image_width = ( $this->image_data['width'] ) ? $this->image_data['width'] : '';
+				$image_height = ( $this->image_data['height'] ) ? $this->image_data['height'] : '';
+				$image_id = $this->image_data['id'];
+
+				$content = str_replace( '/>', 'width="' . $image_width . '" height="' . $image_height . '"/>' , $content );
 
 				$alt_tag = sprintf( 'alt="%s"', $this->image_data['alt'] );
 			}
@@ -139,6 +125,37 @@ class FusionSC_Imageframe {
 				$content = str_replace( '/> ', $alt_tag . ' />', $content );
 			}
 		}
+		
+		$img_classes = 'img-responsive';
+
+		if ( ! empty( $image_id ) ) {
+			$img_classes .= ' wp-image-' . $image_id;
+		}
+
+		// Get custom classes from the img tag
+		preg_match( '/(class=["\'](.*?)["\'])/', $content, $classes );
+
+		if ( ! empty( $classes ) ) {
+			$img_classes .= ' ' . $classes[2];
+		}
+		
+		$img_classes = sprintf( 'class="%s"', $img_classes );
+
+		// Add custom and responsive class and the needed styles to the img tag
+		if( ! empty( $classes ) ) {
+			$content = str_replace( $classes[0], $img_classes . $img_styles , $content );
+		} else {
+			$content = str_replace( '/>', $img_classes . $img_styles . '/>', $content );
+		}		
+		
+		if ( property_exists( Avada(), 'images' ) ) {
+			Avada()->images->set_grid_image_meta( array( 'layout' => 'large', 'columns' => '1' ) );
+		}
+		$content = wp_make_content_images_responsive( $content );
+		if ( property_exists( Avada(), 'images' ) ) {
+			Avada()->images->set_grid_image_meta( array() );
+		}		
+		
 
 		// Set the lightbox image to the dedicated link if it is set
 		if ( $lightbox_image ) {
@@ -156,6 +173,13 @@ class FusionSC_Imageframe {
 		if ( $hover_type == 'liftup' ) {
 			$liftup_classes = 'imageframe-liftup';
 			$liftup_styles = '';
+			
+			if( 'left' == $align ) {
+				$liftup_classes .= ' fusion-imageframe-liftup-left';
+			} elseif( 'right' == $align  ) {
+				$liftup_classes .= ' fusion-imageframe-liftup-right';
+			}
+			
 			if ( $border_radius ) {
 				$liftup_styles = sprintf( '<style scoped="scoped">.imageframe-liftup.imageframe-%s:before{%s}</style>', $this->imageframe_counter, $border_radius );
 				$liftup_classes .= sprintf( ' imageframe-%s', $this->imageframe_counter );
@@ -230,13 +254,13 @@ class FusionSC_Imageframe {
 			$attr['class'] .= ' element-bottomshadow';
 		}
 
-		if( self::$args['align'] == 'left' ) {
-			$attr['style'] .= 'margin-right:25px;float:left;';
-		} elseif( self::$args['align'] == 'right' ) {
-			$attr['style'] .= 'margin-left:25px;float:right;';
-		}
-
 		if( self::$args['hover_type'] != 'liftup' ) {
+			if( self::$args['align'] == 'left' ) {
+				$attr['style'] .= 'margin-right:25px;float:left;';
+			} elseif( self::$args['align'] == 'right' ) {
+				$attr['style'] .= 'margin-left:25px;float:right;';
+			}		
+		
 			$attr['class'] .= ' hover-type-' . self::$args['hover_type'];
 		}
 

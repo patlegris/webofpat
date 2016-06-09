@@ -93,6 +93,10 @@ class FusionSC_GoogleMap {
 				} else {
 					$infobox_text_color = '#747474';
 				}
+			} else if ( 'custom' == $map_style ) {
+				if ( '0' == Avada_Color::get_alpha_from_rgba( $overlay_color ) ) {
+					$overlay_color = '';
+				}
 			}
 
 			// If only one custom icon is set, use it for all markers

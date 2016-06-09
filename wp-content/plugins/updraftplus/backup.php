@@ -2376,19 +2376,18 @@ class UpdraftPlus_Backup {
 
 		// Cache the file scan, if it looks like it'll be useful
 		// We use gzip to reduce the size as on hosts which limit disk I/O, the cacheing may make things worse
-		// || 'others' == $whichone
+		// 	|| 'others' == $whichone
 		if (('uploads' == $whichone) && !$error_occurred && function_exists('gzopen') && function_exists('gzwrite')) {
 			$cache_file_base = $this->zip_basename.'-cachelist-'.$this->makezip_if_altered_since;
 
 			// Just approximate - we're trying to avoid an otherwise-unpredictable PHP fatal error. Cacheing only happens if file enumeration took a long time - so presumably there are very many.
 			$memory_needed_estimate = 0;
 			foreach ($this->zipfiles_batched as $k => $v) { $memory_needed_estimate += strlen($k)+strlen($v)+12; }
-			// Let us suppose we need 15% overhead for gzipping
-			$memory_needed_estimate = $memory_needed_estimate * 0.15;
 
 			// We haven't bothered to check if we just fetched the files from cache, as that shouldn't take a long time and so shouldn't trigger this
-			if ($time_counting_ended-$time_counting_began > 20 && $updraftplus->verify_free_memory($memory_needed_estimate) && $whandle = gzopen($cache_file_base.'-zfb.gz.tmp', 'w')) {
-				$updraftplus->log("File counting took a long time (".($time_counting_ended - $time_counting_began)."s); will attempt to cache results");
+			// Let us suppose we need 15% overhead for gzipping
+			if ($time_counting_ended-$time_counting_began > 20 && $updraftplus->verify_free_memory($memory_needed_estimate*0.15) && $whandle = gzopen($cache_file_base.'-zfb.gz.tmp', 'w')) {
+				$updraftplus->log("File counting took a long time (".($time_counting_ended - $time_counting_began)."s); will attempt to cache results (estimated uncompressed bytes: ".round($memory_needed_estimate/1024, 1)." Kb)");
 				if (!gzwrite($whandle, serialize($this->zipfiles_batched))) {
 					@unlink($cache_file_base.'-zfb.gz.tmp');
 					@gzclose($whandle);

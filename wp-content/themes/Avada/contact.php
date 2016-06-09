@@ -38,9 +38,9 @@ $avada_contact = new Avada_Contact();
 
 				<?php if ( $avada_contact->email_sent ) : //If email is sent ?>
 					<?php if ( shortcode_exists( 'alert' ) ) : ?>
-						<?php echo do_shortcode( '[alert type="success" accent_color="" background_color="" border_size="1px" icon="" box_shadow="yes" animation_type="0" animation_direction="down" animation_speed="0.1" class="" id=""]' . sprintf( __( 'Thank you %s for using our contact form! Your email was successfully sent!', 'Avada' ), '<strong>' . $name . '</strong>' ) . '[/alert]' ); ?>
+						<?php echo do_shortcode( '[alert type="success" accent_color="" background_color="" border_size="1px" icon="" box_shadow="yes" animation_type="0" animation_direction="down" animation_speed="0.1" class="" id=""]' . sprintf( __( 'Thank you %s for using our contact form! Your email was successfully sent!', 'Avada' ), '<strong>' . $avada_contact->name . '</strong>' ) . '[/alert]' ); ?>
 					<?php else : ?>
-						<h3 style="color:#468847;"><?php printf( __( 'Thank you %s for using our contact form! Your email was successfully sent!', 'Avada' ), '<strong>' . $name . '</strong>' ); ?></h3>
+						<h3 style="color:#468847;"><?php printf( __( 'Thank you %s for using our contact form! Your email was successfully sent!', 'Avada' ), '<strong>' . $avada_contact->name . '</strong>' ); ?></h3>
 					<?php endif; ?>
 					<br />
 				<?php endif; ?>

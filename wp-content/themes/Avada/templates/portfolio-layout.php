@@ -54,6 +54,13 @@
 	$current_page_text_layout = ( strpos( $current_page_template, 'text' ) ) ? fusion_get_option( 'portfolio_text_layout', 'portfolio_text_layout', $current_page_id ) : 'unboxed';
 	?>
 
+	<?php
+	/**
+	 * Get the default column spacing.
+	 */
+	$column_spacing = Avada()->settings->get( 'portfolio_column_spacing' )
+	?>
+
 <?php endwhile; ?>
 
 <?php
@@ -68,13 +75,19 @@ if (  is_front_page() ) {
 ?>
 
 <?php
+// If TO setting is set to 0, all items should show
+$number_of_portfolio_items = Avada()->settings->get( 'portfolio_items' );
+if ( '0' == $number_of_portfolio_items ) {
+	$number_of_portfolio_items = -1;
+}
+
 /**
- * Initialize the args that will be needed for th portfolio posts query
+ * Initialize the args that will be needed for the portfolio posts query
  */
 $args = array(
 	'post_type'      => 'avada_portfolio',
 	'paged'          => $paged,
-	'posts_per_page' => Avada()->settings->get( 'portfolio_items' ),
+	'posts_per_page' => $number_of_portfolio_items,
 );
 ?>
 
@@ -344,7 +357,7 @@ $portfolio_posts_to_display = new WP_Query( $args );
 
 						<?php
 						if ( $post_featured_image_size == 'full' ) {
-							Avada()->images->set_grid_image_meta( array( 'layout' => 'portfolio_full', 'columns' => $current_page_columns ) );
+							Avada()->images->set_grid_image_meta( array( 'layout' => 'portfolio_full', 'columns' => $current_page_columns, 'gutter_width' => $column_spacing * 2 ) );
 						}
 						$featured_image_markup = avada_render_first_featured_image_markup( $post->ID, $post_featured_image_size, $post_permalink, true );
 						Avada()->images->set_grid_image_meta( array() );

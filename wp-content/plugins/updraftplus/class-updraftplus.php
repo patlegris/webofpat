@@ -3329,7 +3329,10 @@ class UpdraftPlus {
 		
 			$spooled = false;
 			if ('.crypt' == substr($fullpath, -6, 6)) {
-				if (ob_get_level()) @ob_end_clean();
+				if (ob_get_level()) {
+					$flush_max = min(5, (int)ob_get_level());
+					for ($i=1; $i<=$flush_max; $i++) { @ob_end_clean(); }
+				}
 				header("Cache-Control: no-cache, must-revalidate"); // HTTP/1.1
 				header("Expires: Sat, 26 Jul 1997 05:00:00 GMT"); // Date in the past
 				$this->spool_crypted_file($fullpath, (string)$encryption);
@@ -3341,7 +3344,11 @@ class UpdraftPlus {
 			require_once(UPDRAFTPLUS_DIR.'/includes/class-partialfileservlet.php');
 
 			//Prevent the file being read into memory
-			if (ob_get_level()) @ob_end_clean();
+			if (ob_get_level()) {
+				$flush_max = min(5, (int)ob_get_level());
+				for ($i=1; $i<=$flush_max; $i++) { @ob_end_clean(); }
+			}
+			if (ob_get_level()) @ob_end_clean(); // Twice - see HS#6673 - someone at least needed it
 			
 			if (isset($_SERVER['HTTP_RANGE'])) {
 				$range_header = trim($_SERVER['HTTP_RANGE']);

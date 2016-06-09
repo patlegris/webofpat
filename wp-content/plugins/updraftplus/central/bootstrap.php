@@ -7,13 +7,6 @@ if (!defined('UPDRAFTPLUS_DIR')) die('No access.');
 // Load the listener class that we rely on to pick up messages
 if (!class_exists('UpdraftPlus_UpdraftCentral_Listener')) require_once('listener.php');
 
-// Load the commands classes - the commands that we want to have available
-
-// UpdraftPlus commands
-if (!class_exists('UpdraftPlus_RemoteControl_Commands')) require_once('updraftplus-commands.php');
-// Core UpdraftCentral commands
-if (!class_exists('UpdraftCentral_Core_Commands')) require_once('core-commands.php');
-
 class UpdraftPlus_UpdraftCentral_Main {
 
 	public function __construct() {
@@ -27,7 +20,8 @@ class UpdraftPlus_UpdraftCentral_Main {
 	
 		$command_classes = apply_filters('updraftplus_remotecontrol_command_classes', array(
 			'core' => 'UpdraftCentral_Core_Commands',
-			'updraftplus' => 'UpdraftPlus_RemoteControl_Commands'
+			'updraftplus' => 'UpdraftPlus_RemoteControl_Commands',
+			'updates' => 'UpdraftCentral_Updates_Commands',
 		));
 	
 		// Remote control keys

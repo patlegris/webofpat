@@ -50,7 +50,8 @@
 				// Set extension dir & url
 				if ( empty( $this->extension_dir ) ) {
 					$this->extension_dir = trailingslashit( str_replace( '\\', '/', dirname( __FILE__ ) ) );
-					$this->extension_url = site_url( str_replace( trailingslashit( str_replace( '\\', '/', ABSPATH ) ), '', $this->extension_dir ) );
+					$this->extension_url = trailingslashit( get_template_directory_uri() ) . 'includes/avadaredux/extensions/accordion/accordion/';
+					// $this->extension_url = site_url( str_replace( trailingslashit( str_replace( '\\', '/', ABSPATH ) ), '', $this->extension_dir ) );
 				}
 			}
 

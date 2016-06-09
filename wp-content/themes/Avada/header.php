@@ -245,26 +245,8 @@ if ( 'modern' == Avada()->settings->get( 'mobile_menu_design' ) ) {
 		$main_css      = '';
 		$row_css       = '';
 		$main_class    = '';
-		$page_template = '';
 
-		if ( function_exists( 'is_woocommerce' ) && is_woocommerce() ) {
-			$custom_fields = get_post_custom_values( '_wp_page_template', $c_pageID );
-			$page_template = ( is_array( $custom_fields ) && ! empty( $custom_fields ) ) ? $custom_fields[0] : '';
-		}
-
-		if ( 'tribe_events' == get_post_type( $c_pageID ) && '100-width.php' == tribe_get_option( 'tribeEventsTemplate', 'default' ) ) {
-			$page_template = '100-width.php';
-		}
-
-		if (
-			is_page_template( '100-width.php' ) ||
-			is_page_template( 'blank.php' ) ||
-			'100-width.php' == $page_template ||
-			( ( '1' == fusion_get_option( 'portfolio_width_100', 'portfolio_width_100', $c_pageID ) || 'yes' == fusion_get_option( 'portfolio_width_100', 'portfolio_width_100', $c_pageID ) ) && is_singular( 'avada_portfolio' ) ) ||
-			( ( '1' == fusion_get_option( 'blog_width_100', 'portfolio_width_100', $c_pageID ) || 'yes' == fusion_get_option( 'blog_width_100', 'portfolio_width_100', $c_pageID ) ) && is_singular( 'post' ) ) ||
-			( 'yes' == fusion_get_page_option( 'portfolio_width_100', $c_pageID ) && ! is_singular( array( 'post', 'avada_portfolio' ) ) ) ||
-			( avada_is_portfolio_template() && 'yes' == get_post_meta( $c_pageID, 'pyre_portfolio_width_100', true ) )
-		) {
+		if ( Avada()->layout->is_hundred_percent_template() ) {
 			$main_css = 'padding-left:0px;padding-right:0px;';
 			if ( Avada()->settings->get( 'hundredp_padding' ) && ! get_post_meta( $c_pageID, 'pyre_hundredp_padding', true ) ) {
 				$main_css = 'padding-left:' . Avada()->settings->get( 'hundredp_padding' ) . ';padding-right:' . Avada()->settings->get( 'hundredp_padding' );

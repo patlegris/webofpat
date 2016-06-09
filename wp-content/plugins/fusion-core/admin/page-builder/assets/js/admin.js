@@ -188,7 +188,7 @@ var instance;
 										'[product_category category="" per_page="12" columns="4" orderby="date" order="desc"]',
 										'[recent_products per_page="12" columns="4" orderby="date" order="desc"]',
 										'[featured_products per_page="12" columns="4" orderby="date" order="desc"]',
-										'[woocommerce_shop_messages]'
+										'[shop_messages]'
 										);
 			var selected  = $(this).val();
 			//update content

@@ -498,7 +498,7 @@ function avada_options_section_header( $sections ) {
 					),
 					'header_bg_color' => array(
 						'label'       => esc_html__( 'Header Background Color', 'Avada' ),
-						'description' => esc_html__( 'Controls the background color and opacity for the header. For top headers, opacity set below 1 will remove the header height completely. For side headers, opacity set below 1 will display a color overlay.', 'Avada' ),
+						'description' => esc_html__( 'Controls the background color and opacity for the header. For top headers, opacity set below 1 will remove the header height completely. For side headers, opacity set below 1 will display a color overlay. Transparent headers are disabled on all archive pages due to technical limitations.', 'Avada' ),
 						'id'          => 'header_bg_color',
 						'type'        => 'color-alpha',
 						'default'     => '#ffffff',

@@ -81,7 +81,7 @@ class Avada_Social_Icon {
 		}
 
 		if ( 'mail' == $icon_options['social_network'] ) {
-			$icon_options['href']   = ( 'http' === substr( $icon_options['social_link'], 0, 4 ) ) ? $icon_options['social_link'] : 'mailto:' . str_replace( 'mailto:', '', $icon_options['social_link'] );
+			$icon_options['href']   = ( 'http' === substr( $icon_options['social_link'], 0, 4 ) ) ? $icon_options['social_link'] : 'mailto:' . antispambot( str_replace( 'mailto:', '', $icon_options['social_link'] ) );
 			$icon_options['target'] = '_self';
 		}
 
@@ -120,8 +120,11 @@ class Avada_Social_Icon {
 		$icon_options = apply_filters( 'fusion_attr_social-icons-class-icon', $icon_options );
 
 		$properties = '';
+		$not_allowed_attributes = array( 'last', 'box_color', 'icon_color', 'social_link', 'social_network' );
 		foreach ( $icon_options as $name => $value ) {
-			$properties .= ! empty( $value ) ? ' ' . esc_html( $name ) . '="' . esc_attr( $value ) . '"' : esc_html( " {$name}" );
+			if ( ! in_array( $name, $not_allowed_attributes ) ) {
+				$properties .= ! empty( $value ) ? ' ' . esc_html( $name ) . '="' . esc_attr( $value ) . '"' : esc_html( " {$name}" );
+			}
 		}
 
 		return '<a ' . $properties . '><span class="screen-reader-text">' . $tooltip . '</span>' . $custom . '</a>';

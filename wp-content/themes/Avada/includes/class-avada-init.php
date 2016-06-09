@@ -11,7 +11,9 @@ class Avada_Init {
 		add_action( 'after_setup_theme', array( $this, 'add_image_size' ) );
 
 		// Check done for buddypress activation, might be good for other plugins too
-		if ( empty( $_GET['plugin'] ) ) {
+		if ( ( isset( $_GET['plugin'] ) && false === strpos( $_GET['plugin'], 'woocommerce' ) && false === strpos( $_GET['plugin'], 'bbpress' ) && false === strpos( $_GET['plugin'], 'buddypress' ) && false === strpos( $_GET['plugin'], 'the-events-calendar' ) ) ||
+			 ! isset( $_GET['plugin'] )
+		) {
 			add_action( 'wp_loaded', array( $this, 'register_third_party_plugin_functions' ), 5 );
 		}
 
@@ -31,12 +33,20 @@ class Avada_Init {
 		add_action( 'avada_before_main_content', array( $this, 'youtube_flash_fix' ) );
 		remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head' );
 
-		// Remove post_format from previwe link
+		// Remove post_format from preview link
 		add_filter( 'preview_post_link', array( $this, 'remove_post_format_from_link' ), 9999 );
 
 		// Add home url link for navigation menus
 		add_filter( 'wp_nav_menu_objects', array( $this, 'set_correct_class_for_menu_items' ) );
-
+		
+		add_filter( 'wp_tag_cloud', array( $this, 'remove_font_size_from_tagcloud' ) );
+		
+		// Add contact methods for author page
+		add_filter( 'user_contactmethods', array( $this, 'modify_contact_methods' ) );
+		
+		if ( ! is_admin() ) {
+			add_filter( 'pre_get_posts', array( $this, 'modify_search_filter' ) );
+		}
 	}
 
 	/**
@@ -311,8 +321,62 @@ class Avada_Init {
 	    return $menu_items;
 	}
 
+	public function remove_font_size_from_tagcloud( $tagcloud ) {
 
+		$tagcloud = preg_replace( '/ style=(["\'])[^\1]*?\1/i', '', $tagcloud, -1 );
+		
+		return $tagcloud;
+	}
+	
+	/**
+	* Modifies user contact methods and adds some more social networks.
+	*
+	* @param array $profile_fields The profile fields.
+	* @return array The profile fields with additional contact methods.
+	*/
+	public function modify_contact_methods( $profile_fields ) {
+		// Add new fields
+		$profile_fields['author_email'] = 'Email (Author Page)';
+		$profile_fields['author_facebook'] = 'Facebook (Author Page)';
+		$profile_fields['author_twitter']  = 'Twitter (Author Page)';
+		$profile_fields['author_linkedin'] = 'LinkedIn (Author Page)';
+		$profile_fields['author_dribble']  = 'Dribble (Author Page)';
+		$profile_fields['author_gplus']    = 'Google+ (Author Page)';
+		$profile_fields['author_custom']   = 'Custom Message (Author Page)';
 
+		return $profile_fields;
+	}
+	
+	/**
+	* Modifies the search filter.
+	*
+	* @param object $query The search query.
+	* @return object $query The modified search query.
+	*/	
+	function modify_search_filter( $query ) {
+		if ( is_search() && $query->is_search ) {
+			if ( isset( $_GET ) && ( 2 < count( $_GET ) || ( 2 == count( $_GET ) && ! isset( $_GET['lang'] ) ) ) ) {
+				return $query;
+			}
+
+			$search_content = Avada()->settings->get( 'search_content' );
+
+			if ( 'all_post_types_no_pages' == $search_content ) {
+				$query->set( 'post_type', array( 'post', 'avada_portfolio', 'product', 'tribe_events' ) );
+			} elseif ( 'Only Posts' == $search_content ) {
+				$query->set( 'post_type', 'post' );
+			} elseif ( 'portfolio_items' == $search_content ) {
+				$query->set( 'post_type', 'avada_portfolio' );			
+			} elseif ( 'Only Pages' == $search_content ) {
+				$query->set( 'post_type', 'page' );
+			} elseif ( 'woocommerce_products' == $search_content ) {
+				$query->set( 'post_type', 'product' );
+			} elseif ( 'tribe_events' == $search_content ) {
+				$query->set( 'post_type', 'tribe_events' );
+			}
+		}
+		return $query;
+	}	
 }
 
 // Omit closing PHP tag to avoid "Headers already sent" issues.

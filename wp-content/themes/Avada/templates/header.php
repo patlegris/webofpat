@@ -172,8 +172,7 @@ if ( ! function_exists( 'avada_main_menu' ) ) {
 
 			wp_nav_menu( $main_menu_args );
 
-			if ( has_nav_menu( 'sticky_navigation' ) && ( ! function_exists( 'ubermenu_get_menu_instance_by_theme_location' ) || ( function_exists( 'ubermenu_get_menu_instance_by_theme_location' ) && ! ubermenu_get_menu_instance_by_theme_location( 'sticky_navigation' ) ) ) ) {
-
+			if ( has_nav_menu( 'sticky_navigation' ) && 'Top' == Avada()->settings->get( 'header_position' ) && ( ! function_exists( 'ubermenu_get_menu_instance_by_theme_location' ) || ( function_exists( 'ubermenu_get_menu_instance_by_theme_location' ) && ! ubermenu_get_menu_instance_by_theme_location( 'sticky_navigation' ) ) ) ) {
 				$sticky_menu_args = array(
 					'theme_location'  => 'sticky_navigation',
 					'container_class' => 'fusion-main-menu fusion-sticky-menu',
@@ -202,7 +201,7 @@ if ( ! function_exists( 'avada_default_menu_fallback' ) ) {
 if ( ! function_exists( 'avada_contact_info' ) ) {
 	function avada_contact_info() {
 		$phone_number    = do_shortcode( Avada()->settings->get( 'header_number' ) );
-		$email           = Avada()->settings->get( 'header_email' );
+		$email           = antispambot( Avada()->settings->get( 'header_email' ) );
 		$header_position = Avada()->settings->get( 'header_position' );
 
 		$html = '';

@@ -12,9 +12,16 @@
 	<?php while( have_posts() ) : the_post(); ?>
 		<div id="post-<?php the_ID(); ?>" <?php post_class( 'post' ); ?>>
 			<?php $full_image = ''; ?>
+			<?php if ( 'above' == Avada()->settings->get( 'blog_post_title' ) ) : ?>
+				<?php echo avada_render_post_title( $post->ID, false, '', '2' ); ?>
+			<?php elseif ( 'disabled' == Avada()->settings->get( 'blog_post_title' ) && Avada()->settings->get( 'disable_date_rich_snippet_pages' ) ) : ?>
+				<span class="entry-title" style="display: none;"><?php the_title(); ?></span>
+			<?php endif; ?>			
+			
 			<?php if ( ! post_password_required( $post->ID ) ) : ?>
 				<?php if ( Avada()->settings->get( 'featured_images_single' ) ) : ?>
 					<?php if ( 0 < avada_number_of_featured_images() || get_post_meta( $post->ID, 'pyre_video', true ) ) : ?>
+						<?php Avada()->images->set_grid_image_meta( array( 'layout' => strtolower( 'large' ), 'columns' => '1' ) ); ?>
 						<div class="fusion-flexslider flexslider fusion-flexslider-loading post-slideshow fusion-post-slideshow">
 							<ul class="slides">
 								<?php if ( get_post_meta( $post->ID, 'pyre_video', true ) ) : ?>
@@ -28,29 +35,16 @@
 									<?php $attachment_image = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full' ); ?>
 									<?php $full_image       = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full' ); ?>
 									<?php $attachment_data  = wp_get_attachment_metadata( get_post_thumbnail_id() ); ?>
-									<?php if ( ! $full_image ) : ?>
-										<?php $resized_image = array( 'url' => '' ); ?>
-										<?php $scrset        = ''; ?>
-									<?php else : ?>
-										<?php $resized_image = Fusion_Image_Resizer::image_resize( array(
-											'width'  => Avada()->layout->get_content_width(),
-											'height' => intval( ( $full_image[2] * Avada()->layout->get_content_width() ) / $full_image[1] ),
-											'url'    => $full_image[0],
-											'crop'   => false,
-											'retina' => true,
-										) ); ?>
-										<?php $scrset = ( isset( $resized_image['retina_url'] ) && $resized_image['retina_url'] ) ? ' srcset="' . $resized_image['url'] . ' 1x, ' . $resized_image['retina_url'] . ' 2x"' : ''; ?>
-									<?php endif; ?>
 									<li>
 										<?php if ( Avada()->settings->get( 'status_lightbox' ) && Avada()->settings->get( 'status_lightbox_single' ) ) : ?>
 											<a href="<?php echo $full_image[0]; ?>" data-rel="iLightbox[gallery<?php the_ID(); ?>]" title="<?php echo get_post_field( 'post_excerpt', get_post_thumbnail_id() ); ?>" data-title="<?php echo get_post_field( 'post_title', get_post_thumbnail_id() ); ?>" data-caption="<?php echo get_post_field( 'post_excerpt', get_post_thumbnail_id() ); ?>">
 												<span class="screen-reader-text"><?php esc_attr_e( 'View Larger Image', 'Avada' ); ?></span>
-												<img src="<?php echo $resized_image['url']; ?>"<?php echo $scrset; ?> alt="<?php echo get_post_meta( get_post_thumbnail_id(), '_wp_attachment_image_alt', true ); ?>" role="presentation" />
+												<?php echo get_the_post_thumbnail( $post->ID, 'full' ); ?>
 											</a>
 										<?php else: ?>
-											<img src="<?php echo $resized_image['url']; ?>"<?php echo $scrset; ?> alt="<?php echo get_post_meta( get_post_thumbnail_id(), '_wp_attachment_image_alt', true ); ?>" role="presentation" />
+											<?php echo get_the_post_thumbnail( $post->ID, 'full' ); ?>
 										<?php endif; ?>
-									</li>
+									</li>									
 								<?php endif; ?>
 								<?php $i = 2; ?>
 								<?php while ( $i <= Avada()->settings->get( 'posts_slideshow_number' ) ) : ?>
@@ -59,24 +53,13 @@
 										<?php $attachment_image = wp_get_attachment_image_src( $attachment_new_id, 'full' ); ?>
 										<?php $full_image       = wp_get_attachment_image_src( $attachment_new_id, 'full' ); ?>
 										<?php $attachment_data  = wp_get_attachment_metadata( $attachment_new_id ); ?>
-										<?php if ( ! $full_image ) : ?>
-											<?php $resized_image = array( 'url' => '' ); ?>
-										<?php else : ?>
-											<?php $resized_image = Fusion_Image_Resizer::image_resize( array(
-												'width'  => Avada()->layout->get_content_width(),
-												'height' => intval( ( $full_image[2] * Avada()->layout->get_content_width() ) / $full_image[1] ),
-												'url'    => $full_image[0],
-												'crop'   => false,
-												'retina' => true,
-											) ); ?>
-										<?php endif; ?>
 										<li>
 											<?php if ( Avada()->settings->get( 'status_lightbox' ) && Avada()->settings->get( 'status_lightbox_single' ) ) : ?>
 												<a href="<?php echo $full_image[0]; ?>" data-rel="iLightbox[gallery<?php the_ID(); ?>]" title="<?php echo get_post_field( 'post_excerpt', $attachment_new_id ); ?>" data-title="<?php echo get_post_field( 'post_title', $attachment_new_id ); ?>" data-caption="<?php echo get_post_field( 'post_excerpt', $attachment_new_id ); ?>">
-													<img src="<?php echo $resized_image['url']; ?>" alt="<?php echo get_post_meta( $attachment_new_id, '_wp_attachment_image_alt', true ); ?>" />
+													<?php echo wp_get_attachment_image( $attachment_new_id, 'full' ); ?>
 												</a>
 											<?php else: ?>
-												<img src="<?php echo $resized_image['url']; ?>" alt="<?php echo get_post_meta( $attachment_new_id, '_wp_attachment_image_alt', true ); ?>" />
+												<?php echo wp_get_attachment_image( $attachment_new_id, 'full' ); ?>
 											<?php endif; ?>
 										</li>
 									<?php endif; ?>
@@ -84,16 +67,14 @@
 								<?php endwhile; ?>
 							</ul>
 						</div>
+						<?php Avada()->images->set_grid_image_meta( array() ); ?>
 					<?php endif; ?>
 				<?php endif; ?>
 			<?php endif; ?>
 
-			<?php if ( Avada()->settings->get( 'blog_post_title' ) ) : ?>
+			<?php if ( 'below' == Avada()->settings->get( 'blog_post_title' ) ) : ?>
 				<?php echo avada_render_post_title( $post->ID, false, '', '2' ); ?>
-			<?php elseif ( Avada()->settings->get( 'disable_date_rich_snippet_pages' ) ) : ?>
-				<span class="entry-title" style="display: none;"><?php the_title(); ?></span>
 			<?php endif; ?>
-
 			<div class="post-content">
 				<?php the_content(); ?>
 				<?php avada_link_pages(); ?>

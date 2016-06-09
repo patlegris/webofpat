@@ -61,7 +61,7 @@ $size = ( 'grid' == $atts['layout'] || 'timeline' == $atts['layout'] ) ? 'full' 
 
 			<?php
 			if ( 'grid' == $atts['layout'] ) {
-				Avada()->images->set_grid_image_meta( array( 'layout' => $atts['layout'], 'columns' => $atts['blog_grid_columns'] ) );
+				Avada()->images->set_grid_image_meta( array( 'layout' => $atts['layout'], 'columns' => $atts['blog_grid_columns'], 'gutter_width' => $atts['blog_grid_column_spacing'] ) );
 			} elseif ( 'timeline' == $atts['layout'] ) {
 				Avada()->images->set_grid_image_meta( array( 'layout' => $atts['layout'], 'columns' => '2' ) );
 			} elseif ( false !== strpos( $atts['layout'], 'large' ) && 'full' == $size ) {
@@ -93,7 +93,7 @@ $size = ( 'grid' == $atts['layout'] || 'timeline' == $atts['layout'] ) ? 'full' 
 						<li>
 							<div class="fusion-image-wrapper">
 								<a href="<?php the_permalink(); ?>">
-									<?php 
+									<?php
 									$image_markup = sprintf( '<img src="%s" alt="%s" class="wp-image-%s" role="presentation"/>', $attachment_image[0], $attachment_data['image_meta']['title'], $attachment_id );
 									$image_markup = Avada()->images->edit_grid_image_src( $image_markup, get_the_ID(), $attachment_id, $size );
 									echo wp_make_content_images_responsive( $image_markup );

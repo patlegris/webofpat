@@ -59,7 +59,7 @@ if (!class_exists('UpdraftPlus_Remote_Communications')):
 class UpdraftPlus_Remote_Communications {
 
 	// Version numbers relate to versions of this PHP library only (i.e. it's not a protocol support number, and version numbers of other compatible libraries (e.g. JavaScript) are not comparable)
-	public $version = '1.4.5';
+	public $version = '1.4.7';
 
 	private $key_name_indicator;
 
@@ -250,11 +250,12 @@ class UpdraftPlus_Remote_Communications {
 	// Supported formats: base64_with_count | (default)raw
 	// $extra_info needs to be JSON-serialisable, so be careful about what you put into it.
 	public function get_portable_bundle($format = 'raw', $extra_info = array(), $options = array()) {
-		$site_url = trailingslashit(network_site_url());
+
 		$bundle = array_merge($extra_info, array(
 			'key' => empty($options['key']) ? $this->get_key_remote() : $options['key'],
 			'name_indicator' => $this->key_name_indicator,
-			'url' => $site_url,
+			'url' => trailingslashit(network_site_url()),
+			'admin_url' => trailingslashit(network_admin_url()),
 		));
 
 		if ('base64_with_count' == $format) {
@@ -922,7 +923,7 @@ class UpdraftPlus_Remote_Communications {
 				$command_action_hooked = true;
 				$response = apply_filters('udrpc_command_'.$command, null, $data, $this->key_name_indicator);
 			} else {
-				$response = array('response' => 'rpcerror', 'data' => array('code' => 'unknown_rpc_command', 'command' => $command));
+				$response = array('response' => 'rpcerror', 'data' => array('code' => 'unknown_rpc_command', 'data' => $command));
 			}
 
 			$response = apply_filters('udrpc_action', $response, $command, $data, $this->key_name_indicator, $this);

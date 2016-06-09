@@ -10,15 +10,22 @@
 			<?php
 			$base_logo = 'default';
 			$logo_url = Avada_Sanitize::get_url_with_correct_scheme( Avada()->settings->get( 'logo', 'url' ) );
+			$matches = array();
 
 			if ( '' == $logo_url ) {
 				$base_logo = 'retina';
 				$logo_url = Avada_Sanitize::get_url_with_correct_scheme( Avada()->settings->get( 'logo_retina', 'url' ) );
 			}
 
+			preg_match( '/-\d+x\d+(?=\.(jpg|jpeg|png|gif|tiff|svg)$)/i', $logo_url, $matches );
 			$logo_attachment_id = Avada()->images->get_attachment_id_from_url( $logo_url );
 
-			if ( $logo_attachment_id ) {
+			if ( isset( $matches[0] ) && $logo_attachment_id ) {
+				$thumbnail_dimensions = explode( 'x', $matches[0] );
+				$logo_size['width']  = trim( $thumbnail_dimensions[0], '-' );
+				$logo_size['height'] = $thumbnail_dimensions[1];				
+				
+			} else if ( $logo_attachment_id ) {
 				$logo_data = wp_get_attachment_image_src( $logo_attachment_id, 'full' );
 				if ( 'retina' == $base_logo ) {
 					$logo_size['width'] = $logo_data[1] / 2;

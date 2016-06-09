@@ -389,9 +389,15 @@ if ( ! class_exists( 'FusionCoreFrontendWalker' ) ) {
 					$heading      = do_shortcode($title);
 					$link         = '';
 					$link_closing = '';
+					$target = '';
 
 					if ( ! empty( $item->url ) && '#' != $item->url && 'http://' != $item->url ) {
-						$link         = '<a href="' . $item->url . '">';
+						
+						if ( ! empty( $item->target ) ) {
+							$target = ' target="' . $item->target . '"';
+						}
+						
+						$link         = '<a href="' . $item->url . '"' . $target . '>';
 						$link_closing = '</a>';
 					}
 
@@ -475,7 +481,7 @@ if ( ! class_exists( 'FusionCoreFrontendWalker' ) ) {
 				if ( 0 === $depth ) {
 					$classes = 'menu-text';
 					if ( $this->menu_style ) {
-						$classes .= 'menu-text fusion-button button-default ' . str_replace( 'fusion-', '', $this->menu_style );
+						$classes .= ' fusion-button button-default ' . str_replace( 'fusion-', '', $this->menu_style );
 						// Button should have 3D effect
 						if ( '3d' == Avada()->settings->get( 'button_type' ) ) {
 							$classes .= ' button-3d';

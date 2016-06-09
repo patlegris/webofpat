@@ -47,7 +47,7 @@ class Avada_Helper {
 		return get_post_meta( $post_id, 'pyre_slider_type', true );
 	}
 
-	public static function percent_to_pixels( $percent, $max_width = 2000 ) {
+	public static function percent_to_pixels( $percent, $max_width = 1920 ) {
 		return intval( ( intval( $percent ) * $max_width ) / 100 );
 	}
 

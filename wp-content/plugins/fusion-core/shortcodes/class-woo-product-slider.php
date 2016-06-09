@@ -105,7 +105,7 @@
 				}
 
 				if ( $picture_size == 'fixed' ) {
-					$featured_image_size = 'related-img';
+					$featured_image_size = 'portfolio-five';
 				} else {
 					$featured_image_size = 'full';
 				}

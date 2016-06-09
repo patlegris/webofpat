@@ -241,12 +241,18 @@ function avada_options_section_blog( $sections ) {
 						'type'        => 'switch'
 					),
 					'blog_post_title' => array(
-						'label'       => esc_html__( 'Post Title', 'Avada' ),
-						'description' => esc_html__( 'Turn on to display the post title that goes below the featured image area.', 'Avada' ),
-						'id'          => 'blog_post_title',
-						'default'     => '1',
-						'type'        => 'switch'
-					),
+						'label'           => esc_html__( 'Post Title', 'Avada' ),
+						'description'     => esc_html__( 'Controls if the post title displays above or below the featured post image or is disabled.', 'Avada' ),
+						'id'              => 'blog_post_title',
+						'default'         => 'below',
+						'type'            => 'radio-buttonset',
+						'choices'         => array(
+							'below'       => esc_html__( 'Below ', 'Avada' ),
+							'above'       => esc_html__( 'Above', 'Avada' ),
+							'disabled'    => esc_html__( 'Disabled', 'Avada' ),
+						),
+					),					
+					
 					'author_info' => array(
 						'label'       => esc_html__( 'Author Info Box', 'Avada' ),
 						'description' => esc_html__( 'Turn on to display the author info box below posts.', 'Avada' ),

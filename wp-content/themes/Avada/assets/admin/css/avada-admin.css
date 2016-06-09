@@ -680,9 +680,15 @@ span.avada-loader {
 .avada-patcher-table > tfoot tr td {
   padding: 15px 10px 5px;
   line-height: 1.5;
-  vertical-align: baseline;
+  vertical-align: top;
   border-top: 1px solid #dedede;
   text-align: left;
+}
+.avada-patcher-table > tbody tr .patch-status {
+	text-align: center;
+}
+.avada-patcher-table > tbody tr .patch-apply .button {
+	float: right;
 }
 .avada-patcher-table > thead > tr > th {
   vertical-align: baseline;
@@ -698,6 +704,10 @@ span.avada-loader {
 
 .avada-patcher-table > tbody + tbody {
   border-top: 2px solid @table-border-color;
+}
+
+.avada-patcher-table td.patch-date {
+  min-width: 100px;
 }
 
 .avada-patcher-table td > p {

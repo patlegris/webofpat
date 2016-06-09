@@ -75,7 +75,7 @@ class FusionSC_WooFeaturedProductsSlider {
 				$featured_image_size = 'full';
 			}
 
-			$args['meta_query']     = array(
+			self::$args['meta_query']     = array(
 				array(
 					'key'     => '_featured',
 					'compare' => '=',

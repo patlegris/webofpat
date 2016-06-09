@@ -2,9 +2,9 @@
 # This file is distributed under the Themeforest Split Licence.
 msgid ""
 msgstr ""
-"Project-Id-Version: Avada 4.0\n"
+"Project-Id-Version: Avada 4.0.3\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2016-04-11 09:39:57+00:00\n"
+"POT-Creation-Date: 2016-05-30 14:23:00+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -151,43 +151,43 @@ msgstr ""
 msgid "Submit Form"
 msgstr ""
 
-#: faqs.php:103 single.php:47
+#: faqs.php:103 single.php:35
 msgid "View Larger Image"
 msgstr ""
 
-#: functions.php:328
+#: functions.php:329
 msgid "Sucessfully imported demo data!"
 msgstr ""
 
-#: functions.php:598
+#: functions.php:599
 msgid "Date: %s"
 msgstr ""
 
-#: functions.php:605
+#: functions.php:606
 msgid "Bible Text: "
 msgstr ""
 
-#: functions.php:607
+#: functions.php:608
 msgid "Series: "
 msgstr ""
 
-#: functions.php:623
+#: functions.php:624
 msgid "Topics: "
 msgstr ""
 
-#: functions.php:738
+#: functions.php:739
 msgid ""
 "Our site is currently undergoing scheduled maintenance. Please try again in "
 "a moment."
 msgstr ""
 
-#: functions.php:742
+#: functions.php:743
 msgid ""
 "Currently updating the Avada Theme. Your site will be accessible once the "
 "update finishes"
 msgstr ""
 
-#: functions.php:750
+#: functions.php:751
 msgid ""
 "The Fusion-Core plugin needs to be updated before your site can exit "
 "maintenance mode. Please <a %s>follow this link</a> to update the plugin."
@@ -229,6 +229,7 @@ msgid "Watch Our Quick Guided Tour!"
 msgstr ""
 
 #: includes/admin-screens/fusion-plugins.php:15
+#: includes/admin-screens/install-demos.php:52
 #: includes/admin-screens/system-status.php:81
 msgid "Version %s"
 msgstr ""
@@ -311,7 +312,7 @@ msgid "Required"
 msgstr ""
 
 #: includes/admin-screens/fusion-plugins.php:78
-#: includes/admin-screens/install-demos.php:94
+#: includes/admin-screens/install-demos.php:97
 #: includes/admin-screens/support.php:63
 #: includes/admin-screens/system-status.php:419
 #: includes/admin-screens/welcome.php:81
@@ -362,14 +363,6 @@ msgstr ""
 msgid "Regenerate Thumbnails"
 msgstr ""
 
-#: includes/admin-screens/install-demos.php:52
-#: includes/admin-screens/support.php:13
-#: includes/admin-screens/system-status.php:13
-#: includes/admin-screens/welcome.php:28
-#: includes/class-tgm-plugin-activation.php:2443
-msgid "Version"
-msgstr ""
-
 #: includes/admin-screens/install-demos.php:63
 msgid ""
 "Installing a demo provides pages, posts, images, theme options, widgets, "
@@ -389,8 +382,15 @@ msgstr ""
 msgid "Preview"
 msgstr ""
 
-#: includes/admin-screens/install-demos.php:86
+#: includes/admin-screens/install-demos.php:89
 msgid "New"
+msgstr ""
+
+#: includes/admin-screens/support.php:13
+#: includes/admin-screens/system-status.php:13
+#: includes/admin-screens/welcome.php:28
+#: includes/class-tgm-plugin-activation.php:2443
+msgid "Version"
 msgstr ""
 
 #: includes/admin-screens/support.php:24
@@ -880,126 +880,138 @@ msgstr ""
 
 #: includes/admin-screens/welcome.php:76
 #: includes/plugins/importer/wordpress-importer.php:286
-#: woocommerce/compatibility/2.4/single-product-reviews.php:70
+#: woocommerce/compatibility/2.5/single-product-reviews.php:70
 #: woocommerce/single-product-reviews.php:70
 msgid "Submit"
 msgstr ""
 
-#: includes/auto-patcher/includes/class-avada-patcher-admin-screen.php:63
+#: includes/auto-patcher/includes/class-avada-patcher-admin-screen.php:82
 msgid "Avada Patcher: There Are No Available Patches For Avada v%s"
 msgstr ""
 
-#: includes/auto-patcher/includes/class-avada-patcher-admin-screen.php:65
+#: includes/auto-patcher/includes/class-avada-patcher-admin-screen.php:84
 msgid "Avada Patcher: The following patches are available for Avada %s"
 msgstr ""
 
-#: includes/auto-patcher/includes/class-avada-patcher-admin-screen.php:67
+#: includes/auto-patcher/includes/class-avada-patcher-admin-screen.php:86
 #: templates/portfolio-archive-layout.php:181
-#: templates/portfolio-layout.php:402
+#: templates/portfolio-layout.php:415
 msgid "Learn More"
 msgstr ""
 
-#: includes/auto-patcher/includes/class-avada-patcher-admin-screen.php:73
+#: includes/auto-patcher/includes/class-avada-patcher-admin-screen.php:92
 msgid "Patch #"
 msgstr ""
 
-#: includes/auto-patcher/includes/class-avada-patcher-admin-screen.php:74
+#: includes/auto-patcher/includes/class-avada-patcher-admin-screen.php:93
 msgid "Issue Date"
 msgstr ""
 
-#: includes/auto-patcher/includes/class-avada-patcher-admin-screen.php:75
-#: includes/plugins/megamenu/mega-menus.php:796
+#: includes/auto-patcher/includes/class-avada-patcher-admin-screen.php:94
+#: includes/plugins/megamenu/mega-menus.php:802
 msgid "Description"
 msgstr ""
 
-#: includes/auto-patcher/includes/class-avada-patcher-admin-screen.php:76
+#: includes/auto-patcher/includes/class-avada-patcher-admin-screen.php:95
 #: includes/class-tgm-plugin-activation.php:2444
 msgid "Status"
 msgstr ""
 
-#: includes/auto-patcher/includes/class-avada-patcher-admin-screen.php:100
+#: includes/auto-patcher/includes/class-avada-patcher-admin-screen.php:145
 msgid "Apply Patch"
 msgstr ""
 
-#: includes/avada-functions.php:441 includes/avada-functions.php:443
+#: includes/auto-patcher/includes/class-avada-patcher-admin-screen.php:150
+msgid "Please apply patch #%s first."
+msgstr ""
+
+#: includes/auto-patcher/includes/class-avada-patcher-admin-screen.php:152
+msgid "Patch cannot be currently aplied."
+msgstr ""
+
+#: includes/avada-functions.php:454 includes/avada-functions.php:456
 msgid "By %s"
 msgstr ""
 
-#: includes/avada-functions.php:467
+#: includes/avada-functions.php:480
 msgid "Categories: %s"
 msgstr ""
 
-#: includes/avada-functions.php:479
+#: includes/avada-functions.php:492
 msgid "Tags: %s"
 msgstr ""
 
-#: includes/avada-functions.php:486 templates/related-posts.php:75
+#: includes/avada-functions.php:499 templates/related-posts.php:75
 msgid "0 Comments"
 msgstr ""
 
-#: includes/avada-functions.php:486 templates/related-posts.php:75
+#: includes/avada-functions.php:499 templates/related-posts.php:75
 msgid "1 Comment"
 msgstr ""
 
-#: includes/avada-functions.php:486 templates/related-posts.php:75
+#: includes/avada-functions.php:499 templates/related-posts.php:75
 msgid "% Comments"
 msgstr ""
 
-#: includes/avada-functions.php:563 includes/options/blog.php:265
+#: includes/avada-functions.php:576 includes/options/blog.php:265
 msgid "Related Posts"
 msgstr ""
 
-#: includes/avada-functions.php:566 includes/options/portfolio.php:268
+#: includes/avada-functions.php:579 includes/options/portfolio.php:268
 msgid "Related Projects"
 msgstr ""
 
-#: includes/avada-functions.php:569
+#: includes/avada-functions.php:582
 msgid "Related Faqs"
 msgstr ""
 
-#: includes/avada-functions.php:710 woocommerce/checkout/thankyou.php:37
-#: woocommerce/compatibility/2.4/checkout/thankyou.php:37
+#: includes/avada-functions.php:723 woocommerce/checkout/thankyou.php:37
+#: woocommerce/compatibility/2.5/checkout/thankyou.php:37
 msgid "My Account"
 msgstr ""
 
-#: includes/avada-functions.php:717
+#: includes/avada-functions.php:730
 msgid "Login failed, please try again."
 msgstr ""
 
-#: includes/avada-functions.php:720
+#: includes/avada-functions.php:733
 msgid "Username"
 msgstr ""
 
-#: includes/avada-functions.php:721
+#: includes/avada-functions.php:734
 msgid "Password"
 msgstr ""
 
-#: includes/avada-functions.php:722
+#: includes/avada-functions.php:735
 msgid "Remember Me"
 msgstr ""
 
-#: includes/avada-functions.php:725
+#: includes/avada-functions.php:738
 msgid "Log In"
 msgstr ""
 
-#: includes/avada-functions.php:732
+#: includes/avada-functions.php:742
+msgid "Register"
+msgstr ""
+
+#: includes/avada-functions.php:746
 msgid "Logout"
 msgstr ""
 
-#: includes/avada-functions.php:786
+#: includes/avada-functions.php:800
 msgid "%s Item(s)"
 msgstr ""
 
-#: includes/avada-functions.php:788
+#: includes/avada-functions.php:802
 msgid "Cart"
 msgstr ""
 
-#: includes/avada-functions.php:816 includes/woo-config.php:1244
+#: includes/avada-functions.php:831 includes/woo-config.php:305
 #: templates/rollover.php:163 templates/rollover.php:170
 msgid "View Cart"
 msgstr ""
 
-#: includes/avada-functions.php:817
+#: includes/avada-functions.php:832
 msgid "Checkout"
 msgstr ""
 
@@ -1103,15 +1115,535 @@ msgstr ""
 msgid "All plugins installed and activated successfully. %s"
 msgstr ""
 
+#: includes/avadaredux/class-avada-avadaredux-migration.php:89
+msgid "Preparing to run Upgrade"
+msgstr ""
+
+#: includes/avadaredux/class-avada-avadaredux-migration.php:93
+msgid "Slider controls"
+msgstr ""
+
+#: includes/avadaredux/class-avada-avadaredux-migration.php:97
+msgid "Checkbox & Switch controls"
+msgstr ""
+
+#: includes/avadaredux/class-avada-avadaredux-migration.php:101
+msgid "Dimension controls"
+msgstr ""
+
+#: includes/avadaredux/class-avada-avadaredux-migration.php:107
+msgid "Social Networks"
+msgstr ""
+
+#: includes/avadaredux/class-avada-avadaredux-migration.php:111
+msgid "HEX to RGBA colors conversion"
+msgstr ""
+
+#: includes/avadaredux/class-avada-avadaredux-migration.php:115
+msgid "HEX colors"
+msgstr ""
+
+#: includes/avadaredux/class-avada-avadaredux-migration.php:119
+msgid "Media Files"
+msgstr ""
+
+#: includes/avadaredux/class-avada-avadaredux-migration.php:123
+msgid "Spacing Options"
+msgstr ""
+
+#: includes/avadaredux/class-avada-avadaredux-migration.php:127
+#: includes/avadaredux/custom-fields/typography/field_typography.php:931
+#: includes/options/typography.php:252 includes/options/typography.php:263
+msgid "Custom Fonts"
+msgstr ""
+
+#: includes/avadaredux/class-avada-avadaredux-migration.php:131
+#: includes/avadaredux/class-avada-avadaredux-migration.php:135
+msgid "Typography Options (step %s of %s)"
+msgstr ""
+
+#: includes/avadaredux/class-avada-avadaredux-migration.php:139
+msgid "Other Options"
+msgstr ""
+
+#: includes/avadaredux/class-avada-avadaredux.php:118
+msgid "Avada Options have moved!"
+msgstr ""
+
+#: includes/avadaredux/class-avada-avadaredux.php:118
+msgid "Avada Options"
+msgstr ""
+
+#: includes/avadaredux/class-avada-avadaredux.php:139
+msgid "Theme options have changed, redirecting you to the new page in %s seconds."
+msgstr ""
+
+#: includes/avadaredux/class-avada-avadaredux.php:385
+msgid "%s Enter value including CSS unit (px, em, rem), ex: %s."
+msgstr ""
+
+#: includes/avadaredux/class-avada-avadaredux.php:387
+msgid "%s Enter value including any valid CSS unit, ex: %s."
+msgstr ""
+
+#: includes/avadaredux/class-avada-avadaredux.php:392
+msgid "%s In pixels, ex: %s."
+msgstr ""
+
+#: includes/avadaredux/class-avada-avadaredux.php:394
+#: includes/avadaredux/class-avada-avadaredux.php:404
+msgid "%s Enter values including any valid CSS unit, ex: %s."
+msgstr ""
+
+#: includes/avadaredux/class-avada-avadaredux.php:458
+msgid "In pixels."
+msgstr ""
+
+#: includes/avadaredux/class-avada-avadaredux.php:688
+msgid "Theme Skin"
+msgstr ""
+
+#: includes/avadaredux/class-avada-avadaredux.php:689
+msgid "Color Scheme"
+msgstr ""
+
+#: includes/avadaredux/class-avada-avadaredux.php:953
+#: includes/avadaredux/class-avada-avadaredux.php:954
+#: includes/class-avada-admin.php:118 includes/class-avada-admin.php:249
+msgid "Theme Options"
+msgstr ""
+
+#: includes/avadaredux/class-avada-avadaredux.php:1062
+msgid ""
+"Are you sure? This will reset all saved theme options to their default "
+"values."
+msgstr ""
+
+#: includes/avadaredux/class-avada-avadaredux.php:1072
+msgid ""
+"Are you sure? This will reset all saved options to their default values for "
+"this section."
+msgstr ""
+
+#: includes/avadaredux/class-avada-avadaredux.php:1082
+msgid ""
+"Copy the contents of the json file and paste it below. Then click "
+"\"Import\" to restore your setings."
+msgstr ""
+
+#: includes/avadaredux/custom-fields/color_alpha/field_color_alpha.php:68
+msgid "Transparent"
+msgstr ""
+
+#: includes/avadaredux/custom-fields/dimensions/field_dimensions.php:71
+msgid "Width"
+msgstr ""
+
+#: includes/avadaredux/custom-fields/dimensions/field_dimensions.php:84
+#: includes/avadaredux/custom-fields/typography/field_typography.php:424
+msgid "Height"
+msgstr ""
+
+#: includes/avadaredux/custom-fields/spacing/field_spacing.php:82
+#: templates/portfolio-layout.php:219
+msgid "All"
+msgstr ""
+
+#: includes/avadaredux/custom-fields/spacing/field_spacing.php:106
+#: includes/avadaredux/custom-fields/typography/field_typography.php:453
+#: includes/class-fusion-widget-social-links.php:382
+#: includes/options/extra.php:253 includes/options/header.php:40
+#: includes/options/menu.php:533 includes/options/shortcode_styling.php:997
+#: includes/options/shortcode_styling.php:1044
+#: includes/options/shortcode_styling.php:1341
+#: includes/options/social_media.php:88 includes/options/social_media.php:212
+#: includes/options/social_media.php:389
+msgid "Top"
+msgstr ""
+
+#: includes/avadaredux/custom-fields/spacing/field_spacing.php:113
+#: includes/class-fusion-widget-menu.php:132
+#: includes/class-fusion-widget-social-links.php:383
+#: includes/metaboxes/options/options_slide.php:98
+#: includes/metaboxes/tabs/tab_pagetitlebar.php:33
+#: includes/metaboxes/tabs/tab_sidebars.php:10 includes/options/extra.php:251
+#: includes/options/header.php:42 includes/options/lightbox.php:87
+#: includes/options/logo.php:36 includes/options/menu.php:361
+#: includes/options/menu.php:531 includes/options/menu.php:1276
+#: includes/options/page_title_bar.php:129
+#: includes/options/shortcode_styling.php:987
+#: includes/options/shortcode_styling.php:1045
+#: includes/options/shortcode_styling.php:1342
+#: includes/options/sidebars.php:129 includes/options/sidebars.php:172
+#: includes/options/sidebars.php:240 includes/options/sidebars.php:301
+#: includes/options/sidebars.php:348 includes/options/sidebars.php:417
+#: includes/options/sidebars.php:460 includes/options/social_media.php:89
+#: includes/options/social_media.php:213 includes/options/social_media.php:390
+msgid "Right"
+msgstr ""
+
+#: includes/avadaredux/custom-fields/spacing/field_spacing.php:120
+#: includes/avadaredux/custom-fields/typography/field_typography.php:462
+#: includes/class-fusion-widget-social-links.php:384
+#: includes/options/extra.php:252 includes/options/lightbox.php:88
+#: includes/options/menu.php:532 includes/options/shortcode_styling.php:998
+#: includes/options/shortcode_styling.php:1046
+#: includes/options/shortcode_styling.php:1343
+#: includes/options/social_media.php:90 includes/options/social_media.php:214
+#: includes/options/social_media.php:391
+msgid "Bottom"
+msgstr ""
+
+#: includes/avadaredux/custom-fields/spacing/field_spacing.php:127
+#: includes/class-fusion-widget-menu.php:130
+#: includes/class-fusion-widget-social-links.php:385
+#: includes/metaboxes/options/options_slide.php:98
+#: includes/metaboxes/tabs/tab_pagetitlebar.php:31
+#: includes/metaboxes/tabs/tab_sidebars.php:11 includes/options/extra.php:250
+#: includes/options/header.php:41 includes/options/logo.php:34
+#: includes/options/menu.php:359 includes/options/menu.php:530
+#: includes/options/menu.php:1274 includes/options/page_title_bar.php:127
+#: includes/options/shortcode_styling.php:985
+#: includes/options/shortcode_styling.php:1047
+#: includes/options/shortcode_styling.php:1344
+#: includes/options/sidebars.php:130 includes/options/sidebars.php:173
+#: includes/options/sidebars.php:241 includes/options/sidebars.php:302
+#: includes/options/sidebars.php:349 includes/options/sidebars.php:418
+#: includes/options/sidebars.php:461 includes/options/social_media.php:91
+#: includes/options/social_media.php:215 includes/options/social_media.php:392
+msgid "Left"
+msgstr ""
+
+#: includes/avadaredux/custom-fields/typography/field_typography.php:225
+msgid "Font Family"
+msgstr ""
+
+#: includes/avadaredux/custom-fields/typography/field_typography.php:226
+msgid "Font family"
+msgstr ""
+
+#: includes/avadaredux/custom-fields/typography/field_typography.php:252
+#: includes/avadaredux/custom-fields/typography/field_typography.php:253
+msgid "Backup Font Family"
+msgstr ""
+
+#: includes/avadaredux/custom-fields/typography/field_typography.php:267
+#: includes/avadaredux/custom-fields/typography/field_typography.php:275
+msgid "Font style"
+msgstr ""
+
+#: includes/avadaredux/custom-fields/typography/field_typography.php:268
+msgid "Font Weight &amp; Style"
+msgstr ""
+
+#: includes/avadaredux/custom-fields/typography/field_typography.php:275
+msgid "Style"
+msgstr ""
+
+#: includes/avadaredux/custom-fields/typography/field_typography.php:309
+msgid "Font subsets"
+msgstr ""
+
+#: includes/avadaredux/custom-fields/typography/field_typography.php:311
+msgid "Font Subsets"
+msgstr ""
+
+#: includes/avadaredux/custom-fields/typography/field_typography.php:313
+msgid "Subsets"
+msgstr ""
+
+#: includes/avadaredux/custom-fields/typography/field_typography.php:313
+msgid "Font script"
+msgstr ""
+
+#: includes/avadaredux/custom-fields/typography/field_typography.php:324
+#: includes/avadaredux/custom-fields/typography/field_typography.php:325
+#: includes/avadaredux/custom-fields/typography/field_typography.php:326
+msgid "Text Align"
+msgstr ""
+
+#: includes/avadaredux/custom-fields/typography/field_typography.php:347
+#: includes/avadaredux/custom-fields/typography/field_typography.php:348
+#: includes/avadaredux/custom-fields/typography/field_typography.php:349
+msgid "Text Transform"
+msgstr ""
+
+#: includes/avadaredux/custom-fields/typography/field_typography.php:370
+#: includes/avadaredux/custom-fields/typography/field_typography.php:371
+#: includes/avadaredux/custom-fields/typography/field_typography.php:372
+msgid "Font Variant"
+msgstr ""
+
+#: includes/avadaredux/custom-fields/typography/field_typography.php:390
+#: includes/avadaredux/custom-fields/typography/field_typography.php:391
+#: includes/avadaredux/custom-fields/typography/field_typography.php:392
+msgid "Text Decoration"
+msgstr ""
+
+#: includes/avadaredux/custom-fields/typography/field_typography.php:414
+#: includes/avadaredux/custom-fields/typography/field_typography.php:415
+msgid "Font Size"
+msgstr ""
+
+#: includes/avadaredux/custom-fields/typography/field_typography.php:415
+msgid "Size"
+msgstr ""
+
+#: includes/avadaredux/custom-fields/typography/field_typography.php:423
+#: includes/avadaredux/custom-fields/typography/field_typography.php:424
+msgid "Line Height"
+msgstr ""
+
+#: includes/avadaredux/custom-fields/typography/field_typography.php:432
+#: includes/avadaredux/custom-fields/typography/field_typography.php:433
+msgid "Word Spacing"
+msgstr ""
+
+#: includes/avadaredux/custom-fields/typography/field_typography.php:441
+#: includes/avadaredux/custom-fields/typography/field_typography.php:442
+msgid "Letter Spacing"
+msgstr ""
+
+#: includes/avadaredux/custom-fields/typography/field_typography.php:452
+#: includes/avadaredux/custom-fields/typography/field_typography.php:453
+msgid "Margin Top"
+msgstr ""
+
+#: includes/avadaredux/custom-fields/typography/field_typography.php:461
+#: includes/avadaredux/custom-fields/typography/field_typography.php:462
+msgid "Margin Bottom"
+msgstr ""
+
+#: includes/avadaredux/custom-fields/typography/field_typography.php:480
+msgid "Font Color"
+msgstr ""
+
+#: includes/avadaredux/custom-fields/typography/field_typography.php:482
+msgid "Font color"
+msgstr ""
+
+#: includes/avadaredux/custom-fields/typography/field_typography.php:906
+msgid "Standard Fonts"
+msgstr ""
+
+#: includes/avadaredux/custom-fields/typography/field_typography.php:1015
+msgid "Google Webfonts"
+msgstr ""
+
+#: includes/avadaredux/custom-fields/typography/googlefonts.php:70
+msgid "Normal 400"
+msgstr ""
+
+#: includes/avadaredux/custom-fields/typography/googlefonts.php:71
+msgid "Normal 400 Italic"
+msgstr ""
+
+#: includes/avadaredux/custom-fields/typography/googlefonts.php:72
+msgid "Ultra-Light 100"
+msgstr ""
+
+#: includes/avadaredux/custom-fields/typography/googlefonts.php:73
+msgid "Light 200"
+msgstr ""
+
+#: includes/avadaredux/custom-fields/typography/googlefonts.php:74
+msgid "Book 300"
+msgstr ""
+
+#: includes/avadaredux/custom-fields/typography/googlefonts.php:75
+msgid "Medium 500"
+msgstr ""
+
+#: includes/avadaredux/custom-fields/typography/googlefonts.php:76
+msgid "Semi-Bold 600"
+msgstr ""
+
+#: includes/avadaredux/custom-fields/typography/googlefonts.php:77
+msgid "Bold 700"
+msgstr ""
+
+#: includes/avadaredux/custom-fields/typography/googlefonts.php:78
+msgid "Bold 700 Italic"
+msgstr ""
+
+#: includes/avadaredux/custom-fields/typography/googlefonts.php:79
+msgid "Ultra-Bold 900"
+msgstr ""
+
+#: includes/avadaredux/custom-fields/typography/googlefonts.php:80
+msgid "Ultra-Bold 900 Italic"
+msgstr ""
+
+#: includes/avadaredux/custom-fields/typography/googlefonts.php:81
+msgid "Ultra-Light 100 Italic"
+msgstr ""
+
+#: includes/avadaredux/custom-fields/typography/googlefonts.php:82
+msgid "Book 300 Italic"
+msgstr ""
+
+#: includes/avadaredux/custom-fields/typography/googlefonts.php:83
+msgid "Medium 500 Italic"
+msgstr ""
+
+#: includes/avadaredux/custom-fields/typography/googlefonts.php:84
+msgid "Extra-Bold 800"
+msgstr ""
+
+#: includes/avadaredux/custom-fields/typography/googlefonts.php:85
+msgid "Extra-Bold 800 Italic"
+msgstr ""
+
+#: includes/avadaredux/custom-fields/typography/googlefonts.php:86
+msgid "Semi-Bold 600 Italic"
+msgstr ""
+
+#: includes/avadaredux/custom-fields/typography/googlefonts.php:87
+msgid "Light 200 Italic"
+msgstr ""
+
+#: includes/avadaredux/custom-fields/typography/googlefonts.php:100
+msgid "Greek Extended"
+msgstr ""
+
+#: includes/avadaredux/custom-fields/typography/googlefonts.php:101
+msgid "Greek"
+msgstr ""
+
+#: includes/avadaredux/custom-fields/typography/googlefonts.php:102
+msgid "Cyrillic Extended"
+msgstr ""
+
+#: includes/avadaredux/custom-fields/typography/googlefonts.php:103
+msgid "Cyrillic"
+msgstr ""
+
+#: includes/avadaredux/custom-fields/typography/googlefonts.php:104
+msgid "Latin Extended"
+msgstr ""
+
+#: includes/avadaredux/custom-fields/typography/googlefonts.php:105
+msgid "Latin"
+msgstr ""
+
+#: includes/avadaredux/custom-fields/typography/googlefonts.php:106
+msgid "Vietnamese"
+msgstr ""
+
+#: includes/avadaredux/custom-fields/typography/googlefonts.php:107
+msgid "Arabic"
+msgstr ""
+
+#: includes/avadaredux/custom-fields/typography/googlefonts.php:108
+msgid "Gujarati"
+msgstr ""
+
+#: includes/avadaredux/custom-fields/typography/googlefonts.php:109
+msgid "Devanagari"
+msgstr ""
+
+#: includes/avadaredux/custom-fields/typography/googlefonts.php:110
+msgid "Bengali"
+msgstr ""
+
+#: includes/avadaredux/custom-fields/typography/googlefonts.php:111
+msgid "Hebrew"
+msgstr ""
+
+#: includes/avadaredux/custom-fields/typography/googlefonts.php:112
+msgid "Khmer"
+msgstr ""
+
+#: includes/avadaredux/custom-fields/typography/googlefonts.php:113
+msgid "Tamil"
+msgstr ""
+
+#: includes/avadaredux/custom-fields/typography/googlefonts.php:114
+msgid "Telugu"
+msgstr ""
+
+#: includes/avadaredux/custom-fields/typography/googlefonts.php:115
+msgid "Thai"
+msgstr ""
+
+#: includes/avadaredux/extensions/repeater/repeater/field_repeater.php:187
+#: includes/avadaredux/extensions/repeater/repeater/field_repeater.php:230
+msgid "Delete"
+msgstr ""
+
+#: includes/avadaredux/extensions/repeater/repeater/field_repeater.php:252
+msgid "Add"
+msgstr ""
+
+#: includes/avadaredux/extensions/search/extension_search.php:98
+msgid "Search for option(s)"
+msgstr ""
+
+#: includes/avadaredux/panel_templates/header_stickybar.tpl.php:15
+msgid "Expand Options"
+msgstr ""
+
+#: includes/avadaredux/panel_templates/header_stickybar.tpl.php:19
+msgid "Support Center"
+msgstr ""
+
+#: includes/avadaredux/panel_templates/header_stickybar.tpl.php:26
+msgid "Save Changes"
+msgstr ""
+
+#: includes/avadaredux/panel_templates/header_stickybar.tpl.php:30
+msgid "Reset Section"
+msgstr ""
+
+#: includes/avadaredux/panel_templates/header_stickybar.tpl.php:31
+msgid "Reset All"
+msgstr ""
+
+#: includes/avadaredux/panel_templates/header_stickybar.tpl.php:35
+msgid "Working..."
+msgstr ""
+
+#: includes/avadaredux/validation-functions.php:50
+#: includes/avadaredux/validation-functions.php:313
+msgid ""
+"We could not find a valid unit for this field, falling back to \"%1$s\". "
+"Saved value \"%2$s\" and not \"%3$s\"."
+msgstr ""
+
+#: includes/avadaredux/validation-functions.php:51
+#: includes/avadaredux/validation-functions.php:123
+#: includes/avadaredux/validation-functions.php:314
+msgid ""
+"No units were entered, falling back to using pixels. Saved value \"%2$s\" "
+"and not \"%3$s\"."
+msgstr ""
+
+#: includes/avadaredux/validation-functions.php:122
+msgid ""
+"We could not find a valid unit for this field, falling back to \"%1$s\". "
+"Valid units are %4$s. Saved value \"%2$s\" and not \"%3$s.\"."
+msgstr ""
+
+#: includes/avadaredux/validation-functions.php:219
+msgid ""
+"We could not find a valid unit for %1$s, falling back to \"%2$s\". Valid "
+"units are %3$s. Saved value \"%4$s\" and not \"%5$s.\"."
+msgstr ""
+
+#: includes/avadaredux/validation-functions.php:220
+msgid ""
+"No units were entered for %1s, falling back to using pixels. Saved value "
+"\"%4$s\" and not \"%5$s\"."
+msgstr ""
+
+#: includes/avadaredux/validation-functions.php:365
+#: includes/avadaredux/validation-functions.php:390
+msgid "Sanitized value and saved as %1s instead of %2s."
+msgstr ""
+
 #: includes/class-avada-admin.php:37 includes/class-avada-admin.php:68
 #: includes/class-avada-admin.php:77
 msgid "ThemeFusion News"
-msgstr ""
-
-#: includes/class-avada-admin.php:118 includes/class-avada-admin.php:249
-#: includes/avadaredux/class-avada-avadaredux.php:864
-#: includes/avadaredux/class-avada-avadaredux.php:865
-msgid "Theme Options"
 msgstr ""
 
 #: includes/class-avada-admin.php:245
@@ -1134,15 +1666,15 @@ msgstr ""
 msgid "Empty"
 msgstr ""
 
-#: includes/class-avada-admin.php:521
+#: includes/class-avada-admin.php:528
 msgid "Avada portfolio category base"
 msgstr ""
 
-#: includes/class-avada-admin.php:530
+#: includes/class-avada-admin.php:537
 msgid "Avada portfolio skill base"
 msgstr ""
 
-#: includes/class-avada-admin.php:539
+#: includes/class-avada-admin.php:546
 msgid "Avada portfolio tag base"
 msgstr ""
 
@@ -1153,7 +1685,7 @@ msgstr ""
 #: includes/class-avada-contact.php:156
 #: includes/class-fusion-widget-contact-info.php:44
 #: includes/class-fusion-widget-contact-info.php:111
-#: includes/woo-config.php:1486
+#: includes/woo-config.php:1542
 msgid "Email:"
 msgstr ""
 
@@ -1166,13 +1698,29 @@ msgid "Comments:"
 msgstr ""
 
 #: includes/class-avada-data.php:36
-#: includes/class-fusion-widget-social-links.php:179
+#: includes/class-fusion-widget-social-links.php:190
 #: includes/options/contact.php:38
 msgid "Email Address"
 msgstr ""
 
 #: includes/class-avada-data.php:41
 msgid "Custom"
+msgstr ""
+
+#: includes/class-avada-fusion-builder-interface.php:516
+msgid "LayerSlider"
+msgstr ""
+
+#: includes/class-avada-fusion-builder-interface.php:542
+msgid "Slide ID: "
+msgstr ""
+
+#: includes/class-avada-fusion-builder-interface.php:543
+msgid "Edit slider"
+msgstr ""
+
+#: includes/class-avada-fusion-builder-interface.php:543
+msgid "Edit Slider"
 msgstr ""
 
 #: includes/class-avada-layout-bbpress.php:87
@@ -1190,7 +1738,7 @@ msgstr ""
 #: includes/class-avada-layout-bbpress.php:212
 #: includes/class-avada-layout-bbpress.php:237
 #: includes/class-avada-layout-bbpress.php:259
-#: includes/fusion-functions.php:176 includes/woo-config.php:245
+#: includes/fusion-functions.php:176 includes/woo-config.php:253
 #: single-avada_portfolio.php:19 single-avada_portfolio.php:27
 #: single-avada_portfolio.php:39 single-wpfc_sermon.php:6 single.php:7
 msgid "Previous"
@@ -1199,7 +1747,7 @@ msgstr ""
 #: includes/class-avada-layout-bbpress.php:213
 #: includes/class-avada-layout-bbpress.php:238
 #: includes/class-avada-layout-bbpress.php:260
-#: includes/fusion-functions.php:192 includes/woo-config.php:246
+#: includes/fusion-functions.php:192 includes/woo-config.php:254
 #: single-avada_portfolio.php:46 single-avada_portfolio.php:54
 #: single-avada_portfolio.php:66 single-wpfc_sermon.php:7 single.php:8
 msgid "Next"
@@ -1224,7 +1772,7 @@ msgstr ""
 #: includes/class-avada-migrate.php:277
 msgid ""
 "We have an amazing new update in store for you! Avada 4.0 now includes a "
-"new options panel powered by the AvadaRedux Framework. To complete the "
+"new options panel powered by the Redux Framework. To complete the "
 "migration, we have backed up your existing theme options in your database, "
 "made a copy and then securely converted. If you have a multi-lingual site, "
 "each language will be updated individually one after another. For more "
@@ -1234,7 +1782,7 @@ msgstr ""
 #: includes/class-avada-migrate.php:279
 msgid ""
 "We have an amazing new update in store for you! Avada 4.0 now includes a "
-"new options panel powered by the AvadaRedux Framework. To complete the "
+"new options panel powered by the Redux Framework. To complete the "
 "migration, we have backed up your existing theme options in your database, "
 "made a copy and then securely converted. For more detailed information, "
 "please visit this %s. Thank you for choosing Avada!"
@@ -1340,27 +1888,31 @@ msgstr ""
 msgid "Loading FAQ Items..."
 msgstr ""
 
-#: includes/class-avada-scripts.php:273 includes/woo-config.php:233
+#: includes/class-avada-scripts.php:273 includes/woo-config.php:241
 msgid "Details"
+msgstr ""
+
+#: includes/class-avada-scripts.php:350
+msgid "Not all fields have been filled in correctly."
 msgstr ""
 
 #: includes/class-avada-sidebars.php:17
 msgid "Default Sidebar of Avada"
 msgstr ""
 
-#: includes/class-avada-template.php:341
+#: includes/class-avada-template.php:343
 msgid "%1$s at %2$s"
 msgstr ""
 
-#: includes/class-avada-template.php:341
+#: includes/class-avada-template.php:343
 msgid " - Edit"
 msgstr ""
 
-#: includes/class-avada-template.php:341
+#: includes/class-avada-template.php:343
 msgid " - Reply"
 msgstr ""
 
-#: includes/class-avada-template.php:345
+#: includes/class-avada-template.php:347
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
@@ -1368,29 +1920,29 @@ msgstr ""
 msgid "There is an update available for the %s theme."
 msgstr ""
 
-#: includes/class-avada-upgrade.php:355
+#: includes/class-avada-upgrade.php:396
 msgid "<a href=\"%1$s\" class=\"%2$s\" target=\"_blank\">View Changelog</a>"
 msgstr ""
 
-#: includes/class-avada-upgrade.php:356
+#: includes/class-avada-upgrade.php:397
 msgid ""
 "<a href=\"%1$s\" class=\"%2$s\" style=\"margin:0 4px;\">Dismiss this "
 "notice</a>"
 msgstr ""
 
-#: includes/class-fusion-breadcrumbs.php:95
+#: includes/class-fusion-breadcrumbs.php:99
 msgid "Home"
 msgstr ""
 
-#: includes/class-fusion-breadcrumbs.php:96
+#: includes/class-fusion-breadcrumbs.php:100
 msgid "Tag:"
 msgstr ""
 
-#: includes/class-fusion-breadcrumbs.php:97
+#: includes/class-fusion-breadcrumbs.php:101
 msgid "Search:"
 msgstr ""
 
-#: includes/class-fusion-breadcrumbs.php:98
+#: includes/class-fusion-breadcrumbs.php:102
 msgid "404 - Page not Found"
 msgstr ""
 
@@ -1439,10 +1991,10 @@ msgid "Web:"
 msgstr ""
 
 #: includes/class-fusion-widget-contact-info.php:91
-#: includes/class-fusion-widget-facebook-page.php:119
+#: includes/class-fusion-widget-facebook-page.php:122
 #: includes/class-fusion-widget-flickr.php:109
 #: includes/class-fusion-widget-recent-works.php:80
-#: includes/class-fusion-widget-social-links.php:318
+#: includes/class-fusion-widget-social-links.php:329
 #: includes/class-fusion-widget-tweets.php:188
 msgid "Title:"
 msgstr ""
@@ -1467,37 +2019,45 @@ msgstr ""
 msgid "Adds support for Facebook Page Plugin."
 msgstr ""
 
-#: includes/class-fusion-widget-facebook-page.php:105
+#: includes/class-fusion-widget-facebook-page.php:107
 msgid "Find us on Facebook"
 msgstr ""
 
-#: includes/class-fusion-widget-facebook-page.php:116
+#: includes/class-fusion-widget-facebook-page.php:119
 msgid ""
-"IMPORTANT: Facebook has abandoned color scheme option for the page plugin, "
-"thus the option is also no longer available in the widget."
+"IMPORTANT: Please create a Facebook App and use its ID for features like "
+"sharing."
 msgstr ""
 
-#: includes/class-fusion-widget-facebook-page.php:124
+#: includes/class-fusion-widget-facebook-page.php:119
+msgid "See Instructions."
+msgstr ""
+
+#: includes/class-fusion-widget-facebook-page.php:127
 msgid "Facebook Page URL:"
 msgstr ""
 
-#: includes/class-fusion-widget-facebook-page.php:129
+#: includes/class-fusion-widget-facebook-page.php:132
+msgid "Facebook App ID:"
+msgstr ""
+
+#: includes/class-fusion-widget-facebook-page.php:137
 msgid "Width (has to be between 180 and 500):"
 msgstr ""
 
-#: includes/class-fusion-widget-facebook-page.php:135
+#: includes/class-fusion-widget-facebook-page.php:143
 msgid "Show Friends Faces"
 msgstr ""
 
-#: includes/class-fusion-widget-facebook-page.php:140
+#: includes/class-fusion-widget-facebook-page.php:148
 msgid "Show Posts"
 msgstr ""
 
-#: includes/class-fusion-widget-facebook-page.php:145
+#: includes/class-fusion-widget-facebook-page.php:153
 msgid "Show Cover Photo"
 msgstr ""
 
-#: includes/class-fusion-widget-facebook-page.php:150
+#: includes/class-fusion-widget-facebook-page.php:158
 msgid "Use Small Header"
 msgstr ""
 
@@ -1537,26 +2097,6 @@ msgstr ""
 msgid "Alignment:"
 msgstr ""
 
-#: includes/class-fusion-widget-menu.php:130
-#: includes/class-fusion-widget-social-links.php:374
-#: includes/metaboxes/options/options_slide.php:98
-#: includes/metaboxes/tabs/tab_pagetitlebar.php:31
-#: includes/metaboxes/tabs/tab_sidebars.php:11 includes/options/extra.php:250
-#: includes/options/header.php:41 includes/options/logo.php:34
-#: includes/options/menu.php:359 includes/options/menu.php:530
-#: includes/options/menu.php:1274 includes/options/page_title_bar.php:127
-#: includes/options/shortcode_styling.php:985
-#: includes/options/shortcode_styling.php:1047
-#: includes/options/shortcode_styling.php:1344
-#: includes/options/sidebars.php:130 includes/options/sidebars.php:173
-#: includes/options/sidebars.php:241 includes/options/sidebars.php:302
-#: includes/options/sidebars.php:349 includes/options/sidebars.php:418
-#: includes/options/sidebars.php:461 includes/options/social_media.php:91
-#: includes/options/social_media.php:215 includes/options/social_media.php:392
-#: includes/avadaredux/custom-fields/spacing/field_spacing.php:127
-msgid "Left"
-msgstr ""
-
 #: includes/class-fusion-widget-menu.php:131
 #: includes/metaboxes/options/options_slide.php:98
 #: includes/metaboxes/tabs/tab_pagetitlebar.php:32
@@ -1566,27 +2106,6 @@ msgstr ""
 #: includes/options/shortcode_styling.php:986
 #: includes/options/shortcode_styling.php:1542
 msgid "Center"
-msgstr ""
-
-#: includes/class-fusion-widget-menu.php:132
-#: includes/class-fusion-widget-social-links.php:372
-#: includes/metaboxes/options/options_slide.php:98
-#: includes/metaboxes/tabs/tab_pagetitlebar.php:33
-#: includes/metaboxes/tabs/tab_sidebars.php:10 includes/options/extra.php:251
-#: includes/options/header.php:42 includes/options/lightbox.php:87
-#: includes/options/logo.php:36 includes/options/menu.php:361
-#: includes/options/menu.php:531 includes/options/menu.php:1276
-#: includes/options/page_title_bar.php:129
-#: includes/options/shortcode_styling.php:987
-#: includes/options/shortcode_styling.php:1045
-#: includes/options/shortcode_styling.php:1342
-#: includes/options/sidebars.php:129 includes/options/sidebars.php:172
-#: includes/options/sidebars.php:240 includes/options/sidebars.php:301
-#: includes/options/sidebars.php:348 includes/options/sidebars.php:417
-#: includes/options/sidebars.php:460 includes/options/social_media.php:89
-#: includes/options/social_media.php:213 includes/options/social_media.php:390
-#: includes/avadaredux/custom-fields/spacing/field_spacing.php:113
-msgid "Right"
 msgstr ""
 
 #: includes/class-fusion-widget-menu.php:136
@@ -1617,43 +2136,43 @@ msgstr ""
 msgid "Number of items to show:"
 msgstr ""
 
-#: includes/class-fusion-widget-social-links.php:275
+#: includes/class-fusion-widget-social-links.php:286
 msgid "Get Social"
 msgstr ""
 
-#: includes/class-fusion-widget-social-links.php:323
+#: includes/class-fusion-widget-social-links.php:334
 msgid "Link Target:"
 msgstr ""
 
-#: includes/class-fusion-widget-social-links.php:328
+#: includes/class-fusion-widget-social-links.php:339
 msgid "Icons Font Size:"
 msgstr ""
 
-#: includes/class-fusion-widget-social-links.php:333
+#: includes/class-fusion-widget-social-links.php:344
 msgid "Icons Color Type:"
 msgstr ""
 
-#: includes/class-fusion-widget-social-links.php:335
+#: includes/class-fusion-widget-social-links.php:346
 msgid "Custom Color"
 msgstr ""
 
-#: includes/class-fusion-widget-social-links.php:336
+#: includes/class-fusion-widget-social-links.php:347
 #: includes/options/shortcode_styling.php:1263
 #: includes/options/social_media.php:103 includes/options/social_media.php:234
 #: includes/options/social_media.php:404
 msgid "Brand Colors"
 msgstr ""
 
-#: includes/class-fusion-widget-social-links.php:341
+#: includes/class-fusion-widget-social-links.php:352
 msgid "Icons Color Hex Code:"
 msgstr ""
 
-#: includes/class-fusion-widget-social-links.php:346
+#: includes/class-fusion-widget-social-links.php:357
 msgid "Icons Boxed:"
 msgstr ""
 
-#: includes/class-fusion-widget-social-links.php:348
-#: includes/class-fusion-widget-social-links.php:382
+#: includes/class-fusion-widget-social-links.php:359
+#: includes/class-fusion-widget-social-links.php:393
 #: includes/metaboxes/options/options_slide.php:66
 #: includes/metaboxes/options/options_slide.php:72
 #: includes/metaboxes/options/options_slide.php:78
@@ -1687,8 +2206,8 @@ msgstr ""
 msgid "No"
 msgstr ""
 
-#: includes/class-fusion-widget-social-links.php:349
-#: includes/class-fusion-widget-social-links.php:383
+#: includes/class-fusion-widget-social-links.php:360
+#: includes/class-fusion-widget-social-links.php:394
 #: includes/metaboxes/options/options_slide.php:66
 #: includes/metaboxes/options/options_slide.php:72
 #: includes/metaboxes/options/options_slide.php:78
@@ -1722,47 +2241,23 @@ msgstr ""
 msgid "Yes"
 msgstr ""
 
-#: includes/class-fusion-widget-social-links.php:354
+#: includes/class-fusion-widget-social-links.php:365
 msgid "Boxed Icons Background Color Hex Code:"
 msgstr ""
 
-#: includes/class-fusion-widget-social-links.php:359
+#: includes/class-fusion-widget-social-links.php:370
 msgid "Boxed Icons Radius:"
 msgstr ""
 
-#: includes/class-fusion-widget-social-links.php:364
+#: includes/class-fusion-widget-social-links.php:375
 msgid "Boxed Icons Padding:"
 msgstr ""
 
-#: includes/class-fusion-widget-social-links.php:369
+#: includes/class-fusion-widget-social-links.php:380
 msgid "Tooltip Position:"
 msgstr ""
 
-#: includes/class-fusion-widget-social-links.php:371
-#: includes/options/extra.php:253 includes/options/header.php:40
-#: includes/options/menu.php:533 includes/options/shortcode_styling.php:997
-#: includes/options/shortcode_styling.php:1044
-#: includes/options/shortcode_styling.php:1341
-#: includes/options/social_media.php:88 includes/options/social_media.php:212
-#: includes/options/social_media.php:389
-#: includes/avadaredux/custom-fields/spacing/field_spacing.php:106
-#: includes/avadaredux/custom-fields/typography/field_typography.php:453
-msgid "Top"
-msgstr ""
-
-#: includes/class-fusion-widget-social-links.php:373
-#: includes/options/extra.php:252 includes/options/lightbox.php:88
-#: includes/options/menu.php:532 includes/options/shortcode_styling.php:998
-#: includes/options/shortcode_styling.php:1046
-#: includes/options/shortcode_styling.php:1343
-#: includes/options/social_media.php:90 includes/options/social_media.php:214
-#: includes/options/social_media.php:391
-#: includes/avadaredux/custom-fields/spacing/field_spacing.php:120
-#: includes/avadaredux/custom-fields/typography/field_typography.php:462
-msgid "Bottom"
-msgstr ""
-
-#: includes/class-fusion-widget-social-links.php:375
+#: includes/class-fusion-widget-social-links.php:386
 #: includes/metaboxes/options/options_slide.php:110
 #: includes/metaboxes/options/options_slide.php:156
 #: includes/metaboxes/tabs/tab_pagetitlebar.php:144
@@ -1775,11 +2270,11 @@ msgstr ""
 msgid "None"
 msgstr ""
 
-#: includes/class-fusion-widget-social-links.php:380
+#: includes/class-fusion-widget-social-links.php:391
 msgid "Show Custom Icons:"
 msgstr ""
 
-#: includes/class-fusion-widget-social-links.php:400
+#: includes/class-fusion-widget-social-links.php:411
 msgid "%s Link:"
 msgstr ""
 
@@ -1915,12 +2410,12 @@ msgstr ""
 msgid "Color Scheme:"
 msgstr ""
 
-#: includes/class-fusion-widget-tweets.php:249 includes/options/colors.php:509
+#: includes/class-fusion-widget-tweets.php:249 includes/options/colors.php:524
 #: includes/options/contact.php:92 includes/options/lightbox.php:64
 msgid "Light"
 msgstr ""
 
-#: includes/class-fusion-widget-tweets.php:250 includes/options/colors.php:514
+#: includes/class-fusion-widget-tweets.php:250 includes/options/colors.php:529
 #: includes/options/contact.php:93 includes/options/lightbox.php:65
 msgid "Dark"
 msgstr ""
@@ -2381,7 +2876,7 @@ msgstr ""
 msgid "Pages:"
 msgstr ""
 
-#: includes/dynamic_css.php:8215
+#: includes/dynamic_css.php:8351
 msgid "Please enter correct details for this required field."
 msgstr ""
 
@@ -2426,12 +2921,12 @@ msgstr ""
 msgid "Page Title Bar"
 msgstr ""
 
-#: includes/metaboxes/metaboxes.php:121 includes/woo-config.php:1390
+#: includes/metaboxes/metaboxes.php:121 includes/woo-config.php:1446
 #: woocommerce/cart/cart.php:26 woocommerce/checkout/form-pay.php:31
 #: woocommerce/checkout/review-order.php:17
-#: woocommerce/compatibility/2.4/cart/cart.php:26
-#: woocommerce/compatibility/2.4/checkout/form-pay.php:24
-#: woocommerce/compatibility/2.4/checkout/review-order.php:17
+#: woocommerce/compatibility/2.5/cart/cart.php:26
+#: woocommerce/compatibility/2.5/checkout/form-pay.php:31
+#: woocommerce/compatibility/2.5/checkout/review-order.php:17
 msgid "Product"
 msgstr ""
 
@@ -4485,82 +4980,82 @@ msgid ""
 "target=\"_blank\">Formatting Date and Time</a>"
 msgstr ""
 
-#: includes/options/colors.php:490
+#: includes/options/colors.php:505
 msgid "Colors"
 msgstr ""
 
-#: includes/options/colors.php:497
+#: includes/options/colors.php:512
 msgid ""
 "<strong>IMPORTANT NOTE:</strong> This tab contains general color options. "
 "Additional color options for specific areas, can be found within other "
 "tabs. Example: For menu color options go to the menu tab."
 msgstr ""
 
-#: includes/options/colors.php:502
+#: includes/options/colors.php:517
 msgid "Predefined Theme Skin"
 msgstr ""
 
-#: includes/options/colors.php:503
+#: includes/options/colors.php:518
 msgid ""
 "Controls the main theme skin to be light or dark. Select a skin and all "
 "color options will change to the defined selection."
 msgstr ""
 
-#: includes/options/colors.php:521
+#: includes/options/colors.php:536
 msgid "Predefined Color Scheme"
 msgstr ""
 
-#: includes/options/colors.php:522
+#: includes/options/colors.php:537
 msgid ""
 "Controls the main color scheme throughout the theme. Select a scheme and "
 "all color options will change to the defined selection."
 msgstr ""
 
-#: includes/options/colors.php:528
+#: includes/options/colors.php:543
 msgid "Red"
 msgstr ""
 
-#: includes/options/colors.php:533
+#: includes/options/colors.php:548
 msgid "Light Red"
 msgstr ""
 
-#: includes/options/colors.php:538
+#: includes/options/colors.php:553
 msgid "Blue"
 msgstr ""
 
-#: includes/options/colors.php:543
+#: includes/options/colors.php:558
 msgid "Light Blue"
 msgstr ""
 
-#: includes/options/colors.php:548
+#: includes/options/colors.php:563
 msgid "Green"
 msgstr ""
 
-#: includes/options/colors.php:553
+#: includes/options/colors.php:568
 msgid "Dark Green"
 msgstr ""
 
-#: includes/options/colors.php:558
+#: includes/options/colors.php:573
 msgid "Orange"
 msgstr ""
 
-#: includes/options/colors.php:563
+#: includes/options/colors.php:578
 msgid "Pink"
 msgstr ""
 
-#: includes/options/colors.php:568
+#: includes/options/colors.php:583
 msgid "Brown"
 msgstr ""
 
-#: includes/options/colors.php:573
+#: includes/options/colors.php:588
 msgid "Light Grey"
 msgstr ""
 
-#: includes/options/colors.php:580
+#: includes/options/colors.php:595
 msgid "Primary Color"
 msgstr ""
 
-#: includes/options/colors.php:581
+#: includes/options/colors.php:596
 msgid "Controls the main highlight color throughout the theme."
 msgstr ""
 
@@ -6048,7 +6543,8 @@ msgstr ""
 msgid ""
 "Controls the background color and opacity for the header. For top headers, "
 "opacity set below 1 will remove the header height completely. For side "
-"headers, opacity set below 1 will display a color overlay."
+"headers, opacity set below 1 will display a color overlay. Transparent "
+"headers are disabled on all archive pages due to technical limitations."
 msgstr ""
 
 #: includes/options/header.php:507
@@ -6135,27 +6631,27 @@ msgstr ""
 msgid "Menu + Logo Area"
 msgstr ""
 
-#: includes/options/header.php:726
+#: includes/options/header.php:731
 msgid "Sticky Header Background Color"
 msgstr ""
 
-#: includes/options/header.php:727
+#: includes/options/header.php:732
 msgid "Controls the background color for the sticky header."
 msgstr ""
 
-#: includes/options/header.php:740
+#: includes/options/header.php:745
 msgid "Sticky Header Menu Item Padding"
 msgstr ""
 
-#: includes/options/header.php:741
+#: includes/options/header.php:746
 msgid "Controls the space between each menu item in the sticky header."
 msgstr ""
 
-#: includes/options/header.php:764
+#: includes/options/header.php:769
 msgid "Sticky Header Navigation Font Size"
 msgstr ""
 
-#: includes/options/header.php:765
+#: includes/options/header.php:770
 msgid "Controls the font size of the menu items in the sticky header."
 msgstr ""
 
@@ -9859,7 +10355,7 @@ msgid "VK"
 msgstr ""
 
 #: includes/options/social_media.php:539 includes/options/social_media.php:540
-#: woocommerce/compatibility/2.4/single-product-reviews.php:67
+#: woocommerce/compatibility/2.5/single-product-reviews.php:67
 #: woocommerce/single-product-reviews.php:67
 msgid "Email"
 msgstr ""
@@ -9971,12 +10467,6 @@ msgstr ""
 msgid ""
 "Controls the font size of single post titles for \"Comments\", \"Related "
 "Posts or Projects\" and \"Author Titles\". This is a H3 heading."
-msgstr ""
-
-#: includes/options/typography.php:252 includes/options/typography.php:263
-#: includes/avadaredux/class-avada-avadaredux-migration.php:127
-#: includes/avadaredux/custom-fields/typography/field_typography.php:921
-msgid "Custom Fonts"
 msgstr ""
 
 #: includes/options/typography.php:258
@@ -10542,89 +11032,89 @@ msgstr ""
 msgid "Remove Image"
 msgstr ""
 
-#: includes/plugins/megamenu/mega-menus.php:704
+#: includes/plugins/megamenu/mega-menus.php:710
 #. translators: %s: title of menu item which is invalid
 msgid "%s (Invalid)"
 msgstr ""
 
-#: includes/plugins/megamenu/mega-menus.php:708
+#: includes/plugins/megamenu/mega-menus.php:714
 #. translators: %s: title of menu item in draft status
 msgid "%s (Pending)"
 msgstr ""
 
-#: includes/plugins/megamenu/mega-menus.php:722
+#: includes/plugins/megamenu/mega-menus.php:728
 msgid "sub item"
 msgstr ""
 
-#: includes/plugins/megamenu/mega-menus.php:732
+#: includes/plugins/megamenu/mega-menus.php:738
 msgid "Move up"
 msgstr ""
 
-#: includes/plugins/megamenu/mega-menus.php:740
+#: includes/plugins/megamenu/mega-menus.php:746
 msgid "Move down"
 msgstr ""
 
-#: includes/plugins/megamenu/mega-menus.php:742
-#: includes/plugins/megamenu/mega-menus.php:750
+#: includes/plugins/megamenu/mega-menus.php:748
+#: includes/plugins/megamenu/mega-menus.php:756
 msgid "Edit Menu Item"
 msgstr ""
 
-#: includes/plugins/megamenu/mega-menus.php:759
+#: includes/plugins/megamenu/mega-menus.php:765
 msgid "URL"
 msgstr ""
 
-#: includes/plugins/megamenu/mega-menus.php:766
+#: includes/plugins/megamenu/mega-menus.php:772
 msgid "Navigation Label"
 msgstr ""
 
-#: includes/plugins/megamenu/mega-menus.php:772
+#: includes/plugins/megamenu/mega-menus.php:778
 msgid "Title Attribute"
 msgstr ""
 
-#: includes/plugins/megamenu/mega-menus.php:779
+#: includes/plugins/megamenu/mega-menus.php:785
 msgid "Open link in a new window/tab"
 msgstr ""
 
-#: includes/plugins/megamenu/mega-menus.php:784
+#: includes/plugins/megamenu/mega-menus.php:790
 msgid "CSS Classes (optional)"
 msgstr ""
 
-#: includes/plugins/megamenu/mega-menus.php:790
+#: includes/plugins/megamenu/mega-menus.php:796
 msgid "Link Relationship (XFN)"
 msgstr ""
 
-#: includes/plugins/megamenu/mega-menus.php:798
+#: includes/plugins/megamenu/mega-menus.php:804
 msgid ""
 "The description will be displayed in the menu if the current theme supports "
 "it."
 msgstr ""
 
-#: includes/plugins/megamenu/mega-menus.php:806
+#: includes/plugins/megamenu/mega-menus.php:812
 msgid "Move"
 msgstr ""
 
-#: includes/plugins/megamenu/mega-menus.php:807
+#: includes/plugins/megamenu/mega-menus.php:813
 msgid "Up one"
 msgstr ""
 
-#: includes/plugins/megamenu/mega-menus.php:808
+#: includes/plugins/megamenu/mega-menus.php:814
 msgid "Down one"
 msgstr ""
 
-#: includes/plugins/megamenu/mega-menus.php:811
+#: includes/plugins/megamenu/mega-menus.php:817
 msgid "To the top"
 msgstr ""
 
-#: includes/plugins/megamenu/mega-menus.php:818
+#: includes/plugins/megamenu/mega-menus.php:824
 msgid "Original: %s"
 msgstr ""
 
-#: includes/plugins/megamenu/mega-menus.php:827
+#: includes/plugins/megamenu/mega-menus.php:833
 #: includes/plugins/multiple_sidebars.php:235
 msgid "Remove"
 msgstr ""
 
-#: includes/plugins/megamenu/mega-menus.php:832
+#: includes/plugins/megamenu/mega-menus.php:838
 msgid "Cancel"
 msgstr ""
 
@@ -10749,674 +11239,237 @@ msgstr ""
 msgid "$s..."
 msgstr ""
 
-#: includes/avadaredux/class-avada-avadaredux-migration.php:89
-msgid "Preparing to run Upgrade"
-msgstr ""
-
-#: includes/avadaredux/class-avada-avadaredux-migration.php:93
-msgid "Slider controls"
-msgstr ""
-
-#: includes/avadaredux/class-avada-avadaredux-migration.php:97
-msgid "Checkbox & Switch controls"
-msgstr ""
-
-#: includes/avadaredux/class-avada-avadaredux-migration.php:101
-msgid "Dimension controls"
-msgstr ""
-
-#: includes/avadaredux/class-avada-avadaredux-migration.php:107
-msgid "Social Networks"
-msgstr ""
-
-#: includes/avadaredux/class-avada-avadaredux-migration.php:111
-msgid "HEX to RGBA colors conversion"
-msgstr ""
-
-#: includes/avadaredux/class-avada-avadaredux-migration.php:115
-msgid "HEX colors"
-msgstr ""
-
-#: includes/avadaredux/class-avada-avadaredux-migration.php:119
-msgid "Media Files"
-msgstr ""
-
-#: includes/avadaredux/class-avada-avadaredux-migration.php:123
-msgid "Spacing Options"
-msgstr ""
-
-#: includes/avadaredux/class-avada-avadaredux-migration.php:131
-#: includes/avadaredux/class-avada-avadaredux-migration.php:135
-msgid "Typography Options (step %s of %s)"
-msgstr ""
-
-#: includes/avadaredux/class-avada-avadaredux-migration.php:139
-msgid "Other Options"
-msgstr ""
-
-#: includes/avadaredux/class-avada-avadaredux.php:74
-msgid "Avada Options have moved!"
-msgstr ""
-
-#: includes/avadaredux/class-avada-avadaredux.php:74
-msgid "Avada Options"
-msgstr ""
-
-#: includes/avadaredux/class-avada-avadaredux.php:92
-msgid "Theme options have changed, redirecting you to the new page in %s seconds."
-msgstr ""
-
-#: includes/avadaredux/class-avada-avadaredux.php:237
-#: includes/avadaredux/class-avada-avadaredux.php:238
-#: includes/avadaredux/class-avada-avadaredux.php:241
-#: includes/avadaredux/class-avada-avadaredux.php:242
-#: includes/avadaredux/class-avada-avadaredux.php:245
-#: includes/avadaredux/class-avada-avadaredux.php:246
-msgid "Avada Administration"
-msgstr ""
-
-#: includes/avadaredux/class-avada-avadaredux.php:336
-msgid "%s Enter value including CSS unit (px, em, rem), ex: %s."
-msgstr ""
-
-#: includes/avadaredux/class-avada-avadaredux.php:338
-msgid "%s Enter value including any valid CSS unit, ex: %s."
-msgstr ""
-
-#: includes/avadaredux/class-avada-avadaredux.php:342
-#: includes/avadaredux/class-avada-avadaredux.php:351
-msgid "%s Enter values including any valid CSS unit, ex: %s."
-msgstr ""
-
-#: includes/avadaredux/class-avada-avadaredux.php:405
-msgid "In pixels."
-msgstr ""
-
-#: includes/avadaredux/class-avada-avadaredux.php:628
-msgid "Theme Skin"
-msgstr ""
-
-#: includes/avadaredux/class-avada-avadaredux.php:629
-msgid "Color Scheme"
-msgstr ""
-
-#: includes/avadaredux/class-avada-avadaredux.php:904
-msgid ""
-"Are you sure? This will reset all saved theme options to their default "
-"values."
-msgstr ""
-
-#: includes/avadaredux/class-avada-avadaredux.php:913
-msgid ""
-"Are you sure? This will reset all saved options to their default values for "
-"this section."
-msgstr ""
-
-#: includes/avadaredux/class-avada-avadaredux.php:922
-msgid ""
-"Copy the contents of the json file and paste it below. Then click "
-"\"Import\" to restore your setings."
-msgstr ""
-
-#: includes/avadaredux/custom-fields/color_alpha/field_color_alpha.php:68
-msgid "Transparent"
-msgstr ""
-
-#: includes/avadaredux/custom-fields/dimensions/field_dimensions.php:71
-msgid "Width"
-msgstr ""
-
-#: includes/avadaredux/custom-fields/dimensions/field_dimensions.php:84
-#: includes/avadaredux/custom-fields/typography/field_typography.php:424
-msgid "Height"
-msgstr ""
-
-#: includes/avadaredux/custom-fields/spacing/field_spacing.php:82
-#: templates/portfolio-layout.php:206
-msgid "All"
-msgstr ""
-
-#: includes/avadaredux/custom-fields/typography/field_typography.php:225
-msgid "Font Family"
-msgstr ""
-
-#: includes/avadaredux/custom-fields/typography/field_typography.php:226
-msgid "Font family"
-msgstr ""
-
-#: includes/avadaredux/custom-fields/typography/field_typography.php:252
-#: includes/avadaredux/custom-fields/typography/field_typography.php:253
-msgid "Backup Font Family"
-msgstr ""
-
-#: includes/avadaredux/custom-fields/typography/field_typography.php:267
-#: includes/avadaredux/custom-fields/typography/field_typography.php:275
-msgid "Font style"
-msgstr ""
-
-#: includes/avadaredux/custom-fields/typography/field_typography.php:268
-msgid "Font Weight &amp; Style"
-msgstr ""
-
-#: includes/avadaredux/custom-fields/typography/field_typography.php:275
-msgid "Style"
-msgstr ""
-
-#: includes/avadaredux/custom-fields/typography/field_typography.php:309
-msgid "Font subsets"
-msgstr ""
-
-#: includes/avadaredux/custom-fields/typography/field_typography.php:311
-msgid "Font Subsets"
-msgstr ""
-
-#: includes/avadaredux/custom-fields/typography/field_typography.php:313
-msgid "Subsets"
-msgstr ""
-
-#: includes/avadaredux/custom-fields/typography/field_typography.php:313
-msgid "Font script"
-msgstr ""
-
-#: includes/avadaredux/custom-fields/typography/field_typography.php:324
-#: includes/avadaredux/custom-fields/typography/field_typography.php:325
-#: includes/avadaredux/custom-fields/typography/field_typography.php:326
-msgid "Text Align"
-msgstr ""
-
-#: includes/avadaredux/custom-fields/typography/field_typography.php:347
-#: includes/avadaredux/custom-fields/typography/field_typography.php:348
-#: includes/avadaredux/custom-fields/typography/field_typography.php:349
-msgid "Text Transform"
-msgstr ""
-
-#: includes/avadaredux/custom-fields/typography/field_typography.php:370
-#: includes/avadaredux/custom-fields/typography/field_typography.php:371
-#: includes/avadaredux/custom-fields/typography/field_typography.php:372
-msgid "Font Variant"
-msgstr ""
-
-#: includes/avadaredux/custom-fields/typography/field_typography.php:390
-#: includes/avadaredux/custom-fields/typography/field_typography.php:391
-#: includes/avadaredux/custom-fields/typography/field_typography.php:392
-msgid "Text Decoration"
-msgstr ""
-
-#: includes/avadaredux/custom-fields/typography/field_typography.php:414
-#: includes/avadaredux/custom-fields/typography/field_typography.php:415
-msgid "Font Size"
-msgstr ""
-
-#: includes/avadaredux/custom-fields/typography/field_typography.php:415
-msgid "Size"
-msgstr ""
-
-#: includes/avadaredux/custom-fields/typography/field_typography.php:423
-#: includes/avadaredux/custom-fields/typography/field_typography.php:424
-msgid "Line Height"
-msgstr ""
-
-#: includes/avadaredux/custom-fields/typography/field_typography.php:432
-#: includes/avadaredux/custom-fields/typography/field_typography.php:433
-msgid "Word Spacing"
-msgstr ""
-
-#: includes/avadaredux/custom-fields/typography/field_typography.php:441
-#: includes/avadaredux/custom-fields/typography/field_typography.php:442
-msgid "Letter Spacing"
-msgstr ""
-
-#: includes/avadaredux/custom-fields/typography/field_typography.php:452
-#: includes/avadaredux/custom-fields/typography/field_typography.php:453
-msgid "Margin Top"
-msgstr ""
-
-#: includes/avadaredux/custom-fields/typography/field_typography.php:461
-#: includes/avadaredux/custom-fields/typography/field_typography.php:462
-msgid "Margin Bottom"
-msgstr ""
-
-#: includes/avadaredux/custom-fields/typography/field_typography.php:480
-msgid "Font Color"
-msgstr ""
-
-#: includes/avadaredux/custom-fields/typography/field_typography.php:482
-msgid "Font color"
-msgstr ""
-
-#: includes/avadaredux/custom-fields/typography/field_typography.php:896
-msgid "Standard Fonts"
-msgstr ""
-
-#: includes/avadaredux/custom-fields/typography/field_typography.php:1005
-msgid "Google Webfonts"
-msgstr ""
-
-#: includes/avadaredux/custom-fields/typography/googlefonts.php:70
-#: includes/avadaredux/custom-fields/typography/googlefonts.php:79
-msgid "Normal 400"
-msgstr ""
-
-#: includes/avadaredux/custom-fields/typography/googlefonts.php:71
-msgid "Normal 400 Italic"
-msgstr ""
-
-#: includes/avadaredux/custom-fields/typography/googlefonts.php:72
-msgid "Ultra-Light 100"
-msgstr ""
-
-#: includes/avadaredux/custom-fields/typography/googlefonts.php:73
-msgid "Light 200"
-msgstr ""
-
-#: includes/avadaredux/custom-fields/typography/googlefonts.php:74
-msgid "Book 300"
-msgstr ""
-
-#: includes/avadaredux/custom-fields/typography/googlefonts.php:75
-msgid "Medium 500"
-msgstr ""
-
-#: includes/avadaredux/custom-fields/typography/googlefonts.php:76
-msgid "Semi-Bold 600"
-msgstr ""
-
-#: includes/avadaredux/custom-fields/typography/googlefonts.php:77
-msgid "Bold 700"
-msgstr ""
-
-#: includes/avadaredux/custom-fields/typography/googlefonts.php:78
-msgid "Bold 700 Italic"
-msgstr ""
-
-#: includes/avadaredux/custom-fields/typography/googlefonts.php:80
-msgid "Ultra-Bold 900 Italic"
-msgstr ""
-
-#: includes/avadaredux/custom-fields/typography/googlefonts.php:81
-msgid "Ultra-Light 100 Italic"
-msgstr ""
-
-#: includes/avadaredux/custom-fields/typography/googlefonts.php:82
-msgid "Book 300 Italic"
-msgstr ""
-
-#: includes/avadaredux/custom-fields/typography/googlefonts.php:83
-msgid "Medium 500 Italic"
-msgstr ""
-
-#: includes/avadaredux/custom-fields/typography/googlefonts.php:84
-msgid "Extra-Bold 800"
-msgstr ""
-
-#: includes/avadaredux/custom-fields/typography/googlefonts.php:85
-msgid "Extra-Bold 800 Italic"
-msgstr ""
-
-#: includes/avadaredux/custom-fields/typography/googlefonts.php:86
-msgid "Semi-Bold 600 Italic"
-msgstr ""
-
-#: includes/avadaredux/custom-fields/typography/googlefonts.php:87
-msgid "Light 200 Italic"
-msgstr ""
-
-#: includes/avadaredux/custom-fields/typography/googlefonts.php:100
-msgid "Greek Extended"
-msgstr ""
-
-#: includes/avadaredux/custom-fields/typography/googlefonts.php:101
-msgid "Greek"
-msgstr ""
-
-#: includes/avadaredux/custom-fields/typography/googlefonts.php:102
-msgid "Cyrillic Extended"
-msgstr ""
-
-#: includes/avadaredux/custom-fields/typography/googlefonts.php:103
-msgid "Cyrillic"
-msgstr ""
-
-#: includes/avadaredux/custom-fields/typography/googlefonts.php:104
-msgid "Latin Extended"
-msgstr ""
-
-#: includes/avadaredux/custom-fields/typography/googlefonts.php:105
-msgid "Latin"
-msgstr ""
-
-#: includes/avadaredux/custom-fields/typography/googlefonts.php:106
-msgid "Vietnamese"
-msgstr ""
-
-#: includes/avadaredux/custom-fields/typography/googlefonts.php:107
-msgid "Arabic"
-msgstr ""
-
-#: includes/avadaredux/custom-fields/typography/googlefonts.php:108
-msgid "Gujarati"
-msgstr ""
-
-#: includes/avadaredux/custom-fields/typography/googlefonts.php:109
-msgid "Devanagari"
-msgstr ""
-
-#: includes/avadaredux/custom-fields/typography/googlefonts.php:110
-msgid "Bengali"
-msgstr ""
-
-#: includes/avadaredux/custom-fields/typography/googlefonts.php:111
-msgid "Hebrew"
-msgstr ""
-
-#: includes/avadaredux/custom-fields/typography/googlefonts.php:112
-msgid "Khmer"
-msgstr ""
-
-#: includes/avadaredux/custom-fields/typography/googlefonts.php:113
-msgid "Tamil"
-msgstr ""
-
-#: includes/avadaredux/custom-fields/typography/googlefonts.php:114
-msgid "Telugu"
-msgstr ""
-
-#: includes/avadaredux/custom-fields/typography/googlefonts.php:115
-msgid "Thai"
-msgstr ""
-
-#: includes/avadaredux/extensions/repeater/repeater/field_repeater.php:186
-#: includes/avadaredux/extensions/repeater/repeater/field_repeater.php:229
-msgid "Delete"
-msgstr ""
-
-#: includes/avadaredux/extensions/repeater/repeater/field_repeater.php:251
-msgid "Add"
-msgstr ""
-
-#: includes/avadaredux/extensions/search/extension_search.php:97
-msgid "Search for option(s)"
-msgstr ""
-
-#: includes/avadaredux/panel_templates/header_stickybar.tpl.php:15
-msgid "Expand Options"
-msgstr ""
-
-#: includes/avadaredux/panel_templates/header_stickybar.tpl.php:19
-msgid "Support Center"
-msgstr ""
-
-#: includes/avadaredux/panel_templates/header_stickybar.tpl.php:26
-msgid "Save Changes"
-msgstr ""
-
-#: includes/avadaredux/panel_templates/header_stickybar.tpl.php:30
-msgid "Reset Section"
-msgstr ""
-
-#: includes/avadaredux/panel_templates/header_stickybar.tpl.php:31
-msgid "Reset All"
-msgstr ""
-
-#: includes/avadaredux/panel_templates/header_stickybar.tpl.php:35
-msgid "Working..."
-msgstr ""
-
-#: includes/avadaredux/validation-functions.php:50
-#: includes/avadaredux/validation-functions.php:313
-msgid ""
-"We could not find a valid unit for this field, falling back to \"%1$s\". "
-"Saved value \"%2$s\" and not \"%3$s\"."
-msgstr ""
-
-#: includes/avadaredux/validation-functions.php:51
-#: includes/avadaredux/validation-functions.php:123
-#: includes/avadaredux/validation-functions.php:314
-msgid ""
-"No units were entered, falling back to using pixels. Saved value \"%2$s\" "
-"and not \"%3$s\"."
-msgstr ""
-
-#: includes/avadaredux/validation-functions.php:122
-msgid ""
-"We could not find a valid unit for this field, falling back to \"%1$s\". "
-"Valid units are %4$s. Saved value \"%2$s\" and not \"%3$s.\"."
-msgstr ""
-
-#: includes/avadaredux/validation-functions.php:219
-msgid ""
-"We could not find a valid unit for %1$s, falling back to \"%2$s\". Valid "
-"units are %3$s. Saved value \"%4$s\" and not \"%5$s.\"."
-msgstr ""
-
-#: includes/avadaredux/validation-functions.php:220
-msgid ""
-"No units were entered for %1s, falling back to using pixels. Saved value "
-"\"%4$s\" and not \"%5$s\"."
-msgstr ""
-
-#: includes/avadaredux/validation-functions.php:365
-#: includes/avadaredux/validation-functions.php:390
-msgid "Sanitized value and saved as %1s instead of %2s."
-msgstr ""
-
-#: includes/woo-config.php:150
+#: includes/woo-config.php:158
 msgid "Out of Stock"
 msgstr ""
 
-#: includes/woo-config.php:266
+#: includes/woo-config.php:269 woocommerce/cart/cart.php:127
+#: woocommerce/compatibility/2.5/cart/cart.php:127
+msgid "Update Cart"
+msgstr ""
+
+#: includes/woo-config.php:283
+msgid "Hello %s%s%s(not %2$s? %sSign out%s)"
+msgstr ""
+
+#: includes/woo-config.php:287
+msgid "Hello"
+msgstr ""
+
+#: includes/woo-config.php:326
+msgid "Dashboard"
+msgstr ""
+
+#: includes/woo-config.php:359
+msgid "View Downloads"
+msgstr ""
+
+#: includes/woo-config.php:387
+msgid "View Orders"
+msgstr ""
+
+#: includes/woo-config.php:395
+msgid "Change Address"
+msgstr ""
+
+#: includes/woo-config.php:400 includes/woo-config.php:418
+msgid "Edit Account"
+msgstr ""
+
+#: includes/woo-config.php:422
+msgid "First name"
+msgstr ""
+
+#: includes/woo-config.php:427
+msgid "Last name"
+msgstr ""
+
+#: includes/woo-config.php:432
+msgid "Email address"
+msgstr ""
+
+#: includes/woo-config.php:437
+msgid "Current Password (leave blank to leave unchanged)"
+msgstr ""
+
+#: includes/woo-config.php:442
+msgid "New Password (leave blank to leave unchanged)"
+msgstr ""
+
+#: includes/woo-config.php:447
+msgid "Confirm New Password"
+msgstr ""
+
+#: includes/woo-config.php:456
+msgid "Save changes"
+msgstr ""
+
+#: includes/woo-config.php:478
 msgid "Search..."
 msgstr ""
 
-#: includes/woo-config.php:330 includes/woo-config.php:365
+#: includes/woo-config.php:542 includes/woo-config.php:577
 msgid "Default Order"
 msgstr ""
 
-#: includes/woo-config.php:334 includes/woo-config.php:374
+#: includes/woo-config.php:546 includes/woo-config.php:586
 msgid "Date"
 msgstr ""
 
-#: includes/woo-config.php:338 includes/woo-config.php:371
-#: woocommerce/cart/cart.php:27 woocommerce/compatibility/2.4/cart/cart.php:27
+#: includes/woo-config.php:550 includes/woo-config.php:583
+#: woocommerce/cart/cart.php:27 woocommerce/compatibility/2.5/cart/cart.php:27
 msgid "Price"
 msgstr ""
 
-#: includes/woo-config.php:341 includes/woo-config.php:377
+#: includes/woo-config.php:553 includes/woo-config.php:589
 msgid "Popularity"
 msgstr ""
 
-#: includes/woo-config.php:344 includes/woo-config.php:381
+#: includes/woo-config.php:556 includes/woo-config.php:593
 msgid "Rating"
 msgstr ""
 
-#: includes/woo-config.php:347 includes/woo-config.php:368
-#: woocommerce/compatibility/2.4/single-product-reviews.php:65
+#: includes/woo-config.php:559 includes/woo-config.php:580
+#: woocommerce/compatibility/2.5/single-product-reviews.php:65
 #: woocommerce/single-product-reviews.php:65
 msgid "Name"
 msgstr ""
 
-#: includes/woo-config.php:360 includes/woo-config.php:365
-#: includes/woo-config.php:368 includes/woo-config.php:371
-#: includes/woo-config.php:374 includes/woo-config.php:377
-#: includes/woo-config.php:381
+#: includes/woo-config.php:572 includes/woo-config.php:577
+#: includes/woo-config.php:580 includes/woo-config.php:583
+#: includes/woo-config.php:586 includes/woo-config.php:589
+#: includes/woo-config.php:593
 msgid "Sort by %s"
 msgstr ""
 
-#: includes/woo-config.php:401 includes/woo-config.php:404
-#: includes/woo-config.php:407 includes/woo-config.php:410
+#: includes/woo-config.php:613 includes/woo-config.php:616
+#: includes/woo-config.php:619 includes/woo-config.php:622
 msgid "Show <strong>%s Products</strong>"
 msgstr ""
 
-#: includes/woo-config.php:712
+#: includes/woo-config.php:941
 msgid "Share On Facebook"
 msgstr ""
 
-#: includes/woo-config.php:718
+#: includes/woo-config.php:947
 msgid "Tweet This Product"
 msgstr ""
 
-#: includes/woo-config.php:725
+#: includes/woo-config.php:954
 msgid "Pin This Product"
 msgstr ""
 
-#: includes/woo-config.php:731
+#: includes/woo-config.php:960
 msgid "Mail This Product"
 msgstr ""
 
-#: includes/woo-config.php:805
+#: includes/woo-config.php:1034
 msgid "You Have %d Item In Your Cart"
 msgstr ""
 
-#: includes/woo-config.php:807
+#: includes/woo-config.php:1036
 msgid "You Have %d Items In Your Cart"
 msgstr ""
 
-#: includes/woo-config.php:842
+#: includes/woo-config.php:1067
 msgid "Calculate Shipping"
 msgstr ""
 
-#: includes/woo-config.php:849
+#: includes/woo-config.php:1074
 msgid "Select a country&hellip;"
 msgstr ""
 
-#: includes/woo-config.php:866 includes/woo-config.php:872
-#: includes/woo-config.php:884
+#: includes/woo-config.php:1091 includes/woo-config.php:1097
+#: includes/woo-config.php:1109
 msgid "State / county"
 msgstr ""
 
-#: includes/woo-config.php:873
+#: includes/woo-config.php:1098
 msgid "Select a state&hellip;"
 msgstr ""
 
-#: includes/woo-config.php:893
+#: includes/woo-config.php:1118
 msgid "City"
 msgstr ""
 
-#: includes/woo-config.php:901
+#: includes/woo-config.php:1126
 msgid "Postcode / ZIP"
 msgstr ""
 
-#: includes/woo-config.php:907
+#: includes/woo-config.php:1132
 msgid "Update Totals"
 msgstr ""
 
-#: includes/woo-config.php:938 includes/woo-config.php:1004
+#: includes/woo-config.php:1163 includes/woo-config.php:1218
 msgid "Have A Promotional Code?"
 msgstr ""
 
-#: includes/woo-config.php:941 includes/woo-config.php:1009
+#: includes/woo-config.php:1165 includes/woo-config.php:1223
+#: woocommerce/cart/cart.php:121
+#: woocommerce/compatibility/2.5/cart/cart.php:121
 msgid "Coupon code"
 msgstr ""
 
-#: includes/woo-config.php:943
+#: includes/woo-config.php:1166
 msgid "Apply"
 msgstr ""
 
-#: includes/woo-config.php:1014
+#: includes/woo-config.php:1228 woocommerce/cart/cart.php:121
+#: woocommerce/compatibility/2.5/cart/cart.php:121
 msgid "Apply Coupon"
 msgstr ""
 
-#: includes/woo-config.php:1033 includes/woo-config.php:1506
-#: woocommerce/compatibility/2.4/myaccount/form-edit-address.php:16
-#: woocommerce/myaccount/form-edit-address.php:16
+#: includes/woo-config.php:1247 includes/woo-config.php:1562
+#: woocommerce/compatibility/2.5/myaccount/form-edit-address.php:16
 msgid "Billing Address"
 msgstr ""
 
-#: includes/woo-config.php:1039 includes/woo-config.php:1526
-#: woocommerce/compatibility/2.4/myaccount/form-edit-address.php:16
-#: woocommerce/myaccount/form-edit-address.php:16
+#: includes/woo-config.php:1253 includes/woo-config.php:1582
+#: woocommerce/compatibility/2.5/myaccount/form-edit-address.php:16
 msgid "Shipping Address"
 msgstr ""
 
-#: includes/woo-config.php:1049
-#: woocommerce/compatibility/2.4/single-product/tabs/additional-information.php:16
+#: includes/woo-config.php:1263
+#: woocommerce/compatibility/2.5/single-product/tabs/additional-information.php:16
 #: woocommerce/single-product/tabs/additional-information.php:16
 msgid "Additional Information"
 msgstr ""
 
-#: includes/woo-config.php:1057
+#: includes/woo-config.php:1271
 msgid "Review &amp; Payment"
 msgstr ""
 
-#: includes/woo-config.php:1142 includes/woo-config.php:1157
+#: includes/woo-config.php:1356 includes/woo-config.php:1371
 msgid "Continue"
 msgstr ""
 
-#: includes/woo-config.php:1225 includes/woo-config.php:1227
-msgid "Hello"
-msgstr ""
-
-#: includes/woo-config.php:1265
-msgid "View Downloads"
-msgstr ""
-
-#: includes/woo-config.php:1293
-msgid "View Orders"
-msgstr ""
-
-#: includes/woo-config.php:1301
-msgid "Change Address"
-msgstr ""
-
-#: includes/woo-config.php:1306 includes/woo-config.php:1325
-msgid "Edit Account"
-msgstr ""
-
-#: includes/woo-config.php:1329
-msgid "First name"
-msgstr ""
-
-#: includes/woo-config.php:1334
-msgid "Last name"
-msgstr ""
-
-#: includes/woo-config.php:1339
-msgid "Email address"
-msgstr ""
-
-#: includes/woo-config.php:1344
-msgid "Current Password (leave blank to leave unchanged)"
-msgstr ""
-
-#: includes/woo-config.php:1349
-msgid "New Password (leave blank to leave unchanged)"
-msgstr ""
-
-#: includes/woo-config.php:1354
-msgid "Confirm New Password"
-msgstr ""
-
-#: includes/woo-config.php:1361
-msgid "Save changes"
-msgstr ""
-
-#: includes/woo-config.php:1386
+#: includes/woo-config.php:1442
 msgid "Order Details"
 msgstr ""
 
-#: includes/woo-config.php:1391 woocommerce/cart/cart.php:28
-#: woocommerce/compatibility/2.4/cart/cart.php:28
+#: includes/woo-config.php:1447 woocommerce/cart/cart.php:28
+#: woocommerce/compatibility/2.5/cart/cart.php:28
 msgid "Quantity"
 msgstr ""
 
-#: includes/woo-config.php:1392 woocommerce/cart/cart.php:29
+#: includes/woo-config.php:1448 woocommerce/cart/cart.php:29
 #: woocommerce/checkout/review-order.php:18
 #: woocommerce/checkout/review-order.php:118
-#: woocommerce/compatibility/2.4/cart/cart.php:29
-#: woocommerce/compatibility/2.4/checkout/review-order.php:18
-#: woocommerce/compatibility/2.4/checkout/review-order.php:118
+#: woocommerce/compatibility/2.5/cart/cart.php:29
+#: woocommerce/compatibility/2.5/checkout/review-order.php:18
+#: woocommerce/compatibility/2.5/checkout/review-order.php:118
 msgid "Total"
 msgstr ""
 
-#: includes/woo-config.php:1481
+#: includes/woo-config.php:1537
 msgid "Customer details"
 msgstr ""
 
-#: includes/woo-config.php:1489
+#: includes/woo-config.php:1545
 msgid "Telephone:"
 msgstr ""
 
-#: includes/woo-config.php:1511 includes/woo-config.php:1531
+#: includes/woo-config.php:1567 includes/woo-config.php:1587
 msgid "N/A"
 msgstr ""
 
@@ -11477,7 +11530,7 @@ msgstr ""
 msgid "Go to \"%s\""
 msgstr ""
 
-#: single-wpfc_sermon.php:103 single.php:109
+#: single-wpfc_sermon.php:103 single.php:87
 msgid "About the Author: %s"
 msgstr ""
 
@@ -11510,7 +11563,7 @@ msgid "Protected"
 msgstr ""
 
 #: templates/blog-layout.php:273 templates/portfolio-archive-layout.php:241
-#: templates/portfolio-layout.php:449
+#: templates/portfolio-layout.php:462
 msgid "Load More Posts"
 msgstr ""
 
@@ -11518,7 +11571,7 @@ msgstr ""
 msgid " View Project"
 msgstr ""
 
-#: templates/portfolio-layout.php:406
+#: templates/portfolio-layout.php:419
 msgid "View Project"
 msgstr ""
 
@@ -11582,38 +11635,32 @@ msgstr ""
 msgid "View All %s"
 msgstr ""
 
-#: woocommerce/cart/cart.php:70 woocommerce/compatibility/2.4/cart/cart.php:70
+#: woocommerce/cart/cart.php:70 woocommerce/compatibility/2.5/cart/cart.php:70
 msgid "Available on backorder"
 msgstr ""
 
 #: woocommerce/cart/cart.php:106
-#: woocommerce/compatibility/2.4/cart/cart.php:106
+#: woocommerce/compatibility/2.5/cart/cart.php:106
 msgid "Remove this item"
 msgstr ""
 
-#: woocommerce/cart/cart.php:131
-#: woocommerce/compatibility/2.4/cart/cart.php:131
-msgid "Update Cart"
-msgstr ""
-
-#: woocommerce/cart/cart.php:133 woocommerce/cart/cart.php:135
-#: woocommerce/compatibility/2.4/cart/cart.php:133
-#: woocommerce/compatibility/2.4/cart/cart.php:135
-msgid "Proceed to Checkout"
+#: woocommerce/cart/cart.php:121
+#: woocommerce/compatibility/2.5/cart/cart.php:121
+msgid "Coupon"
 msgstr ""
 
 #: woocommerce/checkout/form-pay.php:24
-#: woocommerce/compatibility/2.4/checkout/form-pay.php:17
+#: woocommerce/compatibility/2.5/checkout/form-pay.php:24
 msgid "Your order"
 msgstr ""
 
 #: woocommerce/checkout/form-pay.php:32
-#: woocommerce/compatibility/2.4/checkout/form-pay.php:25
+#: woocommerce/compatibility/2.5/checkout/form-pay.php:32
 msgid "Totals"
 msgstr ""
 
 #: woocommerce/checkout/form-pay.php:87
-#: woocommerce/compatibility/2.4/checkout/form-pay.php:116
+#: woocommerce/compatibility/2.5/checkout/form-pay.php:87
 msgid ""
 "Sorry, it seems that there are no available payment methods for your "
 "location. Please contact us if you require assistance or wish to make "
@@ -11621,173 +11668,166 @@ msgid ""
 msgstr ""
 
 #: woocommerce/checkout/review-order.php:71
-#: woocommerce/compatibility/2.4/checkout/review-order.php:71
+#: woocommerce/compatibility/2.5/checkout/review-order.php:71
 msgid "Subtotal"
 msgstr ""
 
 #: woocommerce/checkout/thankyou.php:25
-#: woocommerce/compatibility/2.4/checkout/thankyou.php:25
+#: woocommerce/compatibility/2.5/checkout/thankyou.php:25
 msgid ""
 "Unfortunately your order cannot be processed as the originating "
 "bank/merchant has declined your transaction."
 msgstr ""
 
 #: woocommerce/checkout/thankyou.php:29
-#: woocommerce/compatibility/2.4/checkout/thankyou.php:29
+#: woocommerce/compatibility/2.5/checkout/thankyou.php:29
 msgid "Please attempt your purchase again or go to your account page."
 msgstr ""
 
 #: woocommerce/checkout/thankyou.php:31
-#: woocommerce/compatibility/2.4/checkout/thankyou.php:31
+#: woocommerce/compatibility/2.5/checkout/thankyou.php:31
 msgid "Please attempt your purchase again."
 msgstr ""
 
 #: woocommerce/checkout/thankyou.php:35
-#: woocommerce/compatibility/2.4/checkout/thankyou.php:35
+#: woocommerce/compatibility/2.5/checkout/thankyou.php:35
 msgid "Pay"
 msgstr ""
 
 #: woocommerce/checkout/thankyou.php:44 woocommerce/checkout/thankyou.php:80
-#: woocommerce/compatibility/2.4/checkout/thankyou.php:44
-#: woocommerce/compatibility/2.4/checkout/thankyou.php:80
+#: woocommerce/compatibility/2.5/checkout/thankyou.php:44
+#: woocommerce/compatibility/2.5/checkout/thankyou.php:80
 msgid "Thank you. Your order has been received."
 msgstr ""
 
 #: woocommerce/checkout/thankyou.php:48
-#: woocommerce/compatibility/2.4/checkout/thankyou.php:48
+#: woocommerce/compatibility/2.5/checkout/thankyou.php:48
 msgid "Order Number:"
 msgstr ""
 
 #: woocommerce/checkout/thankyou.php:52
-#: woocommerce/compatibility/2.4/checkout/thankyou.php:52
+#: woocommerce/compatibility/2.5/checkout/thankyou.php:52
 msgid "Date:"
 msgstr ""
 
 #: woocommerce/checkout/thankyou.php:56
-#: woocommerce/compatibility/2.4/checkout/thankyou.php:56
+#: woocommerce/compatibility/2.5/checkout/thankyou.php:56
 msgid "Total:"
 msgstr ""
 
 #: woocommerce/checkout/thankyou.php:61
-#: woocommerce/compatibility/2.4/checkout/thankyou.php:61
+#: woocommerce/compatibility/2.5/checkout/thankyou.php:61
 msgid "Payment Method:"
 msgstr ""
 
-#: woocommerce/compatibility/2.4/checkout/form-pay.php:126
-msgid "Pay for order"
-msgstr ""
-
-#: woocommerce/compatibility/2.4/myaccount/form-edit-address.php:27
-#: woocommerce/myaccount/form-edit-address.php:27
+#: woocommerce/compatibility/2.5/myaccount/form-edit-address.php:27
 msgid "Hello <strong>%1$s</strong> (not %1$s? <a href=\"%2$s\">Sign out</a>)."
 msgstr ""
 
-#: woocommerce/compatibility/2.4/myaccount/form-edit-address.php:32
-#: woocommerce/myaccount/form-edit-address.php:32
+#: woocommerce/compatibility/2.5/myaccount/form-edit-address.php:32
 msgid ""
 "From your account dashboard you can view your recent orders, manage your "
 "shipping and billing addresses and <a href=\"%s\">edit your password and "
 "account details</a>."
 msgstr ""
 
-#: woocommerce/compatibility/2.4/myaccount/form-edit-address.php:71
-#: woocommerce/myaccount/form-edit-address.php:71
+#: woocommerce/compatibility/2.5/myaccount/form-edit-address.php:71
 msgid "Save Address"
 msgstr ""
 
-#: woocommerce/compatibility/2.4/single-product/add-to-cart/variable.php:23
+#: woocommerce/compatibility/2.5/single-product/add-to-cart/variable.php:31
 #: woocommerce/single-product/add-to-cart/variable.php:31
 msgid "This product is currently out of stock and unavailable."
 msgstr ""
 
-#: woocommerce/compatibility/2.4/single-product/add-to-cart/variable.php:46
+#: woocommerce/compatibility/2.5/single-product/add-to-cart/variable.php:54
 #: woocommerce/single-product/add-to-cart/variable.php:54
 msgid "Clear selection"
 msgstr ""
 
-#: woocommerce/compatibility/2.4/single-product/tabs/description.php:14
+#: woocommerce/compatibility/2.5/single-product/tabs/description.php:14
 #: woocommerce/single-product/tabs/description.php:14
 msgid "Product Description"
 msgstr ""
 
-#: woocommerce/compatibility/2.4/single-product-reviews.php:24
+#: woocommerce/compatibility/2.5/single-product-reviews.php:24
 #: woocommerce/single-product-reviews.php:24
 msgid "%s review for %s"
 msgid_plural "%s reviews for %s"
 msgstr[0] ""
 msgstr[1] ""
 
-#: woocommerce/compatibility/2.4/single-product-reviews.php:26
+#: woocommerce/compatibility/2.5/single-product-reviews.php:26
 #: woocommerce/single-product-reviews.php:26
 msgid "Reviews"
 msgstr ""
 
-#: woocommerce/compatibility/2.4/single-product-reviews.php:47
+#: woocommerce/compatibility/2.5/single-product-reviews.php:47
 #: woocommerce/single-product-reviews.php:47
 msgid "There are no reviews yet."
 msgstr ""
 
-#: woocommerce/compatibility/2.4/single-product-reviews.php:60
+#: woocommerce/compatibility/2.5/single-product-reviews.php:60
 #: woocommerce/single-product-reviews.php:60
 msgid "Add a review"
 msgstr ""
 
-#: woocommerce/compatibility/2.4/single-product-reviews.php:60
+#: woocommerce/compatibility/2.5/single-product-reviews.php:60
 #: woocommerce/single-product-reviews.php:60
 msgid "Be the first to review"
 msgstr ""
 
-#: woocommerce/compatibility/2.4/single-product-reviews.php:61
+#: woocommerce/compatibility/2.5/single-product-reviews.php:61
 #: woocommerce/single-product-reviews.php:61
 msgid "Leave a Reply to %s"
 msgstr ""
 
-#: woocommerce/compatibility/2.4/single-product-reviews.php:76
+#: woocommerce/compatibility/2.5/single-product-reviews.php:76
 #: woocommerce/single-product-reviews.php:76
 msgid "You must be <a href=\"%s\">logged in</a> to post a review."
 msgstr ""
 
-#: woocommerce/compatibility/2.4/single-product-reviews.php:80
+#: woocommerce/compatibility/2.5/single-product-reviews.php:80
 #: woocommerce/single-product-reviews.php:80
 msgid "Your Rating"
 msgstr ""
 
-#: woocommerce/compatibility/2.4/single-product-reviews.php:81
+#: woocommerce/compatibility/2.5/single-product-reviews.php:81
 #: woocommerce/single-product-reviews.php:81
 msgid "Rate&hellip;"
 msgstr ""
 
-#: woocommerce/compatibility/2.4/single-product-reviews.php:82
+#: woocommerce/compatibility/2.5/single-product-reviews.php:82
 #: woocommerce/single-product-reviews.php:82
 msgid "Perfect"
 msgstr ""
 
-#: woocommerce/compatibility/2.4/single-product-reviews.php:83
+#: woocommerce/compatibility/2.5/single-product-reviews.php:83
 #: woocommerce/single-product-reviews.php:83
 msgid "Good"
 msgstr ""
 
-#: woocommerce/compatibility/2.4/single-product-reviews.php:84
+#: woocommerce/compatibility/2.5/single-product-reviews.php:84
 #: woocommerce/single-product-reviews.php:84
 msgid "Average"
 msgstr ""
 
-#: woocommerce/compatibility/2.4/single-product-reviews.php:85
+#: woocommerce/compatibility/2.5/single-product-reviews.php:85
 #: woocommerce/single-product-reviews.php:85
 msgid "Not that bad"
 msgstr ""
 
-#: woocommerce/compatibility/2.4/single-product-reviews.php:86
+#: woocommerce/compatibility/2.5/single-product-reviews.php:86
 #: woocommerce/single-product-reviews.php:86
 msgid "Very Poor"
 msgstr ""
 
-#: woocommerce/compatibility/2.4/single-product-reviews.php:90
+#: woocommerce/compatibility/2.5/single-product-reviews.php:90
 #: woocommerce/single-product-reviews.php:90
 msgid "Your Review"
 msgstr ""
 
-#: woocommerce/compatibility/2.4/single-product-reviews.php:99
+#: woocommerce/compatibility/2.5/single-product-reviews.php:99
 #: woocommerce/single-product-reviews.php:99
 msgid "Only logged in customers who have purchased this product may leave a review."
 msgstr ""

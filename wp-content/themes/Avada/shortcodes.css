@@ -80,7 +80,9 @@
 .gform_wrapper .gform_button,
 .gform_wrapper .button,
 .woocommerce .checkout #place_order,
-.bbp-submit-wrapper .button {
+.woocommerce .cart-collaterals .checkout-button,
+.bbp-submit-wrapper .button,
+.tribe-events-tickets .button {
   display: inline-block;
   position: relative;
   outline: 0;
@@ -99,14 +101,18 @@
 .gform_wrapper .gform_button:before,
 .gform_wrapper .button:before,
 .woocommerce .checkout #place_order:before,
+.woocommerce .cart-collaterals .checkout-button:before,
 .bbp-submit-wrapper .button:before,
+.tribe-events-tickets .button:before,
 .fusion-button:after,
 .post-password-form input[type="submit"]:after,
 .wpcf7-submit:after,
 .gform_wrapper .gform_button:after,
 .gform_wrapper .button:after,
 .woocommerce .checkout #place_order:after,
-.bbp-submit-wrapper .button:after {
+.woocommerce .cart-collaterals .checkout-button:after,
+.bbp-submit-wrapper .button:after,
+.tribe-events-tickets .button:after {
   content: " ";
   display: table;
 }
@@ -116,7 +122,9 @@
 .gform_wrapper .gform_button:after,
 .gform_wrapper .button:after,
 .woocommerce .checkout #place_order:after,
-.bbp-submit-wrapper .button:after {
+.woocommerce .cart-collaterals .checkout-button:after,
+.bbp-submit-wrapper .button:after,
+.tribe-events-tickets .button:after {
   clear: both;
 }
 .fusion-button:hover,
@@ -125,7 +133,9 @@
 .gform_wrapper .gform_button:hover,
 .gform_wrapper .button:hover,
 .woocommerce .checkout #place_order:hover,
-.bbp-submit-wrapper .button:hover {
+.woocommerce .cart-collaterals .checkout-button:hover,
+.bbp-submit-wrapper .button:hover,
+.tribe-events-tickets .button:hover {
   transition: all .3s;
 }
 .fusion-button:focus,
@@ -134,7 +144,9 @@
 .gform_wrapper .gform_button:focus,
 .gform_wrapper .button:focus,
 .woocommerce .checkout #place_order:focus,
-.bbp-submit-wrapper .button:focus {
+.woocommerce .cart-collaterals .checkout-button:focus,
+.bbp-submit-wrapper .button:focus,
+.tribe-events-tickets .button:focus {
   outline: 0;
 }
 .fusion-button-text,
@@ -4362,6 +4374,10 @@ table {
   margin: 0 0 7px;
   line-height: 20px;
   font-size: 18px;
+}
+.fusion-reading-box-container .reading-box-additional {
+  display: inline-block;
+  width: 100%;
 }
 .fusion-reading-box-container .fusion-desktop-button {
   display: block;

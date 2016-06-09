@@ -136,7 +136,7 @@ class Avada_GoogleMap {
 				}
 			}
 
-			if ( $map_style == 'theme' ) {
+			if ( 'theme' == $map_style ) {
 
 				$map_style                = 'custom';
 				$icon                     = 'theme';
@@ -147,6 +147,12 @@ class Avada_GoogleMap {
 				$overlay_color            = Avada()->settings->get( 'primary_color' );
 				$brightness_level         = $this->calc_color_brightness( Avada()->settings->get( 'primary_color' ) );
 				$infobox_text_color       = ( $brightness_level > 140 ) ? '#fff' : '#747474';
+			} else if ( 'custom' == $map_style ) {
+				if ( '0' == Avada_Color::get_alpha_from_rgba( $overlay_color ) ) {
+					$overlay_color = '';
+				} else {
+					$overlay_color = Avada_Color::rgba2hex( $overlay_color, true );
+				}
 			}
 
 			if ( 'theme' == $icon && 'custom' == $map_style ) {
@@ -234,7 +240,6 @@ class Avada_GoogleMap {
 
 			$map_id = uniqid( 'fusion_map_' ); // generate a unique ID for this map
 			$this->map_id = $map_id;
-
 			ob_start(); ?>
 			<script type="text/javascript">
 				var map_<?php echo $map_id; ?>;

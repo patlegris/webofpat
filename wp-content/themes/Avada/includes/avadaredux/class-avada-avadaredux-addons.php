@@ -17,13 +17,14 @@ class Avada_AvadaRedux_Addons {
 			'color_alpha',
 			'spacing',
 			'dimensions',
+			'ace_editor',
 		);
 		// An array of all our extensions
 		$this->extensions = array(
 			'search',
 			'repeater',
 			'accordion',
-			'vendorsupport'
+			'vendorsupport',
 		);
 
 		$this->path = dirname( __FILE__ );
@@ -46,6 +47,14 @@ class Avada_AvadaRedux_Addons {
 		return $this->path . '/custom-fields/typography/field_typography.php';
 	}
 
+
+	/**
+	 * Register the custom ace_editor field
+	 */
+	public function register_ace_editor() {
+		return $this->path . '/custom-fields/ace_editor/field_ace_editor.php';
+	}
+
 	/**
 	 * Register the custom color_alpha field
 	 */
@@ -66,5 +75,4 @@ class Avada_AvadaRedux_Addons {
 	public function register_dimensions() {
 		return $this->path . '/custom-fields/dimensions/field_dimensions.php';
 	}
-
 }

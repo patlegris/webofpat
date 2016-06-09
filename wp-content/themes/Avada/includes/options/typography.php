@@ -289,7 +289,7 @@ function avada_options_section_typography( $sections ) {
 								'id'          => 'woff2',
 								'default'     => '',
 								'type'        => 'upload',
-								'mode'        => 'woff2',
+								'mode'        => false,
 							),
 							'ttf' => array(
 								'label'       => 'TTF',

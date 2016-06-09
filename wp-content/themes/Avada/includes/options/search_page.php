@@ -37,9 +37,13 @@ function avada_options_section_search_page( $sections ) {
 				'default'     => 'Posts and Pages',
 				'type'        => 'select',
 				'choices'     => array(
-					'Posts and Pages' => esc_html__( 'Posts and Pages', 'Avada' ),
-					'Only Posts'      => esc_html__( 'Only Posts', 'Avada' ),
-					'Only Pages'      => esc_html__( 'Only Pages', 'Avada' ),
+					'Posts and Pages'         => esc_html__( 'All Post Types and Pages', 'Avada' ),
+					'all_post_types_no_pages' => esc_html__( 'All Post Types without Pages', 'Avada' ),
+					'Only Pages'              => esc_html__( 'Only Pages', 'Avada' ),					
+					'Only Posts'              => esc_html__( 'Only Blog Posts', 'Avada' ),
+					'portfolio_items'         => esc_html__( 'Only Portfolio Items', 'Avada' ),
+					'woocommerce_products'    => esc_html__( 'Only WooCommerce Products', 'Avada' ),
+					'tribe_events'            => esc_html__( 'Events Calendar Posts', 'Avada' ),
 				)
 			),
 			'search_excerpt' => array(

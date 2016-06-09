@@ -84,7 +84,7 @@ class UpdraftPlus_BackupModule_s3 {
 		if (is_wp_error($key)) return $key;
 
 		if ('' == $key || '' == $secret) {
-			return new WP_Error('no_settings', __('No settings were found','updraftplus'));
+			return new WP_Error('no_settings', __('No settings were found - please go to the Settings tab and check your settings','updraftplus'));
 		}
 
 		global $updraftplus;
@@ -784,7 +784,7 @@ class UpdraftPlus_BackupModule_s3 {
 		</tr>
 		<tr class="updraftplusmethod <?php echo $key; ?>">
 			<th><?php echo sprintf(__('%s secret key','updraftplus'), $whoweare_short);?>:</th>
-			<td><input data-updraft_settings_test="apisecret" type="<?php echo apply_filters('updraftplus_admin_secret_field_type', 'text'); ?>" autocomplete="off" style="width: 360px" id="updraft_<?php echo $key; ?>_apisecret" name="updraft_<?php echo $key; ?>[secretkey]" value="<?php echo esc_attr($opts['secretkey']); ?>" /></td>
+			<td><input data-updraft_settings_test="apisecret" type="<?php echo apply_filters('updraftplus_admin_secret_field_type', 'password'); ?>" autocomplete="off" style="width: 360px" id="updraft_<?php echo $key; ?>_apisecret" name="updraft_<?php echo $key; ?>[secretkey]" value="<?php echo esc_attr($opts['secretkey']); ?>" /></td>
 		</tr>
 		<tr class="updraftplusmethod <?php echo $key; ?>">
 			<th><?php echo sprintf(__('%s location','updraftplus'), $whoweare_short);?>:</th>

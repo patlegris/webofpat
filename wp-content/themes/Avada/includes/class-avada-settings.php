@@ -55,6 +55,13 @@ class Avada_Settings {
 			// Setting is saved so retrieve it from the db
 			$value = $settings[ $setting ];
 
+			// Strip http: & https: from URLs.
+			if ( 'media' == $all_fields[ $setting ]['type'] ) {
+				if ( isset( $value['url'] ) && ! empty( $value['url'] ) ) {
+					$value['url'] = str_replace( array( 'http://', 'https://' ), '//', $value['url'] );
+				}
+			}
+
 			if ( $subset ) {
 				// Hack for typography fields
 				if ( 'typography' == $all_fields[ $setting ]['type'] ) {

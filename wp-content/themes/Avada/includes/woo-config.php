@@ -16,14 +16,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // Don't duplicate me!
-if ( ! class_exists( 'FusionTemplateWoo' ) ) {
+if ( ! class_exists( 'Avada_Woocommerce' ) ) {
 
 	/**
 	 * Class to apply woocommerce templates
 	 *
 	 * @since 4.0.0
 	 */
-	class FusionTemplateWoo {
+	class Avada_Woocommerce {
 
 		function __construct() {
 
@@ -44,7 +44,10 @@ if ( ! class_exists( 'FusionTemplateWoo' ) ) {
 			remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_product_link_close', 5 );
 			remove_action( 'woocommerce_shop_loop_item_title', 'woocommerce_template_loop_product_title', 10 );
 
+			add_action( 'woocommerce_before_shop_loop_item_title', array( $this, 'avada_woocommerce_add_product_wrappers_open' ), 30 );
 			add_action( 'woocommerce_shop_loop_item_title', array( $this, 'product_title' ), 10 );
+			add_action( 'woocommerce_after_shop_loop_item_title', array( $this, 'avada_woocommerce_add_product_wrappers_close' ), 20 );
+			
 			add_action( 'avada_woocommerce_buttons_on_rollover',  array( $this, 'avada_woocommerce_template_loop_add_to_cart' ), 10 );
 			add_action( 'avada_woocommerce_buttons_on_rollover',  array( $this, 'avada_woocommerce_rollover_buttons_linebreak' ), 15 );
 			add_action( 'avada_woocommerce_buttons_on_rollover', array( $this, 'show_details_button' ), 20 );
@@ -59,6 +62,8 @@ if ( ! class_exists( 'FusionTemplateWoo' ) ) {
 				remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart', 10 );
 
 				add_action( 'woocommerce_before_shop_loop_item_title', array( $this, 'avada_show_product_loop_outofstock_flash' ), 10 );
+				add_action( 'woocommerce_before_shop_loop_item_title', array( $this, 'avada_woocommerce_before_shop_loop_item_title_open' ), 5 );
+				add_action( 'woocommerce_before_shop_loop_item_title', array( $this, 'avada_woocommerce_before_shop_loop_item_title_close' ), 20 );
 				add_action( 'woocommerce_after_shop_loop_item', array( $this, 'before_shop_item_buttons' ), 5 );
 				add_action( 'woocommerce_after_shop_loop_item', array( $this, 'avada_woocommerce_template_loop_add_to_cart' ), 10 );
 				add_action( 'woocommerce_after_shop_loop_item', array( $this, 'show_details_button' ), 15 );
@@ -68,43 +73,56 @@ if ( ! class_exists( 'FusionTemplateWoo' ) ) {
 			/**
 			 * Single Product Page
 			 */
-			add_action( 'woocommerce_single_product_summary', array( $this, 'add_product_border' ), 19 );
+
+			remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_title', 5 );			 
 			remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_rating', 10 );
 			remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 10 );
+			
+			add_action( 'woocommerce_single_product_summary', array( $this, 'add_product_border' ), 19 );
+			add_action( 'woocommerce_single_product_summary', array( $this, 'avada_woocommerce_template_single_title' ), 5 );	
 			add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 10 );
+			add_action( 'woocommerce_single_product_summary',  array( $this, 'avada_woocommerce_stock_html' ), 10 );
 			add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_rating', 11 );
 
-			// Backwards compatibility to 2.4
-			add_filter( 'woocommerce_template_path', array( $this, 'backwards_compatibility' ) );
-
-			/**
-			 * WooCommerce 2.3 Remove extra checkout button
-			 */
-			remove_action( 'woocommerce_proceed_to_checkout', 'woocommerce_button_proceed_to_checkout', 20 );
-
-			/* Remove extra cart totals from the hook 2.3.8 woo */
-			remove_action( 'woocommerce_cart_collaterals', 'woocommerce_cart_totals', 10 );
+			add_action( 'woocommerce_proceed_to_checkout', array( $this, 'avada_woocommerce_proceed_to_checkout' ), 10 );
+			
+			add_action( 'woocommerce_before_account_navigation', array( $this, 'avada_top_user_container' ), 10 );
 
 			// Add welcome user bar to checkout page
-			add_action( 'woocommerce_before_checkout_form', 'avada_top_user_container', 1 );
+			add_action( 'woocommerce_before_checkout_form', array( $this, 'avada_top_user_container' ), 1 );
 
 			// Filter the pagination
 			add_filter( 'woocommerce_pagination_args', array( $this, 'change_pagination' ) );
 
+			/**
+			 * Version sensitive hooks
+			 */			
+			if ( version_compare( self::get_wc_version(), '2.6', '>=' ) ) {
+				// Account Page
+				add_action( 'woocommerce_account_dashboard', array( $this, 'avada_woocommerce_account_dashboard' ), 5 );
+				add_action( 'woocommerce_before_account_orders', array( $this, 'avada_woocommerce_before_account_content_heading' ) );
+				add_action( 'woocommerce_before_account_downloads', array( $this, 'avada_woocommerce_before_account_content_heading' ) );
+				add_action( 'woocommerce_before_account_payment_methods', array( $this, 'avada_woocommerce_before_account_content_heading' ) );
+				add_action( 'woocommerce_edit_account_form_start', array( $this, 'avada_woocommerce_before_account_content_heading' ) );
+			} else {
+				add_filter( 'woocommerce_template_path', array( $this, 'backwards_compatibility' ) );
+				
+				// Account Page
+				add_action( 'woocommerce_before_my_account', array( $this, 'avada_woocommerce_pre26_before_my_account' ) );
+				add_action( 'woocommerce_after_my_account', array( $this, 'avada_woocommerce_pre26_after_my_account' ) );
+			}
+
 		} // end __construct();
 
+
 		/**
-		 * Filter method to modify path to WooCommerce files if WooCommerce is a version less than 2.3
+		 * Filter method to modify path to WooCommerce files if WooCommerce is a version less than 2.6
 		 *
 		 * @since 3.7.2
 		 * @return relative path of WooCommerce template files within the theme
 		 */
 		function backwards_compatibility( $path ) {
-			if ( null !== self::get_wc_version() ) {
-				if ( ! version_compare( self::get_wc_version(), '2.5', '>=' ) ) {
-					$path = 'woocommerce/compatibility/2.4/';
-				}
-			}
+			$path = 'woocommerce/compatibility/2.5/';
 
 			return $path;
 		}
@@ -149,6 +167,19 @@ if ( ! class_exists( 'FusionTemplateWoo' ) ) {
 			if ( ! $product->is_in_stock() ) {
 				printf( '<div class="fusion-out-of-stock"><div class="fusion-position-text">%s</div></div>', __( 'Out of Stock', 'Avada' ) );
 			}
+			
+		}
+		
+		public function avada_woocommerce_before_shop_loop_item_title_open() {
+			?>
+			<a href="<?php the_permalink(); ?>" class="product-images">
+			<?php
+		}
+		
+		public function avada_woocommerce_before_shop_loop_item_title_close() {
+			?>
+			</a>
+			<?php		
 		}
 
 		function before_shop_item_buttons() {
@@ -249,17 +280,264 @@ if ( ! class_exists( 'FusionTemplateWoo' ) ) {
 			return $options;
 		}
 
-		function product_title() {
-			echo '<h3 class="product-title"><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></h3>';
+		public function avada_woocommerce_add_product_wrappers_open() {
+			?>
+			<div class="product-details">
+				<div class="product-details-container">		
+			<?php
 		}
 
-	} // end FusionTemplateWoo() class
+		function product_title() {
+			?>
+			<h3 class="product-title"><a href="<?php echo get_the_permalink(); ?>"><?php echo get_the_title(); ?></a></h3>
+			
+			<div class="clearfix">
+			
+			<?php
+		}
+		
+		public function avada_woocommerce_add_product_wrappers_close() {
+			?>		
+					</div>
+				</div>
+			</div>
+			<?php
+		}
+		
+		
+		/**
+		 * Single Product Page functions
+		 */			
+		public function avada_woocommerce_template_single_title() {
+			?>
+			<h2 itemprop="name" class="product_title entry-title"><?php the_title(); ?></h2>
+			<?php
+		}
+		
+		public function avada_woocommerce_stock_html() {
+			global $product;
+			
+			// Availability
+			$availability      = $product->get_availability();
+			$availability_html = empty( $availability['availability'] ) ? '' : '<p class="stock ' . esc_attr( $availability['class'] ) . '">' . esc_html( $availability['availability'] ) . '</p>';		
+			?>
+			<div class="avada-availability">
+			<?php echo apply_filters( 'woocommerce_stock_html', $availability_html, $availability['availability'], $product ); ?>
+			</div>
+			<?php
+		}
+		
+		/**
+		 * Cart Page functions
+		 */			
+		public function avada_woocommerce_proceed_to_checkout() {
+			?>
+			<a href="" class="fusion-button button-default button-medium button default medium fusion-update-cart"><?php _e( 'Update Cart', 'woocommerce' ); ?></a>
+			<?php
+		}
+		
+		/**
+		 * Account Page functions
+		 */		
+		public function avada_top_user_container() {
+			global $woocommerce, $current_user;
+			?>
+			<div class="avada-myaccount-user">
+				<span class="username">
+					<?php if ( $current_user->display_name ) { ?>
+						<span class="hello">
+							<?php printf( esc_attr__( 'Hello %s%s%s(not %2$s? %sSign out%s)', 'woocommerce' ), '<strong>', esc_html( $current_user->display_name ), '</strong></span><span class="not-user">', '<a href="' . esc_url( wc_get_endpoint_url( 'customer-logout', '', wc_get_page_permalink( 'myaccount' ) ) ) . '">', '</a>' ); ?>
+						</span>
+					<?php } else { ?>
+						<span class="hello">
+							<?php _e( 'Hello', 'Avada' ); ?>
+						</span>
+					<?php } ?>
+
+				</span>
+
+				<?php if ( Avada()->settings->get( 'woo_acc_msg_1' ) ) { ?>
+					<span class="msg">
+						<?php echo Avada()->settings->get( 'woo_acc_msg_1' ); ?>
+					</span>
+				<?php } ?>
+
+				<?php if ( Avada()->settings->get( 'woo_acc_msg_2' ) ) { ?>
+					<span class="msg">
+						<?php echo Avada()->settings->get( 'woo_acc_msg_2' ); ?>
+					</span>
+				<?php } ?>
+				<span class="view-cart">
+					<?php printf( '<a href="%s">%s</a>', get_permalink( get_option( 'woocommerce_cart_page_id' ) ), __( 'View Cart', 'Avada' ) ); ?>
+				</span>
+			</div>
+			<?php
+		}
+		
+		public function avada_woocommerce_account_dashboard() {
+			?>
+			<style>
+			.woocommerce-MyAccount-content{ display: -webkit-flex;display: -ms-flexbox;display:flex;-webkit-flex-flow: column wrap;flex-flow: column nowrap; }
+			.avada-woocommerce-myaccount-heading{ -ms-flex-order: 0;-webkit-order: 0;order: 0; }
+			.woocommerce-MyAccount-content > p, .woocommerce-MyAccount-content > div, .woocommerce-MyAccount-content > span{ -ms-flex-order: 1;-webkit-order: 1;order: 1; }
+			.woocommerce-MyAccount-content > p:first-child { display: none; }
+			</style>
+			<?php		
+			self::avada_woocommerce_before_account_content_heading();
+		}
+		
+		public function avada_woocommerce_before_account_content_heading() {
+			if ( is_account_page() ) {
+				$account_items = wc_get_account_menu_items();
+				$heading_content = __( 'Dashboard', 'Avada' );
+				
+				if ( is_wc_endpoint_url( 'orders' ) ) {
+					$heading_content = $account_items['orders'];
+				} else if ( is_wc_endpoint_url( 'downloads' ) ) {
+					$heading_content = $account_items['downloads'];
+				} else if ( is_wc_endpoint_url( 'payment-methods' ) ) {
+					$heading_content = $account_items['payment-methods'];
+				} else if ( is_wc_endpoint_url( 'edit-account' ) ) {
+					$heading_content = $account_items['edit-account'];
+				}
+				
+				printf( '<h2 class="avada-woocommerce-myaccount-heading">%s</h2>', $heading_content );
+			}
+		}
+		
+		/**
+		 * WooCommerce pre 2.6 compatibility functions
+		 */
+		public function avada_woocommerce_pre26_before_my_account( $order_count, $edit_address = false )
+		{
+			global $woocommerce;
+			$edit_address = is_wc_endpoint_url( 'edit-address' );
+
+			$this->avada_top_user_container();
+			?>
+
+			<ul class="woocommerce-side-nav avada-myaccount-nav avada-woocommerce-pre26">
+				<?php if ( $downloads = WC()->customer->get_downloadable_products() ) : ?>
+					<li <?php if ( ! $edit_address ) {
+						echo 'class="is-active"';
+					} ?>>
+						<a class="downloads" href="#">
+							<?php _e( 'View Downloads', 'Avada' ); ?>
+						</a>
+					</li>
+				<?php endif;
+
+					if ( function_exists( 'wc_get_order_types' ) && function_exists( 'wc_get_order_statuses' ) ) {
+						$customer_orders = get_posts( apply_filters( 'woocommerce_my_account_my_orders_query', array(
+							'numberposts' => $order_count,
+							'meta_key'    => '_customer_user',
+							'meta_value'  => get_current_user_id(),
+							'post_type'   => wc_get_order_types( 'view-orders' ),
+							'post_status' => array_keys( wc_get_order_statuses() )
+						) ) );
+					} else {
+						$customer_orders = get_posts( apply_filters( 'woocommerce_my_account_my_orders_query', array(
+							'numberposts' => $order_count,
+							'meta_key'    => '_customer_user',
+							'meta_value'  => get_current_user_id(),
+							'post_type'   => 'shop_order',
+							'post_status' => 'publish'
+						) ) );
+					}
+
+					if ( $customer_orders ) : ?>
+						<li <?php if ( ! $edit_address && ! WC()->customer->get_downloadable_products() ) {
+							echo 'class="is-active"';
+						} ?>>
+							<a class="orders" href="#">
+								<?php _e( 'View Orders', 'Avada' ); ?>
+							</a>
+						</li>
+					<?php endif; ?>
+				<li <?php if ( $edit_address || ! WC()->customer->get_downloadable_products() && ! $customer_orders ) {
+					echo 'class="is-active"';
+				} ?>>
+					<a class="address" href="#">
+						<?php _e( 'Change Address', 'Avada' ); ?>
+					</a>
+				</li>
+				<li>
+					<a class="account" href="#">
+						<?php _e( 'Edit Account', 'Avada' ); ?>
+					</a>
+				</li>
+			</ul>
+
+			<div class="woocommerce-content-box avada-myaccount-data">
+
+		<?php
+		}
+		
+		function avada_woocommerce_pre26_after_my_account( $args )
+		{
+			global $woocommerce, $wp;
+
+			$user = wp_get_current_user();
+
+			?>
+
+			<h2 class="edit-account-heading"><?php _e( 'Edit Account', 'Avada' ); ?></h2>
+
+			<form class="edit-account-form" action="" method="post">
+				<p class="form-row form-row-first">
+					<label for="account_first_name"><?php _e( 'First name', 'woocommerce' ); ?> <span class="required">*</span></label>
+					<input type="text" class="input-text" name="account_first_name" id="account_first_name" value="<?php echo esc_attr( $user->first_name ); ?>" />
+				</p>
+
+				<p class="form-row form-row-last">
+					<label for="account_last_name"><?php _e( 'Last name', 'woocommerce' ); ?> <span class="required">*</span></label>
+					<input type="text" class="input-text" name="account_last_name" id="account_last_name" value="<?php echo esc_attr( $user->last_name ); ?>" />
+				</p>
+
+				<p class="form-row form-row-wide">
+					<label for="account_email"><?php _e( 'Email address', 'woocommerce' ); ?> <span class="required">*</span></label>
+					<input type="email" class="input-text" name="account_email" id="account_email" value="<?php echo esc_attr( $user->user_email ); ?>" />
+				</p>
+
+				<p class="form-row form-row-wide">
+					<label for="password_current"><?php _e( 'Current Password (leave blank to leave unchanged)', 'woocommerce' ); ?></label>
+					<input type="password" class="input-text" name="password_current" id="password_current" />
+				</p>
+
+				<p class="form-row form-row-wide">
+					<label for="password_1"><?php _e( 'New Password (leave blank to leave unchanged)', 'woocommerce' ); ?></label>
+					<input type="password" class="input-text" name="password_1" id="password_1" />
+				</p>
+
+				<p class="form-row form-row-wide">
+					<label for="password_2"><?php _e( 'Confirm New Password', 'woocommerce' ); ?></label>
+					<input type="password" class="input-text" name="password_2" id="password_2" />
+				</p>
+
+				<div class="clear"></div>
+
+				<?php do_action( 'woocommerce_edit_account_form' ); ?>
+
+				<p><input type="submit" class="fusion-button button-default button-medium button default medium alignright"
+						  name="save_account_details" value="<?php _e( 'Save changes', 'woocommerce' ); ?>"/></p>
+
+				<?php wp_nonce_field( 'save_account_details' ); ?>
+				<input type="hidden" name="action" value="save_account_details"/>
+
+				<div class="clearboth"></div>
+			</form>
+
+		</div>
+
+		<?php
+
+		}		
+
+	} // end Avada_Woocommerce() class
 
 }
-$fusion_template_woo = new FusionTemplateWoo();
 
 add_filter( 'get_product_search_form', 'avada_product_search_form' );
-
 function avada_product_search_form( $form ) {
 	$form = '<form role="search" method="get" class="searchform" action="' . esc_url( home_url( '/' ) ) . '">
 	<div>
@@ -441,17 +719,26 @@ if ( Avada()->settings->get( 'woocommerce_avada_ordering' ) ) {
 }
 function avada_woocommerce_get_catalog_ordering_args( $args ) {
 	global $woocommerce;
+	$woo_default_catalog_orderby = get_option( 'woocommerce_default_catalog_orderby' );
 
 	if ( isset( $_SERVER['QUERY_STRING'] ) ) {
 		parse_str( $_SERVER['QUERY_STRING'], $params );
 	}
 
 	$pob = ! empty( $params['product_orderby'] ) ? $params['product_orderby'] : get_option( 'woocommerce_default_catalog_orderby' );
-	$po  = ! empty( $params['product_order'] ) ? $params['product_order'] : 'asc';
+
+	if ( empty( $params['product_order'] ) ) {
+		if ( 'date' == $woo_default_catalog_orderby ) {
+			$po = 'desc';
+		} else {
+			$po = 'asc';
+		}
+	} else {
+		$po = $params['product_order'];
+	}
 
 	// Remove posts_clause filter, if default ordering is set to rating or popularity to make custom ordering work correctly
 	if ( $pob != 'default' ) {
-		$woo_default_catalog_orderby = get_option( 'woocommerce_default_catalog_orderby' );
 		if ( $woo_default_catalog_orderby == 'rating' ||
 			 $woo_default_catalog_orderby == 'popularity'
 		) {
@@ -466,7 +753,8 @@ function avada_woocommerce_get_catalog_ordering_args( $args ) {
 	switch ( $pob ) {
 		case 'menu_order':
 		case 'default':
-			return $args;
+			$orderby  = $args['orderby'];
+			$order    = $args['order'];
 			break;
 		case 'date':
 			$order    = 'desc';
@@ -705,9 +993,16 @@ function avada_woocommerce_after_single_product_summary() {
 	}
 	$social = '<div class="fusion-clearfix"></div>';
 	if ( Avada()->settings->get( 'woocommerce_social_links' ) ) {
+		
+		if ( ! wp_is_mobile() ){
+            $facebook_url = 'http://www.facebook.com/sharer.php?m2w&s=100&p&#91;url&#93;=' . get_permalink() . '&p&#91;title&#93;=' . wp_strip_all_tags( get_the_title(), true );
+        } else {
+            $facebook_url = 'https://m.facebook.com/sharer.php?u=' . get_permalink();
+        }
+
 		$social .= '<ul class="social-share clearfix">
 		<li class="facebook">
-			<a href="http://www.facebook.com/sharer.php?m2w&s=100&p&#91;url&#93;=' . get_permalink() . '&p&#91;title&#93;=' . wp_strip_all_tags( get_the_title(), true ) . '" target="_blank"' . $nofollow . '>
+			<a href="' . $facebook_url . '" target="_blank"' . $nofollow . '>
 				<i class="fontawesome-icon medium circle-yes fusion-icon-facebook"></i>
 				<div class="fusion-woo-social-share-text"><span>' . __( 'Share On Facebook', 'Avada' ) . '</span></div>
 			</a>
@@ -812,9 +1107,7 @@ function avada_woocommerce_before_cart_table( $args ) {
 
 add_action( 'woocommerce_after_cart_table', 'avada_woocommerce_after_cart_table', 20 );
 function avada_woocommerce_after_cart_table( $args ) {
-	$html = '</div>';
-
-	echo $html;
+	?></div><?php
 }
 
 function woocommerce_cross_sell_display( $posts_per_page = 3, $columns = 3, $orderby = 'rand' ) {
@@ -826,8 +1119,6 @@ function woocommerce_cross_sell_display( $posts_per_page = 3, $columns = 3, $ord
 }
 
 function cart_shipping_calc() {
-	// Move this code to ~/woocommerce/cart/shipping-calculator.php and move the hook call accordingly.
-
 	global $woocommerce;
 
 	if ( get_option( 'woocommerce_enable_shipping_calc' ) === 'no' || ! WC()->cart->needs_shipping() ) {
@@ -837,9 +1128,9 @@ function cart_shipping_calc() {
 
 	<?php do_action( 'woocommerce_before_shipping_calculator' ); ?>
 
-	<div class="woocommerce-shipping-calculator" action="<?php echo esc_url( WC()->cart->get_cart_url() ); ?>" method="post">
+	<form class="woocommerce-shipping-calculator" action="<?php echo esc_url( WC()->cart->get_cart_url() ); ?>" method="post">
 
-		<h2><a href="#" class="shipping-calculator-button"><?php _e( 'Calculate Shipping', 'woocommerce' ); ?></a>
+		<h2><span href="#" class="shipping-calculator-button"><?php _e( 'Calculate Shipping', 'woocommerce' ); ?></span>
 		</h2>
 
 		<div class="avada-shipping-calculator-form">
@@ -909,7 +1200,7 @@ function cart_shipping_calc() {
 
 			<?php wp_nonce_field( 'woocommerce-cart' ); ?>
 		</div>
-	</div>
+	</form>
 
 	<?php do_action( 'woocommerce_after_shipping_calculator' ); ?>
 
@@ -922,7 +1213,7 @@ function woocommerce_shipping_calculator() {
 	}
 }
 
-add_action( 'woocommerce_cart_collaterals', 'avada_woocommerce_cart_collaterals' );
+add_action( 'woocommerce_cart_collaterals', 'avada_woocommerce_cart_collaterals', 5 );
 function avada_woocommerce_cart_collaterals( $args ) {
 	global $woocommerce;
 	?>
@@ -931,42 +1222,22 @@ function avada_woocommerce_cart_collaterals( $args ) {
 
 		<?php echo cart_shipping_calc();
 
-			if ( WC()->cart->coupons_enabled() ) {
-				?>
-				<div class="coupon">
+		if ( WC()->cart->coupons_enabled() ) {
+			?>
+			<div class="coupon">
 
-					<h2><?php _e( 'Have A Promotional Code?', 'Avada' ); ?></h2>
+				<h2><?php _e( 'Have A Promotional Code?', 'Avada' ); ?></h2>
 
-					<input name="coupon_code" class="input-text" id="coupon_code" value=""
-					       placeholder="<?php _e( 'Coupon code', 'woocommerce' ); ?>"/>
-					<input type="submit" class="fusion-button fusion-button-default fusion-button-small button default small"
-					       name="apply_coupon" value="<?php _e( 'Apply', 'Avada' ); ?>"/>
+				<input type="text" name="coupon_code" class="input-text" id="avada_coupon_code" value="" placeholder="<?php esc_attr_e( 'Coupon code', 'woocommerce' ); ?>" /> 
+				<input type="submit" class="fusion-apply-coupon fusion-button fusion-button-default fusion-button-small button default small" name="apply_coupon" value="<?php esc_attr_e( 'Apply', 'Avada' ); ?>" />
 
-					<?php do_action( 'woocommerce_cart_coupon' ); ?>
+				<?php do_action( 'woocommerce_cart_coupon' ); ?>
 
-				</div>
-			<?php
-			}
+			</div>
+		<?php
+		}
 		?>
 	</div>
-<?php
-}
-
-add_action( 'woocommerce_before_cart_totals', 'avada_woocommerce_before_cart_totals', 20 );
-function avada_woocommerce_before_cart_totals( $args ) {
-	global $woocommerce; ?>
-
-	<form action="<?php echo esc_url( WC()->cart->get_cart_url() ); ?>" method="post">
-
-<?php
-}
-
-add_action( 'woocommerce_after_cart', 'avada_woocommerce_after_cart' );
-function avada_woocommerce_after_cart( $args ) {
-	?>
-
-	</form>
-
 <?php
 }
 
@@ -1028,7 +1299,7 @@ function avada_woocommerce_before_checkout_form( $args ) {
 	?>
 
 	<ul class="woocommerce-side-nav woocommerce-checkout-nav">
-		<li class="active">
+		<li class="is-active">
 			<a data-name="col-1" href="#">
 				<?php _e( 'Billing Address', 'Avada' ); ?>
 			</a>
@@ -1213,164 +1484,6 @@ function avada_woocommerce_after_customer_login_form() {
 	<?php
 	endif;
 }
-
-function avada_top_user_container() {
-	global $woocommerce, $current_user;
-
-	echo '<div class="avada_myaccount_user">';
-		echo '<span class="myaccount_user_container">';
-			echo '<span class="username">';
-
-				if ( $current_user->display_name ) {
-					printf( '%s, %s:', __( 'Hello', 'Avada' ), $current_user->display_name );
-				} else {
-					_e( 'Hello', 'Avada' );
-				}
-
-			echo '</span>';
-
-			if ( Avada()->settings->get( 'woo_acc_msg_1' ) ) {
-				echo '<span class="msg">';
-					echo Avada()->settings->get( 'woo_acc_msg_1' );
-				echo '</span>';
-			}
-
-			if ( Avada()->settings->get( 'woo_acc_msg_2' ) ) {
-				echo '<span class="msg">';
-					echo Avada()->settings->get( 'woo_acc_msg_2' );
-				echo '</span>';
-			}
-			echo '<span class="view-cart">';
-				printf( '<a href="%s">%s</a>', get_permalink( get_option( 'woocommerce_cart_page_id' ) ), __( 'View Cart', 'Avada' ) );
-			echo '</span>';
-		echo '</span>';
-	echo '</div>';
-}
-
-add_action( 'woocommerce_before_my_account', 'avada_woocommerce_before_my_account' );
-function avada_woocommerce_before_my_account( $order_count, $edit_address = false )
-{
-	global $woocommerce;
-	$edit_address = is_wc_endpoint_url( 'edit-address' );
-
-	avada_top_user_container();
-	?>
-
-	<ul class="woocommerce-side-nav avada-myaccount-nav">
-		<?php if ( $downloads = WC()->customer->get_downloadable_products() ) : ?>
-			<li <?php if ( ! $edit_address ) {
-				echo 'class="active"';
-			} ?>>
-				<a class="downloads" href="#">
-					<?php _e( 'View Downloads', 'Avada' ); ?>
-				</a>
-			</li>
-		<?php endif;
-
-			if ( function_exists( 'wc_get_order_types' ) && function_exists( 'wc_get_order_statuses' ) ) {
-				$customer_orders = get_posts( apply_filters( 'woocommerce_my_account_my_orders_query', array(
-					'numberposts' => $order_count,
-					'meta_key'    => '_customer_user',
-					'meta_value'  => get_current_user_id(),
-					'post_type'   => wc_get_order_types( 'view-orders' ),
-					'post_status' => array_keys( wc_get_order_statuses() )
-				) ) );
-			} else {
-				$customer_orders = get_posts( apply_filters( 'woocommerce_my_account_my_orders_query', array(
-					'numberposts' => $order_count,
-					'meta_key'    => '_customer_user',
-					'meta_value'  => get_current_user_id(),
-					'post_type'   => 'shop_order',
-					'post_status' => 'publish'
-				) ) );
-			}
-
-			if ( $customer_orders ) : ?>
-				<li <?php if ( ! $edit_address && ! WC()->customer->get_downloadable_products() ) {
-					echo 'class="active"';
-				} ?>>
-					<a class="orders" href="#">
-						<?php _e( 'View Orders', 'Avada' ); ?>
-					</a>
-				</li>
-			<?php endif; ?>
-		<li <?php if ( $edit_address || ! WC()->customer->get_downloadable_products() && ! $customer_orders ) {
-			echo 'class="active"';
-		} ?>>
-			<a class="address" href="#">
-				<?php _e( 'Change Address', 'Avada' ); ?>
-			</a>
-		</li>
-		<li>
-			<a class="account" href="#">
-				<?php _e( 'Edit Account', 'Avada' ); ?>
-			</a>
-		</li>
-	</ul>
-
-<div class="woocommerce-content-box avada-myaccount-data">
-
-<?php
-}
-
-add_action( 'woocommerce_after_my_account', 'avada_woocommerce_after_my_account' );
-function avada_woocommerce_after_my_account( $args )
-{
-	global $woocommerce, $wp;
-
-	$user = wp_get_current_user();
-
-	?>
-
-	<h2 class="edit-account-heading"><?php _e( 'Edit Account', 'Avada' ); ?></h2>
-
-	<form class="edit-account-form" action="" method="post">
-		<p class="form-row form-row-first">
-			<label for="account_first_name"><?php _e( 'First name', 'woocommerce' ); ?> <span class="required">*</span></label>
-			<input type="text" class="input-text" name="account_first_name" id="account_first_name" value="<?php echo esc_attr( $user->first_name ); ?>" />
-		</p>
-
-		<p class="form-row form-row-last">
-			<label for="account_last_name"><?php _e( 'Last name', 'woocommerce' ); ?> <span class="required">*</span></label>
-			<input type="text" class="input-text" name="account_last_name" id="account_last_name" value="<?php echo esc_attr( $user->last_name ); ?>" />
-		</p>
-
-		<p class="form-row form-row-wide">
-			<label for="account_email"><?php _e( 'Email address', 'woocommerce' ); ?> <span class="required">*</span></label>
-			<input type="email" class="input-text" name="account_email" id="account_email" value="<?php echo esc_attr( $user->user_email ); ?>" />
-		</p>
-
-		<p class="form-row form-row-wide">
-			<label for="password_current"><?php _e( 'Current Password (leave blank to leave unchanged)', 'woocommerce' ); ?></label>
-			<input type="password" class="input-text" name="password_current" id="password_current" />
-		</p>
-
-		<p class="form-row form-row-wide">
-			<label for="password_1"><?php _e( 'New Password (leave blank to leave unchanged)', 'woocommerce' ); ?></label>
-			<input type="password" class="input-text" name="password_1" id="password_1" />
-		</p>
-
-		<p class="form-row form-row-wide">
-			<label for="password_2"><?php _e( 'Confirm New Password', 'woocommerce' ); ?></label>
-			<input type="password" class="input-text" name="password_2" id="password_2" />
-		</p>
-
-		<div class="clear"></div>
-
-		<p><input type="submit" class="fusion-button button-default button-medium button default medium alignright"
-		          name="save_account_details" value="<?php _e( 'Save changes', 'woocommerce' ); ?>"/></p>
-
-		<?php wp_nonce_field( 'save_account_details' ); ?>
-		<input type="hidden" name="action" value="save_account_details"/>
-
-		<div class="clearboth"></div>
-	</form>
-
-</div>
-
-<?php
-
-}
 /* end my-account hooks */
 
 /* begin order hooks */
@@ -1420,7 +1533,7 @@ function avada_woocommerce_view_order( $order_id ) {
 							<td class="product-name">
 						<span class="product-thumbnail">
 							<?php
-								$thumbnail = apply_filters( 'woocommerce_cart_item_thumbnail', $_product->get_image() );
+								$thumbnail = $_product->get_image();
 
 								if ( ! $_product->is_visible() ) {
 									echo $thumbnail;

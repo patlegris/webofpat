@@ -1,6 +1,6 @@
 <?php
 /**
- * Contains all framework specific functions that are not part od a separate class
+ * Contains all framework specific functions that are not part of a separate class
  *
  * @author      ThemeFusion
  * @package     FusionFramework

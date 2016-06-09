@@ -138,7 +138,7 @@
 					switch_editor_tmce = $('<a id="' + current_id + '-tmce" class="wp-switch-editor switch-tmce" data-wp-editor-id="' + current_id + '">Visual</a>'),
 					media_buttons = $('<div id="wp-' + current_id + '-media-buttons" class="wp-media-buttons" />'),
 					insert_media_button = $('<a href="#" id="insert-media-button" class="button insert-media add_media" data-editor="' + current_id + '" title="Add Media"><span class="wp-media-buttons-icon"></span> Add Media</a>'),
-					insert_gravity_button = $('<a href="#" id="add_gform" class="button gform_media_link" data-editor="' + current_id + '" title="Add Gravity Form">Add Gavity Form</a>'),
+					insert_gravity_button = $('<a href="#" id="add_gform" class="button gform_media_link" data-editor="' + current_id + '" title="Add Gravity Form">Add Gravity Form</a>'),
 					editor_container = $('<div id="wp-' + current_id + '-editor-container" class="wp-editor-container" />'),
 					content_css = /*Object.prototype.hasOwnProperty.call(tinyMCEPreInit.mceInit[current_id], 'content_css') ? tinyMCEPreInit.mceInit[current_id]['content_css'].split(',') :*/ false;
 

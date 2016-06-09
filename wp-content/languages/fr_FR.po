@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the 4.5.x package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2016-06-01 09:14:33+0000\n"
+"PO-Revision-Date: 2016-06-06 11:20:24+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -7557,7 +7557,7 @@ msgstr "Titre du site"
 
 #: wp-includes/comment-template.php:2130 wp-login.php:723
 msgid "Email"
-msgstr "Adresse de contact"
+msgstr "Adresse de messagerie"
 
 #: wp-includes/class-wp-xmlrpc-server.php:553
 msgid "Allow people to post comments on new articles"

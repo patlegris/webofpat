@@ -25,14 +25,14 @@ class Avada_Multilingual {
 	public function __construct() {
 
 		// Set the $is_pll property.
-		self::$is_pll = $this->is_pll();
+		self::$is_pll = self::is_pll();
 		// Set the $is_wpml property
-		self::$is_wpml = $this->is_wpml();
+		self::$is_wpml = self::is_wpml();
 
 		// Set the $available_languages property
-		$this->set_available_languages();
+		self::set_available_languages();
 		// Set the $main_language properly
-		$this->set_main_language();
+		self::set_main_language();
 		// Set the $active_language property
 		self::set_active_language();
 
@@ -41,11 +41,11 @@ class Avada_Multilingual {
 	/**
 	 * Sets the available languages depending on the active plugin.
 	 */
-	private function set_available_languages() {
+	private static function set_available_languages() {
 		if ( self::$is_pll ) {
-			self::$available_languages = $this->get_available_languages_pll();
+			self::$available_languages = self::get_available_languages_pll();
 		} elseif ( self::$is_wpml ) {
-			self::$available_languages = $this->get_available_languages_wpml();
+			self::$available_languages = self::get_available_languages_wpml();
 		}
 	}
 
@@ -53,6 +53,7 @@ class Avada_Multilingual {
 	 * Gets the $active_language protected property
 	 */
 	public static function get_active_language() {
+		self::set_active_language();
 		return self::$active_language;
 	}
 
@@ -81,6 +82,7 @@ class Avada_Multilingual {
 			if ( defined( 'ICL_LANGUAGE_CODE' ) ) {
 				self::$active_language = ICL_LANGUAGE_CODE;
 				if ( 'all' == ICL_LANGUAGE_CODE ) {
+					Avada::set_language_is_all( true );
 					if ( self::$is_wpml ) {
 						global $sitepress;
 						self::$active_language = $sitepress->get_default_language();
@@ -96,6 +98,9 @@ class Avada_Multilingual {
 	 * Gets the $available_languages protected property
 	 */
 	public static function get_available_languages() {
+		if ( empty( self::$available_languages ) ) {
+			self::set_available_languages();
+		}
 		return self::$available_languages;
 	}
 
@@ -104,7 +109,7 @@ class Avada_Multilingual {
 	 *
 	 * @return array
 	 */
-	private function get_available_languages_wpml() {
+	private static function get_available_languages_wpml() {
 		// Do not continue processing if we're not using WPML
 		if ( ! self::$is_wpml ) {
 			return array();
@@ -124,6 +129,7 @@ class Avada_Multilingual {
 	 * @return string
 	 */
 	public static function get_default_language() {
+		self::set_main_language();
 		return self::$main_language;
 	}
 
@@ -132,11 +138,11 @@ class Avada_Multilingual {
 	 *
 	 * @return void
 	 */
-	private function set_main_language() {
+	private static function set_main_language() {
 		if ( self::$is_pll ) {
-			self::$main_language = $this->get_main_language_pll();
+			self::$main_language = self::get_main_language_pll();
 		} elseif ( self::$is_wpml ) {
-			self::$main_language = $this->get_main_language_wpml();
+			self::$main_language = self::get_main_language_wpml();
 		}
 	}
 
@@ -145,7 +151,7 @@ class Avada_Multilingual {
 	 *
 	 * @return string
 	 */
-	private function get_main_language_wpml() {
+	private static function get_main_language_wpml() {
 		global $sitepress;
 		return $sitepress->get_default_language();
 	}
@@ -155,7 +161,7 @@ class Avada_Multilingual {
 	 *
 	 * @return string
 	 */
-	private function get_main_language_pll() {
+	private static function get_main_language_pll() {
 		return pll_default_language( 'slug' );
 	}
 
@@ -164,7 +170,7 @@ class Avada_Multilingual {
 	 *
 	 * @return array
 	 */
-	private function get_available_languages_pll() {
+	private static function get_available_languages_pll() {
 		// Do not continue processing if we're not using PLL
 		if ( ! self::$is_pll ) {
 			return array();
@@ -187,7 +193,7 @@ class Avada_Multilingual {
 	 *
 	 * @return bool
 	 */
-	private function is_pll() {
+	private static function is_pll() {
 		return ( function_exists( 'pll_default_language' ) ) ? true : false;
 	}
 
@@ -195,7 +201,7 @@ class Avada_Multilingual {
 	 * Determine if we're using WPML.
 	 * Since PLL has a compatibility layer for WPML, we'll have to consider that too.
 	 */
-	private function is_wpml() {
+	private static function is_wpml() {
 		return ( defined( 'ICL_SITEPRESS_VERSION' ) && false === self::$is_pll ) ? true : false;
 	}
 }
